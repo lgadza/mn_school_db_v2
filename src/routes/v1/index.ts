@@ -2,8 +2,8 @@ import express from "express";
 import { Router } from "express";
 
 // Import feature routers
+import authRouter from '../../features/auth/routes';
 // Uncomment these as features are implemented
-// import authRouter from '../../features/auth/routes';
 // import usersRouter from '../../features/users/routes';
 // import rbacRouter from '../../features/rbac/routes';
 
@@ -15,8 +15,8 @@ router.get("/", (req, res) => {
     version: "v1",
     status: "active",
     endpoints: {
+      auth: '/auth',
       // List available endpoints as they are implemented
-      // auth: '/auth',
       // users: '/users',
       // roles: '/rbac/roles',
       demo: "/demo",
@@ -34,8 +34,8 @@ router.get("/demo", (req, res) => {
 });
 
 // Register feature routes
+router.use('/auth', authRouter);
 // Uncomment these as features are implemented
-// router.use('/auth', authRouter);
 // router.use('/users', usersRouter);
 // router.use('/rbac/roles', rbacRouter);
 

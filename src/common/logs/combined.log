@@ -53,3 +53,654 @@
 2025-03-21T14:14:24.642Z info: Health check available at http://localhost:3001/api/health
 2025-03-21T14:14:24.642Z info: Metrics available at http://localhost:3001/api/metrics
 2025-03-21T14:14:54.055Z info: PostgreSQL client removed from pool
+2025-03-21T14:15:17.173Z info: Connecting to Redis:
+2025-03-21T14:15:19.442Z info: Configuring CORS middleware
+2025-03-21T14:15:19.447Z info: Configuring compression middleware
+2025-03-21T14:15:19.453Z info: Redis rate limiter initialized
+2025-03-21T14:15:19.456Z info: Redis rate limiter initialized
+2025-03-21T14:15:19.459Z info: Checking database connection...
+2025-03-21T14:15:19.763Z info: Redis connected successfully
+2025-03-21T14:15:19.789Z info: Connected to PostgreSQL database
+2025-03-21T14:15:19.793Z info: Checking Redis connection...
+2025-03-21T14:15:19.869Z info: Sequelize connection has been established successfully.
+2025-03-21T14:15:20.227Z info: Redis client is ready
+2025-03-21T14:15:20.414Z info: Redis ping successful
+2025-03-21T14:15:20.415Z info: Redis connection successful
+2025-03-21T14:15:20.417Z info: Server running in development mode on port 3001
+2025-03-21T14:15:20.418Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:15:20.418Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:15:50.482Z info: Connecting to Redis:
+2025-03-21T14:15:52.272Z info: Configuring CORS middleware
+2025-03-21T14:15:52.274Z info: Configuring compression middleware
+2025-03-21T14:15:52.279Z info: Redis rate limiter initialized
+2025-03-21T14:15:52.281Z info: Redis rate limiter initialized
+2025-03-21T14:15:52.283Z info: Checking database connection...
+2025-03-21T14:15:52.349Z info: Redis connected successfully
+2025-03-21T14:15:52.377Z info: Connected to PostgreSQL database
+2025-03-21T14:15:52.381Z info: Checking Redis connection...
+2025-03-21T14:15:52.456Z info: Sequelize connection has been established successfully.
+2025-03-21T14:15:52.721Z info: Redis client is ready
+2025-03-21T14:15:52.893Z info: Redis ping successful
+2025-03-21T14:15:52.894Z info: Redis connection successful
+2025-03-21T14:15:52.896Z info: Server running in development mode on port 3001
+2025-03-21T14:15:52.897Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:15:52.897Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:16:22.389Z info: PostgreSQL client removed from pool
+2025-03-21T14:16:38.325Z warn: System under high load, rejecting request
+2025-03-21T14:16:38.325Z error: API Error: Service temporarily unavailable due to high load
+2025-03-21T14:16:40.531Z warn: System under high load, rejecting request
+2025-03-21T14:16:40.531Z error: API Error: Service temporarily unavailable due to high load
+2025-03-21T14:17:14.420Z warn: System under high load, rejecting request
+2025-03-21T14:17:14.421Z error: API Error: Service temporarily unavailable due to high load
+2025-03-21T14:17:15.794Z warn: System under high load, rejecting request
+2025-03-21T14:17:15.795Z error: API Error: Service temporarily unavailable due to high load
+2025-03-21T14:21:38.216Z info: Connecting to Redis:
+2025-03-21T14:21:39.632Z info: Configuring CORS middleware
+2025-03-21T14:21:39.634Z info: Configuring compression middleware
+2025-03-21T14:21:39.637Z info: Redis rate limiter initialized
+2025-03-21T14:21:39.638Z info: Redis rate limiter initialized
+2025-03-21T14:21:39.640Z info: Checking database connection...
+2025-03-21T14:21:39.708Z info: Connected to PostgreSQL database
+2025-03-21T14:21:39.721Z info: Checking Redis connection...
+2025-03-21T14:21:39.780Z info: Sequelize connection has been established successfully.
+2025-03-21T14:21:39.783Z info: Redis connected successfully
+2025-03-21T14:21:40.252Z info: Redis client is ready
+2025-03-21T14:21:40.440Z info: Redis ping successful
+2025-03-21T14:21:40.440Z info: Redis connection successful
+2025-03-21T14:21:40.442Z info: Server running in development mode on port 3001
+2025-03-21T14:21:40.443Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:21:40.443Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:22:09.733Z info: PostgreSQL client removed from pool
+2025-03-21T14:24:42.073Z info: Connecting to Redis:
+2025-03-21T14:24:43.144Z info: Configuring CORS middleware
+2025-03-21T14:24:43.145Z info: Configuring compression middleware
+2025-03-21T14:24:43.148Z info: Redis rate limiter initialized
+2025-03-21T14:24:43.149Z info: Redis rate limiter initialized
+2025-03-21T14:24:43.151Z info: Checking database connection...
+2025-03-21T14:24:43.211Z info: Redis connected successfully
+2025-03-21T14:24:43.214Z info: Connected to PostgreSQL database
+2025-03-21T14:24:43.217Z info: Checking Redis connection...
+2025-03-21T14:24:43.277Z info: Sequelize connection has been established successfully.
+2025-03-21T14:24:43.702Z info: Redis client is ready
+2025-03-21T14:24:43.874Z info: Redis ping successful
+2025-03-21T14:24:43.874Z info: Redis connection successful
+2025-03-21T14:24:43.877Z info: Server running in development mode on port 3001
+2025-03-21T14:24:43.877Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:24:43.877Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:25:12.510Z info: Connecting to Redis:
+2025-03-21T14:25:14.067Z info: Configuring CORS middleware
+2025-03-21T14:25:14.068Z info: Configuring compression middleware
+2025-03-21T14:25:14.072Z info: Redis rate limiter initialized
+2025-03-21T14:25:14.073Z info: Redis rate limiter initialized
+2025-03-21T14:25:14.074Z info: Checking database connection...
+2025-03-21T14:25:14.128Z info: Redis connected successfully
+2025-03-21T14:25:14.211Z info: Sequelize connection has been established successfully.
+2025-03-21T14:25:14.232Z info: Connected to PostgreSQL database
+2025-03-21T14:25:14.234Z info: Checking Redis connection...
+2025-03-21T14:25:14.460Z info: Redis client is ready
+2025-03-21T14:25:14.635Z info: Redis ping successful
+2025-03-21T14:25:14.635Z info: Redis connection successful
+2025-03-21T14:25:14.638Z info: Server running in development mode on port 3001
+2025-03-21T14:25:14.638Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:25:14.639Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:25:44.239Z info: PostgreSQL client removed from pool
+2025-03-21T14:27:16.898Z info: Connecting to Redis:
+2025-03-21T14:27:19.115Z info: Configuring CORS middleware
+2025-03-21T14:27:19.118Z info: Configuring compression middleware
+2025-03-21T14:27:19.124Z info: Redis rate limiter initialized
+2025-03-21T14:27:19.126Z info: Redis rate limiter initialized
+2025-03-21T14:27:19.128Z info: Checking database connection...
+2025-03-21T14:27:19.231Z info: Connected to PostgreSQL database
+2025-03-21T14:27:19.236Z info: Checking Redis connection...
+2025-03-21T14:27:19.334Z info: Sequelize connection has been established successfully.
+2025-03-21T14:27:19.358Z info: Redis connected successfully
+2025-03-21T14:27:19.813Z info: Redis client is ready
+2025-03-21T14:27:19.987Z info: Redis ping successful
+2025-03-21T14:27:19.988Z info: Redis connection successful
+2025-03-21T14:27:19.992Z info: Server running in development mode on port 3001
+2025-03-21T14:27:19.992Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:27:19.992Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:27:31.203Z info: Connecting to Redis:
+2025-03-21T14:27:32.980Z info: Configuring CORS middleware
+2025-03-21T14:27:32.982Z info: Configuring compression middleware
+2025-03-21T14:27:32.986Z info: Redis rate limiter initialized
+2025-03-21T14:27:32.989Z info: Redis rate limiter initialized
+2025-03-21T14:27:32.991Z info: Checking database connection...
+2025-03-21T14:27:33.064Z info: Redis connected successfully
+2025-03-21T14:27:33.168Z info: Connected to PostgreSQL database
+2025-03-21T14:27:33.171Z info: Checking Redis connection...
+2025-03-21T14:27:33.256Z info: Sequelize connection has been established successfully.
+2025-03-21T14:27:33.378Z info: Redis client is ready
+2025-03-21T14:27:33.549Z info: Redis ping successful
+2025-03-21T14:27:33.550Z info: Redis connection successful
+2025-03-21T14:27:33.552Z info: Server running in development mode on port 3001
+2025-03-21T14:27:33.553Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:27:33.553Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:28:03.179Z info: PostgreSQL client removed from pool
+2025-03-21T14:28:46.446Z info: Connecting to Redis:
+2025-03-21T14:28:47.442Z info: Configuring CORS middleware
+2025-03-21T14:28:47.443Z info: Configuring compression middleware
+2025-03-21T14:28:47.446Z info: Redis rate limiter initialized
+2025-03-21T14:28:47.446Z info: Redis rate limiter initialized
+2025-03-21T14:28:47.447Z info: Checking database connection...
+2025-03-21T14:28:47.508Z info: Connected to PostgreSQL database
+2025-03-21T14:28:47.511Z info: Checking Redis connection...
+2025-03-21T14:28:47.527Z info: Redis connected successfully
+2025-03-21T14:28:47.562Z info: Sequelize connection has been established successfully.
+2025-03-21T14:28:47.870Z info: Redis client is ready
+2025-03-21T14:28:48.043Z info: Redis ping successful
+2025-03-21T14:28:48.044Z info: Redis connection successful
+2025-03-21T14:28:48.046Z info: Server running in development mode on port 3001
+2025-03-21T14:28:48.046Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:28:48.046Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:29:01.339Z info: Connecting to Redis:
+2025-03-21T14:29:03.176Z info: Configuring CORS middleware
+2025-03-21T14:29:03.178Z info: Configuring compression middleware
+2025-03-21T14:29:03.183Z info: Redis rate limiter initialized
+2025-03-21T14:29:03.185Z info: Redis rate limiter initialized
+2025-03-21T14:29:03.187Z info: Checking database connection...
+2025-03-21T14:29:03.268Z info: Redis connected successfully
+2025-03-21T14:29:03.297Z info: Connected to PostgreSQL database
+2025-03-21T14:29:03.303Z info: Checking Redis connection...
+2025-03-21T14:29:03.404Z info: Sequelize connection has been established successfully.
+2025-03-21T14:29:03.595Z info: Redis client is ready
+2025-03-21T14:29:03.771Z info: Redis ping successful
+2025-03-21T14:29:03.772Z info: Redis connection successful
+2025-03-21T14:29:03.776Z info: Server running in development mode on port 3001
+2025-03-21T14:29:03.777Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:29:03.778Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:29:29.767Z info: Connecting to Redis:
+2025-03-21T14:29:31.104Z info: Configuring CORS middleware
+2025-03-21T14:29:31.105Z info: Configuring compression middleware
+2025-03-21T14:29:31.110Z info: Redis rate limiter initialized
+2025-03-21T14:29:31.112Z info: Redis rate limiter initialized
+2025-03-21T14:29:31.113Z info: Checking database connection...
+2025-03-21T14:29:31.168Z info: Redis connected successfully
+2025-03-21T14:29:31.190Z info: Connected to PostgreSQL database
+2025-03-21T14:29:31.195Z info: Checking Redis connection...
+2025-03-21T14:29:31.269Z info: Sequelize connection has been established successfully.
+2025-03-21T14:29:31.503Z info: Redis client is ready
+2025-03-21T14:29:31.694Z info: Redis ping successful
+2025-03-21T14:29:31.700Z info: Redis connection successful
+2025-03-21T14:29:31.704Z info: Server running in development mode on port 3001
+2025-03-21T14:29:31.705Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:29:31.707Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:30:01.203Z info: PostgreSQL client removed from pool
+2025-03-21T14:31:00.559Z info: Connecting to Redis:
+2025-03-21T14:31:02.041Z info: Configuring CORS middleware
+2025-03-21T14:31:02.043Z info: Configuring compression middleware
+2025-03-21T14:31:02.050Z info: Redis rate limiter initialized
+2025-03-21T14:31:02.051Z info: Redis rate limiter initialized
+2025-03-21T14:31:02.053Z info: Checking database connection...
+2025-03-21T14:31:02.128Z info: Redis connected successfully
+2025-03-21T14:31:02.211Z info: Connected to PostgreSQL database
+2025-03-21T14:31:02.216Z info: Checking Redis connection...
+2025-03-21T14:31:02.306Z info: Sequelize connection has been established successfully.
+2025-03-21T14:31:02.596Z info: Redis client is ready
+2025-03-21T14:31:02.770Z info: Redis ping successful
+2025-03-21T14:31:02.771Z info: Redis connection successful
+2025-03-21T14:31:02.773Z info: Server running in development mode on port 3001
+2025-03-21T14:31:02.774Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:31:02.774Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:31:32.227Z info: PostgreSQL client removed from pool
+2025-03-21T14:33:18.885Z info: Connecting to Redis:
+2025-03-21T14:33:20.427Z info: Configuring CORS middleware
+2025-03-21T14:33:20.428Z info: Configuring compression middleware
+2025-03-21T14:33:20.432Z info: Redis rate limiter initialized
+2025-03-21T14:33:20.433Z info: Redis rate limiter initialized
+2025-03-21T14:33:20.435Z info: Checking database connection...
+2025-03-21T14:33:20.511Z info: Connected to PostgreSQL database
+2025-03-21T14:33:20.517Z info: Checking Redis connection...
+2025-03-21T14:33:20.584Z info: Redis connected successfully
+2025-03-21T14:33:20.598Z info: Sequelize connection has been established successfully.
+2025-03-21T14:33:20.896Z info: Redis client is ready
+2025-03-21T14:33:21.086Z info: Redis ping successful
+2025-03-21T14:33:21.087Z info: Redis connection successful
+2025-03-21T14:33:21.089Z info: Server running in development mode on port 3001
+2025-03-21T14:33:21.089Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:33:21.090Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:33:41.483Z info: Connecting to Redis:
+2025-03-21T14:33:42.878Z info: Configuring CORS middleware
+2025-03-21T14:33:42.880Z info: Configuring compression middleware
+2025-03-21T14:33:42.884Z info: Redis rate limiter initialized
+2025-03-21T14:33:42.886Z info: Redis rate limiter initialized
+2025-03-21T14:33:42.887Z info: Checking database connection...
+2025-03-21T14:33:42.959Z info: Connected to PostgreSQL database
+2025-03-21T14:33:42.963Z info: Checking Redis connection...
+2025-03-21T14:33:42.979Z info: Redis connected successfully
+2025-03-21T14:33:43.028Z info: Sequelize connection has been established successfully.
+2025-03-21T14:33:43.307Z info: Redis client is ready
+2025-03-21T14:33:43.486Z info: Redis ping successful
+2025-03-21T14:33:43.487Z info: Redis connection successful
+2025-03-21T14:33:43.489Z info: Server running in development mode on port 3001
+2025-03-21T14:33:43.490Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:33:43.490Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:34:12.965Z info: PostgreSQL client removed from pool
+2025-03-21T14:37:20.391Z info: Connecting to Redis:
+2025-03-21T14:37:21.939Z info: Configuring CORS middleware
+2025-03-21T14:37:21.941Z info: Configuring compression middleware
+2025-03-21T14:37:21.949Z info: Redis rate limiter initialized
+2025-03-21T14:37:21.950Z info: Redis rate limiter initialized
+2025-03-21T14:37:21.953Z info: Checking database connection...
+2025-03-21T14:37:22.171Z info: Redis connected successfully
+2025-03-21T14:37:22.198Z info: Connected to PostgreSQL database
+2025-03-21T14:37:22.202Z info: Checking Redis connection...
+2025-03-21T14:37:22.282Z info: Sequelize connection has been established successfully.
+2025-03-21T14:37:22.508Z info: Redis client is ready
+2025-03-21T14:37:22.707Z info: Redis ping successful
+2025-03-21T14:37:22.707Z info: Redis connection successful
+2025-03-21T14:37:22.709Z info: Server running in development mode on port 3001
+2025-03-21T14:37:22.710Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:37:22.710Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:37:33.215Z info: Connecting to Redis:
+2025-03-21T14:37:34.481Z info: Configuring CORS middleware
+2025-03-21T14:37:34.483Z info: Configuring compression middleware
+2025-03-21T14:37:34.487Z info: Redis rate limiter initialized
+2025-03-21T14:37:34.488Z info: Redis rate limiter initialized
+2025-03-21T14:37:34.489Z info: Checking database connection...
+2025-03-21T14:37:34.546Z info: Redis connected successfully
+2025-03-21T14:37:34.560Z info: Connected to PostgreSQL database
+2025-03-21T14:37:34.566Z info: Checking Redis connection...
+2025-03-21T14:37:34.632Z info: Sequelize connection has been established successfully.
+2025-03-21T14:37:34.857Z info: Redis client is ready
+2025-03-21T14:37:35.037Z info: Redis ping successful
+2025-03-21T14:37:35.038Z info: Redis connection successful
+2025-03-21T14:37:35.040Z info: Server running in development mode on port 3001
+2025-03-21T14:37:35.040Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:37:35.041Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:38:04.574Z info: PostgreSQL client removed from pool
+2025-03-21T14:38:52.052Z info: Connecting to Redis:
+2025-03-21T14:38:53.965Z info: Configuring CORS middleware
+2025-03-21T14:38:53.967Z info: Configuring compression middleware
+2025-03-21T14:38:53.972Z info: Redis rate limiter initialized
+2025-03-21T14:38:53.973Z info: Redis rate limiter initialized
+2025-03-21T14:38:53.975Z info: Checking database connection...
+2025-03-21T14:38:54.209Z info: Redis connected successfully
+2025-03-21T14:38:54.220Z info: Connected to PostgreSQL database
+2025-03-21T14:38:54.225Z info: Checking Redis connection...
+2025-03-21T14:38:54.371Z info: Sequelize connection has been established successfully.
+2025-03-21T14:38:54.542Z info: Redis client is ready
+2025-03-21T14:38:54.714Z info: Redis ping successful
+2025-03-21T14:38:54.716Z info: Redis connection successful
+2025-03-21T14:38:54.719Z info: Server running in development mode on port 3001
+2025-03-21T14:38:54.719Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:38:54.719Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:39:24.227Z info: PostgreSQL client removed from pool
+2025-03-21T14:40:30.699Z info: Connecting to Redis:
+2025-03-21T14:40:32.286Z info: Configuring CORS middleware
+2025-03-21T14:40:32.288Z info: Configuring compression middleware
+2025-03-21T14:40:32.292Z info: Redis rate limiter initialized
+2025-03-21T14:40:32.293Z info: Redis rate limiter initialized
+2025-03-21T14:40:32.295Z info: Checking database connection...
+2025-03-21T14:40:32.368Z info: Redis connected successfully
+2025-03-21T14:40:32.391Z info: Connected to PostgreSQL database
+2025-03-21T14:40:32.395Z info: Checking Redis connection...
+2025-03-21T14:40:32.485Z info: Sequelize connection has been established successfully.
+2025-03-21T14:40:32.685Z info: Redis client is ready
+2025-03-21T14:40:32.858Z info: Redis ping successful
+2025-03-21T14:40:32.859Z info: Redis connection successful
+2025-03-21T14:40:32.862Z info: Server running in development mode on port 3001
+2025-03-21T14:40:32.862Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:40:32.862Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:40:54.590Z info: Connecting to Redis:
+2025-03-21T14:40:56.166Z info: Configuring CORS middleware
+2025-03-21T14:40:56.167Z info: Configuring compression middleware
+2025-03-21T14:40:56.171Z info: Redis rate limiter initialized
+2025-03-21T14:40:56.172Z info: Redis rate limiter initialized
+2025-03-21T14:40:56.174Z info: Checking database connection...
+2025-03-21T14:40:56.234Z info: Redis connected successfully
+2025-03-21T14:40:56.253Z info: Connected to PostgreSQL database
+2025-03-21T14:40:56.257Z info: Checking Redis connection...
+2025-03-21T14:40:56.322Z info: Sequelize connection has been established successfully.
+2025-03-21T14:40:56.549Z info: Redis client is ready
+2025-03-21T14:40:56.722Z info: Redis ping successful
+2025-03-21T14:40:56.723Z info: Redis connection successful
+2025-03-21T14:40:56.725Z info: Server running in development mode on port 3001
+2025-03-21T14:40:56.725Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:40:56.725Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:41:26.265Z info: PostgreSQL client removed from pool
+2025-03-21T14:41:49.387Z info: Connecting to Redis:
+2025-03-21T14:41:50.483Z info: Configuring CORS middleware
+2025-03-21T14:41:50.484Z info: Configuring compression middleware
+2025-03-21T14:41:50.488Z info: Redis rate limiter initialized
+2025-03-21T14:41:50.490Z info: Redis rate limiter initialized
+2025-03-21T14:41:50.491Z info: Checking database connection...
+2025-03-21T14:41:50.543Z info: Redis connected successfully
+2025-03-21T14:41:50.560Z info: Connected to PostgreSQL database
+2025-03-21T14:41:50.564Z info: Checking Redis connection...
+2025-03-21T14:41:50.625Z info: Sequelize connection has been established successfully.
+2025-03-21T14:41:50.857Z info: Redis client is ready
+2025-03-21T14:41:51.030Z info: Redis ping successful
+2025-03-21T14:41:51.031Z info: Redis connection successful
+2025-03-21T14:41:51.034Z info: Server running in development mode on port 3001
+2025-03-21T14:41:51.035Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:41:51.035Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:42:20.578Z info: PostgreSQL client removed from pool
+2025-03-21T14:42:26.086Z info: Connecting to Redis:
+2025-03-21T14:42:27.317Z info: Configuring CORS middleware
+2025-03-21T14:42:27.318Z info: Configuring compression middleware
+2025-03-21T14:42:27.322Z info: Redis rate limiter initialized
+2025-03-21T14:42:27.323Z info: Redis rate limiter initialized
+2025-03-21T14:42:27.324Z info: Checking database connection...
+2025-03-21T14:42:27.379Z info: Redis connected successfully
+2025-03-21T14:42:27.461Z info: Sequelize connection has been established successfully.
+2025-03-21T14:42:27.484Z info: Connected to PostgreSQL database
+2025-03-21T14:42:27.486Z info: Checking Redis connection...
+2025-03-21T14:42:27.725Z info: Redis client is ready
+2025-03-21T14:42:27.898Z info: Redis ping successful
+2025-03-21T14:42:27.899Z info: Redis connection successful
+2025-03-21T14:42:27.901Z info: Server running in development mode on port 3001
+2025-03-21T14:42:27.901Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:42:27.902Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:42:39.128Z info: Connecting to Redis:
+2025-03-21T14:42:40.621Z info: Configuring CORS middleware
+2025-03-21T14:42:40.623Z info: Configuring compression middleware
+2025-03-21T14:42:40.628Z info: Redis rate limiter initialized
+2025-03-21T14:42:40.629Z info: Redis rate limiter initialized
+2025-03-21T14:42:40.631Z info: Checking database connection...
+2025-03-21T14:42:40.704Z info: Redis connected successfully
+2025-03-21T14:42:40.720Z info: Connected to PostgreSQL database
+2025-03-21T14:42:40.724Z info: Checking Redis connection...
+2025-03-21T14:42:40.795Z info: Sequelize connection has been established successfully.
+2025-03-21T14:42:41.067Z info: Redis client is ready
+2025-03-21T14:42:41.252Z info: Redis ping successful
+2025-03-21T14:42:41.253Z info: Redis connection successful
+2025-03-21T14:42:41.255Z info: Server running in development mode on port 3001
+2025-03-21T14:42:41.256Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:42:41.256Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:43:09.358Z info: Connecting to Redis:
+2025-03-21T14:43:10.745Z info: Configuring CORS middleware
+2025-03-21T14:43:10.747Z info: Configuring compression middleware
+2025-03-21T14:43:10.751Z info: Redis rate limiter initialized
+2025-03-21T14:43:10.752Z info: Redis rate limiter initialized
+2025-03-21T14:43:10.754Z info: Checking database connection...
+2025-03-21T14:43:10.824Z info: Connected to PostgreSQL database
+2025-03-21T14:43:10.829Z info: Checking Redis connection...
+2025-03-21T14:43:10.892Z info: Sequelize connection has been established successfully.
+2025-03-21T14:43:11.809Z info: Redis connected successfully
+2025-03-21T14:43:12.232Z info: Redis client is ready
+2025-03-21T14:43:12.412Z info: Redis ping successful
+2025-03-21T14:43:12.413Z info: Redis connection successful
+2025-03-21T14:43:12.417Z info: Server running in development mode on port 3001
+2025-03-21T14:43:12.435Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:43:12.439Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:43:33.765Z info: Connecting to Redis:
+2025-03-21T14:43:35.059Z info: Configuring CORS middleware
+2025-03-21T14:43:35.061Z info: Configuring compression middleware
+2025-03-21T14:43:35.065Z info: Redis rate limiter initialized
+2025-03-21T14:43:35.066Z info: Redis rate limiter initialized
+2025-03-21T14:43:35.068Z info: Checking database connection...
+2025-03-21T14:43:35.127Z info: Redis connected successfully
+2025-03-21T14:43:35.136Z info: Connected to PostgreSQL database
+2025-03-21T14:43:35.140Z info: Checking Redis connection...
+2025-03-21T14:43:35.204Z info: Sequelize connection has been established successfully.
+2025-03-21T14:43:35.444Z info: Redis client is ready
+2025-03-21T14:43:35.617Z info: Redis ping successful
+2025-03-21T14:43:35.617Z info: Redis connection successful
+2025-03-21T14:43:35.619Z info: Server running in development mode on port 3001
+2025-03-21T14:43:35.619Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:43:35.620Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:44:05.152Z info: PostgreSQL client removed from pool
+2025-03-21T14:44:50.381Z info: Connecting to Redis:
+2025-03-21T14:44:51.499Z info: Configuring CORS middleware
+2025-03-21T14:44:51.500Z info: Configuring compression middleware
+2025-03-21T14:44:51.504Z info: Redis rate limiter initialized
+2025-03-21T14:44:51.505Z info: Redis rate limiter initialized
+2025-03-21T14:44:51.507Z info: Checking database connection...
+2025-03-21T14:44:51.578Z info: Connected to PostgreSQL database
+2025-03-21T14:44:51.582Z info: Checking Redis connection...
+2025-03-21T14:44:51.630Z info: Sequelize connection has been established successfully.
+2025-03-21T14:44:51.664Z info: Redis connected successfully
+2025-03-21T14:44:51.981Z info: Redis client is ready
+2025-03-21T14:44:52.155Z info: Redis ping successful
+2025-03-21T14:44:52.156Z info: Redis connection successful
+2025-03-21T14:44:52.161Z info: Server running in development mode on port 3001
+2025-03-21T14:44:52.162Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:44:52.162Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:45:21.591Z info: PostgreSQL client removed from pool
+2025-03-21T14:46:11.301Z info: Connecting to Redis:
+2025-03-21T14:46:12.218Z info: Configuring CORS middleware
+2025-03-21T14:46:12.219Z info: Configuring compression middleware
+2025-03-21T14:46:12.223Z info: Redis rate limiter initialized
+2025-03-21T14:46:12.225Z info: Redis rate limiter initialized
+2025-03-21T14:46:12.226Z info: Checking database connection...
+2025-03-21T14:46:12.274Z info: Redis connected successfully
+2025-03-21T14:46:12.332Z info: Sequelize connection has been established successfully.
+2025-03-21T14:46:12.367Z info: Connected to PostgreSQL database
+2025-03-21T14:46:12.369Z info: Checking Redis connection...
+2025-03-21T14:46:12.599Z info: Redis client is ready
+2025-03-21T14:46:12.775Z info: Redis ping successful
+2025-03-21T14:46:12.776Z info: Redis connection successful
+2025-03-21T14:46:12.778Z info: Server running in development mode on port 3001
+2025-03-21T14:46:12.779Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:46:12.779Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:46:42.369Z info: PostgreSQL client removed from pool
+2025-03-21T14:47:15.766Z info: Connecting to Redis:
+2025-03-21T14:47:17.077Z info: Configuring CORS middleware
+2025-03-21T14:47:17.079Z info: Configuring compression middleware
+2025-03-21T14:47:17.082Z info: Redis rate limiter initialized
+2025-03-21T14:47:17.084Z info: Redis rate limiter initialized
+2025-03-21T14:47:17.085Z info: Checking database connection...
+2025-03-21T14:47:17.136Z info: Redis connected successfully
+2025-03-21T14:47:17.151Z info: Connected to PostgreSQL database
+2025-03-21T14:47:17.154Z info: Checking Redis connection...
+2025-03-21T14:47:17.304Z info: Sequelize connection has been established successfully.
+2025-03-21T14:47:17.450Z info: Redis client is ready
+2025-03-21T14:47:17.624Z info: Redis ping successful
+2025-03-21T14:47:17.625Z info: Redis connection successful
+2025-03-21T14:47:17.628Z info: Server running in development mode on port 3001
+2025-03-21T14:47:17.628Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:47:17.629Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:47:47.563Z info: Connecting to Redis:
+2025-03-21T14:47:48.919Z info: Configuring CORS middleware
+2025-03-21T14:47:48.921Z info: Configuring compression middleware
+2025-03-21T14:47:48.925Z info: Redis rate limiter initialized
+2025-03-21T14:47:48.927Z info: Redis rate limiter initialized
+2025-03-21T14:47:48.929Z info: Checking database connection...
+2025-03-21T14:47:48.991Z info: Redis connected successfully
+2025-03-21T14:47:49.010Z info: Connected to PostgreSQL database
+2025-03-21T14:47:49.015Z info: Checking Redis connection...
+2025-03-21T14:47:49.135Z info: Sequelize connection has been established successfully.
+2025-03-21T14:47:49.329Z info: Redis client is ready
+2025-03-21T14:47:49.528Z info: Redis ping successful
+2025-03-21T14:47:49.529Z info: Redis connection successful
+2025-03-21T14:47:49.531Z info: Server running in development mode on port 3001
+2025-03-21T14:47:49.532Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:47:49.532Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:48:19.021Z info: PostgreSQL client removed from pool
+2025-03-21T14:56:12.797Z info: Connecting to Redis:
+2025-03-21T14:56:14.104Z info: Configuring CORS middleware
+2025-03-21T14:56:14.106Z info: Configuring compression middleware
+2025-03-21T14:56:14.110Z info: Redis rate limiter initialized
+2025-03-21T14:56:14.111Z info: Redis rate limiter initialized
+2025-03-21T14:56:14.113Z info: Checking database connection...
+2025-03-21T14:56:14.359Z info: Redis connected successfully
+2025-03-21T14:56:14.391Z info: Connected to PostgreSQL database
+2025-03-21T14:56:14.396Z info: Checking Redis connection...
+2025-03-21T14:56:14.467Z info: Sequelize connection has been established successfully.
+2025-03-21T14:56:14.680Z info: Redis client is ready
+2025-03-21T14:56:14.856Z info: Redis ping successful
+2025-03-21T14:56:14.856Z info: Redis connection successful
+2025-03-21T14:56:14.859Z info: Server running in development mode on port 3001
+2025-03-21T14:56:14.859Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:56:14.859Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:56:30.765Z info: Connecting to Redis:
+2025-03-21T14:56:32.168Z info: Configuring CORS middleware
+2025-03-21T14:56:32.169Z info: Configuring compression middleware
+2025-03-21T14:56:32.173Z info: Redis rate limiter initialized
+2025-03-21T14:56:32.174Z info: Redis rate limiter initialized
+2025-03-21T14:56:32.176Z info: Checking database connection...
+2025-03-21T14:56:32.235Z info: Redis connected successfully
+2025-03-21T14:56:32.246Z info: Connected to PostgreSQL database
+2025-03-21T14:56:32.250Z info: Checking Redis connection...
+2025-03-21T14:56:32.308Z info: Sequelize connection has been established successfully.
+2025-03-21T14:56:32.595Z info: Redis client is ready
+2025-03-21T14:56:32.768Z info: Redis ping successful
+2025-03-21T14:56:32.769Z info: Redis connection successful
+2025-03-21T14:56:32.771Z info: Server running in development mode on port 3001
+2025-03-21T14:56:32.771Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:56:32.771Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:57:02.255Z info: PostgreSQL client removed from pool
+2025-03-21T14:58:33.541Z info: Connecting to Redis:
+2025-03-21T14:58:34.822Z info: Configuring CORS middleware
+2025-03-21T14:58:34.824Z info: Configuring compression middleware
+2025-03-21T14:58:34.828Z info: Redis rate limiter initialized
+2025-03-21T14:58:34.829Z info: Redis rate limiter initialized
+2025-03-21T14:58:34.831Z info: Checking database connection...
+2025-03-21T14:58:34.888Z info: Redis connected successfully
+2025-03-21T14:58:34.904Z info: Connected to PostgreSQL database
+2025-03-21T14:58:34.908Z info: Checking Redis connection...
+2025-03-21T14:58:34.972Z info: Sequelize connection has been established successfully.
+2025-03-21T14:58:35.220Z info: Redis client is ready
+2025-03-21T14:58:35.415Z info: Redis ping successful
+2025-03-21T14:58:35.416Z info: Redis connection successful
+2025-03-21T14:58:35.418Z info: Server running in development mode on port 3001
+2025-03-21T14:58:35.418Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:58:35.419Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:59:00.870Z info: Connecting to Redis:
+2025-03-21T14:59:02.200Z info: Configuring CORS middleware
+2025-03-21T14:59:02.202Z info: Configuring compression middleware
+2025-03-21T14:59:02.206Z info: Redis rate limiter initialized
+2025-03-21T14:59:02.207Z info: Redis rate limiter initialized
+2025-03-21T14:59:02.209Z info: Checking database connection...
+2025-03-21T14:59:02.270Z info: Redis connected successfully
+2025-03-21T14:59:02.279Z info: Connected to PostgreSQL database
+2025-03-21T14:59:02.283Z info: Checking Redis connection...
+2025-03-21T14:59:02.339Z info: Sequelize connection has been established successfully.
+2025-03-21T14:59:02.601Z info: Redis client is ready
+2025-03-21T14:59:02.776Z info: Redis ping successful
+2025-03-21T14:59:02.777Z info: Redis connection successful
+2025-03-21T14:59:02.779Z info: Server running in development mode on port 3001
+2025-03-21T14:59:02.779Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:59:02.779Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:59:18.878Z info: Connecting to Redis:
+2025-03-21T14:59:20.214Z info: Configuring CORS middleware
+2025-03-21T14:59:20.215Z info: Configuring compression middleware
+2025-03-21T14:59:20.219Z info: Redis rate limiter initialized
+2025-03-21T14:59:20.220Z info: Redis rate limiter initialized
+2025-03-21T14:59:20.222Z info: Checking database connection...
+2025-03-21T14:59:20.283Z info: Connected to PostgreSQL database
+2025-03-21T14:59:20.286Z info: Checking Redis connection...
+2025-03-21T14:59:20.344Z info: Sequelize connection has been established successfully.
+2025-03-21T14:59:21.288Z info: Redis connected successfully
+2025-03-21T14:59:21.601Z info: Redis client is ready
+2025-03-21T14:59:21.773Z info: Redis ping successful
+2025-03-21T14:59:21.774Z info: Redis connection successful
+2025-03-21T14:59:21.776Z info: Server running in development mode on port 3001
+2025-03-21T14:59:21.777Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T14:59:21.777Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T14:59:50.290Z info: PostgreSQL client removed from pool
+2025-03-21T15:00:02.748Z info: Connecting to Redis:
+2025-03-21T15:00:04.396Z info: Configuring CORS middleware
+2025-03-21T15:00:04.398Z info: Configuring compression middleware
+2025-03-21T15:00:04.402Z info: Redis rate limiter initialized
+2025-03-21T15:00:04.403Z info: Redis rate limiter initialized
+2025-03-21T15:00:04.405Z info: Checking database connection...
+2025-03-21T15:00:04.475Z info: Redis connected successfully
+2025-03-21T15:00:04.486Z info: Connected to PostgreSQL database
+2025-03-21T15:00:04.489Z info: Checking Redis connection...
+2025-03-21T15:00:04.548Z info: Sequelize connection has been established successfully.
+2025-03-21T15:00:04.789Z info: Redis client is ready
+2025-03-21T15:00:04.961Z info: Redis ping successful
+2025-03-21T15:00:04.961Z info: Redis connection successful
+2025-03-21T15:00:04.963Z info: Server running in development mode on port 3001
+2025-03-21T15:00:04.964Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T15:00:04.964Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T15:00:34.501Z info: PostgreSQL client removed from pool
+2025-03-21T15:03:04.558Z info: Connecting to Redis:
+2025-03-21T15:03:06.262Z info: Configuring CORS middleware
+2025-03-21T15:03:06.264Z info: Configuring compression middleware
+2025-03-21T15:03:06.267Z info: Redis rate limiter initialized
+2025-03-21T15:03:06.269Z info: Redis rate limiter initialized
+2025-03-21T15:03:06.271Z info: Checking database connection...
+2025-03-21T15:03:06.345Z info: Connected to PostgreSQL database
+2025-03-21T15:03:06.350Z info: Checking Redis connection...
+2025-03-21T15:03:06.426Z info: Sequelize connection has been established successfully.
+2025-03-21T15:03:06.452Z info: Redis connected successfully
+2025-03-21T15:03:06.770Z info: Redis client is ready
+2025-03-21T15:03:06.943Z info: Redis ping successful
+2025-03-21T15:03:06.944Z info: Redis connection successful
+2025-03-21T15:03:06.946Z info: Server running in development mode on port 3001
+2025-03-21T15:03:06.947Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T15:03:06.947Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T15:03:36.363Z info: PostgreSQL client removed from pool
+2025-03-21T15:04:16.913Z info: Connecting to Redis:
+2025-03-21T15:06:13.364Z info: Connecting to Redis:
+2025-03-21T15:11:20.937Z info: Connecting to Redis:
+2025-03-21T15:12:47.144Z info: Connecting to Redis:
+2025-03-21T15:18:20.812Z info: Connecting to Redis:
+2025-03-21T15:23:11.539Z info: Connecting to Redis:
+2025-03-21T15:24:23.695Z info: Connecting to Redis:
+2025-03-21T15:28:29.328Z info: Connecting to Redis:
+2025-03-21T15:29:13.262Z info: Connecting to Redis:
+2025-03-21T15:29:35.364Z info: Connecting to Redis:
+2025-03-21T15:36:07.184Z info: Connecting to Redis:
+2025-03-21T15:38:21.801Z info: Connecting to Redis:
+2025-03-21T15:40:42.613Z info: Connecting to Redis:
+2025-03-21T15:40:46.043Z info: Redis rate limiter initialized
+2025-03-21T15:40:48.100Z info: Configuring CORS middleware
+2025-03-21T15:40:48.101Z info: Configuring compression middleware
+2025-03-21T15:40:48.103Z info: Redis rate limiter initialized
+2025-03-21T15:40:48.104Z info: Redis rate limiter initialized
+2025-03-21T15:40:48.118Z info: Checking database connection...
+2025-03-21T15:40:48.179Z info: Connected to PostgreSQL database
+2025-03-21T15:40:48.182Z info: Checking Redis connection...
+2025-03-21T15:40:48.187Z info: Redis connected successfully
+2025-03-21T15:40:48.655Z info: Redis client is ready
+2025-03-21T15:40:48.827Z info: Redis ping successful
+2025-03-21T15:40:48.828Z info: Redis connection successful
+2025-03-21T15:40:48.831Z info: API Routes (48 total routes):
+2025-03-21T15:40:48.970Z info: Server running in development mode on port 3001
+2025-03-21T15:40:48.971Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T15:40:48.971Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T15:41:18.195Z info: PostgreSQL client removed from pool
+2025-03-21T15:42:05.914Z info: Connecting to Redis:
+2025-03-21T15:42:08.834Z info: Redis rate limiter initialized
+2025-03-21T15:42:08.979Z info: Configuring CORS middleware
+2025-03-21T15:42:08.981Z info: Configuring compression middleware
+2025-03-21T15:42:08.983Z info: Redis rate limiter initialized
+2025-03-21T15:42:08.984Z info: Redis rate limiter initialized
+2025-03-21T15:42:08.987Z info: Checking database connection...
+2025-03-21T15:42:09.059Z info: Connected to PostgreSQL database
+2025-03-21T15:42:09.063Z info: Setting up model associations...
+2025-03-21T15:42:09.068Z info: Model associations have been set up successfully
+2025-03-21T15:42:09.069Z info: Checking Redis connection...
+2025-03-21T15:42:09.140Z info: Redis connected successfully
+2025-03-21T15:42:09.615Z info: Redis client is ready
+2025-03-21T15:42:09.797Z info: Redis ping successful
+2025-03-21T15:42:09.797Z info: Redis connection successful
+2025-03-21T15:42:09.801Z info: API Routes (48 total routes):
+2025-03-21T15:42:09.844Z info: Server running in development mode on port 3001
+2025-03-21T15:42:09.844Z info: Health check available at http://localhost:3001/api/health
+2025-03-21T15:42:09.844Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-21T15:42:38.732Z info: REQUEST POST /api/v1/auth/register
+2025-03-21T15:42:38.916Z warn: Request validation failed
+2025-03-21T15:42:38.917Z error: API Error: Validation failed
+2025-03-21T15:42:38.918Z warn: RESPONSE 400 POST /register [186.05ms]
+2025-03-21T15:42:39.077Z info: PostgreSQL client removed from pool
+2025-03-21T15:44:16.799Z info: REQUEST POST /api/v1/auth/register
+2025-03-21T15:44:17.076Z warn: Request validation failed
+2025-03-21T15:44:17.076Z error: API Error: Validation failed
+2025-03-21T15:44:17.077Z warn: RESPONSE 400 POST /register [277.48ms]
+2025-03-21T15:45:46.835Z info: REQUEST POST /api/v1/auth/register
+2025-03-21T15:45:47.074Z warn: Request validation failed
+2025-03-21T15:45:47.074Z error: API Error: Validation failed
+2025-03-21T15:45:47.075Z warn: RESPONSE 400 POST /register [239.82ms]
+2025-03-21T15:45:56.651Z info: REQUEST POST /api/v1/auth/register
+2025-03-21T15:45:57.016Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at async AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:33:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-21T15:45:57.018Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:33:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-21T15:45:57.018Z error: API Error: Database error while finding user
+2025-03-21T15:45:57.018Z error: RESPONSE 500 POST /register [367.84ms]

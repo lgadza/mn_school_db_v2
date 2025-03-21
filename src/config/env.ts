@@ -58,6 +58,11 @@ const env = cleanEnv(process.env, {
   AWS_REGION: str({ default: "eu-central-1", desc: "AWS region" }),
   AWS_S3_BUCKET_NAME: str({ desc: "AWS S3 bucket name" }),
 
+  // App URL
+  APP_URL: str({
+    default: "http://localhost:3001",
+    desc: "Base URL for the application",
+  }),
   // Email
   SENDER_EMAIL: str({ desc: "Sender email address" }),
   PERSONAL_EMAIL: str({ desc: "Personal email address" }),

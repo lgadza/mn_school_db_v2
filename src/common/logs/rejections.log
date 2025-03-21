@@ -62,3 +62,176 @@
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Function.Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-21T15:04:18.481Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/service.ts[0m:[93m130[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'verifyPassword' does not exist on type 'UserInterface'.
+
+[7m130[0m     const isPasswordValid = await user.verifyPassword(password);
+[7m   [0m [91m                                       ~~~~~~~~~~~~~~[0m
+[96msrc/features/auth/service.ts[0m:[93m325[0m:[93m11[0m - [91merror[0m[90m TS2552: [0mCannot find name 'User'. Did you mean 'user'?
+
+[7m325[0m     await User.update(
+[7m   [0m [91m          ~~~~[0m
+
+  [96msrc/features/auth/service.ts[0m:[93m313[0m:[93m11[0m
+    [7m313[0m     const user = await this.repository.findUserByResetToken(token);
+    [7m   [0m [96m          ~~~~[0m
+    'user' is declared here.
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-21T15:06:24.450Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m65[0m:[93m3[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ id: { type: DataTypes.AbstractDataTypeConstructor; primaryKey: true; defaultValue: DataTypes.AbstractDataTypeConstructor; }; username: { type: DataTypes.StringDataType; allowNull: false; unique: true; }; ... 13 more ...; phoneNumber: { ...; }; }' is not assignable to parameter of type 'ModelAttributes<User, Optional<UserInterface, never>>'.
+  Property 'verifyPassword' is missing in type '{ id: { type: DataTypes.AbstractDataTypeConstructor; primaryKey: true; defaultValue: DataTypes.AbstractDataTypeConstructor; }; username: { type: DataTypes.StringDataType; allowNull: false; unique: true; }; ... 13 more ...; phoneNumber: { ...; }; }' but required in type 'ModelAttributes<User, Optional<UserInterface, never>>'.
+
+[7m 65[0m   {
+[7m   [0m [91m  ~[0m
+[7m 66[0m     id: {
+[7m   [0m [91m~~~~~~~~~[0m
+[7m...[0m 
+[7m139[0m     },
+[7m   [0m [91m~~~~~~[0m
+[7m140[0m   },
+[7m   [0m [91m~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m20[0m:[93m3[0m
+    [7m20[0m   verifyPassword(password: string): Promise<boolean>;
+    [7m  [0m [96m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'verifyPassword' is declared here.
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-21T15:11:23.918Z error: Error: Role.belongsToMany called with something that's not a subclass of Sequelize.Model
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:49:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\rbac\models\roles.model.ts:50:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:12:49.893Z error: Error: Role.belongsToMany called with something that's not a subclass of Sequelize.Model
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:49:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\rbac\models\roles.model.ts:50:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:18:24.388Z error: Error: Role.belongsToMany called with something that's not a subclass of Sequelize.Model
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:49:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\rbac\models\roles.model.ts:50:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:23:14.443Z error: Error: Role.belongsToMany called with something that's not a subclass of Sequelize.Model
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:49:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\rbac\models\roles.model.ts:50:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:24:29.383Z error: Error: Role.belongsToMany called with something that's not a subclass of Sequelize.Model
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:49:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\rbac\models\roles.model.ts:50:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:28:31.205Z error: Error: No Sequelize instance passed
+    at Function.init (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\rbac\models\roles.model.ts:22:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:29:14.149Z error: Error: No Sequelize instance passed
+    at Function.init (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\users\model.ts:66:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:29:36.449Z error: Error: No Sequelize instance passed
+    at Function.init (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\users\model.ts:66:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:36:08.442Z error: Error: No Sequelize instance passed
+    at Function.init (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:960:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\users\model.ts:66:6)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-21T15:38:22.375Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/config/sequelize.ts[0m:[93m13[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'name' does not exist on type '{ host: string; port: number; username: string; password: string; database: string; url: string; }'.
+
+[7m13[0m     appConfig.database.name,
+[7m  [0m [91m                       ~~~~[0m
+[96msrc/config/sequelize.ts[0m:[93m38[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'name' does not exist on type '{ host: string; port: number; username: string; password: string; database: string; url: string; }'.
+
+[7m38[0m     appConfig.database.name,
+[7m  [0m [91m                       ~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)

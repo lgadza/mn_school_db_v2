@@ -56,7 +56,7 @@ const appConfig = {
     port: env.PG_PORT,
     username: env.PG_USER,
     password: env.PG_PASSWORD,
-    database: env.PG_DB,
+    name: env.PG_DB,
     url:
       env.NODE_ENV === "production"
         ? env.PRODUCTION_DATABASE_URL
@@ -69,6 +69,9 @@ const appConfig = {
     jwtSecret: env.JWT_SECRET,
     jwtExpiresIn: env.JWT_EXPIRES_IN,
   },
+
+  // App URL
+  appUrl: env.APP_URL,
 };
 
 export default appConfig;

@@ -9,6 +9,10 @@ import { v4 as uuidv4 } from "uuid";
 import path from "path";
 import { appConfig } from "./config";
 import logger from "./common/utils/logging/logger";
+import swaggerUi from "swagger-ui-express";
+import listEndpoints from "express-list-endpoints";
+import Table from "cli-table3";
+import chalk from "chalk";
 
 // Import middleware
 import CorsMiddleware from "@/shared/middleware/cors";
@@ -25,6 +29,10 @@ import redis from "@/config/redis";
 
 // Import API routers
 import apiV1Router from "@/routes/v1";
+
+// Import the setupAssociations function
+import setupAssociations from "@/features/associations";
+import swaggerDocs from "./common/utils/docs/swagger";
 
 // Initialize Express app
 const app: Express = express();
@@ -52,6 +60,8 @@ CompressionMiddleware.configure(app);
 // 5. Request parsing
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
 app.use(
   cookieParser(
     appConfig.security.cookieSecret ||
@@ -170,12 +180,17 @@ const gracefulShutdown = async () => {
 // Start the server
 const startServer = async () => {
   try {
-    // Check database connection
+    // Initialize database connection first
     logger.info("Checking database connection...");
     const dbHealth = await db.healthCheck();
+
     if (!dbHealth) {
       logger.warn("Database connection check failed, but continuing startup");
     }
+
+    // Now that database is initialized, set up model associations
+    logger.info("Setting up model associations...");
+    setupAssociations();
 
     // Check Redis connection
     logger.info("Checking Redis connection...");
@@ -197,6 +212,64 @@ const startServer = async () => {
       );
       logger.info(`Metrics available at http://localhost:${PORT}/api/metrics`);
     });
+
+    // Log all registered endpoints using proper table formatting
+    try {
+      const endpoints = listEndpoints(app);
+      const totalRoutes = endpoints.reduce(
+        (count, route) => count + route.methods.length,
+        0
+      );
+
+      // Define the table with column headers
+      const table = new Table({
+        head: [
+          chalk.bold("METHOD"),
+          chalk.bold("PATH"),
+          chalk.bold("MIDDLEWARE"),
+        ],
+        colWidths: [15, 50, 50],
+        style: {
+          head: ["cyan"],
+          border: ["gray"],
+        },
+      });
+
+      // Add rows to the table
+      endpoints.forEach((route) => {
+        const path = route.path;
+        const middleware = route.middlewares.join(", ") || "none";
+
+        route.methods.forEach((method) => {
+          // Color the method based on type
+          let coloredMethod;
+          switch (method) {
+            case "GET":
+              coloredMethod = chalk.green(method);
+              break;
+            case "POST":
+              coloredMethod = chalk.yellow(method);
+              break;
+            case "PUT":
+              coloredMethod = chalk.blue(method);
+              break;
+            case "DELETE":
+              coloredMethod = chalk.red(method);
+              break;
+            default:
+              coloredMethod = chalk.gray(method);
+          }
+
+          table.push([coloredMethod, path, middleware]);
+        });
+      });
+
+      // Log the table with a header
+      logger.info(`API Routes (${totalRoutes} total routes):`);
+      console.log(table.toString());
+    } catch (error) {
+      logger.error("Failed to generate endpoints table", { error });
+    }
   } catch (error) {
     logger.error("Error starting server:", error);
     process.exit(1);
