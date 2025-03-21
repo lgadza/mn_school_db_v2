@@ -6,23 +6,15 @@ import ResponseUtil, {
 import { ValidationError as JoiValidationError } from "joi";
 import { QueryFailedError } from "typeorm";
 import DiagnosticsUtil from "@/common/utils/system/diagnosticsUtil";
+import {
+  ErrorCode,
+  ErrorSeverity,
+  ErrorMetadata,
+  createErrorMetadata,
+} from "./errorCodes";
 
-/**
- * Custom error codes
- */
-export enum ErrorCode {
-  VALIDATION_ERROR = "VALIDATION_ERROR",
-  UNAUTHORIZED = "UNAUTHORIZED",
-  FORBIDDEN = "FORBIDDEN",
-  NOT_FOUND = "NOT_FOUND",
-  CONFLICT = "CONFLICT",
-  INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR",
-  BAD_REQUEST = "BAD_REQUEST",
-  SERVICE_UNAVAILABLE = "SERVICE_UNAVAILABLE",
-  DATABASE_ERROR = "DATABASE_ERROR",
-  NETWORK_ERROR = "NETWORK_ERROR",
-  THIRD_PARTY_API_ERROR = "THIRD_PARTY_API_ERROR",
-}
+// Re-export error codes
+export { ErrorCode, ErrorSeverity, ErrorMetadata, createErrorMetadata };
 
 /**
  * Base application error class
@@ -31,23 +23,27 @@ export class AppError extends Error {
   public readonly name: string;
   public readonly httpCode: HttpStatus;
   public readonly isOperational: boolean;
-  public readonly code: ErrorCode;
-  public readonly context?: Record<string, any>;
+  public readonly metadata: ErrorMetadata;
 
   constructor(
     message: string,
     httpCode: HttpStatus = HttpStatus.INTERNAL_SERVER_ERROR,
-    code: ErrorCode = ErrorCode.INTERNAL_SERVER_ERROR,
+    code: ErrorCode = ErrorCode.GEN_INTERNAL_ERROR,
     isOperational: boolean = true,
-    context?: Record<string, any>
+    metadata?: Partial<ErrorMetadata>
   ) {
     super(message);
 
     this.name = this.constructor.name;
     this.httpCode = httpCode;
     this.isOperational = isOperational;
-    this.code = code;
-    this.context = context;
+    this.metadata = {
+      code,
+      timestamp: new Date().toISOString(),
+      severity: metadata?.severity || ErrorSeverity.ERROR,
+      source: metadata?.source || "server",
+      additionalInfo: metadata?.additionalInfo,
+    };
 
     Error.captureStackTrace(this, this.constructor);
   }
@@ -59,9 +55,12 @@ export class AppError extends Error {
 export class NotFoundError extends AppError {
   constructor(
     message: string = "Resource not found",
-    context?: Record<string, any>
+    metadata?: Partial<ErrorMetadata>
   ) {
-    super(message, HttpStatus.NOT_FOUND, ErrorCode.NOT_FOUND, true, context);
+    super(message, HttpStatus.NOT_FOUND, ErrorCode.RES_NOT_FOUND, true, {
+      ...metadata,
+      severity: ErrorSeverity.WARNING,
+    });
   }
 }
 
@@ -69,14 +68,15 @@ export class NotFoundError extends AppError {
  * 400 Bad Request error
  */
 export class BadRequestError extends AppError {
-  constructor(message: string = "Bad request", context?: Record<string, any>) {
-    super(
-      message,
-      HttpStatus.BAD_REQUEST,
-      ErrorCode.BAD_REQUEST,
-      true,
-      context
-    );
+  constructor(
+    message: string = "Bad request",
+    code: ErrorCode = ErrorCode.VAL_INVALID_FORMAT,
+    metadata?: Partial<ErrorMetadata>
+  ) {
+    super(message, HttpStatus.BAD_REQUEST, code, true, {
+      ...metadata,
+      severity: ErrorSeverity.WARNING,
+    });
   }
 }
 
@@ -84,14 +84,15 @@ export class BadRequestError extends AppError {
  * 401 Unauthorized error
  */
 export class UnauthorizedError extends AppError {
-  constructor(message: string = "Unauthorized", context?: Record<string, any>) {
-    super(
-      message,
-      HttpStatus.UNAUTHORIZED,
-      ErrorCode.UNAUTHORIZED,
-      true,
-      context
-    );
+  constructor(
+    message: string = "Unauthorized",
+    code: ErrorCode = ErrorCode.AUTH_MISSING_TOKEN,
+    metadata?: Partial<ErrorMetadata>
+  ) {
+    super(message, HttpStatus.UNAUTHORIZED, code, true, {
+      ...metadata,
+      severity: ErrorSeverity.WARNING,
+    });
   }
 }
 
@@ -99,8 +100,20 @@ export class UnauthorizedError extends AppError {
  * 403 Forbidden error
  */
 export class ForbiddenError extends AppError {
-  constructor(message: string = "Forbidden", context?: Record<string, any>) {
-    super(message, HttpStatus.FORBIDDEN, ErrorCode.FORBIDDEN, true, context);
+  constructor(
+    message: string = "Forbidden",
+    metadata?: Partial<ErrorMetadata>
+  ) {
+    super(
+      message,
+      HttpStatus.FORBIDDEN,
+      ErrorCode.AUTH_INSUFFICIENT_PERMISSIONS,
+      true,
+      {
+        ...metadata,
+        severity: ErrorSeverity.WARNING,
+      }
+    );
   }
 }
 
@@ -110,9 +123,12 @@ export class ForbiddenError extends AppError {
 export class ConflictError extends AppError {
   constructor(
     message: string = "Resource conflict",
-    context?: Record<string, any>
+    metadata?: Partial<ErrorMetadata>
   ) {
-    super(message, HttpStatus.CONFLICT, ErrorCode.CONFLICT, true, context);
+    super(message, HttpStatus.CONFLICT, ErrorCode.RES_CONFLICT, true, {
+      ...metadata,
+      severity: ErrorSeverity.WARNING,
+    });
   }
 }
 
@@ -122,14 +138,17 @@ export class ConflictError extends AppError {
 export class ValidationError extends AppError {
   constructor(
     message: string = "Validation error",
-    context?: Record<string, any>
+    metadata?: Partial<ErrorMetadata>
   ) {
     super(
       message,
       HttpStatus.UNPROCESSABLE_ENTITY,
-      ErrorCode.VALIDATION_ERROR,
+      ErrorCode.VAL_INVALID_FORMAT,
       true,
-      context
+      {
+        ...metadata,
+        severity: ErrorSeverity.WARNING,
+      }
     );
   }
 }
@@ -140,14 +159,17 @@ export class ValidationError extends AppError {
 export class DatabaseError extends AppError {
   constructor(
     message: string = "Database error",
-    context?: Record<string, any>
+    metadata?: Partial<ErrorMetadata>
   ) {
     super(
       message,
       HttpStatus.INTERNAL_SERVER_ERROR,
-      ErrorCode.DATABASE_ERROR,
+      ErrorCode.DB_QUERY_FAILED,
       true,
-      context
+      {
+        ...metadata,
+        severity: ErrorSeverity.ERROR,
+      }
     );
   }
 }
@@ -158,14 +180,17 @@ export class DatabaseError extends AppError {
 export class ServiceUnavailableError extends AppError {
   constructor(
     message: string = "Service unavailable",
-    context?: Record<string, any>
+    metadata?: Partial<ErrorMetadata>
   ) {
     super(
       message,
       HttpStatus.SERVICE_UNAVAILABLE,
-      ErrorCode.SERVICE_UNAVAILABLE,
+      ErrorCode.EXT_SERVICE_UNAVAILABLE,
       true,
-      context
+      {
+        ...metadata,
+        severity: ErrorSeverity.ERROR,
+      }
     );
   }
 }
@@ -211,7 +236,10 @@ export class ErrorHandlerUtil {
         res,
         error.message,
         error.httpCode,
-        { code: error.code, context: error.context },
+        {
+          code: error.metadata.code,
+          metadata: error.metadata,
+        },
         { requestId: req.headers["x-request-id"] as string }
       );
     } else if (error instanceof JoiValidationError) {
@@ -219,17 +247,23 @@ export class ErrorHandlerUtil {
       return ResponseUtil.sendBadRequest(
         res,
         "Validation failed",
-        error.details,
+        {
+          code: ErrorCode.VAL_INVALID_FORMAT,
+          details: error.details,
+        },
         { requestId: req.headers["x-request-id"] as string }
       );
     } else if (error instanceof QueryFailedError) {
       // Database query errors
-      const sanitizedMessage = this.sanitizeDatabaseError(error);
+      const sanitizedError = this.mapDatabaseError(error);
       return ResponseUtil.sendError(
         res,
-        sanitizedMessage,
-        HttpStatus.INTERNAL_SERVER_ERROR,
-        { code: ErrorCode.DATABASE_ERROR },
+        sanitizedError.message,
+        sanitizedError.httpCode,
+        {
+          code: sanitizedError.code,
+          originalCode: (error as any).code,
+        },
         { requestId: req.headers["x-request-id"] as string }
       );
     } else if (error.name === "SyntaxError") {
@@ -237,7 +271,7 @@ export class ErrorHandlerUtil {
       return ResponseUtil.sendBadRequest(
         res,
         "Invalid JSON in request body",
-        { code: ErrorCode.BAD_REQUEST },
+        { code: ErrorCode.VAL_INVALID_FORMAT }, // Changed from BAD_REQUEST to VAL_INVALID_FORMAT
         { requestId: req.headers["x-request-id"] as string }
       );
     }
@@ -247,7 +281,7 @@ export class ErrorHandlerUtil {
       res,
       "Internal Server Error",
       HttpStatus.INTERNAL_SERVER_ERROR,
-      { code: ErrorCode.INTERNAL_SERVER_ERROR },
+      { code: ErrorCode.GEN_INTERNAL_ERROR },
       { requestId: req.headers["x-request-id"] as string }
     );
   };
@@ -270,6 +304,49 @@ export class ErrorHandlerUtil {
       { requestId: req.headers["x-request-id"] as string }
     );
   };
+
+  /**
+   * Map database errors to appropriate AppErrors
+   */
+  private static mapDatabaseError(error: any): {
+    message: string;
+    httpCode: HttpStatus;
+    code: ErrorCode;
+  } {
+    // In production, don't leak database details
+    if (process.env.NODE_ENV === "production") {
+      if (error.code === "23505") {
+        return {
+          message: "A record with the same unique constraint already exists",
+          httpCode: HttpStatus.CONFLICT,
+          code: ErrorCode.DB_CONSTRAINT_VIOLATION,
+        };
+      } else if (error.code === "23503") {
+        return {
+          message: "Foreign key constraint violation",
+          httpCode: HttpStatus.BAD_REQUEST,
+          code: ErrorCode.DB_CONSTRAINT_VIOLATION,
+        };
+      } else if (error.code === "42P01") {
+        return {
+          message: "Database resource not found",
+          httpCode: HttpStatus.INTERNAL_SERVER_ERROR,
+          code: ErrorCode.DB_QUERY_FAILED,
+        };
+      }
+      return {
+        message: "A database error occurred",
+        httpCode: HttpStatus.INTERNAL_SERVER_ERROR,
+        code: ErrorCode.DB_QUERY_FAILED,
+      };
+    }
+
+    return {
+      message: error.message,
+      httpCode: HttpStatus.INTERNAL_SERVER_ERROR,
+      code: ErrorCode.DB_QUERY_FAILED,
+    };
+  }
 
   /**
    * Sanitize database error messages for production
@@ -323,7 +400,7 @@ export class ErrorHandlerUtil {
         res,
         "Service temporarily unavailable due to high load",
         HttpStatus.SERVICE_UNAVAILABLE,
-        { code: ErrorCode.SERVICE_UNAVAILABLE },
+        { code: ErrorCode.EXT_SERVICE_UNAVAILABLE },
         { requestId: req.headers["x-request-id"] as string }
       );
     }

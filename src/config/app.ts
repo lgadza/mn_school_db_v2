@@ -62,6 +62,13 @@ const appConfig = {
         ? env.PRODUCTION_DATABASE_URL
         : env.DATABASE_URL,
   },
+
+  // Security configuration
+  security: {
+    cookieSecret: env.COOKIE_SECRET,
+    jwtSecret: env.JWT_SECRET,
+    jwtExpiresIn: env.JWT_EXPIRES_IN,
+  },
 };
 
 export default appConfig;

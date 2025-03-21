@@ -38,6 +38,7 @@ const env = cleanEnv(process.env, {
   // Auth
   JWT_SECRET: str({ desc: "JWT secret key" }),
   JWT_EXPIRES_IN: str({ default: "24h", desc: "JWT expiration time" }),
+  COOKIE_SECRET: str({ desc: "Secret key for cookie signing" }),
 
   // Frontend URLs
   FE_DEV_URL: url({ desc: "Frontend development URL" }),
