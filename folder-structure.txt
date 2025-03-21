@@ -1,0 +1,77 @@
+MN School Database v2 Directory Structure
+=========================================
+
+├── .env
+├── .gitignore
+├── folder-structure.txt
+├── getFolderStructure.ts
+├── jest.config.ts
+├── package-lock.json
+├── package.json
+├── README.md
+├── src/
+│   ├── common/
+│   │   ├── utils/
+│   │   │   ├── auth/
+│   │   │   │   └── jwt.ts
+│   │   │   ├── date/
+│   │   │   │   └── dateTimeUtil.ts
+│   │   │   ├── db/
+│   │   │   │   └── dbConnect.ts
+│   │   │   ├── email/
+│   │   │   │   └── emailUtil.ts
+│   │   │   ├── errors/
+│   │   │   │   └── errorUtils.ts
+│   │   │   ├── file/
+│   │   │   │   └── fileUploadUtil.ts
+│   │   │   ├── logging/
+│   │   │   │   └── logger.ts
+│   │   │   ├── responses/
+│   │   │   │   └── responseUtil.ts
+│   │   │   ├── security/
+│   │   │   │   └── encryptionUtil.ts
+│   │   │   └── system/
+│   │   │       └── diagnosticsUtil.ts
+│   │   └── validators/
+│   │       └── validationUtil.ts
+│   ├── config/
+│   │   ├── app.ts
+│   │   ├── base.ts
+│   │   ├── database.ts
+│   │   ├── env.ts
+│   │   ├── index.ts
+│   │   ├── redis.ts
+│   │   └── s3Client.ts
+│   ├── features/
+│   │   ├── shared/
+│   │   │   └── common.model.ts
+│   │   └── users/
+│   ├── interfaces/
+│   │   └── index.d.ts
+│   ├── migrations/
+│   ├── seeders/
+│   ├── server.ts
+│   ├── shared/
+│   │   ├── middleware/
+│   │   │   ├── auth.ts
+│   │   │   ├── errorHandler.ts
+│   │   │   ├── helmet.ts
+│   │   │   ├── logger.ts
+│   │   │   ├── multer.ts
+│   │   │   └── rateLimiter.ts
+│   │   └── tests/
+│   │       ├── global.test.ts
+│   │       └── setup.ts
+│   ├── types/
+│   │   ├── express-list-endpoints.d.ts
+│   │   └── swagger-jsdoc.d.ts
+│   └── __tests__/
+│       ├── e2e/
+│       │   └── app.e2e.test.ts
+│       ├── integration/
+│       │   └── users.integration.test.ts
+│       └── unit/
+│           └── utils.test.ts
+├── tsconfig.json
+├── tsconfig.node.json
+└── us-east-1-bundle.pem
