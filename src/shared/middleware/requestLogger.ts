@@ -73,7 +73,9 @@ export class RequestLoggerMiddleware {
         query: req.query,
         ip: req.ip || req.connection.remoteAddress,
         userAgent: req.headers["user-agent"],
-        userId: req.user?.userId || "anonymous",
+        // userId: req.user?.userId || "anonymous",
+        userId: (req as any).user?.userId || "anonymous",
+
         timestamp: new Date().toISOString(),
       };
 

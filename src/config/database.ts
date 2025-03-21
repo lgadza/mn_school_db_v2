@@ -1,6 +1,6 @@
 import { Pool, PoolConfig, PoolClient } from "pg";
 import { parse } from "pg-connection-string";
-import logger from "@/common/utils/logging/logger";
+import logger from "../common/utils/logging/logger";
 import env from "./env";
 
 /**

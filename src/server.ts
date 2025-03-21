@@ -1,11 +1,14 @@
+// Register module aliases
+import "./register-aliases";
+
 import express, { Express, Request, Response } from "express";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import { v4 as uuidv4 } from "uuid";
 import path from "path";
-import { appConfig } from "@/config";
-import logger from "@/common/utils/logging/logger";
+import { appConfig } from "./config";
+import logger from "./common/utils/logging/logger";
 
 // Import middleware
 import CorsMiddleware from "@/shared/middleware/cors";
@@ -19,6 +22,9 @@ import DiagnosticsUtil from "@/common/utils/system/diagnosticsUtil";
 // Import database and Redis clients
 import db from "@/config/database";
 import redis from "@/config/redis";
+
+// Import API routers
+import apiV1Router from "@/routes/v1";
 
 // Initialize Express app
 const app: Express = express();
@@ -46,7 +52,6 @@ CompressionMiddleware.configure(app);
 // 5. Request parsing
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
-// Fix the cookieSecret TypeScript error - use optional chaining and provide a fallback
 app.use(
   cookieParser(
     appConfig.security.cookieSecret ||
@@ -73,7 +78,40 @@ app.use(RateLimiter.createAuthLimiter("/api/auth/login"));
 // 10. High load protection
 app.use(errorHandlerMiddleware.highLoadProtection);
 
-// 11. System diagnostics endpoints
+// -----------------------------------------------------------
+// API Routes with Versioning
+// -----------------------------------------------------------
+
+// Root route
+app.get("/", (req: Request, res: Response) => {
+  res.json({
+    message: "Minnesota School Database API",
+    version: process.env.npm_package_version || "1.0.0",
+    environment: appConfig.env,
+    documentation: "/api/docs",
+    availableVersions: {
+      v1: "/api/v1",
+      // future versions can be added here
+    },
+  });
+});
+
+// API version routes
+app.use("/api/v1", apiV1Router);
+
+// Catch-all route for undefined API versions
+app.all("/api/:version/*", (req: Request, res: Response) => {
+  res.status(404).json({
+    error: "API Version Not Found",
+    message: `API version '${req.params.version}' does not exist or is not supported`,
+    availableVersions: [
+      "v1",
+      // Add future versions here
+    ],
+  });
+});
+
+// System health endpoints (available across all versions)
 app.get("/api/health", async (req: Request, res: Response) => {
   const healthCheck = await DiagnosticsUtil.performHealthCheck();
   const statusCode =
@@ -90,35 +128,6 @@ app.get("/api/metrics", (req: Request, res: Response) => {
   const metrics = DiagnosticsUtil.getSystemMetrics();
   res.json(metrics);
 });
-
-// -----------------------------------------------------------
-// API Routes
-// -----------------------------------------------------------
-
-// Root route
-app.get("/", (req: Request, res: Response) => {
-  res.json({
-    message: "Minnesota School Database API",
-    version: process.env.npm_package_version || "1.0.0",
-    environment: appConfig.env,
-    documentation: "/api/docs",
-  });
-});
-
-// Demo route (protected by rate limiting)
-app.get("/api/demo", (req: Request, res: Response) => {
-  res.json({
-    message: "API is working correctly",
-    requestId: req.headers["x-request-id"],
-    timestamp: new Date().toISOString(),
-  });
-});
-
-// Import and register API routes
-// TODO: Import actual route modules and register them
-// app.use('/api/users', userRoutes);
-// app.use('/api/schools', schoolRoutes);
-// etc.
 
 // -----------------------------------------------------------
 // Error handling

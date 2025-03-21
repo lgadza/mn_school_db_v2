@@ -203,7 +203,9 @@ export class RateLimiter {
 
     return async (req: Request, res: Response, next: NextFunction) => {
       // Get user ID from request (added by auth middleware)
-      const userId = req.user?.userId || "anonymous";
+      // Use type assertion to help TypeScript recognize the user property
+      const userId = (req as any).user?.userId || "anonymous";
+      //   const userId = req.user?.userId || "anonymous";
 
       // Use both user ID and IP as the key to prevent abuse from multiple IPs
       const key = `${userId}:${this.getClientIp(req)}`;
@@ -291,7 +293,10 @@ export class RateLimiter {
     res: Response,
     limiterRes: RateLimiterRes
   ): void {
-    res.setHeader("X-RateLimit-Limit", (limiterRes.remainingPoints + limiterRes.consumedPoints).toString());
+    res.setHeader(
+      "X-RateLimit-Limit",
+      (limiterRes.remainingPoints + limiterRes.consumedPoints).toString()
+    );
     res.setHeader(
       "X-RateLimit-Remaining",
       limiterRes.remainingPoints.toString()

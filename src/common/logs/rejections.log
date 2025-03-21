@@ -1,0 +1,64 @@
+2025-03-21T14:03:03.444Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/rateLimiter.ts[0m:[93m206[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+[7m206[0m       const userId = req.user?.userId || "anonymous";
+[7m   [0m [91m                         ~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-21T14:05:59.392Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/rateLimiter.ts[0m:[93m206[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+[7m206[0m       const userId = req.user?.userId || "anonymous";
+[7m   [0m [91m                         ~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-21T14:06:40.953Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/rateLimiter.ts[0m:[93m206[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+[7m206[0m       const userId = req.user?.userId || "anonymous";
+[7m   [0m [91m                         ~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-21T14:08:22.455Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/requestLogger.ts[0m:[93m76[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+
+[7m76[0m         userId: req.user?.userId || "anonymous",
+[7m  [0m [91m                    ~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)

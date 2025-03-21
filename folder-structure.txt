@@ -21,6 +21,7 @@ MN School Database v2 Directory Structure
 │   │   │   ├── email/
 │   │   │   │   └── emailUtil.ts
 │   │   │   ├── errors/
+│   │   │   │   ├── errorCodes.ts
 │   │   │   │   └── errorUtils.ts
 │   │   │   ├── file/
 │   │   │   │   └── fileUploadUtil.ts
@@ -41,8 +42,18 @@ MN School Database v2 Directory Structure
 │   │   ├── env.ts
 │   │   ├── index.ts
 │   │   ├── redis.ts
-│   │   └── s3Client.ts
+│   │   ├── s3Client.ts
+│   │   └── sequelize.ts
 │   ├── features/
+│   │   ├── auth/
+│   │   ├── rbac/
+│   │   │   ├── controllers/
+│   │   │   ├── interfaces/
+│   │   │   │   └── index.ts
+│   │   │   ├── models/
+│   │   │   │   └── roles.model.ts
+│   │   │   ├── routes/
+│   │   │   └── services/
 │   │   ├── shared/
 │   │   │   └── common.model.ts
 │   │   └── users/
@@ -54,11 +65,13 @@ MN School Database v2 Directory Structure
 │   ├── shared/
 │   │   ├── middleware/
 │   │   │   ├── auth.ts
+│   │   │   ├── compression.ts
+│   │   │   ├── cors.ts
 │   │   │   ├── errorHandler.ts
 │   │   │   ├── helmet.ts
-│   │   │   ├── logger.ts
 │   │   │   ├── multer.ts
-│   │   │   └── rateLimiter.ts
+│   │   │   ├── rateLimiter.ts
+│   │   │   └── requestLogger.ts
 │   │   └── tests/
 │   │       ├── global.test.ts
 │   │       └── setup.ts

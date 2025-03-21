@@ -12,8 +12,15 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ]
   },
+  "files": [
+    "src/types/express/index.d.ts"
+  ],
   "include": [
     "src/**/*",
     "*.ts"
