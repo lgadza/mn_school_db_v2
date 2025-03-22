@@ -1,34 +1,39 @@
 import { Model, DataTypes, Optional } from "sequelize";
 import sequelize from "../../../config/sequelize";
+import { PermissionAction } from "../interfaces/roles.interface";
 
-// Role attributes interface
-export interface RoleAttributes {
+// Permission attributes interface
+export interface PermissionAttributes {
   id: string;
   name: string;
   description?: string;
+  resource: string;
+  action: PermissionAction;
   createdAt: Date;
   updatedAt: Date;
 }
 
-// Role creation attributes interface
-export interface RoleCreationAttributes
-  extends Optional<RoleAttributes, "id" | "createdAt" | "updatedAt"> {}
+// Permission creation attributes interface
+export interface PermissionCreationAttributes
+  extends Optional<PermissionAttributes, "id" | "createdAt" | "updatedAt"> {}
 
-// Role model
-class Role
-  extends Model<RoleAttributes, RoleCreationAttributes>
-  implements RoleAttributes
+// Permission model
+class Permission
+  extends Model<PermissionAttributes, PermissionCreationAttributes>
+  implements PermissionAttributes
 {
   public id!: string;
   public name!: string;
   public description?: string;
+  public resource!: string;
+  public action!: PermissionAction;
 
   // Timestamps
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
 
-Role.init(
+Permission.init(
   {
     id: {
       type: DataTypes.UUID,
@@ -43,6 +48,14 @@ Role.init(
     description: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    resource: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    action: {
+      type: DataTypes.ENUM(...Object.values(PermissionAction)),
+      allowNull: false,
     },
     createdAt: {
       type: DataTypes.DATE,
@@ -59,11 +72,11 @@ Role.init(
   },
   {
     sequelize,
-    tableName: "roles",
-    modelName: "Role",
+    tableName: "permissions", // Make sure this is lowercase
+    modelName: "Permission",
     timestamps: true,
     underscored: true, // Use snake_case for all fields
   }
 );
 
-export default Role;
+export default Permission;

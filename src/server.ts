@@ -25,14 +25,16 @@ import DiagnosticsUtil from "@/common/utils/system/diagnosticsUtil";
 
 // Import database and Redis clients
 import db from "@/config/database";
+import { QueryTypes } from "sequelize";
 import redis from "@/config/redis";
 
 // Import API routers
 import apiV1Router from "@/routes/v1";
 
 // Import the setupAssociations function
-import setupAssociations from "@/features/associations";
+import setupAssociations, { syncModelsInOrder } from "@/features/associations";
 import swaggerDocs from "./common/utils/docs/swagger";
+import { runSeeders } from "./seeders";
 
 // Initialize Express app
 const app: Express = express();
@@ -236,14 +238,69 @@ const startServer = async () => {
       );
     }
 
-    // Start the server
-    app.listen(PORT, () => {
-      logger.info(`Server running in ${appConfig.env} mode on port ${PORT}`);
-      logger.info(
-        `Health check available at http://localhost:${PORT}/api/health`
+    // Sync database more deliberately with error handling
+    logger.info("Syncing database models...");
+    try {
+      // First set up associations so foreign keys are properly defined
+      logger.info("Setting up model associations before sync...");
+      setupAssociations();
+
+      // Instead of using db.sync which syncs all models at once,
+      // use our custom function to sync models in order
+      await syncModelsInOrder({ force: false, alter: true });
+      logger.info("Database synced successfully");
+
+      // Verify tables exist before seeding
+      logger.info("Verifying database tables before seeding...");
+      const tableCheck = await db.sequelize.query(
+        "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'",
+        { type: QueryTypes.SELECT }
       );
-      logger.info(`Metrics available at http://localhost:${PORT}/api/metrics`);
-    });
+
+      const tables = tableCheck.map((t: any) => t.table_name);
+      logger.info(`Found database tables: ${tables.join(", ")}`);
+
+      if (tables.length === 0) {
+        logger.error(
+          "No tables were created during sync. This indicates a database configuration issue."
+        );
+      } else {
+        // Run seeders if tables exist
+        logger.info("Running seeders...");
+        await runSeeders();
+        logger.info("Seeding completed successfully");
+      }
+
+      // Start the server
+      app.listen(PORT, () => {
+        logger.info(`Server running on port ${PORT}`);
+      });
+    } catch (error) {
+      logger.error("Failed to sync database:", error);
+
+      // Log more detailed error information
+      if (error instanceof Error) {
+        logger.error(`Error details: ${error.message}`);
+        logger.error(`Error stack: ${error.stack}`);
+      }
+
+      // Try to get database connection info for debugging
+      try {
+        const connectionInfo = await db.sequelize.query(
+          "SELECT current_database(), current_user",
+          {
+            type: QueryTypes.SELECT,
+            plain: true,
+          }
+        );
+        logger.info("Database connection info:", connectionInfo);
+      } catch (err) {
+        logger.error("Could not get database connection info:", err);
+      }
+
+      // Exit with error
+      process.exit(1);
+    }
 
     // Log all registered endpoints using proper table formatting
     try {

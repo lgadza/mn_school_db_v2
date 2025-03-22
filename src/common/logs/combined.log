@@ -1479,3 +1479,1782 @@
 2025-03-22T03:38:39.603Z info: Redis connected successfully
 2025-03-22T03:38:40.065Z info: Redis client is ready
 2025-03-22T03:38:40.233Z info: Redis ping successful
+2025-03-22T04:41:47.362Z info: Connecting to Redis:
+2025-03-22T04:41:49.679Z info: Redis rate limiter initialized
+2025-03-22T04:41:49.812Z info: Configuring CORS middleware
+2025-03-22T04:41:49.813Z info: Configuring compression middleware
+2025-03-22T04:41:49.815Z info: Redis rate limiter initialized
+2025-03-22T04:41:49.816Z info: Redis rate limiter initialized
+2025-03-22T04:41:49.817Z info: Checking database connection...
+2025-03-22T04:41:49.914Z info: Redis connected successfully
+2025-03-22T04:41:49.952Z info: Database connection successful
+2025-03-22T04:41:49.953Z info: Setting up model associations...
+2025-03-22T04:41:55.601Z info: Model associations have been set up successfully
+2025-03-22T04:41:55.602Z info: Checking Redis connection...
+2025-03-22T04:41:55.605Z info: Redis client is ready
+2025-03-22T04:41:55.772Z info: Redis ping successful
+2025-03-22T04:41:55.773Z info: Redis connection successful
+2025-03-22T04:41:55.779Z info: API Routes (48 total routes):
+2025-03-22T04:41:55.811Z info: Server running in development mode on port 3001
+2025-03-22T04:41:55.812Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T04:41:55.813Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T04:42:01.359Z info: REQUEST POST /api/v1/auth/register
+2025-03-22T04:42:01.565Z warn: System under high load, rejecting request
+2025-03-22T04:42:01.565Z error: API Error: Service temporarily unavailable due to high load
+2025-03-22T04:42:01.567Z error: RESPONSE 503 POST /api/v1/auth/register [207.73ms]
+2025-03-22T04:51:23.295Z info: Connecting to Redis:
+2025-03-22T04:51:26.409Z info: Redis rate limiter initialized
+2025-03-22T04:51:26.708Z info: Configuring CORS middleware
+2025-03-22T04:51:26.709Z info: Configuring compression middleware
+2025-03-22T04:51:26.713Z info: Redis rate limiter initialized
+2025-03-22T04:51:26.715Z info: Redis rate limiter initialized
+2025-03-22T04:51:26.718Z info: Checking database connection...
+2025-03-22T04:51:26.825Z info: Redis connected successfully
+2025-03-22T04:51:26.898Z info: Database connection successful
+2025-03-22T04:51:26.899Z info: Setting up model associations...
+2025-03-22T04:51:26.906Z info: Model associations have been set up successfully
+2025-03-22T04:51:26.907Z info: Checking Redis connection...
+2025-03-22T04:51:27.315Z info: Redis client is ready
+2025-03-22T04:51:27.504Z info: Redis ping successful
+2025-03-22T04:51:27.505Z info: Redis connection successful
+2025-03-22T04:51:27.508Z info: API Routes (48 total routes):
+2025-03-22T04:51:27.543Z info: Database connected and synced
+2025-03-22T04:51:27.543Z info: Starting database seeding...
+2025-03-22T04:51:27.544Z info: Starting RBAC data seeding...
+2025-03-22T04:51:27.656Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:51:27.657Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:51:27.657Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:51:27.658Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:16.019Z info: Connecting to Redis:
+2025-03-22T04:53:19.017Z info: Redis rate limiter initialized
+2025-03-22T04:53:19.262Z info: Configuring CORS middleware
+2025-03-22T04:53:19.263Z info: Configuring compression middleware
+2025-03-22T04:53:19.268Z info: Redis rate limiter initialized
+2025-03-22T04:53:19.269Z info: Redis rate limiter initialized
+2025-03-22T04:53:19.271Z info: Checking database connection...
+2025-03-22T04:53:19.326Z info: Redis connected successfully
+2025-03-22T04:53:19.409Z info: Database connection successful
+2025-03-22T04:53:19.410Z info: Setting up model associations...
+2025-03-22T04:53:19.418Z info: Model associations have been set up successfully
+2025-03-22T04:53:19.418Z info: Checking Redis connection...
+2025-03-22T04:53:19.799Z info: Redis client is ready
+2025-03-22T04:53:19.967Z info: Redis ping successful
+2025-03-22T04:53:19.968Z info: Redis connection successful
+2025-03-22T04:53:19.970Z info: API Routes (48 total routes):
+2025-03-22T04:53:20.020Z info: Database connected and synced
+2025-03-22T04:53:20.020Z info: Starting database seeding...
+2025-03-22T04:53:20.021Z info: Starting RBAC data seeding...
+2025-03-22T04:53:20.021Z info: Checking existing roles...
+2025-03-22T04:53:20.149Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:20.150Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:20.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:20.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:54:07.469Z info: Connecting to Redis:
+2025-03-22T04:54:09.620Z info: Redis rate limiter initialized
+2025-03-22T04:54:09.821Z info: Configuring CORS middleware
+2025-03-22T04:54:09.822Z info: Configuring compression middleware
+2025-03-22T04:54:09.824Z info: Redis rate limiter initialized
+2025-03-22T04:54:09.825Z info: Redis rate limiter initialized
+2025-03-22T04:54:09.827Z info: Checking database connection...
+2025-03-22T04:54:10.067Z info: Redis connected successfully
+2025-03-22T04:54:10.234Z info: Database connection successful
+2025-03-22T04:54:10.235Z info: Setting up model associations...
+2025-03-22T04:54:10.236Z info: Setting up model associations...
+2025-03-22T04:54:10.240Z info: Model associations set up successfully
+2025-03-22T04:54:10.240Z info: Checking Redis connection...
+2025-03-22T04:54:10.379Z info: Redis client is ready
+2025-03-22T04:54:10.546Z info: Redis ping successful
+2025-03-22T04:54:10.548Z info: Redis connection successful
+2025-03-22T04:54:10.550Z info: API Routes (48 total routes):
+2025-03-22T04:54:10.581Z info: Database connected and synced
+2025-03-22T04:54:11.590Z info: Verifying database tables before seeding...
+2025-03-22T04:54:11.609Z info: Found tables: 
+2025-03-22T04:54:11.610Z info: Running seeders...
+2025-03-22T04:54:11.610Z info: Starting database seeding...
+2025-03-22T04:54:11.611Z info: Starting RBAC data seeding...
+2025-03-22T04:54:11.611Z info: Checking existing roles...
+2025-03-22T04:54:11.709Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:54:11.710Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:54:11.710Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:54:11.711Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:54:11.713Z info: Server running on port 3001
+2025-03-22T04:55:19.441Z info: Connecting to Redis:
+2025-03-22T04:55:21.767Z info: Redis rate limiter initialized
+2025-03-22T04:55:21.988Z info: Configuring CORS middleware
+2025-03-22T04:55:21.990Z info: Configuring compression middleware
+2025-03-22T04:55:21.993Z info: Redis rate limiter initialized
+2025-03-22T04:55:21.994Z info: Redis rate limiter initialized
+2025-03-22T04:55:21.996Z info: Checking database connection...
+2025-03-22T04:55:22.059Z info: Redis connected successfully
+2025-03-22T04:55:22.125Z info: Database connection successful
+2025-03-22T04:55:22.126Z info: Setting up model associations...
+2025-03-22T04:55:22.127Z info: Setting up model associations...
+2025-03-22T04:55:22.131Z info: Model associations set up successfully
+2025-03-22T04:55:22.132Z info: Checking Redis connection...
+2025-03-22T04:55:22.371Z info: Redis client is ready
+2025-03-22T04:55:22.548Z info: Redis ping successful
+2025-03-22T04:55:22.564Z info: Redis connection successful
+2025-03-22T04:55:22.568Z info: API Routes (48 total routes):
+2025-03-22T04:55:22.651Z info: Database connected and synced
+2025-03-22T04:55:23.656Z info: Verifying database tables before seeding...
+2025-03-22T04:55:23.658Z info: Found tables: 
+2025-03-22T04:55:23.659Z info: Running seeders...
+2025-03-22T04:55:23.659Z info: Starting database seeding...
+2025-03-22T04:55:23.660Z info: Starting RBAC data seeding...
+2025-03-22T04:55:23.660Z info: Checking existing roles...
+2025-03-22T04:55:23.665Z info: Found 0 existing roles
+2025-03-22T04:55:23.666Z info: Creating default roles...
+2025-03-22T04:55:23.679Z info: Default roles seeded successfully
+2025-03-22T04:55:23.680Z info: Checking existing permissions...
+2025-03-22T04:55:23.806Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.806Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.807Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.807Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.810Z info: Server running on port 3001
+2025-03-22T04:55:53.806Z info: Connecting to Redis:
+2025-03-22T04:55:56.459Z info: Redis rate limiter initialized
+2025-03-22T04:55:56.711Z info: Configuring CORS middleware
+2025-03-22T04:55:56.712Z info: Configuring compression middleware
+2025-03-22T04:55:56.715Z info: Redis rate limiter initialized
+2025-03-22T04:55:56.716Z info: Redis rate limiter initialized
+2025-03-22T04:55:56.718Z info: Checking database connection...
+2025-03-22T04:55:56.765Z info: Redis connected successfully
+2025-03-22T04:55:56.857Z info: Database connection successful
+2025-03-22T04:55:56.858Z info: Setting up model associations...
+2025-03-22T04:55:56.859Z info: Setting up model associations...
+2025-03-22T04:55:56.866Z info: Model associations set up successfully
+2025-03-22T04:55:56.866Z info: Checking Redis connection...
+2025-03-22T04:55:57.075Z info: Redis client is ready
+2025-03-22T04:55:57.260Z info: Redis ping successful
+2025-03-22T04:55:57.261Z info: Redis connection successful
+2025-03-22T04:55:57.263Z info: API Routes (48 total routes):
+2025-03-22T04:55:57.379Z info: Database connected and synced
+2025-03-22T04:56:05.546Z info: Connecting to Redis:
+2025-03-22T04:56:07.860Z info: Redis rate limiter initialized
+2025-03-22T04:56:08.092Z info: Configuring CORS middleware
+2025-03-22T04:56:08.093Z info: Configuring compression middleware
+2025-03-22T04:56:08.096Z info: Redis rate limiter initialized
+2025-03-22T04:56:08.097Z info: Redis rate limiter initialized
+2025-03-22T04:56:08.098Z info: Checking database connection...
+2025-03-22T04:56:08.147Z info: Redis connected successfully
+2025-03-22T04:56:08.220Z info: Database connection successful
+2025-03-22T04:56:08.221Z info: Setting up model associations...
+2025-03-22T04:56:08.222Z info: Setting up model associations...
+2025-03-22T04:56:08.226Z info: Model associations set up successfully
+2025-03-22T04:56:08.227Z info: Checking Redis connection...
+2025-03-22T04:56:08.632Z info: Redis client is ready
+2025-03-22T04:56:08.812Z info: Redis ping successful
+2025-03-22T04:56:08.812Z info: Redis connection successful
+2025-03-22T04:56:08.816Z info: API Routes (48 total routes):
+2025-03-22T04:56:08.902Z info: Database connected and synced
+2025-03-22T04:56:09.912Z info: Verifying database tables before seeding...
+2025-03-22T04:56:09.915Z info: Found tables: 
+2025-03-22T04:56:09.916Z info: Running seeders...
+2025-03-22T04:56:09.916Z info: Starting database seeding...
+2025-03-22T04:56:09.917Z info: Starting RBAC data seeding...
+2025-03-22T04:56:09.917Z info: Checking existing roles...
+2025-03-22T04:56:09.922Z info: Found 6 existing roles
+2025-03-22T04:56:09.923Z info: Roles already seeded, skipping...
+2025-03-22T04:56:09.923Z info: Checking existing permissions...
+2025-03-22T04:56:10.028Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:56:10.029Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:56:10.030Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:56:10.030Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:56:10.032Z info: Server running on port 3001
+2025-03-22T04:57:10.167Z info: Connecting to Redis:
+2025-03-22T04:57:12.670Z info: Redis rate limiter initialized
+2025-03-22T04:57:12.881Z info: Configuring CORS middleware
+2025-03-22T04:57:12.882Z info: Configuring compression middleware
+2025-03-22T04:57:12.885Z info: Redis rate limiter initialized
+2025-03-22T04:57:12.885Z info: Redis rate limiter initialized
+2025-03-22T04:57:12.887Z info: Checking database connection...
+2025-03-22T04:57:13.026Z info: Database connection successful
+2025-03-22T04:57:13.026Z info: Setting up model associations...
+2025-03-22T04:57:13.027Z info: Setting up model associations...
+2025-03-22T04:57:13.033Z info: Model associations set up successfully
+2025-03-22T04:57:13.033Z info: Checking Redis connection...
+2025-03-22T04:57:13.036Z info: Redis connected successfully
+2025-03-22T04:57:13.490Z info: Redis client is ready
+2025-03-22T04:57:13.673Z info: Redis ping successful
+2025-03-22T04:57:13.673Z info: Redis connection successful
+2025-03-22T04:57:13.675Z info: API Routes (48 total routes):
+2025-03-22T04:57:13.772Z info: Database connected and synced
+2025-03-22T04:57:14.785Z info: Verifying database tables before seeding...
+2025-03-22T04:57:14.788Z info: Found tables: 
+2025-03-22T04:57:14.789Z info: Running seeders...
+2025-03-22T04:57:14.789Z info: Starting database seeding...
+2025-03-22T04:57:14.790Z info: Starting RBAC data seeding...
+2025-03-22T04:57:14.790Z info: Checking existing roles...
+2025-03-22T04:57:14.796Z info: Found 6 existing roles
+2025-03-22T04:57:14.797Z info: Roles already seeded, skipping...
+2025-03-22T04:57:14.797Z info: Checking existing permissions...
+2025-03-22T04:57:14.999Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:15.000Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:15.000Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:15.001Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:15.003Z info: Server running on port 3001
+2025-03-22T06:59:04.355Z info: Connecting to Redis:
+2025-03-22T06:59:43.904Z info: Redis rate limiter initialized
+2025-03-22T06:59:46.395Z info: Configuring CORS middleware
+2025-03-22T06:59:46.397Z info: Configuring compression middleware
+2025-03-22T06:59:46.400Z info: Redis rate limiter initialized
+2025-03-22T06:59:46.401Z info: Redis rate limiter initialized
+2025-03-22T06:59:46.403Z info: Checking database connection...
+2025-03-22T06:59:46.793Z info: Redis connected successfully
+2025-03-22T06:59:46.972Z info: Database connection successful
+2025-03-22T06:59:46.973Z info: Setting up model associations...
+2025-03-22T06:59:46.974Z info: Setting up model associations...
+2025-03-22T06:59:46.982Z info: Model associations set up successfully
+2025-03-22T06:59:46.983Z info: Checking Redis connection...
+2025-03-22T06:59:47.289Z info: Redis client is ready
+2025-03-22T06:59:47.492Z info: Redis ping successful
+2025-03-22T06:59:47.493Z info: Redis connection successful
+2025-03-22T06:59:47.496Z info: API Routes (48 total routes):
+2025-03-22T06:59:47.677Z info: Database connected and synced
+2025-03-22T06:59:48.691Z info: Verifying database tables before seeding...
+2025-03-22T06:59:48.714Z info: Found tables: 
+2025-03-22T06:59:48.714Z info: Running seeders...
+2025-03-22T06:59:48.715Z info: Starting database seeding...
+2025-03-22T06:59:48.715Z info: Starting RBAC data seeding...
+2025-03-22T06:59:48.716Z info: Checking existing roles...
+2025-03-22T06:59:48.925Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T06:59:48.927Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T06:59:48.927Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T06:59:48.928Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T06:59:48.932Z info: Server running on port 3001
+2025-03-22T07:02:34.127Z info: Connecting to Redis:
+2025-03-22T07:02:36.886Z info: Redis rate limiter initialized
+2025-03-22T07:02:37.097Z info: Configuring CORS middleware
+2025-03-22T07:02:37.099Z info: Configuring compression middleware
+2025-03-22T07:02:37.102Z info: Redis rate limiter initialized
+2025-03-22T07:02:37.104Z info: Redis rate limiter initialized
+2025-03-22T07:02:37.106Z info: Checking database connection...
+2025-03-22T07:02:37.160Z info: Redis connected successfully
+2025-03-22T07:02:37.224Z info: Database connection successful
+2025-03-22T07:02:37.225Z info: Setting up model associations...
+2025-03-22T07:02:37.226Z info: Setting up model associations...
+2025-03-22T07:02:37.230Z info: Model associations set up successfully
+2025-03-22T07:02:37.230Z info: Checking Redis connection...
+2025-03-22T07:02:37.683Z info: Redis client is ready
+2025-03-22T07:02:37.987Z info: Redis ping successful
+2025-03-22T07:02:37.988Z info: Redis connection successful
+2025-03-22T07:02:37.992Z info: API Routes (48 total routes):
+2025-03-22T07:02:38.042Z info: Database connected and synced
+2025-03-22T07:02:39.045Z info: Verifying database tables before seeding...
+2025-03-22T07:02:39.061Z info: Found tables: 
+2025-03-22T07:02:39.061Z info: Running seeders...
+2025-03-22T07:02:39.062Z info: Starting database seeding...
+2025-03-22T07:02:39.062Z info: Starting RBAC data seeding...
+2025-03-22T07:02:39.063Z info: Checking existing roles...
+2025-03-22T07:02:39.294Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.294Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.296Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.296Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.298Z info: Server running on port 3001
+2025-03-22T07:06:27.090Z info: Connecting to Redis:
+2025-03-22T07:06:30.010Z info: Redis rate limiter initialized
+2025-03-22T07:06:30.264Z info: Configuring CORS middleware
+2025-03-22T07:06:30.265Z info: Configuring compression middleware
+2025-03-22T07:06:30.268Z info: Redis rate limiter initialized
+2025-03-22T07:06:30.269Z info: Redis rate limiter initialized
+2025-03-22T07:06:30.271Z info: Checking database connection...
+2025-03-22T07:06:30.418Z info: Database connection successful
+2025-03-22T07:06:30.419Z info: Setting up model associations...
+2025-03-22T07:06:30.420Z info: Setting up model associations...
+2025-03-22T07:06:30.425Z info: Model associations set up successfully
+2025-03-22T07:06:30.426Z info: Checking Redis connection...
+2025-03-22T07:06:30.428Z info: Redis connected successfully
+2025-03-22T07:06:30.950Z info: Redis client is ready
+2025-03-22T07:06:31.152Z info: Redis ping successful
+2025-03-22T07:06:31.153Z info: Redis connection successful
+2025-03-22T07:06:31.156Z info: API Routes (48 total routes):
+2025-03-22T07:06:31.211Z info: Database connected and synced
+2025-03-22T07:06:32.224Z info: Verifying database tables before seeding...
+2025-03-22T07:06:32.236Z info: Found tables: 
+2025-03-22T07:06:32.236Z info: Running seeders...
+2025-03-22T07:06:32.237Z info: Starting database seeding...
+2025-03-22T07:06:32.237Z info: Starting RBAC data seeding...
+2025-03-22T07:06:32.238Z info: Checking existing roles...
+2025-03-22T07:06:32.508Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.509Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.510Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.510Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.513Z info: Server running on port 3001
+2025-03-22T07:07:35.798Z info: Connecting to Redis:
+2025-03-22T07:07:38.970Z info: Redis rate limiter initialized
+2025-03-22T07:07:39.232Z info: Configuring CORS middleware
+2025-03-22T07:07:39.233Z info: Configuring compression middleware
+2025-03-22T07:07:39.236Z info: Redis rate limiter initialized
+2025-03-22T07:07:39.237Z info: Redis rate limiter initialized
+2025-03-22T07:07:39.239Z info: Checking database connection...
+2025-03-22T07:07:39.301Z info: Redis connected successfully
+2025-03-22T07:07:39.412Z info: Database connection successful
+2025-03-22T07:07:39.413Z info: Setting up model associations...
+2025-03-22T07:07:39.414Z info: Setting up model associations...
+2025-03-22T07:07:39.420Z info: Model associations set up successfully
+2025-03-22T07:07:39.421Z info: Checking Redis connection...
+2025-03-22T07:07:39.663Z info: Redis client is ready
+2025-03-22T07:07:39.868Z info: Redis ping successful
+2025-03-22T07:07:39.869Z info: Redis connection successful
+2025-03-22T07:07:39.873Z info: API Routes (48 total routes):
+2025-03-22T07:07:39.918Z info: Database connected and synced
+2025-03-22T07:07:40.928Z info: Verifying database tables before seeding...
+2025-03-22T07:07:40.941Z info: Found tables: 
+2025-03-22T07:07:40.941Z info: Running seeders...
+2025-03-22T07:07:40.942Z info: Starting database seeding...
+2025-03-22T07:07:40.943Z info: Starting RBAC data seeding...
+2025-03-22T07:07:40.944Z info: Checking existing roles...
+2025-03-22T07:07:41.095Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.095Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.096Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.096Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.099Z info: Server running on port 3001
+2025-03-22T07:09:12.852Z info: Connecting to Redis:
+2025-03-22T07:09:15.550Z info: Redis rate limiter initialized
+2025-03-22T07:09:15.744Z info: Configuring CORS middleware
+2025-03-22T07:09:15.745Z info: Configuring compression middleware
+2025-03-22T07:09:15.747Z info: Redis rate limiter initialized
+2025-03-22T07:09:15.748Z info: Redis rate limiter initialized
+2025-03-22T07:09:15.749Z info: Checking database connection...
+2025-03-22T07:09:15.803Z info: Redis connected successfully
+2025-03-22T07:09:15.945Z info: Database connection successful
+2025-03-22T07:09:15.945Z info: Setting up model associations...
+2025-03-22T07:09:15.946Z info: Setting up model associations...
+2025-03-22T07:09:15.949Z info: Model associations set up successfully
+2025-03-22T07:09:15.950Z info: Checking Redis connection...
+2025-03-22T07:09:16.324Z info: Redis client is ready
+2025-03-22T07:09:16.543Z info: Redis ping successful
+2025-03-22T07:09:16.544Z info: Redis connection successful
+2025-03-22T07:09:16.548Z info: API Routes (48 total routes):
+2025-03-22T07:09:16.584Z info: Database connected and synced
+2025-03-22T07:09:17.590Z info: Verifying database tables before seeding...
+2025-03-22T07:09:17.604Z info: Found tables: 
+2025-03-22T07:09:17.605Z info: Running seeders...
+2025-03-22T07:09:17.606Z info: Starting database seeding...
+2025-03-22T07:09:17.606Z info: Starting RBAC data seeding...
+2025-03-22T07:09:17.606Z info: Checking existing roles...
+2025-03-22T07:09:17.745Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.746Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.747Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.747Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.749Z info: Server running on port 3001
+2025-03-22T07:10:13.708Z info: Connecting to Redis:
+2025-03-22T07:10:16.159Z info: Redis rate limiter initialized
+2025-03-22T07:10:16.400Z info: Configuring CORS middleware
+2025-03-22T07:10:16.402Z info: Configuring compression middleware
+2025-03-22T07:10:16.405Z info: Redis rate limiter initialized
+2025-03-22T07:10:16.406Z info: Redis rate limiter initialized
+2025-03-22T07:10:16.408Z info: Checking database connection...
+2025-03-22T07:10:16.463Z info: Redis connected successfully
+2025-03-22T07:10:16.663Z info: Database connection successful
+2025-03-22T07:10:16.664Z info: Setting up model associations...
+2025-03-22T07:10:16.664Z info: Setting up model associations...
+2025-03-22T07:10:16.669Z info: Model associations set up successfully
+2025-03-22T07:10:16.670Z info: Checking Redis connection...
+2025-03-22T07:10:16.944Z info: Redis client is ready
+2025-03-22T07:10:17.160Z info: Redis ping successful
+2025-03-22T07:10:17.161Z info: Redis connection successful
+2025-03-22T07:10:17.166Z info: API Routes (48 total routes):
+2025-03-22T07:10:17.216Z info: Database connected and synced
+2025-03-22T07:10:18.222Z info: Verifying database tables before seeding...
+2025-03-22T07:10:18.232Z info: Found tables: 
+2025-03-22T07:10:18.233Z info: Running seeders...
+2025-03-22T07:10:18.233Z info: Starting database seeding...
+2025-03-22T07:10:18.233Z info: Starting RBAC data seeding...
+2025-03-22T07:10:18.234Z info: Checking existing roles...
+2025-03-22T07:10:18.366Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.367Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.367Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.368Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.370Z info: Server running on port 3001
+2025-03-22T07:11:24.491Z info: Connecting to Redis:
+2025-03-22T07:11:27.194Z info: Redis rate limiter initialized
+2025-03-22T07:11:27.414Z info: Configuring CORS middleware
+2025-03-22T07:11:27.415Z info: Configuring compression middleware
+2025-03-22T07:11:27.419Z info: Redis rate limiter initialized
+2025-03-22T07:11:27.420Z info: Redis rate limiter initialized
+2025-03-22T07:11:27.422Z info: Checking database connection...
+2025-03-22T07:11:27.681Z info: Redis connected successfully
+2025-03-22T07:11:27.837Z info: Database connection successful
+2025-03-22T07:11:27.838Z info: Setting up model associations...
+2025-03-22T07:11:27.838Z info: Setting up model associations...
+2025-03-22T07:11:27.846Z info: Model associations set up successfully
+2025-03-22T07:11:27.846Z info: Checking Redis connection...
+2025-03-22T07:11:28.052Z info: Redis client is ready
+2025-03-22T07:11:28.315Z info: Redis ping successful
+2025-03-22T07:11:28.316Z info: Redis connection successful
+2025-03-22T07:11:28.319Z info: API Routes (48 total routes):
+2025-03-22T07:11:28.364Z info: Database connected and synced
+2025-03-22T07:11:29.366Z info: Verifying database tables before seeding...
+2025-03-22T07:11:29.377Z info: Found tables: 
+2025-03-22T07:11:29.377Z info: Running seeders...
+2025-03-22T07:11:29.378Z info: Starting database seeding...
+2025-03-22T07:11:29.378Z info: Starting RBAC data seeding...
+2025-03-22T07:11:29.379Z info: Checking existing roles...
+2025-03-22T07:11:29.510Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.511Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.511Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.512Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.514Z info: Server running on port 3001
+2025-03-22T07:12:11.087Z info: Connecting to Redis:
+2025-03-22T07:12:13.686Z info: Redis rate limiter initialized
+2025-03-22T07:12:13.896Z info: Configuring CORS middleware
+2025-03-22T07:12:13.898Z info: Configuring compression middleware
+2025-03-22T07:12:13.900Z info: Redis rate limiter initialized
+2025-03-22T07:12:13.901Z info: Redis rate limiter initialized
+2025-03-22T07:12:13.902Z info: Checking database connection...
+2025-03-22T07:12:14.090Z info: Redis connected successfully
+2025-03-22T07:12:14.223Z info: Database connection successful
+2025-03-22T07:12:14.224Z info: Setting up model associations...
+2025-03-22T07:12:14.225Z info: Setting up model associations...
+2025-03-22T07:12:14.229Z info: Model associations set up successfully
+2025-03-22T07:12:14.230Z info: Checking Redis connection...
+2025-03-22T07:12:14.416Z info: Redis client is ready
+2025-03-22T07:12:14.670Z info: Redis ping successful
+2025-03-22T07:12:14.671Z info: Redis connection successful
+2025-03-22T07:12:14.674Z info: API Routes (48 total routes):
+2025-03-22T07:12:14.724Z info: Database connected and synced
+2025-03-22T07:12:15.741Z info: Verifying database tables before seeding...
+2025-03-22T07:12:15.752Z info: Found tables: 
+2025-03-22T07:12:15.753Z info: Running seeders...
+2025-03-22T07:12:15.754Z info: Starting database seeding...
+2025-03-22T07:12:15.754Z info: Starting RBAC data seeding...
+2025-03-22T07:12:15.755Z info: Checking existing roles...
+2025-03-22T07:12:15.900Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.901Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.902Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.902Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.905Z info: Server running on port 3001
+2025-03-22T07:19:35.583Z info: Connecting to Redis:
+2025-03-22T07:19:38.178Z info: Redis rate limiter initialized
+2025-03-22T07:19:38.425Z info: Configuring CORS middleware
+2025-03-22T07:19:38.426Z info: Configuring compression middleware
+2025-03-22T07:19:38.430Z info: Redis rate limiter initialized
+2025-03-22T07:19:38.431Z info: Redis rate limiter initialized
+2025-03-22T07:19:38.433Z info: Checking database connection...
+2025-03-22T07:19:38.594Z info: Redis connected successfully
+2025-03-22T07:19:38.621Z info: Database connection successful
+2025-03-22T07:19:38.622Z info: Setting up model associations...
+2025-03-22T07:19:38.623Z info: Setting up model associations...
+2025-03-22T07:19:38.628Z info: Model associations set up successfully
+2025-03-22T07:19:38.628Z info: Checking Redis connection...
+2025-03-22T07:19:39.019Z info: Redis client is ready
+2025-03-22T07:19:39.239Z info: Redis ping successful
+2025-03-22T07:19:39.240Z info: Redis connection successful
+2025-03-22T07:19:39.243Z info: API Routes (48 total routes):
+2025-03-22T07:19:39.301Z info: Database connected and synced
+2025-03-22T07:19:40.311Z info: Verifying database tables before seeding...
+2025-03-22T07:19:40.326Z info: Found tables: 
+2025-03-22T07:19:40.327Z info: Running seeders...
+2025-03-22T07:19:40.328Z info: Starting database seeding...
+2025-03-22T07:19:40.329Z info: Starting RBAC data seeding...
+2025-03-22T07:19:40.329Z info: Checking existing roles...
+2025-03-22T07:19:40.466Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.467Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.468Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.481Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.498Z info: Server running on port 3001
+2025-03-22T07:19:51.128Z info: Connecting to Redis:
+2025-03-22T07:19:54.005Z info: Redis rate limiter initialized
+2025-03-22T07:19:54.243Z info: Configuring CORS middleware
+2025-03-22T07:19:54.245Z info: Configuring compression middleware
+2025-03-22T07:19:54.248Z info: Redis rate limiter initialized
+2025-03-22T07:19:54.248Z info: Redis rate limiter initialized
+2025-03-22T07:19:54.251Z info: Checking database connection...
+2025-03-22T07:19:54.319Z info: Redis connected successfully
+2025-03-22T07:19:54.470Z info: Database connection successful
+2025-03-22T07:19:54.471Z info: Setting up model associations...
+2025-03-22T07:19:54.471Z info: Setting up model associations...
+2025-03-22T07:19:54.477Z info: Model associations set up successfully
+2025-03-22T07:19:54.477Z info: Checking Redis connection...
+2025-03-22T07:19:54.622Z info: Redis client is ready
+2025-03-22T07:19:54.888Z info: Redis ping successful
+2025-03-22T07:19:54.889Z info: Redis connection successful
+2025-03-22T07:19:54.892Z info: API Routes (48 total routes):
+2025-03-22T07:19:54.938Z info: Database connected and synced
+2025-03-22T07:19:55.956Z info: Verifying database tables before seeding...
+2025-03-22T07:19:55.973Z info: Found tables: 
+2025-03-22T07:19:55.974Z info: Running seeders...
+2025-03-22T07:19:55.975Z info: Starting database seeding...
+2025-03-22T07:19:55.975Z info: Starting RBAC data seeding...
+2025-03-22T07:19:55.976Z info: Checking existing roles...
+2025-03-22T07:19:56.112Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.113Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.114Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.114Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.117Z info: Server running on port 3001
+2025-03-22T07:20:35.204Z info: Connecting to Redis:
+2025-03-22T07:20:38.190Z info: Redis rate limiter initialized
+2025-03-22T07:20:38.477Z info: Configuring CORS middleware
+2025-03-22T07:20:38.480Z info: Configuring compression middleware
+2025-03-22T07:20:38.483Z info: Redis rate limiter initialized
+2025-03-22T07:20:38.484Z info: Redis rate limiter initialized
+2025-03-22T07:20:38.486Z info: Checking database connection...
+2025-03-22T07:20:38.541Z info: Redis connected successfully
+2025-03-22T07:20:38.753Z info: Database connection successful
+2025-03-22T07:20:38.754Z info: Setting up model associations...
+2025-03-22T07:20:38.754Z info: Setting up model associations...
+2025-03-22T07:20:38.759Z info: Model associations set up successfully
+2025-03-22T07:20:38.760Z info: Checking Redis connection...
+2025-03-22T07:20:39.128Z info: Redis client is ready
+2025-03-22T07:20:39.336Z info: Redis ping successful
+2025-03-22T07:20:39.337Z info: Redis connection successful
+2025-03-22T07:20:39.340Z info: API Routes (48 total routes):
+2025-03-22T07:20:39.399Z info: Database connected and synced
+2025-03-22T07:20:40.409Z info: Verifying database tables before seeding...
+2025-03-22T07:20:40.421Z info: Found tables: 
+2025-03-22T07:20:40.421Z info: Running seeders...
+2025-03-22T07:20:40.422Z info: Starting database seeding...
+2025-03-22T07:20:40.422Z info: Starting RBAC data seeding...
+2025-03-22T07:20:40.423Z info: Checking existing roles...
+2025-03-22T07:20:40.601Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.602Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.603Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.603Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.606Z info: Server running on port 3001
+2025-03-22T07:22:00.254Z info: Connecting to Redis:
+2025-03-22T07:22:02.497Z info: Redis rate limiter initialized
+2025-03-22T07:22:02.711Z info: Configuring CORS middleware
+2025-03-22T07:22:02.713Z info: Configuring compression middleware
+2025-03-22T07:22:02.716Z info: Redis rate limiter initialized
+2025-03-22T07:22:02.717Z info: Redis rate limiter initialized
+2025-03-22T07:22:02.720Z info: Checking database connection...
+2025-03-22T07:22:03.030Z info: Redis connected successfully
+2025-03-22T07:22:03.115Z info: Database connection successful
+2025-03-22T07:22:03.116Z info: Setting up model associations...
+2025-03-22T07:22:03.117Z info: Setting up model associations...
+2025-03-22T07:22:03.123Z info: Model associations set up successfully
+2025-03-22T07:22:03.124Z info: Checking Redis connection...
+2025-03-22T07:22:03.503Z info: Redis client is ready
+2025-03-22T07:22:03.707Z info: Redis ping successful
+2025-03-22T07:22:03.710Z info: Redis connection successful
+2025-03-22T07:22:03.716Z info: API Routes (48 total routes):
+2025-03-22T07:22:03.792Z info: Database connected and synced
+2025-03-22T07:22:04.801Z info: Verifying database tables before seeding...
+2025-03-22T07:22:04.812Z info: Found tables: 
+2025-03-22T07:22:04.813Z info: Running seeders...
+2025-03-22T07:22:04.813Z info: Starting database seeding...
+2025-03-22T07:22:04.813Z info: Starting RBAC data seeding...
+2025-03-22T07:22:04.814Z info: Checking existing roles...
+2025-03-22T07:22:05.149Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.150Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.153Z info: Server running on port 3001
+2025-03-22T07:24:13.947Z info: Connecting to Redis:
+2025-03-22T07:25:08.701Z info: Connecting to Redis:
+2025-03-22T07:26:51.325Z info: Connecting to Redis:
+2025-03-22T07:27:18.823Z info: Connecting to Redis:
+2025-03-22T07:27:42.605Z info: Connecting to Redis:
+2025-03-22T07:27:44.762Z info: Redis rate limiter initialized
+2025-03-22T07:27:44.965Z info: Configuring CORS middleware
+2025-03-22T07:27:44.966Z info: Configuring compression middleware
+2025-03-22T07:27:44.970Z info: Redis rate limiter initialized
+2025-03-22T07:27:44.970Z info: Redis rate limiter initialized
+2025-03-22T07:27:44.973Z info: Checking database connection...
+2025-03-22T07:27:45.042Z info: Redis connected successfully
+2025-03-22T07:27:45.220Z info: Database connection successful
+2025-03-22T07:27:45.221Z info: Setting up model associations...
+2025-03-22T07:27:45.221Z info: Setting up model associations...
+2025-03-22T07:27:45.230Z info: Model associations set up successfully
+2025-03-22T07:27:45.230Z info: Checking Redis connection...
+2025-03-22T07:27:45.361Z info: Redis client is ready
+2025-03-22T07:27:45.618Z info: Redis ping successful
+2025-03-22T07:27:45.619Z info: Redis connection successful
+2025-03-22T07:27:45.623Z info: API Routes (48 total routes):
+2025-03-22T07:27:45.661Z info: Database connected and synced
+2025-03-22T07:27:46.669Z info: Verifying database tables before seeding...
+2025-03-22T07:27:46.680Z info: Found tables: 
+2025-03-22T07:27:46.680Z info: Running seeders...
+2025-03-22T07:27:46.681Z info: Starting database seeding...
+2025-03-22T07:27:47.687Z info: Starting RBAC seeding...
+2025-03-22T07:27:47.688Z info: Checking existing roles...
+2025-03-22T07:27:47.809Z info: Roles table does not exist yet. Creating tables first...
+2025-03-22T07:27:47.870Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:92:7)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:216:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:16:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:27:47.871Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:92:7)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:216:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:16:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:27:47.871Z info: Database seeding completed
+2025-03-22T07:27:47.872Z info: Seeding completed successfully
+2025-03-22T07:27:47.876Z info: Server running on port 3001
+2025-03-22T07:32:14.811Z info: Connecting to Redis:
+2025-03-22T07:34:09.588Z info: Database configuration:
+2025-03-22T07:34:09.683Z info: Connecting to Redis:
+2025-03-22T07:34:12.105Z info: Redis rate limiter initialized
+2025-03-22T07:34:12.406Z info: Configuring CORS middleware
+2025-03-22T07:34:12.408Z info: Configuring compression middleware
+2025-03-22T07:34:12.411Z info: Redis rate limiter initialized
+2025-03-22T07:34:12.411Z info: Redis rate limiter initialized
+2025-03-22T07:34:12.413Z info: Checking database connection...
+2025-03-22T07:34:12.469Z info: Redis connected successfully
+2025-03-22T07:34:12.566Z info: Sequelize connection has been established successfully.
+2025-03-22T07:34:12.604Z info: Database connection successful
+2025-03-22T07:34:12.605Z info: Setting up model associations...
+2025-03-22T07:34:12.605Z info: Setting up model associations...
+2025-03-22T07:34:12.613Z info: Model associations set up successfully
+2025-03-22T07:34:12.613Z info: Checking Redis connection...
+2025-03-22T07:34:12.795Z info: Redis client is ready
+2025-03-22T07:34:13.099Z info: Redis ping successful
+2025-03-22T07:34:13.100Z info: Redis connection successful
+2025-03-22T07:34:13.100Z info: Syncing database models...
+2025-03-22T07:34:13.101Z info: Syncing database with options: {"force":false,"alter":true}
+2025-03-22T07:34:13.162Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:34:13.163Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:34:13.164Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:34:13.164Z error: Error details: relation "schools" does not exist
+2025-03-22T07:34:13.165Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:34:13.168Z info: Database connection info:
+2025-03-22T07:35:33.319Z info: Database configuration:
+2025-03-22T07:35:33.414Z info: Connecting to Redis:
+2025-03-22T07:35:35.965Z info: Redis rate limiter initialized
+2025-03-22T07:35:36.233Z info: Configuring CORS middleware
+2025-03-22T07:35:36.234Z info: Configuring compression middleware
+2025-03-22T07:35:36.238Z info: Redis rate limiter initialized
+2025-03-22T07:35:36.244Z info: Redis rate limiter initialized
+2025-03-22T07:35:36.246Z info: Checking database connection...
+2025-03-22T07:35:36.328Z info: Redis connected successfully
+2025-03-22T07:35:36.447Z info: Sequelize connection has been established successfully.
+2025-03-22T07:35:36.504Z info: Database connection successful
+2025-03-22T07:35:36.504Z info: Setting up model associations...
+2025-03-22T07:35:36.505Z info: Setting up model associations...
+2025-03-22T07:35:36.508Z info: Model associations set up successfully
+2025-03-22T07:35:36.509Z info: Checking Redis connection...
+2025-03-22T07:35:36.633Z info: Redis client is ready
+2025-03-22T07:35:36.809Z info: Redis ping successful
+2025-03-22T07:35:36.823Z info: Redis connection successful
+2025-03-22T07:35:36.824Z info: Syncing database models...
+2025-03-22T07:35:36.824Z info: Syncing database with options: {"force":false,"alter":true}
+2025-03-22T07:35:36.890Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:35:36.891Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:35:36.892Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:35:36.892Z error: Error details: relation "schools" does not exist
+2025-03-22T07:35:36.893Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:35:36.894Z info: Database connection info:
+2025-03-22T07:36:16.561Z info: Database configuration:
+2025-03-22T07:36:16.687Z info: Connecting to Redis:
+2025-03-22T07:36:19.270Z info: Redis rate limiter initialized
+2025-03-22T07:36:19.530Z info: Configuring CORS middleware
+2025-03-22T07:36:19.531Z info: Configuring compression middleware
+2025-03-22T07:36:19.534Z info: Redis rate limiter initialized
+2025-03-22T07:36:19.536Z info: Redis rate limiter initialized
+2025-03-22T07:36:19.539Z info: Checking database connection...
+2025-03-22T07:36:19.611Z info: Redis connected successfully
+2025-03-22T07:36:19.708Z info: Sequelize connection has been established successfully.
+2025-03-22T07:36:19.750Z info: Database connection successful
+2025-03-22T07:36:19.751Z info: Setting up model associations...
+2025-03-22T07:36:19.751Z info: Setting up model associations...
+2025-03-22T07:36:19.759Z info: Model associations set up successfully
+2025-03-22T07:36:19.759Z info: Checking Redis connection...
+2025-03-22T07:36:19.973Z info: Redis client is ready
+2025-03-22T07:36:20.280Z info: Redis ping successful
+2025-03-22T07:36:20.281Z info: Redis connection successful
+2025-03-22T07:36:20.281Z info: Syncing database models...
+2025-03-22T07:36:20.282Z info: Syncing database with options: {"force":false,"alter":true}
+2025-03-22T07:36:20.342Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:20.343Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:36:20.344Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:20.344Z error: Error details: relation "schools" does not exist
+2025-03-22T07:36:20.345Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:20.347Z info: Database connection info:
+2025-03-22T07:36:37.949Z info: Database configuration:
+2025-03-22T07:36:38.038Z info: Connecting to Redis:
+2025-03-22T07:36:40.602Z info: Redis rate limiter initialized
+2025-03-22T07:36:40.839Z info: Configuring CORS middleware
+2025-03-22T07:36:40.840Z info: Configuring compression middleware
+2025-03-22T07:36:40.843Z info: Redis rate limiter initialized
+2025-03-22T07:36:40.844Z info: Redis rate limiter initialized
+2025-03-22T07:36:40.845Z info: Checking database connection...
+2025-03-22T07:36:40.919Z info: Redis connected successfully
+2025-03-22T07:36:40.979Z info: Sequelize connection has been established successfully.
+2025-03-22T07:36:41.015Z info: Database connection successful
+2025-03-22T07:36:41.016Z info: Setting up model associations...
+2025-03-22T07:36:41.016Z info: Setting up model associations...
+2025-03-22T07:36:41.021Z info: Model associations set up successfully
+2025-03-22T07:36:41.021Z info: Checking Redis connection...
+2025-03-22T07:36:41.282Z info: Redis client is ready
+2025-03-22T07:36:41.475Z info: Redis ping successful
+2025-03-22T07:36:41.476Z info: Redis connection successful
+2025-03-22T07:36:41.477Z info: Syncing database models...
+2025-03-22T07:36:41.477Z info: Syncing database with options: {"force":false,"alter":true}
+2025-03-22T07:36:41.532Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:41.533Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:36:41.534Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:41.534Z error: Error details: relation "schools" does not exist
+2025-03-22T07:36:41.535Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:54.054Z info: Database configuration:
+2025-03-22T07:36:54.155Z info: Connecting to Redis:
+2025-03-22T07:36:56.403Z info: Redis rate limiter initialized
+2025-03-22T07:36:56.636Z info: Configuring CORS middleware
+2025-03-22T07:36:56.637Z info: Configuring compression middleware
+2025-03-22T07:36:56.639Z info: Redis rate limiter initialized
+2025-03-22T07:36:56.640Z info: Redis rate limiter initialized
+2025-03-22T07:36:56.641Z info: Checking database connection...
+2025-03-22T07:36:56.703Z info: Redis connected successfully
+2025-03-22T07:36:56.849Z info: Sequelize connection has been established successfully.
+2025-03-22T07:36:56.893Z info: Database connection successful
+2025-03-22T07:36:56.894Z info: Setting up model associations...
+2025-03-22T07:36:56.894Z info: Setting up model associations...
+2025-03-22T07:36:56.898Z info: Model associations set up successfully
+2025-03-22T07:36:56.899Z info: Checking Redis connection...
+2025-03-22T07:36:57.144Z info: Redis client is ready
+2025-03-22T07:36:57.459Z info: Redis ping successful
+2025-03-22T07:36:57.460Z info: Redis connection successful
+2025-03-22T07:36:57.461Z info: Syncing database models...
+2025-03-22T07:36:57.461Z info: Setting up model associations before sync...
+2025-03-22T07:36:57.462Z info: Setting up model associations...
+2025-03-22T07:36:57.465Z info: Model associations set up successfully
+2025-03-22T07:36:57.465Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-22T07:36:57.466Z info: Syncing model: Role
+2025-03-22T07:36:57.519Z info: Successfully synced model: Role
+2025-03-22T07:36:57.520Z info: Syncing model: Permission
+2025-03-22T07:36:57.544Z info: Successfully synced model: Permission
+2025-03-22T07:36:57.545Z info: Syncing model: School
+2025-03-22T07:36:57.560Z info: Successfully synced model: School
+2025-03-22T07:36:57.561Z info: Syncing model: User
+2025-03-22T07:36:57.587Z info: Successfully synced model: User
+2025-03-22T07:36:57.588Z info: Syncing model: RolePermission
+2025-03-22T07:36:57.632Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:84:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T07:36:57.633Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:84:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T07:36:57.633Z error: Error details: column "roleId" does not exist
+2025-03-22T07:36:57.633Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:84:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T07:39:15.181Z info: Database configuration:
+2025-03-22T07:39:15.273Z info: Connecting to Redis:
+2025-03-22T07:39:17.561Z info: Redis rate limiter initialized
+2025-03-22T07:39:17.801Z info: Configuring CORS middleware
+2025-03-22T07:39:17.803Z info: Configuring compression middleware
+2025-03-22T07:39:17.806Z info: Redis rate limiter initialized
+2025-03-22T07:39:17.806Z info: Redis rate limiter initialized
+2025-03-22T07:39:17.808Z info: Checking database connection...
+2025-03-22T07:39:17.957Z info: Redis connected successfully
+2025-03-22T07:39:17.959Z info: Sequelize connection has been established successfully.
+2025-03-22T07:39:18.000Z info: Database connection successful
+2025-03-22T07:39:18.000Z info: Setting up model associations...
+2025-03-22T07:39:18.000Z info: Setting up model associations...
+2025-03-22T07:39:18.007Z info: Model associations set up successfully
+2025-03-22T07:39:18.008Z info: Checking Redis connection...
+2025-03-22T07:39:18.353Z info: Redis client is ready
+2025-03-22T07:39:18.660Z info: Redis ping successful
+2025-03-22T07:39:18.661Z info: Redis connection successful
+2025-03-22T07:39:18.661Z info: Syncing database models...
+2025-03-22T07:39:18.662Z info: Setting up model associations before sync...
+2025-03-22T07:39:18.662Z info: Setting up model associations...
+2025-03-22T07:39:18.665Z info: Model associations set up successfully
+2025-03-22T07:39:18.665Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-22T07:39:18.666Z info: Syncing model: Role
+2025-03-22T07:39:18.763Z info: Successfully synced model: Role
+2025-03-22T07:39:18.764Z info: Syncing model: Permission
+2025-03-22T07:39:18.793Z info: Successfully synced model: Permission
+2025-03-22T07:39:18.793Z info: Syncing model: School
+2025-03-22T07:39:18.820Z info: Successfully synced model: School
+2025-03-22T07:39:18.820Z info: Syncing model: User
+2025-03-22T07:39:18.869Z info: Successfully synced model: User
+2025-03-22T07:39:18.869Z info: Syncing model: RolePermission
+2025-03-22T07:39:18.898Z info: Successfully synced model: RolePermission
+2025-03-22T07:39:18.899Z info: Syncing model: UserRole
+2025-03-22T07:39:18.913Z info: Successfully synced model: UserRole
+2025-03-22T07:39:18.914Z info: All models synced successfully
+2025-03-22T07:39:18.914Z info: Database synced successfully
+2025-03-22T07:39:18.914Z info: Verifying database tables before seeding...
+2025-03-22T07:39:18.916Z info: Found database tables: , , , , , , 
+2025-03-22T07:39:18.916Z info: Running seeders...
+2025-03-22T07:39:18.917Z info: Starting database seeding...
+2025-03-22T07:39:19.927Z info: Starting RBAC seeding...
+2025-03-22T07:39:19.932Z info: Checking existing roles...
+2025-03-22T07:39:19.939Z info: No roles found. Seeding default roles...
+2025-03-22T07:39:19.961Z info: Default roles seeded successfully
+2025-03-22T07:39:19.966Z info: No permissions found. Seeding default permissions...
+2025-03-22T07:39:19.972Z info: Default permissions seeded successfully
+2025-03-22T07:39:19.976Z info: No role-permission mappings found. Creating default mappings...
+2025-03-22T07:39:19.982Z info: Role-permission mappings created successfully
+2025-03-22T07:39:19.983Z info: RBAC seeding completed successfully
+2025-03-22T07:39:19.983Z info: Database seeding completed
+2025-03-22T07:39:19.983Z info: Seeding completed successfully
+2025-03-22T07:39:19.989Z info: API Routes (48 total routes):
+2025-03-22T07:39:20.029Z info: Server running on port 3001
+2025-03-22T07:40:31.822Z warn: Route not found: GET /favicon.ico
+2025-03-22T07:40:31.824Z error: API Error: Route not found: GET /favicon.ico
+2025-03-22T07:48:13.902Z info: Database configuration:
+2025-03-22T07:48:14.043Z info: Connecting to Redis:
+2025-03-22T07:48:16.739Z info: Redis rate limiter initialized
+2025-03-22T07:48:17.078Z info: Configuring CORS middleware
+2025-03-22T07:48:17.079Z info: Configuring compression middleware
+2025-03-22T07:48:17.082Z info: Redis rate limiter initialized
+2025-03-22T07:48:17.083Z info: Redis rate limiter initialized
+2025-03-22T07:48:17.084Z info: Checking database connection...
+2025-03-22T07:48:17.232Z info: Redis connected successfully
+2025-03-22T07:48:17.249Z info: Sequelize connection has been established successfully.
+2025-03-22T07:48:17.366Z info: Database connection successful
+2025-03-22T07:48:17.367Z info: Setting up model associations...
+2025-03-22T07:48:17.367Z info: Setting up model associations...
+2025-03-22T07:48:17.374Z info: Model associations set up successfully
+2025-03-22T07:48:17.374Z info: Checking Redis connection...
+2025-03-22T07:48:17.610Z info: Redis client is ready
+2025-03-22T07:48:17.895Z info: Redis ping successful
+2025-03-22T07:48:17.896Z info: Redis connection successful
+2025-03-22T07:48:17.897Z info: Syncing database models...
+2025-03-22T07:48:17.897Z info: Verifying database schema...
+2025-03-22T07:48:17.910Z info: Found database tables: , , , , , , 
+2025-03-22T07:48:51.815Z info: Database configuration:
+2025-03-22T07:48:51.990Z info: Connecting to Redis:
+2025-03-22T07:48:54.912Z info: Redis rate limiter initialized
+2025-03-22T07:48:55.323Z info: Configuring CORS middleware
+2025-03-22T07:48:55.324Z info: Configuring compression middleware
+2025-03-22T07:48:55.328Z info: Redis rate limiter initialized
+2025-03-22T07:48:55.328Z info: Redis rate limiter initialized
+2025-03-22T07:48:55.330Z info: Checking database connection...
+2025-03-22T07:48:55.453Z info: Redis connected successfully
+2025-03-22T07:48:55.558Z info: Sequelize connection has been established successfully.
+2025-03-22T07:48:55.645Z info: Database connection successful
+2025-03-22T07:48:55.646Z info: Setting up model associations...
+2025-03-22T07:48:55.646Z info: Setting up model associations...
+2025-03-22T07:48:55.653Z info: Model associations set up successfully
+2025-03-22T07:48:55.654Z info: Checking Redis connection...
+2025-03-22T07:48:55.772Z info: Redis client is ready
+2025-03-22T07:48:55.987Z info: Redis ping successful
+2025-03-22T07:48:55.988Z info: Redis connection successful
+2025-03-22T07:48:55.988Z info: Syncing database models...
+2025-03-22T07:48:55.989Z info: Setting up model associations before sync...
+2025-03-22T07:48:55.990Z info: Setting up model associations...
+2025-03-22T07:48:55.993Z info: Model associations set up successfully
+2025-03-22T07:48:55.994Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-22T07:48:55.995Z info: Checking for duplicate tables with case-sensitivity issues...
+2025-03-22T07:48:56.009Z warn: Found duplicate tables: 'roles' and 'Roles'. Fixing the issue...
+2025-03-22T07:48:56.017Z info: Found 6 records in the 'Roles' table
+2025-03-22T07:48:56.058Z info: Dropped the 'Roles' table
+2025-03-22T07:48:56.098Z info: Duplicate table check and cleanup completed
+2025-03-22T07:48:56.099Z info: Syncing model: Role
+2025-03-22T07:48:56.200Z info: Successfully synced model: Role
+2025-03-22T07:48:56.200Z info: Syncing model: Permission
+2025-03-22T07:48:56.314Z info: Successfully synced model: Permission
+2025-03-22T07:48:56.315Z info: Syncing model: School
+2025-03-22T07:48:56.352Z info: Successfully synced model: School
+2025-03-22T07:48:56.353Z info: Syncing model: User
+2025-03-22T07:48:56.421Z info: Successfully synced model: User
+2025-03-22T07:48:56.422Z info: Syncing model: RolePermission
+2025-03-22T07:48:56.457Z info: Successfully synced model: RolePermission
+2025-03-22T07:48:56.458Z info: Syncing model: UserRole
+2025-03-22T07:48:56.513Z info: Successfully synced model: UserRole
+2025-03-22T07:48:56.513Z info: All models synced successfully
+2025-03-22T07:48:56.514Z info: Database synced successfully
+2025-03-22T07:48:56.514Z info: Verifying database tables before seeding...
+2025-03-22T07:48:56.517Z info: Found database tables: , , , , , 
+2025-03-22T07:48:56.517Z info: Running seeders...
+2025-03-22T07:48:56.518Z info: Starting database seeding...
+2025-03-22T07:48:57.525Z info: Starting RBAC seeding...
+2025-03-22T07:48:57.533Z info: Checking existing roles...
+2025-03-22T07:48:57.550Z info: Found 4 existing roles. Skipping role seeding.
+2025-03-22T07:48:57.566Z info: Found 4 existing permissions. Skipping permission seeding.
+2025-03-22T07:48:57.578Z info: Found 4 existing role-permission mappings. Skipping.
+2025-03-22T07:48:57.587Z info: RBAC seeding completed successfully
+2025-03-22T07:48:57.587Z info: Database seeding completed
+2025-03-22T07:48:57.588Z info: Seeding completed successfully
+2025-03-22T07:48:57.600Z info: API Routes (48 total routes):
+2025-03-22T07:48:57.708Z info: Server running on port 3001
+2025-03-22T07:51:13.531Z info: Database configuration:
+2025-03-22T07:51:13.665Z info: Connecting to Redis:
+2025-03-22T07:51:17.512Z info: Redis rate limiter initialized
+2025-03-22T07:51:18.086Z info: Configuring CORS middleware
+2025-03-22T07:51:18.088Z info: Configuring compression middleware
+2025-03-22T07:51:18.094Z info: Redis rate limiter initialized
+2025-03-22T07:51:18.094Z info: Redis rate limiter initialized
+2025-03-22T07:51:18.097Z info: Checking database connection...
+2025-03-22T07:51:18.160Z info: Redis connected successfully
+2025-03-22T07:51:18.285Z info: Sequelize connection has been established successfully.
+2025-03-22T07:51:18.341Z info: Database connection successful
+2025-03-22T07:51:18.342Z info: Setting up model associations...
+2025-03-22T07:51:18.342Z info: Setting up model associations...
+2025-03-22T07:51:18.349Z info: Model associations set up successfully
+2025-03-22T07:51:18.349Z info: Checking Redis connection...
+2025-03-22T07:51:18.532Z info: Redis client is ready
+2025-03-22T07:51:18.707Z info: Redis ping successful
+2025-03-22T07:51:18.707Z info: Redis connection successful
+2025-03-22T07:51:18.708Z info: Syncing database models...
+2025-03-22T07:51:18.708Z info: Setting up model associations before sync...
+2025-03-22T07:51:18.708Z info: Setting up model associations...
+2025-03-22T07:51:18.713Z info: Model associations set up successfully
+2025-03-22T07:51:18.714Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-22T07:51:18.715Z info: Checking for duplicate tables with case-sensitivity issues...
+2025-03-22T07:51:18.733Z info: Duplicate table check and cleanup completed
+2025-03-22T07:51:18.734Z info: Syncing model: Role
+2025-03-22T07:51:18.801Z info: Successfully synced model: Role
+2025-03-22T07:51:18.802Z info: Syncing model: Permission
+2025-03-22T07:51:18.843Z info: Successfully synced model: Permission
+2025-03-22T07:51:18.843Z info: Syncing model: School
+2025-03-22T07:51:18.879Z info: Successfully synced model: School
+2025-03-22T07:51:18.879Z info: Syncing model: User
+2025-03-22T07:51:18.941Z info: Successfully synced model: User
+2025-03-22T07:51:18.942Z info: Syncing model: RolePermission
+2025-03-22T07:51:18.977Z info: Successfully synced model: RolePermission
+2025-03-22T07:51:18.977Z info: Syncing model: UserRole
+2025-03-22T07:51:19.018Z info: Successfully synced model: UserRole
+2025-03-22T07:51:19.019Z info: All models synced successfully
+2025-03-22T07:51:19.019Z info: Database synced successfully
+2025-03-22T07:51:19.019Z info: Verifying database tables before seeding...
+2025-03-22T07:51:19.022Z info: Found database tables: , , , , , 
+2025-03-22T07:51:19.022Z info: Running seeders...
+2025-03-22T07:51:19.022Z info: Starting database seeding...
+2025-03-22T07:51:20.034Z info: Starting RBAC seeding...
+2025-03-22T07:51:20.039Z info: Checking existing roles...
+2025-03-22T07:51:20.050Z info: Found 4 existing roles. Skipping role seeding.
+2025-03-22T07:51:20.058Z info: Found 4 existing permissions. Skipping permission seeding.
+2025-03-22T07:51:20.065Z info: Found 4 existing role-permission mappings. Skipping.
+2025-03-22T07:51:20.065Z info: RBAC seeding completed successfully
+2025-03-22T07:51:20.066Z info: Database seeding completed
+2025-03-22T07:51:20.066Z info: Seeding completed successfully
+2025-03-22T07:51:20.072Z info: API Routes (48 total routes):
+2025-03-22T07:51:20.129Z info: Server running on port 3001

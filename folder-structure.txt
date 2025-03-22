@@ -1,8 +1,54 @@
 MN School Database v2 Directory Structure
 =========================================
 
+├── .babelrc
 ├── .env
+├── .env.test
 ├── .gitignore
+├── babel.config.js
+├── coverage/
+│   ├── clover.xml
+│   ├── coverage-final.json
+│   ├── lcov-report/
+│   │   ├── base.css
+│   │   ├── block-navigation.js
+│   │   ├── favicon.png
+│   │   ├── index.html
+│   │   ├── prettify.css
+│   │   ├── prettify.js
+│   │   ├── sort-arrow-sprite.png
+│   │   ├── sorter.js
+│   │   └── src/
+│   │       ├── common/
+│   │       │   └── utils/
+│   │       │       └── logging/
+│   │       │           ├── index.html
+│   │       │           └── logger.ts.html
+│   │       ├── config/
+│   │       │   ├── app.ts.html
+│   │       │   ├── base.ts.html
+│   │       │   ├── env.ts.html
+│   │       │   ├── index.html
+│   │       │   └── index.ts.html
+│   │       ├── features/
+│   │       │   ├── auth/
+│   │       │   │   ├── index.html
+│   │       │   │   ├── routes.ts.html
+│   │       │   │   └── schema.ts.html
+│   │       │   └── shared/
+│   │       │       ├── common.model.ts.html
+│   │       │       └── index.html
+│   │       ├── index.html
+│   │       ├── register-aliases.ts.html
+│   │       ├── routes/
+│   │       │   ├── index.html
+│   │       │   └── index.ts.html
+│   │       └── shared/
+│   │           └── tests/
+│   │               ├── global.test.ts.html
+│   │               ├── index.html
+│   │               └── setup.ts.html
+│   └── lcov.info
 ├── folder-structure.txt
 ├── getFolderStructure.ts
 ├── jest.config.ts
@@ -11,13 +57,22 @@ MN School Database v2 Directory Structure
 ├── README.md
 ├── src/
 │   ├── common/
+│   │   ├── logs/
+│   │   │   ├── combined.log
+│   │   │   ├── error.log
+│   │   │   ├── exceptions.log
+│   │   │   └── rejections.log
 │   │   ├── utils/
 │   │   │   ├── auth/
 │   │   │   │   └── jwt.ts
+│   │   │   ├── cache/
+│   │   │   │   └── cacheUtil.ts
 │   │   │   ├── date/
 │   │   │   │   └── dateTimeUtil.ts
 │   │   │   ├── db/
 │   │   │   │   └── dbConnect.ts
+│   │   │   ├── docs/
+│   │   │   │   └── swagger.ts
 │   │   │   ├── email/
 │   │   │   │   └── emailUtil.ts
 │   │   │   ├── errors/
@@ -45,21 +100,50 @@ MN School Database v2 Directory Structure
 │   │   ├── s3Client.ts
 │   │   └── sequelize.ts
 │   ├── features/
+│   │   ├── associations.ts
 │   │   ├── auth/
+│   │   │   ├── controller.ts
+│   │   │   ├── dto.ts
+│   │   │   ├── interfaces/
+│   │   │   │   └── services.ts
+│   │   │   ├── repository.ts
+│   │   │   ├── routes.ts
+│   │   │   ├── schema.ts
+│   │   │   └── service.ts
 │   │   ├── rbac/
 │   │   │   ├── controllers/
+│   │   │   │   └── roles.controller.ts
+│   │   │   ├── dto/
+│   │   │   │   └── roles.dto.ts
 │   │   │   ├── interfaces/
-│   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── roles.interface.ts
 │   │   │   ├── models/
+│   │   │   │   ├── permissions.model.ts
+│   │   │   │   ├── role-permission.model.ts
 │   │   │   │   └── roles.model.ts
+│   │   │   ├── repository/
+│   │   │   │   └── roles.repository.ts
 │   │   │   ├── routes/
+│   │   │   │   └── roles.route.ts
+│   │   │   ├── schema/
+│   │   │   │   └── roles.schema.ts
 │   │   │   └── services/
+│   │   │       └── roles.service.ts
 │   │   ├── shared/
 │   │   │   └── common.model.ts
 │   │   └── users/
+│   │       ├── interfaces.ts
+│   │       ├── model.ts
+│   │       └── user-role.model.ts
 │   ├── interfaces/
 │   │   └── index.d.ts
 │   ├── migrations/
+│   ├── register-aliases.ts
+│   ├── routes/
+│   │   ├── index.ts
+│   │   └── v1/
+│   │       └── index.ts
 │   ├── seeders/
 │   ├── server.ts
 │   ├── shared/
@@ -70,20 +154,37 @@ MN School Database v2 Directory Structure
 │   │   │   ├── errorHandler.ts
 │   │   │   ├── helmet.ts
 │   │   │   ├── multer.ts
+│   │   │   ├── permission.ts
 │   │   │   ├── rateLimiter.ts
 │   │   │   └── requestLogger.ts
 │   │   └── tests/
 │   │       ├── global.test.ts
 │   │       └── setup.ts
 │   ├── types/
+│   │   ├── express/
+│   │   │   └── index.d.ts
 │   │   ├── express-list-endpoints.d.ts
 │   │   └── swagger-jsdoc.d.ts
 │   └── __tests__/
 │       ├── e2e/
-│       │   └── app.e2e.test.ts
+│       │   ├── app.e2e.test.ts
+│       │   └── auth.e2e.test.ts
+│       ├── helpers/
+│       │   ├── auth-test-helpers.ts
+│       │   └── test-utils.ts
 │       ├── integration/
+│       │   ├── auth/
+│       │   │   ├── auth.integration.test.ts
+│       │   │   └── auth.repository.integration.test.ts
 │       │   └── users.integration.test.ts
+│       ├── setup.ts
 │       └── unit/
+│           ├── auth/
+│           │   ├── controller.test.ts
+│           │   ├── interfaces.test.ts
+│           │   ├── repository.test.ts
+│           │   ├── schema.test.ts
+│           │   └── service.test.ts
 │           └── utils.test.ts
 ├── tsconfig.json
 ├── tsconfig.node.json

@@ -670,3 +670,1073 @@
 2025-03-22T03:26:59.409Z error: API Error: Database error while finding user
 2025-03-22T03:26:59.410Z error: RESPONSE 500 POST /login [408.16ms]
 2025-03-22T03:26:59.442Z error: API Error: Too many requests. Please try again later.
+2025-03-22T04:42:01.565Z error: API Error: Service temporarily unavailable due to high load
+2025-03-22T04:42:01.567Z error: RESPONSE 503 POST /api/v1/auth/register [207.73ms]
+2025-03-22T04:51:27.656Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:51:27.657Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:51:27.657Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:51:27.658Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:28:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:126:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:20.149Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:20.150Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:20.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:53:20.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:247:9
+2025-03-22T04:54:11.709Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:54:11.710Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:54:11.710Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:54:11.711Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.806Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.806Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.807Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:55:23.807Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T04:56:10.028Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:56:10.029Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:56:10.030Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:56:10.030Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:14.999Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:15.000Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:15.000Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T04:57:15.001Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedPermissions (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:78:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:162:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:286:13
+2025-03-22T06:59:48.925Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T06:59:48.927Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T06:59:48.927Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T06:59:48.928Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.294Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.294Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.296Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:02:39.296Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.508Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.509Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.510Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:06:32.510Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.095Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.095Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.096Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:07:41.096Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.745Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.746Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.747Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:09:17.747Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.366Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.367Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.367Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:10:18.368Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.510Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.511Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.511Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:11:29.512Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.900Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.901Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.902Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:12:15.902Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.466Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.467Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.468Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:40.481Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.112Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.113Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.114Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:19:56.114Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.601Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.602Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.603Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:20:40.603Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.149Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.150Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:22:05.151Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:30:19)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:161:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:12:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:24:16.668Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/seeders/rbac.seeder.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2614: [0mModule '"../features/rbac/models/roles.model"' has no exported member 'Role'. Did you mean to use 'import Role from "../features/rbac/models/roles.model"' instead?
+
+[7m1[0m import { Role } from "../features/rbac/models/roles.model";
+[7m [0m [91m         ~~~~[0m
+[96msrc/seeders/rbac.seeder.ts[0m:[93m2[0m:[93m10[0m - [91merror[0m[90m TS2614: [0mModule '"../features/rbac/models/permissions.model"' has no exported member 'Permission'. Did you mean to use 'import Permission from "../features/rbac/models/permissions.model"' instead?
+
+[7m2[0m import { Permission } from "../features/rbac/models/permissions.model";
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/seeders/rbac.seeder.ts[0m:[93m3[0m:[93m10[0m - [91merror[0m[90m TS2614: [0mModule '"../features/rbac/models/role-permission.model"' has no exported member 'RolePermission'. Did you mean to use 'import RolePermission from "../features/rbac/models/role-permission.model"' instead?
+
+[7m3[0m import { RolePermission } from "../features/rbac/models/role-permission.model";
+[7m [0m [91m         ~~~~~~~~~~~~~~[0m
+[96msrc/seeders/rbac.seeder.ts[0m:[93m72[0m:[93m45[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m72[0m     const count = await Role.count().catch((error) => {
+[7m  [0m [91m                                            ~~~~~[0m
+[96msrc/seeders/rbac.seeder.ts[0m:[93m106[0m:[93m51[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m106[0m     const count = await Permission.count().catch((error) => {
+[7m   [0m [91m                                                  ~~~~~[0m
+[96msrc/seeders/rbac.seeder.ts[0m:[93m145[0m:[93m55[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m145[0m     const count = await RolePermission.count().catch((error) => {
+[7m   [0m [91m                                                      ~~~~~[0m
+[96msrc/seeders/rbac.seeder.ts[0m:[93m160[0m:[93m37[0m - [91merror[0m[90m TS7006: [0mParameter 'role' implicitly has an 'any' type.
+
+[7m160[0m       const adminRole = roles.find((role) => role.name === "admin");
+[7m   [0m [91m                                    ~~~~[0m
+[96msrc/seeders/rbac.seeder.ts[0m:[93m162[0m:[93m51[0m - [91merror[0m[90m TS7006: [0mParameter 'permission' implicitly has an 'any' type.
+
+[7m162[0m         const adminPermissions = permissions.map((permission) => ({
+[7m   [0m [91m                                                  ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T07:25:11.459Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/seeders/rbac.seeder.ts[0m:[93m133[0m:[93m35[0m - [91merror[0m[90m TS2345: [0mArgument of type '{ name: string; description: string; resource: string; action: string; }[]' is not assignable to parameter of type 'readonly Optional<PermissionCreationInterface, NullishPropertiesOf<PermissionCreationInterface>>[]'.
+  Type '{ name: string; description: string; resource: string; action: string; }' is not assignable to type 'Optional<PermissionCreationInterface, NullishPropertiesOf<PermissionCreationInterface>>'.
+    Type '{ name: string; description: string; resource: string; action: string; }' is not assignable to type 'Omit<PermissionCreationInterface, NullishPropertiesOf<PermissionCreationInterface>>'.
+      Types of property 'action' are incompatible.
+        Type 'string' is not assignable to type 'PermissionAction'.
+
+[7m133[0m       await Permission.bulkCreate(defaultPermissions);
+[7m   [0m [91m                                  ~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T07:26:54.387Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/seeders/rbac.seeder.ts[0m:[93m10[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"../features/rbac/interfaces/roles.interface"' has no exported member 'PermissionAction'.
+
+[7m10[0m import { PermissionAction } from "../features/rbac/interfaces/roles.interface";
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T07:27:21.361Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/seeders/rbac.seeder.ts[0m:[93m10[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"../features/rbac/interfaces/roles.interface"' has no exported member 'PermissionAction'.
+
+[7m10[0m import { PermissionAction } from "../features/rbac/interfaces/roles.interface";
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T07:27:47.870Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:92:7)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:216:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:16:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:27:47.871Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async seedRoles (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:92:7)
+    at async seedRBAC (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\rbac.seeder.ts:216:5)
+    at async runSeeders (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\seeders\index.ts:16:5)
+    at async C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:263:11
+2025-03-22T07:32:17.272Z error: TypeError [ERR_INVALID_ARG_TYPE]: The "string" argument must be of type string or an instance of Buffer or ArrayBuffer. Received an instance of Object
+    at new NodeError (node:internal/errors:405:5)
+    at Function.byteLength (node:buffer:787:11)
+    at Writer.addCString (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg-protocol\src\buffer-writer.ts:43:24)
+    at Object.startup (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg-protocol\src\serializer.ts:25:28)
+    at Connection.startup (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg\lib\connection.js:125:33)
+    at Connection.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg\lib\client.js:125:13)
+    at Connection.emit (node:events:517:28)
+    at Connection.emit (node:domain:489:12)
+    at Socket.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg\lib\connection.js:49:12)
+    at Object.onceWrapper (node:events:631:28)
+2025-03-22T07:34:13.162Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:34:13.163Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:34:13.164Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:34:13.164Z error: Error details: relation "schools" does not exist
+2025-03-22T07:34:13.165Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:35:36.890Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:35:36.891Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:35:36.892Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:35:36.892Z error: Error details: relation "schools" does not exist
+2025-03-22T07:35:36.893Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:20.342Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:20.343Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:36:20.344Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:20.344Z error: Error details: relation "schools" does not exist
+2025-03-22T07:36:20.345Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:41.532Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:41.533Z error: Original database error: relation "schools" does not exist
+2025-03-22T07:36:41.534Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:41.534Z error: Error details: relation "schools" does not exist
+2025-03-22T07:36:41.535Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.createTable (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:229:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1353:7)
+    at async Sequelize.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:825:9)
+    at async Object.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\config\database.ts:172:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:244:7)
+2025-03-22T07:36:57.632Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:84:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T07:36:57.633Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:84:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T07:36:57.633Z error: Error details: column "roleId" does not exist
+2025-03-22T07:36:57.633Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:84:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T07:40:31.824Z error: API Error: Route not found: GET /favicon.ico
+2025-03-22T07:48:17.966Z error: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:255:57
+    at Array.map (<anonymous>)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:255:44)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)

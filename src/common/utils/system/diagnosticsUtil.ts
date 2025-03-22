@@ -6,6 +6,7 @@ import logger from "@/common/utils/logging/logger";
 import db from "@/config/database";
 import redis from "@/config/redis";
 import { appConfig } from "@/config";
+import DBConnectUtil from "@/common/utils/db/dbConnect";
 
 /**
  * System metrics interface
@@ -59,7 +60,9 @@ export interface HealthCheckResult {
       memoryUsedPercent: number;
     };
   };
+  checks: Record<string, any>;
   uptime: number;
+  responseTime: number;
 }
 
 /**
@@ -111,8 +114,9 @@ export class DiagnosticsUtil {
       network: {
         hostname: os.hostname(),
         interfaces: Object.fromEntries(
-          Object.entries(os.networkInterfaces() || {})
-            .filter(([_, value]) => value !== undefined) as [string, os.NetworkInterfaceInfo[]][]
+          Object.entries(os.networkInterfaces() || {}).filter(
+            ([_, value]) => value !== undefined
+          ) as [string, os.NetworkInterfaceInfo[]][]
         ),
       },
     };
@@ -124,18 +128,42 @@ export class DiagnosticsUtil {
    * @returns Health check result
    */
   public static async performHealthCheck(): Promise<HealthCheckResult> {
-    // Start with default values
-    const result: HealthCheckResult = {
-      status: "healthy",
+    const startTime = performance.now();
+    const checks: Record<string, any> = {};
+    let overallStatus: "healthy" | "degraded" | "unhealthy" = "healthy";
+
+    // Check database
+    try {
+      checks.database = await DBConnectUtil.checkHealth();
+      if (!checks.database.isHealthy) {
+        overallStatus = "degraded";
+      }
+    } catch (error) {
+      logger.error("Database health check failed:", error);
+      checks.database = { isHealthy: false, error: (error as Error).message };
+      overallStatus = "unhealthy";
+    }
+
+    // Add more health checks here...
+
+    const endTime = performance.now();
+
+    return {
+      status: overallStatus,
+      uptime: process.uptime(),
       timestamp: new Date().toISOString(),
-      version: process.env.npm_package_version || "1.0.0",
-      environment: appConfig.env,
+      responseTime: endTime - startTime,
+      checks,
+      version: "v1",
+      environment: appConfig.env || "unknown",
       components: {
         database: {
-          status: "down",
+          status: checks.database.isHealthy ? "up" : "down",
+          latencyMs: checks.database.latencyMs,
+          error: checks.database.error,
         },
         redis: {
-          status: "down",
+          status: redis.status === "ready" ? "up" : "down", // Check Redis connection status
         },
         system: {
           cpuLoad: os.loadavg()[0],
@@ -143,54 +171,7 @@ export class DiagnosticsUtil {
             ((os.totalmem() - os.freemem()) / os.totalmem()) * 100,
         },
       },
-      uptime: process.uptime(),
     };
-
-    // Check database connection
-    try {
-      const startTime = performance.now();
-      const dbHealth = await db.healthCheck();
-      const endTime = performance.now();
-
-      result.components.database = {
-        status: dbHealth ? "up" : "down",
-        latencyMs: endTime - startTime,
-      };
-    } catch (error: any) {
-      result.components.database = {
-        status: "down",
-        error: error.message,
-      };
-      result.status = "degraded";
-    }
-
-    // Check Redis connection
-    try {
-      const startTime = performance.now();
-      await redis.ping();
-      const endTime = performance.now();
-
-      result.components.redis = {
-        status: "up",
-        latencyMs: endTime - startTime,
-      };
-    } catch (error: any) {
-      result.components.redis = {
-        status: "down",
-        error: error.message,
-      };
-      result.status = "degraded";
-    }
-
-    // If both database and Redis are down, the system is unhealthy
-    if (
-      result.components.database.status === "down" &&
-      result.components.redis.status === "down"
-    ) {
-      result.status = "unhealthy";
-    }
-
-    return result;
   }
 
   /**

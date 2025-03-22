@@ -1,0 +1,11 @@
+2025-03-22T07:32:17.272Z error: TypeError [ERR_INVALID_ARG_TYPE]: The "string" argument must be of type string or an instance of Buffer or ArrayBuffer. Received an instance of Object
+    at new NodeError (node:internal/errors:405:5)
+    at Function.byteLength (node:buffer:787:11)
+    at Writer.addCString (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg-protocol\src\buffer-writer.ts:43:24)
+    at Object.startup (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg-protocol\src\serializer.ts:25:28)
+    at Connection.startup (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg\lib\connection.js:125:33)
+    at Connection.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg\lib\client.js:125:13)
+    at Connection.emit (node:events:517:28)
+    at Connection.emit (node:domain:489:12)
+    at Socket.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\pg\lib\connection.js:49:12)
+    at Object.onceWrapper (node:events:631:28)
