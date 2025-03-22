@@ -1,38 +1,13 @@
 import {
-  parseISO,
   format,
-  isValid,
-  differenceInSeconds,
-  differenceInMinutes,
-  differenceInHours,
-  differenceInDays,
-  differenceInMonths,
-  differenceInYears,
-  addSeconds,
-  addMinutes,
-  addHours,
+  parse,
   addDays,
-  addWeeks,
-  addMonths,
-  addYears,
-  isAfter,
-  isBefore,
-  isEqual,
-  startOfDay,
-  endOfDay,
-  startOfWeek,
-  endOfWeek,
-  startOfMonth,
-  endOfMonth,
-  startOfYear,
-  endOfYear,
+  addHours,
+  addMinutes,
+  differenceInDays,
+  isValid,
 } from "date-fns";
-import {
-  toZonedTime,
-  //   utcToZonedTime,
-  formatInTimeZone,
-} from "date-fns-tz";
-import logger from "@/common/utils/logging/logger";
+import { toZonedTime } from "date-fns-tz";
 
 /**
  * Date format options
@@ -42,337 +17,146 @@ export enum DateFormat {
   DATE = "yyyy-MM-dd",
   TIME = "HH:mm:ss",
   DATETIME = "yyyy-MM-dd HH:mm:ss",
-  HUMAN_READABLE = "MMMM d, yyyy h:mm a",
-  DAY_MONTH_YEAR = "dd/MM/yyyy",
-  MONTH_DAY_YEAR = "MM/dd/yyyy",
+  HUMAN = "MMM dd, yyyy",
+  MONTH_YEAR = "MMMM yyyy",
+  DAY_MONTH = "dd MMM",
 }
 
 /**
- * Duration unit type
+ * Time unit for date operations
  */
-export type DurationUnit =
-  | "seconds"
-  | "minutes"
-  | "hours"
-  | "days"
-  | "months"
-  | "years";
+export type TimeUnit = "days" | "hours" | "minutes";
 
 /**
- * Date range interface
+ * Timezone for date operations
  */
-export interface DateRange {
-  start: Date;
-  end: Date;
-}
+const DEFAULT_TIMEZONE = "UTC";
 
 /**
- * Date/Time Utility
- * Provides standardized methods for date and time operations
+ * Date utility class
  */
-export class DateTimeUtil {
+export default class DateTimeUtil {
   /**
-   * Default timezone
-   */
-  private static readonly DEFAULT_TIMEZONE = "UTC";
-
-  /**
-   * Format a date
-   *
-   * @param date - Date to format
-   * @param formatStr - Format string
-   * @param timezone - Timezone
-   * @returns Formatted date string
+   * Format a date to string
    */
   public static formatDate(
     date: Date | string | number,
-    formatStr: string = DateFormat.DATETIME,
-    timezone: string = this.DEFAULT_TIMEZONE
+    formatType: DateFormat = DateFormat.ISO
   ): string {
     try {
-      const parsedDate = this.parseDate(date);
+      // If date is string or number, convert to Date
+      const dateObj =
+        typeof date === "string" || typeof date === "number"
+          ? new Date(date)
+          : date;
 
-      if (!isValid(parsedDate)) {
+      if (!isValid(dateObj)) {
         throw new Error("Invalid date");
       }
 
-      // If timezone is provided, convert date to that timezone
-      if (timezone !== this.DEFAULT_TIMEZONE) {
-        return formatInTimeZone(parsedDate, timezone, formatStr);
-      }
-
-      return format(parsedDate, formatStr);
+      return format(dateObj, formatType);
     } catch (error) {
-      logger.error("Error formatting date:", error);
-      return "Invalid Date";
+      console.error("Error formatting date:", error);
+      return "";
     }
   }
 
   /**
-   * Parse a date
-   *
-   * @param date - Date to parse
-   * @returns Parsed date
+   * Parse a string to Date
    */
-  public static parseDate(date: Date | string | number): Date {
-    if (date instanceof Date) {
-      return date;
-    }
-
-    if (typeof date === "string") {
-      return parseISO(date);
-    }
-
-    return new Date(date);
-  }
-
-  /**
-   * Convert a date to a different timezone
-   *
-   * @param date - Date to convert
-   * @param timezone - Target timezone
-   * @returns Converted date
-   */
-  public static convertToTimezone(
-    date: Date | string | number,
-    timezone: string
+  public static parseDate(
+    dateString: string,
+    formatType: DateFormat = DateFormat.ISO
   ): Date {
-    const parsedDate = this.parseDate(date);
-    return toZonedTime(parsedDate, timezone);
-  }
-
-  /**
-   * Convert a date to UTC
-   *
-   * @param date - Date to convert
-   * @param sourceTimezone - Source timezone
-   * @returns UTC date
-   */
-  public static convertToUTC(
-    date: Date | string | number,
-    sourceTimezone: string
-  ): Date {
-    const parsedDate = this.parseDate(date);
-    // Convert from zoned time to UTC
-    // Note: date-fns-tz doesn't have a direct zonedTimeToUtc function
-    // We're using the UTC date as is since parsedDate should already be in UTC
-    return new Date(parsedDate.toISOString());
-  }
-
-  /**
-   * Get the duration between two dates
-   *
-   * @param startDate - Start date
-   * @param endDate - End date
-   * @param unit - Duration unit
-   * @returns Duration value
-   */
-  public static getDuration(
-    startDate: Date | string | number,
-    endDate: Date | string | number,
-    unit: DurationUnit = "seconds"
-  ): number {
-    const parsedStartDate = this.parseDate(startDate);
-    const parsedEndDate = this.parseDate(endDate);
-
-    switch (unit) {
-      case "seconds":
-        return differenceInSeconds(parsedEndDate, parsedStartDate);
-      case "minutes":
-        return differenceInMinutes(parsedEndDate, parsedStartDate);
-      case "hours":
-        return differenceInHours(parsedEndDate, parsedStartDate);
-      case "days":
-        return differenceInDays(parsedEndDate, parsedStartDate);
-      case "months":
-        return differenceInMonths(parsedEndDate, parsedStartDate);
-      case "years":
-        return differenceInYears(parsedEndDate, parsedStartDate);
-      default:
-        return differenceInSeconds(parsedEndDate, parsedStartDate);
+    try {
+      return parse(dateString, formatType, new Date());
+    } catch (error) {
+      console.error("Error parsing date:", error);
+      return new Date();
     }
   }
 
   /**
    * Add time to a date
-   *
-   * @param date - Date to modify
-   * @param amount - Amount to add
-   * @param unit - Duration unit
-   * @returns Modified date
    */
-  public static addTime(
-    date: Date | string | number,
-    amount: number,
-    unit: DurationUnit = "days"
+  public static addTime(date: Date, amount: number, unit: TimeUnit): Date {
+    try {
+      switch (unit) {
+        case "days":
+          return addDays(date, amount);
+        case "hours":
+          return addHours(date, amount);
+        case "minutes":
+          return addMinutes(date, amount);
+        default:
+          return date;
+      }
+    } catch (error) {
+      console.error("Error adding time:", error);
+      return date;
+    }
+  }
+
+  /**
+   * Get difference between two dates in days
+   */
+  public static getDayDifference(date1: Date, date2: Date): number {
+    try {
+      return differenceInDays(date1, date2);
+    } catch (error) {
+      console.error("Error calculating day difference:", error);
+      return 0;
+    }
+  }
+
+  /**
+   * Convert date to a specific timezone
+   */
+  public static toTimezone(
+    date: Date,
+    timezone: string = DEFAULT_TIMEZONE
   ): Date {
-    const parsedDate = this.parseDate(date);
-
-    switch (unit) {
-      case "seconds":
-        return addSeconds(parsedDate, amount);
-      case "minutes":
-        return addMinutes(parsedDate, amount);
-      case "hours":
-        return addHours(parsedDate, amount);
-      case "days":
-        return addDays(parsedDate, amount);
-      case "months":
-        return addMonths(parsedDate, amount);
-      case "years":
-        return addYears(parsedDate, amount);
-      default:
-        return addDays(parsedDate, amount);
+    try {
+      return toZonedTime(date, timezone);
+    } catch (error) {
+      console.error("Error converting to timezone:", error);
+      return date;
     }
   }
 
   /**
-   * Check if a date is after another date
-   *
-   * @param date - Date to check
-   * @param dateToCompare - Date to compare
-   * @returns Whether the date is after the comparison date
+   * Convert date from a specific timezone to UTC
    */
-  public static isAfter(
-    date: Date | string | number,
-    dateToCompare: Date | string | number
-  ): boolean {
-    return isAfter(this.parseDate(date), this.parseDate(dateToCompare));
-  }
-
-  /**
-   * Check if a date is before another date
-   *
-   * @param date - Date to check
-   * @param dateToCompare - Date to compare
-   * @returns Whether the date is before the comparison date
-   */
-  public static isBefore(
-    date: Date | string | number,
-    dateToCompare: Date | string | number
-  ): boolean {
-    return isBefore(this.parseDate(date), this.parseDate(dateToCompare));
-  }
-
-  /**
-   * Check if two dates are equal
-   *
-   * @param firstDate - First date
-   * @param secondDate - Second date
-   * @returns Whether the dates are equal
-   */
-  public static isEqual(
-    firstDate: Date | string | number,
-    secondDate: Date | string | number
-  ): boolean {
-    return isEqual(this.parseDate(firstDate), this.parseDate(secondDate));
-  }
-
-  /**
-   * Get the start of a time period
-   *
-   * @param date - Reference date
-   * @param unit - Time unit
-   * @returns Start date
-   */
-  public static getStartOf(
-    date: Date | string | number,
-    unit: "day" | "week" | "month" | "year"
+  public static fromTimezone(
+    date: Date,
+    timezone: string = DEFAULT_TIMEZONE
   ): Date {
-    const parsedDate = this.parseDate(date);
-
-    switch (unit) {
-      case "day":
-        return startOfDay(parsedDate);
-      case "week":
-        return startOfWeek(parsedDate, { weekStartsOn: 1 }); // Week starts on Monday
-      case "month":
-        return startOfMonth(parsedDate);
-      case "year":
-        return startOfYear(parsedDate);
-      default:
-        return startOfDay(parsedDate);
+    try {
+      return toZonedTime(date, timezone);
+    } catch (error) {
+      console.error("Error converting from timezone:", error);
+      return date;
     }
   }
 
   /**
-   * Get the end of a time period
-   *
-   * @param date - Reference date
-   * @param unit - Time unit
-   * @returns End date
+   * Get current date in a specific timezone
    */
-  public static getEndOf(
-    date: Date | string | number,
-    unit: "day" | "week" | "month" | "year"
-  ): Date {
-    const parsedDate = this.parseDate(date);
-
-    switch (unit) {
-      case "day":
-        return endOfDay(parsedDate);
-      case "week":
-        return endOfWeek(parsedDate, { weekStartsOn: 1 }); // Week starts on Monday
-      case "month":
-        return endOfMonth(parsedDate);
-      case "year":
-        return endOfYear(parsedDate);
-      default:
-        return endOfDay(parsedDate);
-    }
+  public static now(timezone: string = DEFAULT_TIMEZONE): Date {
+    return this.toTimezone(new Date(), timezone);
   }
 
   /**
-   * Get a date range
-   *
-   * @param date - Reference date
-   * @param unit - Time unit
-   * @returns Date range
+   * Check if a date is valid
    */
-  public static getDateRange(
-    date: Date | string | number,
-    unit: "day" | "week" | "month" | "year"
-  ): DateRange {
-    return {
-      start: this.getStartOf(date, unit),
-      end: this.getEndOf(date, unit),
-    };
-  }
+  public static isValidDate(date: any): boolean {
+    if (!date) return false;
 
-  /**
-   * Format a timestamp in a human-readable format
-   *
-   * @param timestamp - Timestamp in milliseconds or ISO string
-   * @returns Human-readable timestamp
-   */
-  public static formatHumanReadable(timestamp: number | string | Date): string {
-    const date = this.parseDate(timestamp);
+    const dateObj =
+      typeof date === "string" || typeof date === "number"
+        ? new Date(date)
+        : date;
 
-    const now = new Date();
-    const seconds = Math.floor(differenceInSeconds(now, date));
-
-    if (seconds < 60) {
-      return "just now";
-    }
-
-    const minutes = Math.floor(seconds / 60);
-    if (minutes < 60) {
-      return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
-    }
-
-    const hours = Math.floor(minutes / 60);
-    if (hours < 24) {
-      return `${hours} hour${hours > 1 ? "s" : ""} ago`;
-    }
-
-    const days = Math.floor(hours / 24);
-    if (days < 7) {
-      return `${days} day${days > 1 ? "s" : ""} ago`;
-    }
-
-    // For older dates, use standard format
-    return this.formatDate(date, DateFormat.HUMAN_READABLE);
+    return isValid(dateObj);
   }
 }
-
-export default DateTimeUtil;

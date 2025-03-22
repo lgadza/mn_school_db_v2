@@ -9,17 +9,17 @@ interface UserCreationInterface
     | "id"
     | "lastLogin"
     | "avatar"
-    | "schoolId"
     | "gender"
     | "passwordResetToken"
     | "passwordResetExpires"
     | "dateOfBirth"
-    | "countryCode"
     | "email"
-    | "verifyPassword"
   > {}
 
-interface UserAttributes extends Omit<UserInterface, "verifyPassword"> {}
+interface UserAttributes extends Omit<UserInterface, "verifyPassword"> {
+  schoolId?: string;
+  countryCode?: string | null;
+}
 
 class User
   extends Model<UserAttributes, UserCreationInterface>

@@ -704,3 +704,778 @@
     at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
 2025-03-21T15:45:57.018Z error: API Error: Database error while finding user
 2025-03-21T15:45:57.018Z error: RESPONSE 500 POST /register [367.84ms]
+2025-03-22T02:28:42.783Z info: Connecting to Redis:
+2025-03-22T02:29:12.325Z info: Redis rate limiter initialized
+2025-03-22T02:29:15.519Z info: Configuring CORS middleware
+2025-03-22T02:29:15.521Z info: Configuring compression middleware
+2025-03-22T02:29:15.524Z info: Redis rate limiter initialized
+2025-03-22T02:29:15.525Z info: Redis rate limiter initialized
+2025-03-22T02:29:15.528Z info: Checking database connection...
+2025-03-22T02:29:15.621Z info: Redis connected successfully
+2025-03-22T02:29:15.633Z info: Connected to PostgreSQL database
+2025-03-22T02:29:15.641Z info: Database connection successful
+2025-03-22T02:29:15.642Z info: Setting up model associations...
+2025-03-22T02:29:15.649Z info: Model associations have been set up successfully
+2025-03-22T02:29:15.650Z info: Checking Redis connection...
+2025-03-22T02:29:16.070Z info: Redis client is ready
+2025-03-22T02:29:16.237Z info: Redis ping successful
+2025-03-22T02:29:16.238Z info: Redis connection successful
+2025-03-22T02:29:16.247Z info: API Routes (48 total routes):
+2025-03-22T02:29:16.428Z info: Server running in development mode on port 3001
+2025-03-22T02:29:16.428Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:29:16.429Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:29:45.653Z info: PostgreSQL client removed from pool
+2025-03-22T02:35:58.429Z info: Connecting to Redis:
+2025-03-22T02:36:00.814Z info: Redis rate limiter initialized
+2025-03-22T02:36:00.927Z info: Configuring CORS middleware
+2025-03-22T02:36:00.928Z info: Configuring compression middleware
+2025-03-22T02:36:00.931Z info: Redis rate limiter initialized
+2025-03-22T02:36:00.932Z info: Redis rate limiter initialized
+2025-03-22T02:36:00.934Z info: Checking database connection...
+2025-03-22T02:36:01.066Z info: Redis connected successfully
+2025-03-22T02:36:01.096Z info: Connected to PostgreSQL database
+2025-03-22T02:36:01.099Z info: Database connection successful
+2025-03-22T02:36:01.100Z info: Setting up model associations...
+2025-03-22T02:36:01.105Z info: Model associations have been set up successfully
+2025-03-22T02:36:01.106Z info: Checking Redis connection...
+2025-03-22T02:36:01.525Z info: Redis client is ready
+2025-03-22T02:36:01.696Z info: Redis ping successful
+2025-03-22T02:36:01.696Z info: Redis connection successful
+2025-03-22T02:36:01.701Z info: API Routes (48 total routes):
+2025-03-22T02:36:01.731Z info: Server running in development mode on port 3001
+2025-03-22T02:36:01.732Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:36:01.732Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:36:15.681Z info: Connecting to Redis:
+2025-03-22T02:36:17.938Z info: Redis rate limiter initialized
+2025-03-22T02:36:18.049Z info: Configuring CORS middleware
+2025-03-22T02:36:18.050Z info: Configuring compression middleware
+2025-03-22T02:36:18.053Z info: Redis rate limiter initialized
+2025-03-22T02:36:18.054Z info: Redis rate limiter initialized
+2025-03-22T02:36:18.055Z info: Checking database connection...
+2025-03-22T02:36:18.098Z info: Redis connected successfully
+2025-03-22T02:36:18.210Z info: Connected to PostgreSQL database
+2025-03-22T02:36:18.213Z info: Database connection successful
+2025-03-22T02:36:18.213Z info: Setting up model associations...
+2025-03-22T02:36:18.218Z info: Model associations have been set up successfully
+2025-03-22T02:36:18.219Z info: Checking Redis connection...
+2025-03-22T02:36:18.424Z info: Redis client is ready
+2025-03-22T02:36:18.595Z info: Redis ping successful
+2025-03-22T02:36:18.596Z info: Redis connection successful
+2025-03-22T02:36:18.600Z info: API Routes (48 total routes):
+2025-03-22T02:36:18.628Z info: Server running in development mode on port 3001
+2025-03-22T02:36:18.629Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:36:18.629Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:36:31.232Z info: Connecting to Redis:
+2025-03-22T02:36:33.536Z info: Redis rate limiter initialized
+2025-03-22T02:36:33.654Z info: Configuring CORS middleware
+2025-03-22T02:36:33.655Z info: Configuring compression middleware
+2025-03-22T02:36:33.658Z info: Redis rate limiter initialized
+2025-03-22T02:36:33.659Z info: Redis rate limiter initialized
+2025-03-22T02:36:33.660Z info: Checking database connection...
+2025-03-22T02:36:33.717Z info: Redis connected successfully
+2025-03-22T02:36:33.719Z info: Connected to PostgreSQL database
+2025-03-22T02:36:33.721Z info: Database connection successful
+2025-03-22T02:36:33.722Z info: Setting up model associations...
+2025-03-22T02:36:33.728Z info: Model associations have been set up successfully
+2025-03-22T02:36:33.729Z info: Checking Redis connection...
+2025-03-22T02:36:34.027Z info: Redis client is ready
+2025-03-22T02:36:34.194Z info: Redis ping successful
+2025-03-22T02:36:34.195Z info: Redis connection successful
+2025-03-22T02:36:34.199Z info: API Routes (48 total routes):
+2025-03-22T02:36:34.232Z info: Server running in development mode on port 3001
+2025-03-22T02:36:34.232Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:36:34.232Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:36:58.115Z info: Connecting to Redis:
+2025-03-22T02:37:00.095Z info: Redis rate limiter initialized
+2025-03-22T02:37:00.190Z info: Configuring CORS middleware
+2025-03-22T02:37:00.191Z info: Configuring compression middleware
+2025-03-22T02:37:00.193Z info: Redis rate limiter initialized
+2025-03-22T02:37:00.193Z info: Redis rate limiter initialized
+2025-03-22T02:37:00.194Z info: Checking database connection...
+2025-03-22T02:37:00.238Z info: Redis connected successfully
+2025-03-22T02:37:00.240Z info: Connected to PostgreSQL database
+2025-03-22T02:37:00.242Z info: Database connection successful
+2025-03-22T02:37:00.243Z info: Setting up model associations...
+2025-03-22T02:37:00.246Z info: Model associations have been set up successfully
+2025-03-22T02:37:00.246Z info: Checking Redis connection...
+2025-03-22T02:37:00.759Z info: Redis client is ready
+2025-03-22T02:37:00.928Z info: Redis ping successful
+2025-03-22T02:37:00.929Z info: Redis connection successful
+2025-03-22T02:37:00.935Z info: API Routes (48 total routes):
+2025-03-22T02:37:00.963Z info: Server running in development mode on port 3001
+2025-03-22T02:37:00.963Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:37:00.964Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:37:21.848Z info: Connecting to Redis:
+2025-03-22T02:37:23.767Z info: Redis rate limiter initialized
+2025-03-22T02:37:23.861Z info: Configuring CORS middleware
+2025-03-22T02:37:23.862Z info: Configuring compression middleware
+2025-03-22T02:37:23.864Z info: Redis rate limiter initialized
+2025-03-22T02:37:23.865Z info: Redis rate limiter initialized
+2025-03-22T02:37:23.866Z info: Checking database connection...
+2025-03-22T02:37:23.919Z info: Redis connected successfully
+2025-03-22T02:37:24.032Z info: Connected to PostgreSQL database
+2025-03-22T02:37:24.034Z info: Database connection successful
+2025-03-22T02:37:24.035Z info: Setting up model associations...
+2025-03-22T02:37:24.038Z info: Model associations have been set up successfully
+2025-03-22T02:37:24.039Z info: Checking Redis connection...
+2025-03-22T02:37:24.401Z info: Redis client is ready
+2025-03-22T02:37:24.577Z info: Redis ping successful
+2025-03-22T02:37:24.578Z info: Redis connection successful
+2025-03-22T02:37:24.582Z info: API Routes (48 total routes):
+2025-03-22T02:37:24.611Z info: Server running in development mode on port 3001
+2025-03-22T02:37:24.612Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:37:24.612Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:37:37.991Z info: Connecting to Redis:
+2025-03-22T02:37:41.584Z info: Redis rate limiter initialized
+2025-03-22T02:37:41.825Z info: Configuring CORS middleware
+2025-03-22T02:37:41.826Z info: Configuring compression middleware
+2025-03-22T02:37:41.833Z info: Redis rate limiter initialized
+2025-03-22T02:37:41.838Z info: Redis rate limiter initialized
+2025-03-22T02:37:41.842Z info: Checking database connection...
+2025-03-22T02:37:41.923Z info: Redis connected successfully
+2025-03-22T02:37:41.945Z info: Connected to PostgreSQL database
+2025-03-22T02:37:41.950Z info: Database connection successful
+2025-03-22T02:37:41.951Z info: Setting up model associations...
+2025-03-22T02:37:41.957Z info: Model associations have been set up successfully
+2025-03-22T02:37:41.958Z info: Checking Redis connection...
+2025-03-22T02:37:42.266Z info: Redis client is ready
+2025-03-22T02:37:42.450Z info: Redis ping successful
+2025-03-22T02:37:42.451Z info: Redis connection successful
+2025-03-22T02:37:42.455Z info: API Routes (48 total routes):
+2025-03-22T02:37:42.497Z info: Server running in development mode on port 3001
+2025-03-22T02:37:42.498Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:37:42.498Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:38:11.965Z info: PostgreSQL client removed from pool
+2025-03-22T02:41:19.846Z info: Connecting to Redis:
+2025-03-22T02:41:21.736Z info: Redis rate limiter initialized
+2025-03-22T02:41:21.826Z info: Configuring CORS middleware
+2025-03-22T02:41:21.827Z info: Configuring compression middleware
+2025-03-22T02:41:21.829Z info: Redis rate limiter initialized
+2025-03-22T02:41:21.830Z info: Redis rate limiter initialized
+2025-03-22T02:41:21.831Z info: Checking database connection...
+2025-03-22T02:41:21.906Z info: Redis connected successfully
+2025-03-22T02:41:21.991Z info: Connected to PostgreSQL database
+2025-03-22T02:41:21.993Z info: Database connection successful
+2025-03-22T02:41:21.994Z info: Setting up model associations...
+2025-03-22T02:41:22.004Z info: Model associations have been set up successfully
+2025-03-22T02:41:22.005Z info: Checking Redis connection...
+2025-03-22T02:41:22.230Z info: Redis client is ready
+2025-03-22T02:41:22.409Z info: Redis ping successful
+2025-03-22T02:41:22.410Z info: Redis connection successful
+2025-03-22T02:41:22.414Z info: API Routes (48 total routes):
+2025-03-22T02:41:22.441Z info: Server running in development mode on port 3001
+2025-03-22T02:41:22.442Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:41:22.442Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:41:33.432Z info: Connecting to Redis:
+2025-03-22T02:41:35.385Z info: Redis rate limiter initialized
+2025-03-22T02:41:35.480Z info: Configuring CORS middleware
+2025-03-22T02:41:35.481Z info: Configuring compression middleware
+2025-03-22T02:41:35.483Z info: Redis rate limiter initialized
+2025-03-22T02:41:35.484Z info: Redis rate limiter initialized
+2025-03-22T02:41:35.485Z info: Checking database connection...
+2025-03-22T02:41:35.687Z info: Redis connected successfully
+2025-03-22T02:41:35.689Z info: Connected to PostgreSQL database
+2025-03-22T02:41:35.691Z info: Database connection successful
+2025-03-22T02:41:35.692Z info: Setting up model associations...
+2025-03-22T02:41:35.695Z info: Model associations have been set up successfully
+2025-03-22T02:41:35.696Z info: Checking Redis connection...
+2025-03-22T02:41:36.059Z info: Redis client is ready
+2025-03-22T02:41:36.251Z info: Redis ping successful
+2025-03-22T02:41:36.253Z info: Redis connection successful
+2025-03-22T02:41:36.258Z info: API Routes (48 total routes):
+2025-03-22T02:41:36.283Z info: Server running in development mode on port 3001
+2025-03-22T02:41:36.285Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:41:36.285Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:42:05.702Z info: PostgreSQL client removed from pool
+2025-03-22T02:45:10.088Z info: Connecting to Redis:
+2025-03-22T02:45:12.416Z info: Redis rate limiter initialized
+2025-03-22T02:45:12.530Z info: Configuring CORS middleware
+2025-03-22T02:45:12.531Z info: Configuring compression middleware
+2025-03-22T02:45:12.533Z info: Redis rate limiter initialized
+2025-03-22T02:45:12.534Z info: Redis rate limiter initialized
+2025-03-22T02:45:12.535Z info: Checking database connection...
+2025-03-22T02:45:12.579Z info: Redis connected successfully
+2025-03-22T02:45:12.585Z info: Connected to PostgreSQL database
+2025-03-22T02:45:12.588Z info: Database connection successful
+2025-03-22T02:45:12.588Z info: Setting up model associations...
+2025-03-22T02:45:12.604Z info: Model associations have been set up successfully
+2025-03-22T02:45:12.604Z info: Checking Redis connection...
+2025-03-22T02:45:13.033Z info: Redis client is ready
+2025-03-22T02:45:13.200Z info: Redis ping successful
+2025-03-22T02:45:13.201Z info: Redis connection successful
+2025-03-22T02:45:13.205Z info: API Routes (48 total routes):
+2025-03-22T02:45:13.235Z info: Server running in development mode on port 3001
+2025-03-22T02:45:13.235Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:45:13.236Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:45:42.594Z info: PostgreSQL client removed from pool
+2025-03-22T02:46:31.047Z info: Connecting to Redis:
+2025-03-22T02:46:33.068Z info: Redis rate limiter initialized
+2025-03-22T02:46:33.158Z info: Configuring CORS middleware
+2025-03-22T02:46:33.160Z info: Configuring compression middleware
+2025-03-22T02:46:33.162Z info: Redis rate limiter initialized
+2025-03-22T02:46:33.163Z info: Redis rate limiter initialized
+2025-03-22T02:46:33.164Z info: Checking database connection...
+2025-03-22T02:46:33.220Z info: Connected to PostgreSQL database
+2025-03-22T02:46:33.223Z info: Database connection successful
+2025-03-22T02:46:33.223Z info: Setting up model associations...
+2025-03-22T02:46:33.229Z info: Model associations have been set up successfully
+2025-03-22T02:46:33.230Z info: Checking Redis connection...
+2025-03-22T02:46:33.284Z info: Redis connected successfully
+2025-03-22T02:46:33.597Z info: Redis client is ready
+2025-03-22T02:46:33.776Z info: Redis ping successful
+2025-03-22T02:46:33.777Z info: Redis connection successful
+2025-03-22T02:46:33.780Z info: API Routes (48 total routes):
+2025-03-22T02:46:33.816Z info: Server running in development mode on port 3001
+2025-03-22T02:46:33.816Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:46:33.817Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:46:51.141Z info: Connecting to Redis:
+2025-03-22T02:46:53.243Z info: Redis rate limiter initialized
+2025-03-22T02:46:53.348Z info: Configuring CORS middleware
+2025-03-22T02:46:53.349Z info: Configuring compression middleware
+2025-03-22T02:46:53.351Z info: Redis rate limiter initialized
+2025-03-22T02:46:53.352Z info: Redis rate limiter initialized
+2025-03-22T02:46:53.353Z info: Checking database connection...
+2025-03-22T02:46:53.399Z info: Redis connected successfully
+2025-03-22T02:46:53.407Z info: Connected to PostgreSQL database
+2025-03-22T02:46:53.410Z info: Database connection successful
+2025-03-22T02:46:53.411Z info: Setting up model associations...
+2025-03-22T02:46:53.427Z info: Model associations have been set up successfully
+2025-03-22T02:46:53.428Z info: Checking Redis connection...
+2025-03-22T02:46:53.709Z info: Redis client is ready
+2025-03-22T02:46:53.876Z info: Redis ping successful
+2025-03-22T02:46:53.876Z info: Redis connection successful
+2025-03-22T02:46:53.880Z info: API Routes (48 total routes):
+2025-03-22T02:46:53.909Z info: Server running in development mode on port 3001
+2025-03-22T02:46:53.910Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:46:53.910Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:47:23.282Z info: Connecting to Redis:
+2025-03-22T02:47:25.865Z info: Redis rate limiter initialized
+2025-03-22T02:47:25.992Z info: Configuring CORS middleware
+2025-03-22T02:47:25.993Z info: Configuring compression middleware
+2025-03-22T02:47:25.996Z info: Redis rate limiter initialized
+2025-03-22T02:47:25.997Z info: Redis rate limiter initialized
+2025-03-22T02:47:25.999Z info: Checking database connection...
+2025-03-22T02:47:26.048Z info: Redis connected successfully
+2025-03-22T02:47:26.071Z info: Connected to PostgreSQL database
+2025-03-22T02:47:26.074Z info: Database connection successful
+2025-03-22T02:47:26.075Z info: Setting up model associations...
+2025-03-22T02:47:26.083Z info: Model associations have been set up successfully
+2025-03-22T02:47:26.084Z info: Checking Redis connection...
+2025-03-22T02:47:26.507Z info: Redis client is ready
+2025-03-22T02:47:26.679Z info: Redis ping successful
+2025-03-22T02:47:26.679Z info: Redis connection successful
+2025-03-22T02:47:26.686Z info: API Routes (48 total routes):
+2025-03-22T02:47:26.773Z info: Server running in development mode on port 3001
+2025-03-22T02:47:26.774Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:47:26.775Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:47:35.937Z info: Connecting to Redis:
+2025-03-22T02:47:38.644Z info: Redis rate limiter initialized
+2025-03-22T02:47:38.791Z info: Configuring CORS middleware
+2025-03-22T02:47:38.792Z info: Configuring compression middleware
+2025-03-22T02:47:38.796Z info: Redis rate limiter initialized
+2025-03-22T02:47:38.797Z info: Redis rate limiter initialized
+2025-03-22T02:47:38.798Z info: Checking database connection...
+2025-03-22T02:47:38.847Z info: Redis connected successfully
+2025-03-22T02:47:38.868Z info: Connected to PostgreSQL database
+2025-03-22T02:47:38.872Z info: Database connection successful
+2025-03-22T02:47:38.873Z info: Setting up model associations...
+2025-03-22T02:47:38.881Z info: Model associations have been set up successfully
+2025-03-22T02:47:38.882Z info: Checking Redis connection...
+2025-03-22T02:47:39.172Z info: Redis client is ready
+2025-03-22T02:47:39.360Z info: Redis ping successful
+2025-03-22T02:47:39.360Z info: Redis connection successful
+2025-03-22T02:47:39.365Z info: API Routes (48 total routes):
+2025-03-22T02:47:39.406Z info: Server running in development mode on port 3001
+2025-03-22T02:47:39.407Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:47:39.407Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:48:18.774Z info: Connecting to Redis:
+2025-03-22T02:48:21.155Z info: Redis rate limiter initialized
+2025-03-22T02:48:21.276Z info: Configuring CORS middleware
+2025-03-22T02:48:21.277Z info: Configuring compression middleware
+2025-03-22T02:48:21.280Z info: Redis rate limiter initialized
+2025-03-22T02:48:21.280Z info: Redis rate limiter initialized
+2025-03-22T02:48:21.282Z info: Checking database connection...
+2025-03-22T02:48:21.328Z info: Redis connected successfully
+2025-03-22T02:48:21.338Z info: Connected to PostgreSQL database
+2025-03-22T02:48:21.341Z info: Database connection successful
+2025-03-22T02:48:21.342Z info: Setting up model associations...
+2025-03-22T02:48:21.355Z info: Model associations have been set up successfully
+2025-03-22T02:48:21.355Z info: Checking Redis connection...
+2025-03-22T02:48:21.792Z info: Redis client is ready
+2025-03-22T02:48:21.961Z info: Redis ping successful
+2025-03-22T02:48:21.962Z info: Redis connection successful
+2025-03-22T02:48:21.966Z info: API Routes (48 total routes):
+2025-03-22T02:48:21.994Z info: Server running in development mode on port 3001
+2025-03-22T02:48:21.994Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:48:21.994Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:48:51.351Z info: PostgreSQL client removed from pool
+2025-03-22T02:49:45.891Z info: Connecting to Redis:
+2025-03-22T02:49:48.697Z info: Redis rate limiter initialized
+2025-03-22T02:49:48.866Z info: Configuring CORS middleware
+2025-03-22T02:49:48.868Z info: Configuring compression middleware
+2025-03-22T02:49:48.872Z info: Redis rate limiter initialized
+2025-03-22T02:49:48.874Z info: Redis rate limiter initialized
+2025-03-22T02:49:48.876Z info: Checking database connection...
+2025-03-22T02:49:49.002Z info: Redis connected successfully
+2025-03-22T02:49:49.041Z info: Connected to PostgreSQL database
+2025-03-22T02:49:49.044Z info: Database connection successful
+2025-03-22T02:49:49.044Z info: Setting up model associations...
+2025-03-22T02:49:49.050Z info: Model associations have been set up successfully
+2025-03-22T02:49:49.050Z info: Checking Redis connection...
+2025-03-22T02:49:49.316Z info: Redis client is ready
+2025-03-22T02:49:49.496Z info: Redis ping successful
+2025-03-22T02:49:49.496Z info: Redis connection successful
+2025-03-22T02:49:49.500Z info: API Routes (48 total routes):
+2025-03-22T02:49:49.534Z info: Server running in development mode on port 3001
+2025-03-22T02:49:49.534Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T02:49:49.534Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T02:56:17.596Z info: Connecting to Redis:
+2025-03-22T02:58:12.091Z info: Connecting to Redis:
+2025-03-22T02:58:49.075Z info: Connecting to Redis:
+2025-03-22T02:59:50.570Z info: Connecting to Redis:
+2025-03-22T03:00:26.479Z info: Connecting to Redis:
+2025-03-22T03:00:41.361Z info: Connecting to Redis:
+2025-03-22T03:01:39.449Z info: Connecting to Redis:
+2025-03-22T03:01:41.823Z info: Redis rate limiter initialized
+2025-03-22T03:01:42.026Z info: Configuring CORS middleware
+2025-03-22T03:01:42.027Z info: Configuring compression middleware
+2025-03-22T03:01:42.031Z info: Redis rate limiter initialized
+2025-03-22T03:01:42.033Z info: Redis rate limiter initialized
+2025-03-22T03:01:42.035Z info: Checking database connection...
+2025-03-22T03:01:42.113Z info: Redis connected successfully
+2025-03-22T03:01:42.277Z info: Database connection successful
+2025-03-22T03:01:42.278Z info: Setting up model associations...
+2025-03-22T03:01:42.283Z info: Model associations have been set up successfully
+2025-03-22T03:01:42.284Z info: Checking Redis connection...
+2025-03-22T03:01:42.431Z info: Redis client is ready
+2025-03-22T03:01:42.634Z info: Redis ping successful
+2025-03-22T03:01:42.635Z info: Redis connection successful
+2025-03-22T03:01:42.641Z info: API Routes (48 total routes):
+2025-03-22T03:01:42.678Z info: Server running in development mode on port 3001
+2025-03-22T03:01:42.679Z info: Health check available at http://localhost:3001/api/health
+2025-03-22T03:01:42.679Z info: Metrics available at http://localhost:3001/api/metrics
+2025-03-22T03:26:31.114Z info: Connecting to Redis:
+2025-03-22T03:26:45.836Z info: Redis connected successfully
+2025-03-22T03:26:46.291Z info: Redis client is ready
+2025-03-22T03:26:46.472Z info: Redis ping successful
+2025-03-22T03:26:46.678Z debug: Executing (default): SELECT 1+1 AS result
+2025-03-22T03:26:46.761Z info: Database connection has been established successfully.
+2025-03-22T03:26:47.588Z debug: Executing (default): SELECT "id", "name", "description", "created_at" AS "createdAt", "updated_at" AS "updatedAt" FROM "roles" AS "Role" WHERE "Role"."name" = 'user';
+2025-03-22T03:26:35.605Z info: Connecting to Redis:
+2025-03-22T03:26:47.942Z info: Database connection closed successfully.
+2025-03-22T03:26:47.981Z info: Redis connected successfully
+2025-03-22T03:26:31.113Z info: Connecting to Redis:
+2025-03-22T03:26:49.819Z info: Redis rate limiter initialized
+2025-03-22T03:26:54.749Z info: Configuring CORS middleware
+2025-03-22T03:26:54.753Z info: Configuring compression middleware
+2025-03-22T03:26:54.760Z info: Redis rate limiter initialized
+2025-03-22T03:26:54.781Z info: Redis rate limiter initialized
+2025-03-22T03:26:54.785Z info: Checking database connection...
+2025-03-22T03:26:54.930Z info: Redis connected successfully
+2025-03-22T03:26:31.112Z info: Connecting to Redis:
+2025-03-22T03:26:50.066Z info: Redis rate limiter initialized
+2025-03-22T03:26:54.754Z info: Configuring CORS middleware
+2025-03-22T03:26:54.772Z info: Configuring compression middleware
+2025-03-22T03:26:54.786Z info: Redis rate limiter initialized
+2025-03-22T03:26:54.789Z info: Redis rate limiter initialized
+2025-03-22T03:26:54.792Z info: Checking database connection...
+2025-03-22T03:26:55.023Z info: Redis connected successfully
+2025-03-22T03:26:55.195Z info: Redis client is ready
+2025-03-22T03:26:55.249Z info: Redis client is ready
+2025-03-22T03:26:55.371Z info: Redis ping successful
+2025-03-22T03:26:55.438Z info: Redis ping successful
+2025-03-22T03:26:55.451Z debug: Executing (default): SELECT 1+1 AS result
+2025-03-22T03:26:55.470Z debug: Executing (default): SELECT 1+1 AS result
+2025-03-22T03:26:55.472Z info: Database connection successful
+2025-03-22T03:26:55.473Z info: Setting up model associations...
+2025-03-22T03:26:55.481Z info: Model associations have been set up successfully
+2025-03-22T03:26:55.484Z info: Checking Redis connection...
+2025-03-22T03:26:55.486Z info: Database connection has been established successfully.
+2025-03-22T03:26:55.716Z debug: Executing (default): SELECT 1+1 AS result
+2025-03-22T03:26:55.735Z debug: Executing (default): SELECT 1+1 AS result
+2025-03-22T03:26:55.737Z info: Database connection successful
+2025-03-22T03:26:55.738Z info: Setting up model associations...
+2025-03-22T03:26:55.746Z info: Model associations have been set up successfully
+2025-03-22T03:26:55.748Z info: Checking Redis connection...
+2025-03-22T03:26:55.751Z info: Database connection has been established successfully.
+2025-03-22T03:26:55.918Z info: Redis connection successful
+2025-03-22T03:26:55.687Z info: Redis connection successful
+2025-03-22T03:26:55.693Z info: API Routes (49 total routes):
+2025-03-22T03:26:56.274Z info: Server running in test mode on port 4000
+2025-03-22T03:26:56.276Z info: Health check available at http://localhost:4000/api/health
+2025-03-22T03:26:56.277Z info: Metrics available at http://localhost:4000/api/metrics
+2025-03-22T03:26:55.926Z info: API Routes (49 total routes):
+2025-03-22T03:26:56.785Z debug: Executing (default): SELECT "id", "name", "description", "created_at" AS "createdAt", "updated_at" AS "updatedAt" FROM "roles" AS "Role" WHERE "Role"."name" = 'user';
+2025-03-22T03:26:56.958Z debug: Executing (default): SELECT "id", "username", "email", "password", "first_name" AS "firstName", "last_name" AS "lastName", "is_active" AS "isActive", "last_login" AS "lastLogin", "avatar", "school_id" AS "schoolId", "gender", "password_reset_token" AS "passwordResetToken", "password_reset_expires" AS "passwordResetExpires", "date_of_birth" AS "dateOfBirth", "country_code" AS "countryCode", "phone_number" AS "phoneNumber", "created_at" AS "createdAt", "updated_at" AS "updatedAt" FROM "users" AS "User" WHERE "User"."email" = 'test-1742614014793@example.com';
+2025-03-22T03:26:57.015Z info: Database connection closed successfully.
+2025-03-22T03:26:57.083Z info: REQUEST POST /api/v1/auth/register
+2025-03-22T03:26:57.483Z debug: Executing (default): SELECT "User"."id", "User"."username", "User"."email", "User"."password", "User"."first_name" AS "firstName", "User"."last_name" AS "lastName", "User"."is_active" AS "isActive", "User"."last_login" AS "lastLogin", "User"."avatar", "User"."school_id" AS "schoolId", "User"."gender", "User"."password_reset_token" AS "passwordResetToken", "User"."password_reset_expires" AS "passwordResetExpires", "User"."date_of_birth" AS "dateOfBirth", "User"."country_code" AS "countryCode", "User"."phone_number" AS "phoneNumber", "User"."created_at" AS "createdAt", "User"."updated_at" AS "updatedAt", "roles"."id" AS "roles.id", "roles"."name" AS "roles.name", "roles"."description" AS "roles.description", "roles"."created_at" AS "roles.createdAt", "roles"."updated_at" AS "roles.updatedAt" FROM "users" AS "User" LEFT OUTER JOIN ( "user_roles" AS "roles->UserRole" INNER JOIN "roles" AS "roles" ON "roles"."id" = "roles->UserRole"."role_id") ON "User"."id" = "roles->UserRole"."user_id" WHERE "User"."email" = 'e2e-test-1742614014798@example.com';
+2025-03-22T03:26:57.597Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:33:33)
+    at AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T03:26:57.600Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:33:33)
+    at AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T03:26:57.601Z error: API Error: Database error while finding user
+2025-03-22T03:26:57.606Z error: RESPONSE 500 POST /register [523.89ms]
+2025-03-22T03:26:57.647Z info: REQUEST GET /api/v1/auth/me
+2025-03-22T03:26:57.836Z error: TypeError: Cannot read properties of undefined (reading 'extractTokenFromHeader')
+    at verifyToken (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\auth.ts:51:26)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Object.<anonymous>.ErrorHandlerUtil.highLoadProtection (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\errors\errorUtils.ts:407:5)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:182:9
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:111:9
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T03:26:57.843Z error: API Error: Authentication failed
+2025-03-22T03:26:57.846Z warn: RESPONSE 401 GET /me [198.66ms]
+2025-03-22T03:26:57.861Z info: REQUEST POST /api/v1/auth/logout
+2025-03-22T03:26:58.035Z error: TypeError: Cannot read properties of undefined (reading 'extractTokenFromHeader')
+    at verifyToken (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\auth.ts:51:26)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Object.<anonymous>.ErrorHandlerUtil.highLoadProtection (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\errors\errorUtils.ts:407:5)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:182:9
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:111:9
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T03:26:58.038Z error: API Error: Authentication failed
+2025-03-22T03:26:58.040Z warn: RESPONSE 401 POST /logout [179.41ms]
+2025-03-22T03:26:58.061Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:58.237Z debug: Executing (default): SELECT "User"."id", "User"."username", "User"."email", "User"."password", "User"."first_name" AS "firstName", "User"."last_name" AS "lastName", "User"."is_active" AS "isActive", "User"."last_login" AS "lastLogin", "User"."avatar", "User"."school_id" AS "schoolId", "User"."gender", "User"."password_reset_token" AS "passwordResetToken", "User"."password_reset_expires" AS "passwordResetExpires", "User"."date_of_birth" AS "dateOfBirth", "User"."country_code" AS "countryCode", "User"."phone_number" AS "phoneNumber", "User"."created_at" AS "createdAt", "User"."updated_at" AS "updatedAt", "roles"."id" AS "roles.id", "roles"."name" AS "roles.name", "roles"."description" AS "roles.description", "roles"."created_at" AS "roles.createdAt", "roles"."updated_at" AS "roles.updatedAt" FROM "users" AS "User" LEFT OUTER JOIN ( "user_roles" AS "roles->UserRole" INNER JOIN "roles" AS "roles" ON "roles"."id" = "roles->UserRole"."role_id") ON "User"."id" = "roles->UserRole"."user_id" WHERE "User"."email" = 'e2e-test-1742614014798@example.com';
+2025-03-22T03:26:58.240Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:58.242Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:58.243Z error: API Error: Database error while finding user
+2025-03-22T03:26:58.244Z error: RESPONSE 500 POST /login [183.46ms]
+2025-03-22T03:26:58.257Z info: REQUEST POST /api/v1/auth/refresh-token
+2025-03-22T03:26:58.408Z info: Redis client is ready
+2025-03-22T03:26:58.444Z warn: Request validation failed
+2025-03-22T03:26:58.448Z error: API Error: Validation failed
+2025-03-22T03:26:58.451Z warn: RESPONSE 400 POST /refresh-token [194.10ms]
+2025-03-22T03:26:58.465Z info: REQUEST POST /api/v1/auth/forgot-password
+2025-03-22T03:26:58.580Z info: Redis ping successful
+2025-03-22T03:26:58.848Z warn: Redis rate limiter failed, falling back to memory:
+2025-03-22T03:26:58.854Z debug: Executing (default): SELECT "User"."id", "User"."username", "User"."email", "User"."password", "User"."first_name" AS "firstName", "User"."last_name" AS "lastName", "User"."is_active" AS "isActive", "User"."last_login" AS "lastLogin", "User"."avatar", "User"."school_id" AS "schoolId", "User"."gender", "User"."password_reset_token" AS "passwordResetToken", "User"."password_reset_expires" AS "passwordResetExpires", "User"."date_of_birth" AS "dateOfBirth", "User"."country_code" AS "countryCode", "User"."phone_number" AS "phoneNumber", "User"."created_at" AS "createdAt", "User"."updated_at" AS "updatedAt", "roles"."id" AS "roles.id", "roles"."name" AS "roles.name", "roles"."description" AS "roles.description", "roles"."created_at" AS "roles.createdAt", "roles"."updated_at" AS "roles.updatedAt" FROM "users" AS "User" LEFT OUTER JOIN ( "user_roles" AS "roles->UserRole" INNER JOIN "roles" AS "roles" ON "roles"."id" = "roles->UserRole"."role_id") ON "User"."id" = "roles->UserRole"."user_id" WHERE "User"."email" = 'e2e-test-1742614014798@example.com';
+2025-03-22T03:26:58.857Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:275:18)
+    at AuthController.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:171:7)
+2025-03-22T03:26:58.859Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:275:18)
+    at AuthController.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:171:7)
+2025-03-22T03:26:58.860Z error: API Error: Database error while finding user
+2025-03-22T03:26:58.861Z error: RESPONSE 500 POST /forgot-password [396.64ms]
+2025-03-22T03:26:58.970Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:58.976Z debug: Executing (default): SELECT "User"."id", "User"."username", "User"."email", "User"."password", "User"."first_name" AS "firstName", "User"."last_name" AS "lastName", "User"."is_active" AS "isActive", "User"."last_login" AS "lastLogin", "User"."avatar", "User"."school_id" AS "schoolId", "User"."gender", "User"."password_reset_token" AS "passwordResetToken", "User"."password_reset_expires" AS "passwordResetExpires", "User"."date_of_birth" AS "dateOfBirth", "User"."country_code" AS "countryCode", "User"."phone_number" AS "phoneNumber", "User"."created_at" AS "createdAt", "User"."updated_at" AS "updatedAt", "roles"."id" AS "roles.id", "roles"."name" AS "roles.name", "roles"."description" AS "roles.description", "roles"."created_at" AS "roles.createdAt", "roles"."updated_at" AS "roles.updatedAt" FROM "users" AS "User" LEFT OUTER JOIN ( "user_roles" AS "roles->UserRole" INNER JOIN "roles" AS "roles" ON "roles"."id" = "roles->UserRole"."role_id") ON "User"."id" = "roles->UserRole"."user_id" WHERE "User"."email" = 'random0@example.com';
+2025-03-22T03:26:58.979Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:58.991Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.002Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.022Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.025Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.026Z warn: RESPONSE 429 POST /api/v1/auth/login [4.61ms]
+2025-03-22T03:26:59.031Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.036Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.038Z warn: RESPONSE 429 POST /api/v1/auth/login [6.86ms]
+2025-03-22T03:26:59.042Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.044Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.045Z warn: RESPONSE 429 POST /api/v1/auth/login [3.40ms]
+2025-03-22T03:26:59.049Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.051Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.052Z warn: RESPONSE 429 POST /api/v1/auth/login [3.35ms]
+2025-03-22T03:26:59.056Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.058Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.060Z warn: RESPONSE 429 POST /api/v1/auth/login [3.94ms]
+2025-03-22T03:26:59.063Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.065Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.067Z warn: RESPONSE 429 POST /api/v1/auth/login [4.03ms]
+2025-03-22T03:26:59.071Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.073Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.075Z warn: RESPONSE 429 POST /api/v1/auth/login [3.95ms]
+2025-03-22T03:26:59.078Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.080Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.081Z warn: RESPONSE 429 POST /api/v1/auth/login [3.42ms]
+2025-03-22T03:26:59.084Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.086Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.087Z warn: RESPONSE 429 POST /api/v1/auth/login [3.26ms]
+2025-03-22T03:26:59.095Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.097Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.097Z warn: RESPONSE 429 POST /api/v1/auth/login [2.10ms]
+2025-03-22T03:26:59.099Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.101Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.102Z warn: RESPONSE 429 POST /api/v1/auth/login [2.29ms]
+2025-03-22T03:26:59.104Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.105Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.106Z warn: RESPONSE 429 POST /api/v1/auth/login [2.08ms]
+2025-03-22T03:26:59.108Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.109Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.110Z warn: RESPONSE 429 POST /api/v1/auth/login [1.86ms]
+2025-03-22T03:26:59.111Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.113Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.114Z warn: RESPONSE 429 POST /api/v1/auth/login [2.98ms]
+2025-03-22T03:26:59.117Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.119Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.120Z warn: RESPONSE 429 POST /api/v1/auth/login [3.13ms]
+2025-03-22T03:26:59.122Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.124Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.125Z warn: RESPONSE 429 POST /api/v1/auth/login [3.06ms]
+2025-03-22T03:26:59.127Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.129Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.130Z warn: RESPONSE 429 POST /api/v1/auth/login [2.94ms]
+2025-03-22T03:26:59.133Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.135Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.136Z warn: RESPONSE 429 POST /api/v1/auth/login [3.33ms]
+2025-03-22T03:26:59.139Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.141Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.142Z warn: RESPONSE 429 POST /api/v1/auth/login [3.19ms]
+2025-03-22T03:26:59.145Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.147Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.148Z warn: RESPONSE 429 POST /api/v1/auth/login [3.27ms]
+2025-03-22T03:26:59.156Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.159Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.160Z warn: RESPONSE 429 POST /api/v1/auth/login [3.70ms]
+2025-03-22T03:26:59.165Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.167Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.169Z warn: RESPONSE 429 POST /api/v1/auth/login [4.80ms]
+2025-03-22T03:26:59.173Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.175Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.176Z warn: RESPONSE 429 POST /api/v1/auth/login [3.38ms]
+2025-03-22T03:26:59.179Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.182Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.184Z warn: RESPONSE 429 POST /api/v1/auth/login [4.60ms]
+2025-03-22T03:26:59.186Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.188Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.188Z warn: RESPONSE 429 POST /api/v1/auth/login [2.08ms]
+2025-03-22T03:26:59.190Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.191Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.192Z warn: RESPONSE 429 POST /api/v1/auth/login [2.29ms]
+2025-03-22T03:26:59.194Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.199Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.204Z warn: RESPONSE 429 POST /api/v1/auth/login [10.41ms]
+2025-03-22T03:26:59.207Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.208Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.209Z warn: RESPONSE 429 POST /api/v1/auth/login [2.07ms]
+2025-03-22T03:26:59.211Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.213Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.214Z warn: RESPONSE 429 POST /api/v1/auth/login [2.80ms]
+2025-03-22T03:26:59.217Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.220Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.222Z warn: RESPONSE 429 POST /api/v1/auth/login [4.66ms]
+2025-03-22T03:26:59.224Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.225Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.226Z warn: RESPONSE 429 POST /api/v1/auth/login [2.01ms]
+2025-03-22T03:26:59.229Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.231Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.233Z warn: RESPONSE 429 POST /api/v1/auth/login [3.93ms]
+2025-03-22T03:26:59.236Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.238Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.239Z warn: RESPONSE 429 POST /api/v1/auth/login [2.20ms]
+2025-03-22T03:26:59.240Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.244Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.245Z warn: RESPONSE 429 POST /api/v1/auth/login [4.98ms]
+2025-03-22T03:26:59.247Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.249Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.250Z warn: RESPONSE 429 POST /api/v1/auth/login [2.85ms]
+2025-03-22T03:26:59.252Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.254Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.254Z warn: RESPONSE 429 POST /api/v1/auth/login [2.03ms]
+2025-03-22T03:26:59.256Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.258Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.260Z warn: RESPONSE 429 POST /api/v1/auth/login [3.58ms]
+2025-03-22T03:26:59.262Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.264Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.266Z warn: RESPONSE 429 POST /api/v1/auth/login [3.21ms]
+2025-03-22T03:26:59.268Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.270Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.271Z warn: RESPONSE 429 POST /api/v1/auth/login [3.37ms]
+2025-03-22T03:26:59.274Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.276Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.278Z warn: RESPONSE 429 POST /api/v1/auth/login [3.47ms]
+2025-03-22T03:26:59.280Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.282Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.283Z warn: RESPONSE 429 POST /api/v1/auth/login [2.86ms]
+2025-03-22T03:26:59.286Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.288Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.289Z warn: RESPONSE 429 POST /api/v1/auth/login [3.73ms]
+2025-03-22T03:26:59.296Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.298Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.299Z warn: RESPONSE 429 POST /api/v1/auth/login [2.69ms]
+2025-03-22T03:26:59.302Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.304Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.305Z warn: RESPONSE 429 POST /api/v1/auth/login [3.08ms]
+2025-03-22T03:26:59.307Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.309Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.310Z warn: RESPONSE 429 POST /api/v1/auth/login [2.97ms]
+2025-03-22T03:26:59.313Z info: REQUEST POST /api/v1/auth/login
+2025-03-22T03:26:59.315Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.316Z warn: RESPONSE 429 POST /api/v1/auth/login [3.12ms]
+2025-03-22T03:26:59.324Z debug: Executing (default): SELECT "User"."id", "User"."username", "User"."email", "User"."password", "User"."first_name" AS "firstName", "User"."last_name" AS "lastName", "User"."is_active" AS "isActive", "User"."last_login" AS "lastLogin", "User"."avatar", "User"."school_id" AS "schoolId", "User"."gender", "User"."password_reset_token" AS "passwordResetToken", "User"."password_reset_expires" AS "passwordResetExpires", "User"."date_of_birth" AS "dateOfBirth", "User"."country_code" AS "countryCode", "User"."phone_number" AS "phoneNumber", "User"."created_at" AS "createdAt", "User"."updated_at" AS "updatedAt", "roles"."id" AS "roles.id", "roles"."name" AS "roles.name", "roles"."description" AS "roles.description", "roles"."created_at" AS "roles.createdAt", "roles"."updated_at" AS "roles.updatedAt" FROM "users" AS "User" LEFT OUTER JOIN ( "user_roles" AS "roles->UserRole" INNER JOIN "roles" AS "roles" ON "roles"."id" = "roles->UserRole"."role_id") ON "User"."id" = "roles->UserRole"."user_id" WHERE "User"."email" = 'random1@example.com';
+2025-03-22T03:26:59.325Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.326Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.327Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.328Z error: RESPONSE 500 POST /login [358.80ms]
+2025-03-22T03:26:59.384Z debug: Executing (default): SELECT "User"."id", "User"."username", "User"."email", "User"."password", "User"."first_name" AS "firstName", "User"."last_name" AS "lastName", "User"."is_active" AS "isActive", "User"."last_login" AS "lastLogin", "User"."avatar", "User"."school_id" AS "schoolId", "User"."gender", "User"."password_reset_token" AS "passwordResetToken", "User"."password_reset_expires" AS "passwordResetExpires", "User"."date_of_birth" AS "dateOfBirth", "User"."country_code" AS "countryCode", "User"."phone_number" AS "phoneNumber", "User"."created_at" AS "createdAt", "User"."updated_at" AS "updatedAt", "roles"."id" AS "roles.id", "roles"."name" AS "roles.name", "roles"."description" AS "roles.description", "roles"."created_at" AS "roles.createdAt", "roles"."updated_at" AS "roles.updatedAt" FROM "users" AS "User" LEFT OUTER JOIN ( "user_roles" AS "roles->UserRole" INNER JOIN "roles" AS "roles" ON "roles"."id" = "roles->UserRole"."role_id") ON "User"."id" = "roles->UserRole"."user_id" WHERE "User"."email" = 'random2@example.com';
+2025-03-22T03:26:59.385Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.387Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.388Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.389Z error: RESPONSE 500 POST /login [410.17ms]
+2025-03-22T03:26:59.399Z debug: Executing (default): SELECT "User"."id", "User"."username", "User"."email", "User"."password", "User"."first_name" AS "firstName", "User"."last_name" AS "lastName", "User"."is_active" AS "isActive", "User"."last_login" AS "lastLogin", "User"."avatar", "User"."school_id" AS "schoolId", "User"."gender", "User"."password_reset_token" AS "passwordResetToken", "User"."password_reset_expires" AS "passwordResetExpires", "User"."date_of_birth" AS "dateOfBirth", "User"."country_code" AS "countryCode", "User"."phone_number" AS "phoneNumber", "User"."created_at" AS "createdAt", "User"."updated_at" AS "updatedAt", "roles"."id" AS "roles.id", "roles"."name" AS "roles.name", "roles"."description" AS "roles.description", "roles"."created_at" AS "roles.createdAt", "roles"."updated_at" AS "roles.updatedAt" FROM "users" AS "User" LEFT OUTER JOIN ( "user_roles" AS "roles->UserRole" INNER JOIN "roles" AS "roles" ON "roles"."id" = "roles->UserRole"."role_id") ON "User"."id" = "roles->UserRole"."user_id" WHERE "User"."email" = 'random3@example.com';
+2025-03-22T03:26:59.401Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.402Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.403Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.404Z error: RESPONSE 500 POST /login [413.46ms]
+2025-03-22T03:26:59.407Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.408Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.409Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.410Z error: RESPONSE 500 POST /login [408.16ms]
+2025-03-22T03:26:59.440Z info: REQUEST POST /api/v1/auth/register
+2025-03-22T03:26:59.442Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.445Z warn: RESPONSE 429 POST /api/v1/auth/register [4.80ms]
+2025-03-22T03:26:59.450Z debug: Executing (default): SELECT "id", "username", "email", "password", "first_name" AS "firstName", "last_name" AS "lastName", "is_active" AS "isActive", "last_login" AS "lastLogin", "avatar", "school_id" AS "schoolId", "gender", "password_reset_token" AS "passwordResetToken", "password_reset_expires" AS "passwordResetExpires", "date_of_birth" AS "dateOfBirth", "country_code" AS "countryCode", "phone_number" AS "phoneNumber", "created_at" AS "createdAt", "updated_at" AS "updatedAt" FROM "users" AS "User" WHERE "User"."email" = 'e2e-test-1742614014798@example.com';
+2025-03-22T03:26:59.481Z info: Database connection closed successfully.
+2025-03-22T03:35:07.423Z info: Connecting to Redis:
+2025-03-22T03:35:11.059Z info: Redis connected successfully
+2025-03-22T03:35:11.370Z info: Redis client is ready
+2025-03-22T03:35:11.542Z info: Redis ping successful
+2025-03-22T03:38:38.112Z info: Connecting to Redis:
+2025-03-22T03:38:39.603Z info: Redis connected successfully
+2025-03-22T03:38:40.065Z info: Redis client is ready
+2025-03-22T03:38:40.233Z info: Redis ping successful

@@ -259,3 +259,414 @@
     at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
 2025-03-21T15:45:57.018Z error: API Error: Database error while finding user
 2025-03-21T15:45:57.018Z error: RESPONSE 500 POST /register [367.84ms]
+2025-03-22T02:56:20.952Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T02:58:14.650Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T02:58:51.868Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T02:59:52.815Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T03:00:28.766Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T03:00:44.248Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T03:26:57.597Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:33:33)
+    at AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T03:26:57.600Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:33:33)
+    at AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T03:26:57.601Z error: API Error: Database error while finding user
+2025-03-22T03:26:57.606Z error: RESPONSE 500 POST /register [523.89ms]
+2025-03-22T03:26:57.836Z error: TypeError: Cannot read properties of undefined (reading 'extractTokenFromHeader')
+    at verifyToken (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\auth.ts:51:26)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Object.<anonymous>.ErrorHandlerUtil.highLoadProtection (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\errors\errorUtils.ts:407:5)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:182:9
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:111:9
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T03:26:57.843Z error: API Error: Authentication failed
+2025-03-22T03:26:58.035Z error: TypeError: Cannot read properties of undefined (reading 'extractTokenFromHeader')
+    at verifyToken (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\auth.ts:51:26)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at Object.<anonymous>.ErrorHandlerUtil.highLoadProtection (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\errors\errorUtils.ts:407:5)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:182:9
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\rateLimiter.ts:111:9
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T03:26:58.038Z error: API Error: Authentication failed
+2025-03-22T03:26:58.240Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:58.242Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:58.243Z error: API Error: Database error while finding user
+2025-03-22T03:26:58.244Z error: RESPONSE 500 POST /login [183.46ms]
+2025-03-22T03:26:58.448Z error: API Error: Validation failed
+2025-03-22T03:26:58.857Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:275:18)
+    at AuthController.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:171:7)
+2025-03-22T03:26:58.859Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:275:18)
+    at AuthController.requestPasswordReset (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:171:7)
+2025-03-22T03:26:58.860Z error: API Error: Database error while finding user
+2025-03-22T03:26:58.861Z error: RESPONSE 500 POST /forgot-password [396.64ms]
+2025-03-22T03:26:59.025Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.036Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.044Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.051Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.058Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.065Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.073Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.080Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.086Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.097Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.101Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.105Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.109Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.113Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.119Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.124Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.129Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.135Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.141Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.147Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.159Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.167Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.175Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.182Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.188Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.191Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.199Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.208Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.213Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.220Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.225Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.231Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.238Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.244Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.249Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.254Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.258Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.264Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.270Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.276Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.282Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.288Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.298Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.304Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.309Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.315Z error: API Error: Too many requests. Please try again later.
+2025-03-22T03:26:59.325Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.326Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.327Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.328Z error: RESPONSE 500 POST /login [358.80ms]
+2025-03-22T03:26:59.385Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.387Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.388Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.389Z error: RESPONSE 500 POST /login [410.17ms]
+2025-03-22T03:26:59.401Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.402Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.403Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.404Z error: RESPONSE 500 POST /login [413.46ms]
+2025-03-22T03:26:59.407Z error: Error: 
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at PostgresQueryInterface.select (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1824:21)
+    at Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.408Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AuthService.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:113:18)
+    at AuthController.login (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:55:22)
+2025-03-22T03:26:59.409Z error: API Error: Database error while finding user
+2025-03-22T03:26:59.410Z error: RESPONSE 500 POST /login [408.16ms]
+2025-03-22T03:26:59.442Z error: API Error: Too many requests. Please try again later.

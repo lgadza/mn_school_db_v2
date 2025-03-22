@@ -16,7 +16,8 @@
     "typeRoots": [
       "./node_modules/@types",
       "./src/types"
-    ]
+    ],
+    "resolveJsonModule": true
   },
   "files": [
     "src/types/express/index.d.ts"

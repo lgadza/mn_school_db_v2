@@ -1,160 +1,74 @@
-import { Pool, PoolConfig, PoolClient } from "pg";
-import { parse } from "pg-connection-string";
-import logger from "../common/utils/logging/logger";
-import env from "./env";
+import { Sequelize } from "sequelize";
+import { appConfig } from "@/config";
+import logger from "@/common/utils/logging/logger";
 
-/**
- * PostgreSQL connection configuration
- */
-class PostgresqlClient {
-  private pool: Pool;
-  private isConnected = false;
-  private static instance: PostgresqlClient;
+// Define the interface for our database client that tests will use
+interface DatabaseClient {
+  sequelize: Sequelize;
+  authenticate(): Promise<void>;
+  disconnect(): Promise<void>;
+  close(): Promise<void>; // Alias for disconnect for test compatibility
+  healthCheck(): Promise<boolean>;
+}
 
-  private constructor() {
-    const connectionConfig: PoolConfig = this.buildConnectionConfig();
+// Create and configure Sequelize instance
+const sequelize = new Sequelize({
+  dialect: "postgres",
+  host: appConfig.database.host,
+  port: appConfig.database.port,
+  database: appConfig.database.name,
+  username: appConfig.database.username,
+  password: appConfig.database.password,
+  logging: (msg) => logger.debug(msg),
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000,
+  },
+});
 
-    this.pool = new Pool(connectionConfig);
+// Create database client with required methods
+const databaseClient: DatabaseClient = {
+  sequelize,
 
-    // Set up event handlers
-    this.pool.on("connect", () => {
-      this.isConnected = true;
-      logger.info("Connected to PostgreSQL database");
-    });
-
-    this.pool.on("error", (err) => {
-      this.isConnected = false;
-      logger.error("PostgreSQL connection error:", err);
-    });
-
-    this.pool.on("remove", () => {
-      logger.info("PostgreSQL client removed from pool");
-    });
-  }
-
-  /**
-   * Build connection configuration based on environment
-   */
-  private buildConnectionConfig(): PoolConfig {
-    // Use connection string if available
-    const connectionString =
-      env.NODE_ENV === "production"
-        ? env.PRODUCTION_DATABASE_URL
-        : env.DATABASE_URL;
-
-    if (connectionString) {
-      const parsedConfig = parse(connectionString);
-      return {
-        host: parsedConfig.host || env.PG_HOST,
-        port: parsedConfig.port ? parseInt(parsedConfig.port, 10) : env.PG_PORT,
-        user: parsedConfig.user || env.PG_USER,
-        password: parsedConfig.password || env.PG_PASSWORD,
-        database: parsedConfig.database || env.PG_DB,
-        ssl:
-          env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
-        max: 20, // Maximum number of clients in the pool
-        idleTimeoutMillis: 30000, // How long a client is allowed to remain idle
-        connectionTimeoutMillis: 5000, // How long to wait for a connection to be established
-      };
-    }
-
-    // Fall back to individual environment variables
-    return {
-      host: env.PG_HOST,
-      port: env.PG_PORT,
-      user: env.PG_USER,
-      password: env.PG_PASSWORD,
-      database: env.PG_DB,
-      max: 20,
-      idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 5000,
-    };
-  }
-
-  /**
-   * Get PostgreSQL client singleton instance
-   */
-  public static getInstance(): PostgresqlClient {
-    if (!PostgresqlClient.instance) {
-      PostgresqlClient.instance = new PostgresqlClient();
-    }
-    return PostgresqlClient.instance;
-  }
-
-  /**
-   * Get a client from the pool
-   */
-  public async getClient(): Promise<PoolClient> {
+  // Authenticate database connection
+  async authenticate(): Promise<void> {
     try {
-      return await this.pool.connect();
+      await sequelize.authenticate();
+      logger.info("Database connection has been established successfully.");
     } catch (error) {
-      logger.error("Error getting PostgreSQL client:", error);
-      throw new Error("Failed to get PostgreSQL client");
-    }
-  }
-
-  /**
-   * Execute a query
-   */
-  public async query(text: string, params?: any[]): Promise<any> {
-    const client = await this.getClient();
-    try {
-      const result = await client.query(text, params);
-      return result;
-    } finally {
-      client.release();
-    }
-  }
-
-  /**
-   * Execute a query in a transaction
-   */
-  public async transaction<T>(
-    callback: (client: PoolClient) => Promise<T>
-  ): Promise<T> {
-    const client = await this.getClient();
-    try {
-      await client.query("BEGIN");
-      const result = await callback(client);
-      await client.query("COMMIT");
-      return result;
-    } catch (error) {
-      await client.query("ROLLBACK");
+      logger.error("Unable to connect to the database:", error);
       throw error;
-    } finally {
-      client.release();
     }
-  }
+  },
 
-  /**
-   * Check database connection
-   */
-  public async healthCheck(): Promise<boolean> {
+  // Disconnect from database
+  async disconnect(): Promise<void> {
     try {
-      await this.pool.query("SELECT 1");
+      await sequelize.close();
+      logger.info("Database connection closed successfully.");
+    } catch (error) {
+      logger.error("Error closing database connection:", error);
+      throw error;
+    }
+  },
+
+  // Alias for disconnect for test compatibility
+  async close(): Promise<void> {
+    return this.disconnect();
+  },
+
+  // Check database health
+  async healthCheck(): Promise<boolean> {
+    try {
+      await sequelize.authenticate();
       return true;
     } catch (error) {
       logger.error("Database health check failed:", error);
       return false;
     }
-  }
+  },
+};
 
-  /**
-   * Close pool and disconnect
-   */
-  public async disconnect(): Promise<void> {
-    try {
-      await this.pool.end();
-      this.isConnected = false;
-      logger.info("Disconnected from PostgreSQL database");
-    } catch (error) {
-      logger.error("Error disconnecting from PostgreSQL:", error);
-      throw error;
-    }
-  }
-}
-
-// Create and export the singleton instance
-const db = PostgresqlClient.getInstance();
-
-export default db;
+export default databaseClient;

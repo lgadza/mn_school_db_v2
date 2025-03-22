@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --no-cache",
     "dev": "nodemon --exec ts-node-esm src/server.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "migrate": "sequelize db:migrate",
     "fs": "npx ts-node-esm getFolderStructure.ts",
-    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest --selectProjects unit",
+    "test:integration": "jest --selectProjects integration",
+    "test:e2e": "jest --selectProjects e2e",
+    "test:auth": "jest --testPathPattern=auth",
+    "test:ci": "jest --ci --coverage --reporters=default --reporters=jest-junit"
   },
   "keywords": [],
   "author": "",
@@ -54,6 +59,10 @@
     "winston": "^3.17.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/plugin-transform-typescript": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/preset-typescript": "^7.23.7",
     "@types/bcrypt": "^5.0.2",
     "@types/compression": "^1.7.5",
     "@types/cookie-parser": "^1.4.8",
@@ -68,6 +77,8 @@
     "@types/pg": "^8.11.11",
     "@types/supertest": "^6.0.2",
     "@types/swagger-jsdoc": "^6.0.4",
+    "babel-jest": "^29.7.0",
+    "babel-plugin-module-resolver": "^5.0.2",
     "i": "^0.3.7",
     "jest": "^29.7.0",
     "sequelize-cli": "^6.6.2",

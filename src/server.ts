@@ -180,12 +180,44 @@ const gracefulShutdown = async () => {
 // Start the server
 const startServer = async () => {
   try {
-    // Initialize database connection first
+    // Initialize database connection first with retry logic
     logger.info("Checking database connection...");
-    const dbHealth = await db.healthCheck();
+    let dbConnected = false;
+    let retries = 0;
+    const maxRetries = 5;
 
-    if (!dbHealth) {
-      logger.warn("Database connection check failed, but continuing startup");
+    while (!dbConnected && retries < maxRetries) {
+      try {
+        const dbHealth = await db.healthCheck();
+        if (dbHealth) {
+          dbConnected = true;
+          logger.info("Database connection successful");
+        } else {
+          retries++;
+          logger.warn(
+            `Database connection attempt ${retries}/${maxRetries} failed. Retrying in 3 seconds...`
+          );
+          // Wait 3 seconds before retrying
+          await new Promise((resolve) => setTimeout(resolve, 3000));
+        }
+      } catch (error) {
+        retries++;
+        logger.error(
+          `Database connection attempt ${retries}/${maxRetries} failed with error:`,
+          error
+        );
+        if (retries >= maxRetries) {
+          throw new Error(
+            "Failed to connect to database after multiple attempts"
+          );
+        }
+        // Wait 3 seconds before retrying
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+      }
+    }
+
+    if (!dbConnected) {
+      throw new Error("Database connection check failed after maximum retries");
     }
 
     // Now that database is initialized, set up model associations

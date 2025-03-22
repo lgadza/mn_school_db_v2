@@ -1,23 +1,21 @@
 export interface UserInterface {
   id: string;
-  username: string;
   email: string | null;
-  password: string;
+  username: string;
+  password?: string;
   firstName: string;
   lastName: string;
-  isActive: boolean;
-  lastLogin?: Date;
+  phoneNumber: string;
   avatar?: string | null;
-  schoolId?: string | undefined;
+  isActive: boolean;
   gender?: string | null;
+  dateOfBirth?: Date | null;
+  lastLogin?: Date | null;
   passwordResetToken?: string | null;
   passwordResetExpires?: Date | null;
-  dateOfBirth?: Date | null;
-  countryCode?: string | null;
-  phoneNumber: string;
-
-  // Add this method to fix the TypeScript error
-  verifyPassword(password: string): Promise<boolean>;
+  // Make verifyPassword optional using '?' since it's a method that is added by the model
+  // rather than a field that would be passed in user creation data
+  verifyPassword?: (password: string) => Promise<boolean>;
 }
 
 export interface UserRoleInterface {

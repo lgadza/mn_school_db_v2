@@ -235,3 +235,171 @@
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Function.Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T02:56:20.952Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T02:58:14.650Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T02:58:51.868Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T02:59:52.815Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T03:00:28.766Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T03:00:44.248Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m9[0m:[93m5[0m - [91merror[0m[90m TS2344: [0mType '"email" | "gender" | "dateOfBirth" | "countryCode" | "id" | "avatar" | "lastLogin" | "passwordResetToken" | "passwordResetExpires" | "verifyPassword" | "schoolId"' does not satisfy the constraint 'keyof UserInterface'.
+  Type '"countryCode"' is not assignable to type 'keyof UserInterface'.
+
+[7m  9[0m     | "id"
+[7m   [0m [91m    ~~~~~~[0m
+[7m 10[0m     | "lastLogin"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 18[0m     | "email"
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 19[0m     | "verifyPassword"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m108[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'schoolId' does not exist in type 'ModelAttributes<User, Optional<UserAttributes, never>>'.
+
+[7m108[0m     schoolId: {
+[7m   [0m [91m    ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)

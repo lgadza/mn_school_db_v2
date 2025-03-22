@@ -127,6 +127,13 @@ export class AuthService implements IAuthService {
     }
 
     // Verify password
+    if (typeof user.verifyPassword !== "function") {
+      throw new UnauthorizedError(
+        "Invalid user configuration",
+        ErrorCode.AUTH_INVALID_CREDENTIALS
+      );
+    }
+
     const isPasswordValid = await user.verifyPassword(password);
     if (!isPasswordValid) {
       throw new UnauthorizedError(
