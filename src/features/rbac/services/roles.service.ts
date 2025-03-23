@@ -1,6 +1,10 @@
-import { IRoleService } from "../interfaces/roles.interface";
+import {
+  CreateRoleDto,
+  IRoleService,
+  RoleInterface,
+  UpdateRoleDto,
+} from "../interfaces/roles.interface";
 import { IRoleRepository } from "../interfaces/roles.interface";
-import { RoleInterface, CreateRoleDto, UpdateRoleDto } from "../interfaces";
 import roleRepository from "../repository/roles.repository";
 import {
   NotFoundError,

@@ -1,5 +1,8 @@
 import { IAddressRepository } from "./interfaces/services";
-import { AddressInterface, AddressLinkInterface } from "./interfaces";
+import {
+  AddressInterface,
+  AddressLinkInterface,
+} from "./interfaces/interfaces";
 import Address from "./model";
 import AddressLink from "./address-link.model";
 import { Transaction, Op, WhereOptions } from "sequelize";

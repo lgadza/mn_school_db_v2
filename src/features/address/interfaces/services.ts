@@ -1,4 +1,4 @@
-import { AddressInterface, AddressLinkInterface } from "../interfaces";
+import { AddressInterface, AddressLinkInterface } from "./interfaces";
 import {
   AddressDetailDTO,
   CreateAddressDTO,

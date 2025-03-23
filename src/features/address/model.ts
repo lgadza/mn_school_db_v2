@@ -1,6 +1,6 @@
 import { Model, DataTypes, Optional } from "sequelize";
 import sequelize from "@/config/sequelize";
-import { AddressInterface } from "./interfaces";
+import { AddressInterface } from "./interfaces/interfaces";
 
 // Define optional fields for creation (fields with default values or generated values like ID)
 interface AddressCreationInterface extends Optional<AddressInterface, "id"> {}

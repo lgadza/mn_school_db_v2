@@ -5,8 +5,10 @@ import { Router } from "express";
 import authRouter from "../../features/auth/routes";
 import usersRouter from "../../features/users/routes";
 import addressRouter from "../../features/address/routes";
+import schoolRouter from "../../features/schools/routes";
+
 // Uncomment these as features are implemented
-// import rbacRouter from '../../features/rbac/routes';
+import rbacRouter from "../../features/rbac/routes/roles.route";
 
 const router: Router = express.Router();
 
@@ -19,6 +21,7 @@ router.get("/", (req, res) => {
       auth: "/auth",
       users: "/users",
       addresses: "/addresses",
+      schools: "/schools",
       // List available endpoints as they are implemented
       // roles: '/rbac/roles',
       demo: "/demo",
@@ -39,7 +42,7 @@ router.get("/demo", (req, res) => {
 router.use("/auth", authRouter);
 router.use("/users", usersRouter);
 router.use("/addresses", addressRouter);
-// Uncomment these as features are implemented
-// router.use('/rbac/roles', rbacRouter);
+router.use("/schools", schoolRouter);
+router.use("/rbac/roles", rbacRouter);
 
 export default router;

@@ -3016,3 +3016,149 @@
 2025-03-23T08:29:08.932Z error: RESPONSE 503 POST /api/v1/auth/forgot-password [280.77ms]
 2025-03-23T08:30:24.368Z error: API Error: Service temporarily unavailable due to high load
 2025-03-23T08:30:24.369Z error: RESPONSE 503 POST /api/v1/auth/forgot-password [289.21ms]
+2025-03-23T21:04:10.075Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m11[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/schools/model"' has no default export.
+
+[7m11[0m import School from "./schools/model";
+[7m  [0m [91m       ~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T21:04:50.581Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m11[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/schools/model"' has no default export.
+
+[7m11[0m import School from "./schools/model";
+[7m  [0m [91m       ~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T21:05:47.608Z error: Error: SchoolAddress.belongsTo called with something that's not a subclass of Sequelize.Model
+    at Function.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:93:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\schools\address-link.model.ts:87:15)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-23T21:07:03.187Z error: Error: SchoolAddress.belongsTo called with something that's not a subclass of Sequelize.Model
+    at Function.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:93:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\schools\address-link.model.ts:87:15)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-23T21:07:33.602Z error: Error: SchoolAddress.belongsTo called with something that's not a subclass of Sequelize.Model
+    at Function.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:93:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\schools\address-link.model.ts:87:15)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-23T21:13:14.514Z error: Error: SchoolAddress.belongsTo called with something that's not a subclass of Sequelize.Model
+    at Function.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:93:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\schools\address-link.model.ts:87:15)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-23T21:16:29.618Z error: Error: SchoolAddress.belongsTo called with something that's not a subclass of Sequelize.Model
+    at Function.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:93:13)
+    at Object.<anonymous> (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\schools\address-link.model.ts:87:15)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+2025-03-23T21:23:56.322Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/v1/index.ts[0m:[93m45[0m:[93m27[0m - [91merror[0m[90m TS2304: [0mCannot find name 'rbacRouter'.
+
+[7m45[0m router.use("/rbac/roles", rbacRouter);
+[7m  [0m [91m                          ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T21:26:38.713Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/rbac/services/roles.service.ts[0m:[93m3[0m:[93m61[0m - [91merror[0m[90m TS2307: [0mCannot find module '../interfaces' or its corresponding type declarations.
+
+[7m3[0m import { RoleInterface, CreateRoleDto, UpdateRoleDto } from "../interfaces";
+[7m [0m [91m                                                            ~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:08:17.711Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/schools/service.ts[0m:[93m180[0m:[93m18[0m - [91merror[0m[90m TS2304: [0mCannot find name 'CreateAddressDTO'.
+
+[7m180[0m     addressData: CreateAddressDTO
+[7m   [0m [91m                 ~~~~~~~~~~~~~~~~[0m
+[96msrc/features/schools/service.ts[0m:[93m184[0m:[93m33[0m - [91merror[0m[90m TS2304: [0mCannot find name 'db'.
+
+[7m184[0m       const transaction = await db.sequelize.transaction();
+[7m   [0m [91m                                ~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:11:49.895Z error: API Error: Validation failed
+2025-03-23T22:13:05.863Z error: API Error: No authentication token provided
+2025-03-23T22:13:41.606Z error: API Error: Token has expired
+2025-03-23T22:16:15.314Z error: ForbiddenError: Insufficient permissions
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\permission.ts:94:15
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T22:16:15.315Z error: API Error: Insufficient permissions

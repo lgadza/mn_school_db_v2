@@ -5,7 +5,10 @@ import addressController from "./controller";
 import addressRepository from "./repository";
 import addressValidationSchemas from "./validation";
 import addressRoutes from "./routes";
-import { AddressInterface, AddressLinkInterface } from "./interfaces";
+import {
+  AddressInterface,
+  AddressLinkInterface,
+} from "./interfaces/interfaces";
 import {
   AddressBaseDTO,
   AddressDetailDTO,

@@ -1,4 +1,4 @@
-import { AddressInterface } from "./interfaces";
+import { AddressInterface } from "./interfaces/interfaces";
 
 /**
  * Base DTO for address information

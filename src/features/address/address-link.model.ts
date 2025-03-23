@@ -1,6 +1,6 @@
 import { Model, DataTypes, Optional } from "sequelize";
 import sequelize from "@/config/sequelize";
-import { AddressLinkInterface } from "./interfaces";
+import { AddressLinkInterface } from "./interfaces/interfaces";
 import Address from "./model";
 
 // Define optional fields for creation
