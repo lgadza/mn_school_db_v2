@@ -585,6 +585,8 @@ router.get(
  *         description: Unauthorized, authentication required
  *       500:
  *         description: Internal server error
+ *
+ *
  */
 router.post(
   "/logout",

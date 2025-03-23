@@ -936,3 +936,123 @@
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Function.Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:48:14.702Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/auth.ts[0m:[93m90[0m:[93m19[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m90[0m     allowedRoles: UserRole | UserRole[]
+[7m  [0m [91m                  ~~~~~~~~[0m
+[96msrc/shared/middleware/auth.ts[0m:[93m90[0m:[93m30[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m90[0m     allowedRoles: UserRole | UserRole[]
+[7m  [0m [91m                             ~~~~~~~~[0m
+[96msrc/shared/middleware/auth.ts[0m:[93m100[0m:[93m41[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m100[0m       const userRole = req.user.role as UserRole;
+[7m   [0m [91m                                        ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:49:24.967Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/auth.ts[0m:[93m90[0m:[93m19[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m90[0m     allowedRoles: UserRole | UserRole[]
+[7m  [0m [91m                  ~~~~~~~~[0m
+[96msrc/shared/middleware/auth.ts[0m:[93m90[0m:[93m30[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m90[0m     allowedRoles: UserRole | UserRole[]
+[7m  [0m [91m                             ~~~~~~~~[0m
+[96msrc/shared/middleware/auth.ts[0m:[93m100[0m:[93m41[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m100[0m       const userRole = req.user.role as UserRole;
+[7m   [0m [91m                                        ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:49:42.328Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/auth.ts[0m:[93m5[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@/features/rbac/constants/roles"' has no exported member 'UserRole'.
+
+[7m5[0m import { UserRole } from "@/features/rbac/constants/roles";
+[7m [0m [91m         ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:50:00.635Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/shared/middleware/auth.ts[0m:[93m90[0m:[93m19[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m90[0m     allowedRoles: UserRole | UserRole[]
+[7m  [0m [91m                  ~~~~~~~~[0m
+[96msrc/shared/middleware/auth.ts[0m:[93m90[0m:[93m30[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m90[0m     allowedRoles: UserRole | UserRole[]
+[7m  [0m [91m                             ~~~~~~~~[0m
+[96msrc/shared/middleware/auth.ts[0m:[93m100[0m:[93m41[0m - [91merror[0m[90m TS2304: [0mCannot find name 'UserRole'.
+
+[7m100[0m       const userRole = req.user.role as UserRole;
+[7m   [0m [91m                                        ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T08:06:05.857Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/controller.ts[0m:[93m173[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'isEmailRegistered' does not exist on type 'IAuthService'.
+
+[7m173[0m       const isEmailRegistered = await this.service.isEmailRegistered(email);
+[7m   [0m [91m                                                   ~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T08:07:17.422Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/controller.ts[0m:[93m173[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'isEmailRegistered' does not exist on type 'IAuthService'.
+
+[7m173[0m       const isEmailRegistered = await this.service.isEmailRegistered(email);
+[7m   [0m [91m                                                   ~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)

@@ -30,4 +30,11 @@ export interface IAuthService {
   requestPasswordReset(email: string): Promise<boolean>;
   resetPassword(token: string, newPassword: string): Promise<boolean>;
   verifyEmail(token: string): Promise<boolean>;
+
+  /**
+   * Check if an email is registered in the system
+   * @param email Email to check
+   * @returns Boolean indicating if the email is registered
+   */
+  isEmailRegistered(email: string): Promise<boolean>;
 }

@@ -24,6 +24,14 @@ export class AuthService implements IAuthService {
   constructor(repository: IAuthRepository) {
     this.repository = repository;
   }
+  /**
+   * Check if an email is already registered
+   */
+  public async isEmailRegistered(email: string): Promise<boolean> {
+    // Check if a user with the given email exists in the repository
+    const user = await this.repository.findUserByEmail(email);
+    return !!user; // Return true if user exists, otherwise false
+  }
 
   /**
    * Register a new user

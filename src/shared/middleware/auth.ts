@@ -4,16 +4,6 @@ import ResponseUtil from "@/common/utils/responses/responseUtil";
 import logger from "@/common/utils/logging/logger";
 
 /**
- * User role types
- */
-export enum UserRole {
-  ADMIN = "admin",
-  MANAGER = "manager",
-  USER = "user",
-  GUEST = "guest",
-}
-
-/**
  * Extended Express Request interface with authentication properties
  */
 declare global {
@@ -48,7 +38,7 @@ export class AuthMiddleware {
     next: NextFunction
   ): Promise<void> {
     try {
-      const token = this.extractTokenFromHeader(req);
+      const token = AuthMiddleware.extractTokenFromHeader(req);
 
       if (!token) {
         ResponseUtil.sendUnauthorized(res, "No authentication token provided");
@@ -97,7 +87,7 @@ export class AuthMiddleware {
    * @returns Express middleware
    */
   public static hasRole(
-    allowedRoles: UserRole | UserRole[]
+    allowedRoles: string | string[]
   ): (req: Request, res: Response, next: NextFunction) => void {
     const roles = Array.isArray(allowedRoles) ? allowedRoles : [allowedRoles];
 
@@ -107,7 +97,7 @@ export class AuthMiddleware {
         return ResponseUtil.sendUnauthorized(res, "Authentication required");
       }
 
-      const userRole = req.user.role as UserRole;
+      const userRole = req.user.role as string;
 
       // Check if user has an allowed role
       if (!userRole || !roles.includes(userRole)) {
@@ -171,7 +161,7 @@ export class AuthMiddleware {
     next: NextFunction
   ): Promise<void> {
     try {
-      const token = this.extractTokenFromHeader(req);
+      const token = AuthMiddleware.extractTokenFromHeader(req);
 
       if (!token) {
         // No token, but that's okay for this middleware

@@ -20,6 +20,12 @@ const config: Config.InitialOptions = {
   moduleFileExtensions: ["ts", "js", "json", "node"],
   testTimeout: 30000,
   setupFilesAfterEnv: ["<rootDir>/src/__tests__/setup.ts"],
+  // Add setup file from jest.config.js
+  setupFiles: ["./jest.setup.js"],
+
+  // Add these options to help with connection teardown issues
+  forceExit: true, // Force Jest to exit after all tests complete
+  detectOpenHandles: false, // Set to true for debugging connection issues
 
   // Project definition is simplified
   projects: [
