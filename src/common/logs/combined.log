@@ -7160,3 +7160,580 @@
 2025-03-23T22:16:15.315Z warn: RESPONSE 403 PUT /api/v1/users/f7585325-dea8-47c1-bd86-9299ff882327 [344.06ms]
 2025-03-23T22:16:44.840Z info: REQUEST PUT /api/v1/schools/f7585325-dea8-47c1-bd86-9299ff882327
 2025-03-23T22:16:45.288Z info: RESPONSE 200 PUT /f7585325-dea8-47c1-bd86-9299ff882327 [448.04ms]
+2025-03-23T22:19:15.621Z info: Database configuration:
+2025-03-23T22:19:15.745Z info: Connecting to Redis:
+2025-03-23T22:19:18.695Z info: Redis rate limiter initialized
+2025-03-23T22:19:19.533Z info: Cache utility initialized
+2025-03-23T22:19:21.600Z info: Configuring CORS middleware
+2025-03-23T22:19:21.601Z info: Configuring compression middleware
+2025-03-23T22:19:21.607Z info: Redis rate limiter initialized
+2025-03-23T22:19:21.607Z info: Redis rate limiter initialized
+2025-03-23T22:19:21.609Z info: Checking database connection...
+2025-03-23T22:19:21.689Z info: Redis connected successfully
+2025-03-23T22:19:21.777Z info: Sequelize connection has been established successfully.
+2025-03-23T22:19:21.822Z info: Database connection successful
+2025-03-23T22:19:21.823Z info: Setting up model associations...
+2025-03-23T22:19:21.824Z info: Setting up model associations...
+2025-03-23T22:19:21.846Z info: Model associations set up successfully
+2025-03-23T22:19:21.847Z info: Checking Redis connection...
+2025-03-23T22:19:22.126Z info: Redis client is ready
+2025-03-23T22:19:22.298Z info: Redis ping successful
+2025-03-23T22:19:22.299Z info: Redis connection successful
+2025-03-23T22:19:22.299Z info: Syncing database models...
+2025-03-23T22:19:22.300Z info: Setting up model associations before sync...
+2025-03-23T22:19:22.300Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:19:22.301Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:19:22.302Z info: Syncing model: Role
+2025-03-23T22:19:22.436Z info: Successfully synced model: Role
+2025-03-23T22:19:22.437Z info: Syncing model: Permission
+2025-03-23T22:19:22.502Z info: Successfully synced model: Permission
+2025-03-23T22:19:22.503Z info: Syncing model: School
+2025-03-23T22:19:22.598Z info: Successfully synced model: School
+2025-03-23T22:19:22.598Z info: Syncing model: User
+2025-03-23T22:19:22.782Z info: Successfully synced model: User
+2025-03-23T22:19:22.783Z info: Syncing model: Address
+2025-03-23T22:19:22.810Z info: Successfully synced model: Address
+2025-03-23T22:19:22.810Z info: Syncing model: RolePermission
+2025-03-23T22:19:22.841Z info: Successfully synced model: RolePermission
+2025-03-23T22:19:22.842Z info: Syncing model: UserRole
+2025-03-23T22:19:22.876Z info: Successfully synced model: UserRole
+2025-03-23T22:19:22.877Z info: Syncing model: AddressLink
+2025-03-23T22:19:22.940Z info: Successfully synced model: AddressLink
+2025-03-23T22:19:22.941Z info: All models synced successfully
+2025-03-23T22:19:22.941Z info: Database synced successfully
+2025-03-23T22:19:22.941Z info: Verifying database tables before seeding...
+2025-03-23T22:19:22.944Z info: Found database tables: , , , , , , , 
+2025-03-23T22:19:22.944Z info: Running seeders...
+2025-03-23T22:19:22.945Z info: Starting database seeding...
+2025-03-23T22:19:23.957Z info: Starting RBAC seeding...
+2025-03-23T22:19:23.961Z info: Checking existing roles...
+2025-03-23T22:19:24.009Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-23T22:19:24.038Z info: Found 8 tables for permission generation
+2025-03-23T22:19:24.039Z info: No new permissions to create
+2025-03-23T22:19:24.044Z info: Found 350 existing role-permission mappings. Skipping.
+2025-03-23T22:19:24.045Z info: RBAC seeding completed successfully
+2025-03-23T22:19:24.045Z info: Database seeding completed
+2025-03-23T22:19:24.045Z info: Seeding completed successfully
+2025-03-23T22:19:24.050Z info: API Routes (90 total routes):
+2025-03-23T22:19:24.135Z info: Server running on port 3001
+2025-03-23T22:19:49.396Z info: Database configuration:
+2025-03-23T22:19:49.538Z info: Connecting to Redis:
+2025-03-23T22:19:52.684Z info: Redis rate limiter initialized
+2025-03-23T22:19:53.713Z info: Cache utility initialized
+2025-03-23T22:19:55.896Z info: Configuring CORS middleware
+2025-03-23T22:19:55.897Z info: Configuring compression middleware
+2025-03-23T22:19:55.908Z info: Redis rate limiter initialized
+2025-03-23T22:19:55.909Z info: Redis rate limiter initialized
+2025-03-23T22:19:55.911Z info: Checking database connection...
+2025-03-23T22:19:55.963Z info: Redis connected successfully
+2025-03-23T22:19:56.056Z info: Sequelize connection has been established successfully.
+2025-03-23T22:19:56.099Z info: Database connection successful
+2025-03-23T22:19:56.099Z info: Setting up model associations...
+2025-03-23T22:19:56.100Z info: Setting up model associations...
+2025-03-23T22:19:56.115Z info: Model associations set up successfully
+2025-03-23T22:19:56.115Z info: Checking Redis connection...
+2025-03-23T22:19:56.296Z info: Redis client is ready
+2025-03-23T22:19:56.462Z info: Redis ping successful
+2025-03-23T22:19:56.464Z info: Redis connection successful
+2025-03-23T22:19:56.464Z info: Syncing database models...
+2025-03-23T22:19:56.464Z info: Setting up model associations before sync...
+2025-03-23T22:19:56.465Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:19:56.465Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:19:56.466Z info: Syncing model: Role
+2025-03-23T22:19:56.570Z info: Successfully synced model: Role
+2025-03-23T22:19:56.571Z info: Syncing model: Permission
+2025-03-23T22:19:56.620Z info: Successfully synced model: Permission
+2025-03-23T22:19:56.620Z info: Syncing model: School
+2025-03-23T22:19:56.716Z info: Successfully synced model: School
+2025-03-23T22:19:56.717Z info: Syncing model: User
+2025-03-23T22:19:56.915Z info: Successfully synced model: User
+2025-03-23T22:19:56.916Z info: Syncing model: Address
+2025-03-23T22:19:56.946Z info: Successfully synced model: Address
+2025-03-23T22:19:56.947Z info: Syncing model: RolePermission
+2025-03-23T22:19:56.979Z info: Successfully synced model: RolePermission
+2025-03-23T22:19:56.979Z info: Syncing model: UserRole
+2025-03-23T22:19:57.011Z info: Successfully synced model: UserRole
+2025-03-23T22:19:57.011Z info: Syncing model: AddressLink
+2025-03-23T22:19:57.070Z info: Successfully synced model: AddressLink
+2025-03-23T22:19:57.070Z info: All models synced successfully
+2025-03-23T22:19:57.071Z info: Database synced successfully
+2025-03-23T22:19:57.071Z info: Verifying database tables before seeding...
+2025-03-23T22:19:57.073Z info: Found database tables: , , , , , , , 
+2025-03-23T22:19:57.073Z info: Running seeders...
+2025-03-23T22:19:57.074Z info: Starting database seeding...
+2025-03-23T22:19:58.076Z info: Starting RBAC seeding...
+2025-03-23T22:19:58.079Z info: Checking existing roles...
+2025-03-23T22:19:58.118Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-23T22:19:58.149Z info: Found 8 tables for permission generation
+2025-03-23T22:19:58.150Z info: No new permissions to create
+2025-03-23T22:19:58.154Z info: Found 350 existing role-permission mappings. Skipping.
+2025-03-23T22:19:58.155Z info: RBAC seeding completed successfully
+2025-03-23T22:19:58.155Z info: Database seeding completed
+2025-03-23T22:19:58.156Z info: Seeding completed successfully
+2025-03-23T22:19:58.162Z info: API Routes (90 total routes):
+2025-03-23T22:19:58.216Z info: Server running on port 3001
+2025-03-23T22:20:28.817Z info: Database configuration:
+2025-03-23T22:20:28.997Z info: Connecting to Redis:
+2025-03-23T22:20:32.842Z info: Redis rate limiter initialized
+2025-03-23T22:20:33.784Z info: Cache utility initialized
+2025-03-23T22:20:36.355Z info: Configuring CORS middleware
+2025-03-23T22:20:36.356Z info: Configuring compression middleware
+2025-03-23T22:20:36.361Z info: Redis rate limiter initialized
+2025-03-23T22:20:36.362Z info: Redis rate limiter initialized
+2025-03-23T22:20:36.364Z info: Checking database connection...
+2025-03-23T22:20:36.418Z info: Redis connected successfully
+2025-03-23T22:20:36.523Z info: Sequelize connection has been established successfully.
+2025-03-23T22:20:36.567Z info: Database connection successful
+2025-03-23T22:20:36.567Z info: Setting up model associations...
+2025-03-23T22:20:36.568Z info: Setting up model associations...
+2025-03-23T22:20:36.588Z info: Model associations set up successfully
+2025-03-23T22:20:36.589Z info: Checking Redis connection...
+2025-03-23T22:20:36.878Z info: Redis client is ready
+2025-03-23T22:20:37.051Z info: Redis ping successful
+2025-03-23T22:20:37.052Z info: Redis connection successful
+2025-03-23T22:20:37.052Z info: Syncing database models...
+2025-03-23T22:20:37.053Z info: Setting up model associations before sync...
+2025-03-23T22:20:37.053Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:20:37.054Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:20:37.054Z info: Syncing model: Role
+2025-03-23T22:20:37.169Z info: Successfully synced model: Role
+2025-03-23T22:20:37.177Z info: Syncing model: Permission
+2025-03-23T22:20:37.252Z info: Successfully synced model: Permission
+2025-03-23T22:20:37.253Z info: Syncing model: School
+2025-03-23T22:20:37.394Z info: Successfully synced model: School
+2025-03-23T22:20:37.399Z info: Syncing model: User
+2025-03-23T22:20:59.274Z info: Database configuration:
+2025-03-23T22:20:59.569Z info: Connecting to Redis:
+2025-03-23T22:21:02.127Z info: Redis rate limiter initialized
+2025-03-23T22:21:02.802Z info: Cache utility initialized
+2025-03-23T22:21:04.466Z info: Configuring CORS middleware
+2025-03-23T22:21:04.468Z info: Configuring compression middleware
+2025-03-23T22:21:04.472Z info: Redis rate limiter initialized
+2025-03-23T22:21:04.473Z info: Redis rate limiter initialized
+2025-03-23T22:21:04.474Z info: Checking database connection...
+2025-03-23T22:21:04.527Z info: Redis connected successfully
+2025-03-23T22:21:04.627Z info: Sequelize connection has been established successfully.
+2025-03-23T22:21:04.772Z info: Database connection successful
+2025-03-23T22:21:04.773Z info: Setting up model associations...
+2025-03-23T22:21:04.774Z info: Setting up model associations...
+2025-03-23T22:21:04.785Z info: Model associations set up successfully
+2025-03-23T22:21:04.786Z info: Checking Redis connection...
+2025-03-23T22:21:04.826Z info: Redis client is ready
+2025-03-23T22:21:04.998Z info: Redis ping successful
+2025-03-23T22:21:04.999Z info: Redis connection successful
+2025-03-23T22:21:05.001Z info: Syncing database models...
+2025-03-23T22:21:05.001Z info: Setting up model associations before sync...
+2025-03-23T22:21:05.002Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:21:05.003Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:21:05.004Z info: Syncing model: Role
+2025-03-23T22:21:05.086Z info: Successfully synced model: Role
+2025-03-23T22:21:05.087Z info: Syncing model: Permission
+2025-03-23T22:21:05.126Z info: Successfully synced model: Permission
+2025-03-23T22:21:05.127Z info: Syncing model: School
+2025-03-23T22:21:05.209Z info: Successfully synced model: School
+2025-03-23T22:21:05.210Z info: Syncing model: User
+2025-03-23T22:21:05.363Z info: Successfully synced model: User
+2025-03-23T22:21:05.364Z info: Syncing model: Address
+2025-03-23T22:21:05.387Z info: Successfully synced model: Address
+2025-03-23T22:21:05.388Z info: Syncing model: RolePermission
+2025-03-23T22:21:05.417Z info: Successfully synced model: RolePermission
+2025-03-23T22:21:05.418Z info: Syncing model: UserRole
+2025-03-23T22:21:05.445Z info: Successfully synced model: UserRole
+2025-03-23T22:21:05.446Z info: Syncing model: AddressLink
+2025-03-23T22:21:05.503Z info: Successfully synced model: AddressLink
+2025-03-23T22:21:05.504Z info: All models synced successfully
+2025-03-23T22:21:05.504Z info: Database synced successfully
+2025-03-23T22:21:05.504Z info: Verifying database tables before seeding...
+2025-03-23T22:21:05.506Z info: Found database tables: , , , , , , , 
+2025-03-23T22:21:05.506Z info: Running seeders...
+2025-03-23T22:21:05.507Z info: Starting database seeding...
+2025-03-23T22:21:06.521Z info: Starting RBAC seeding...
+2025-03-23T22:21:06.525Z info: Checking existing roles...
+2025-03-23T22:21:06.559Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-23T22:21:06.582Z info: Found 8 tables for permission generation
+2025-03-23T22:21:06.583Z info: No new permissions to create
+2025-03-23T22:21:06.587Z info: Found 350 existing role-permission mappings. Skipping.
+2025-03-23T22:21:06.587Z info: RBAC seeding completed successfully
+2025-03-23T22:21:06.587Z info: Database seeding completed
+2025-03-23T22:21:06.587Z info: Seeding completed successfully
+2025-03-23T22:21:06.592Z info: API Routes (90 total routes):
+2025-03-23T22:21:06.638Z info: Server running on port 3001
+2025-03-23T22:22:06.356Z info: Database configuration:
+2025-03-23T22:22:51.507Z info: Database configuration:
+2025-03-23T22:23:22.510Z info: Database configuration:
+2025-03-23T22:24:26.629Z info: Database configuration:
+2025-03-23T22:24:26.772Z info: Connecting to Redis:
+2025-03-23T22:24:30.059Z info: Redis rate limiter initialized
+2025-03-23T22:24:30.827Z info: Cache utility initialized
+2025-03-23T22:24:32.993Z info: Configuring CORS middleware
+2025-03-23T22:24:32.994Z info: Configuring compression middleware
+2025-03-23T22:24:32.998Z info: Redis rate limiter initialized
+2025-03-23T22:24:32.999Z info: Redis rate limiter initialized
+2025-03-23T22:24:33.000Z info: Checking database connection...
+2025-03-23T22:24:33.145Z info: Redis connected successfully
+2025-03-23T22:24:33.178Z info: Sequelize connection has been established successfully.
+2025-03-23T22:24:33.219Z info: Database connection successful
+2025-03-23T22:24:33.220Z info: Setting up model associations...
+2025-03-23T22:24:33.220Z info: Setting up model associations...
+2025-03-23T22:24:33.243Z info: Model associations set up successfully
+2025-03-23T22:24:33.244Z info: Checking Redis connection...
+2025-03-23T22:24:33.462Z info: Redis client is ready
+2025-03-23T22:24:33.637Z info: Redis ping successful
+2025-03-23T22:24:33.639Z info: Redis connection successful
+2025-03-23T22:24:33.639Z info: Syncing database models...
+2025-03-23T22:24:33.639Z info: Setting up model associations before sync...
+2025-03-23T22:24:33.640Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:24:33.640Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:24:33.641Z info: Syncing model: Role
+2025-03-23T22:24:33.773Z info: Successfully synced model: Role
+2025-03-23T22:24:33.774Z info: Syncing model: Permission
+2025-03-23T22:24:33.837Z info: Successfully synced model: Permission
+2025-03-23T22:24:33.837Z info: Syncing model: School
+2025-03-23T22:24:33.934Z info: Successfully synced model: School
+2025-03-23T22:24:33.935Z info: Syncing model: User
+2025-03-23T22:24:34.142Z info: Successfully synced model: User
+2025-03-23T22:24:34.142Z info: Syncing model: Address
+2025-03-23T22:24:34.170Z info: Successfully synced model: Address
+2025-03-23T22:24:34.170Z info: Syncing model: RolePermission
+2025-03-23T22:24:34.204Z info: Successfully synced model: RolePermission
+2025-03-23T22:24:34.204Z info: Syncing model: UserRole
+2025-03-23T22:24:34.238Z info: Successfully synced model: UserRole
+2025-03-23T22:24:34.238Z info: Syncing model: AddressLink
+2025-03-23T22:24:34.297Z info: Successfully synced model: AddressLink
+2025-03-23T22:24:34.297Z info: All models synced successfully
+2025-03-23T22:24:34.297Z info: Database synced successfully
+2025-03-23T22:24:34.298Z info: Verifying database tables before seeding...
+2025-03-23T22:24:34.300Z info: Found database tables: , , , , , , , 
+2025-03-23T22:24:34.300Z info: Running seeders...
+2025-03-23T22:24:34.300Z info: Starting database seeding...
+2025-03-23T22:24:35.311Z info: Starting RBAC seeding...
+2025-03-23T22:24:35.314Z info: Checking existing roles...
+2025-03-23T22:24:35.360Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-23T22:24:35.389Z info: Found 8 tables for permission generation
+2025-03-23T22:24:35.390Z info: No new permissions to create
+2025-03-23T22:24:35.395Z info: Found 350 existing role-permission mappings. Skipping.
+2025-03-23T22:24:35.396Z info: RBAC seeding completed successfully
+2025-03-23T22:24:35.396Z info: Database seeding completed
+2025-03-23T22:24:35.396Z info: Seeding completed successfully
+2025-03-23T22:24:35.402Z info: API Routes (95 total routes):
+2025-03-23T22:24:35.463Z info: Server running on port 3001
+2025-03-23T22:29:40.449Z info: REQUEST POST /api/v1/search
+2025-03-23T22:29:40.621Z warn: Redis rate limiter failed, falling back to memory:
+2025-03-23T22:29:40.736Z warn: RESPONSE 404 POST /api/v1/search [286.20ms]
+2025-03-23T22:30:19.989Z info: REQUEST POST /api/v1/search
+2025-03-23T22:30:20.330Z warn: System under high load: CPU 100.0%, Memory 92.2%
+2025-03-23T22:30:20.364Z warn: System under high load, rejecting request
+2025-03-23T22:30:20.396Z error: API Error: Service temporarily unavailable due to high load
+2025-03-23T22:30:20.425Z error: RESPONSE 503 POST /api/v1/search [435.46ms]
+2025-03-23T22:34:06.178Z info: Database configuration:
+2025-03-23T22:34:06.397Z info: Connecting to Redis:
+2025-03-23T22:34:11.164Z info: Redis rate limiter initialized
+2025-03-23T22:34:12.260Z info: Cache utility initialized
+2025-03-23T22:34:15.612Z info: Configuring CORS middleware
+2025-03-23T22:34:15.613Z info: Configuring compression middleware
+2025-03-23T22:34:15.621Z info: Redis rate limiter initialized
+2025-03-23T22:34:15.621Z info: Redis rate limiter initialized
+2025-03-23T22:34:15.623Z info: Checking database connection...
+2025-03-23T22:34:15.772Z info: Redis connected successfully
+2025-03-23T22:34:15.835Z info: Sequelize connection has been established successfully.
+2025-03-23T22:34:15.877Z info: Database connection successful
+2025-03-23T22:34:15.878Z info: Setting up model associations...
+2025-03-23T22:34:15.879Z info: Setting up model associations...
+2025-03-23T22:34:15.896Z info: Model associations set up successfully
+2025-03-23T22:34:15.896Z info: Checking Redis connection...
+2025-03-23T22:34:16.216Z info: Redis client is ready
+2025-03-23T22:34:16.395Z info: Redis ping successful
+2025-03-23T22:34:16.396Z info: Redis connection successful
+2025-03-23T22:34:16.397Z info: Syncing database models...
+2025-03-23T22:34:16.397Z info: Setting up model associations before sync...
+2025-03-23T22:34:16.397Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:34:16.398Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:34:16.398Z info: Syncing model: Role
+2025-03-23T22:34:16.562Z info: Successfully synced model: Role
+2025-03-23T22:34:16.562Z info: Syncing model: Permission
+2025-03-23T22:34:16.641Z info: Successfully synced model: Permission
+2025-03-23T22:34:16.642Z info: Syncing model: School
+2025-03-23T22:34:16.744Z info: Successfully synced model: School
+2025-03-23T22:34:16.744Z info: Syncing model: User
+2025-03-23T22:34:17.029Z info: Successfully synced model: User
+2025-03-23T22:34:17.030Z info: Syncing model: Address
+2025-03-23T22:34:17.058Z info: Successfully synced model: Address
+2025-03-23T22:34:17.058Z info: Syncing model: RolePermission
+2025-03-23T22:34:17.094Z info: Successfully synced model: RolePermission
+2025-03-23T22:34:17.094Z info: Syncing model: UserRole
+2025-03-23T22:34:17.128Z info: Successfully synced model: UserRole
+2025-03-23T22:34:17.129Z info: Syncing model: AddressLink
+2025-03-23T22:34:17.193Z info: Successfully synced model: AddressLink
+2025-03-23T22:34:17.193Z info: All models synced successfully
+2025-03-23T22:34:17.193Z info: Database synced successfully
+2025-03-23T22:34:17.194Z info: Verifying database tables before seeding...
+2025-03-23T22:34:17.196Z info: Found database tables: , , , , , , , 
+2025-03-23T22:34:17.196Z info: Running seeders...
+2025-03-23T22:34:17.196Z info: Starting database seeding...
+2025-03-23T22:34:18.212Z info: Starting RBAC seeding...
+2025-03-23T22:34:18.219Z info: Checking existing roles...
+2025-03-23T22:34:18.276Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-23T22:34:18.310Z info: Found 8 tables for permission generation
+2025-03-23T22:34:18.311Z info: No new permissions to create
+2025-03-23T22:34:18.315Z info: Found 350 existing role-permission mappings. Skipping.
+2025-03-23T22:34:18.315Z info: RBAC seeding completed successfully
+2025-03-23T22:34:18.316Z info: Database seeding completed
+2025-03-23T22:34:18.316Z info: Seeding completed successfully
+2025-03-23T22:34:18.322Z info: API Routes (95 total routes):
+2025-03-23T22:34:18.377Z info: Server running on port 3001
+2025-03-23T22:36:04.555Z info: REQUEST POST /api/v1/search
+2025-03-23T22:36:04.724Z warn: Redis rate limiter failed, falling back to memory:
+2025-03-23T22:36:04.834Z warn: RESPONSE 404 POST /api/v1/search [279.14ms]
+2025-03-23T22:38:25.575Z info: REQUEST GET /api/v1/search
+2025-03-23T22:38:25.906Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:38:25.909Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:38:25.920Z info: RESPONSE 200 GET / [344.86ms]
+2025-03-23T22:39:21.981Z info: REQUEST GET /api/v1/search
+2025-03-23T22:39:22.171Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:39:22.172Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:39:22.181Z info: RESPONSE 200 GET / [199.55ms]
+2025-03-23T22:39:54.411Z info: REQUEST GET /api/v1/search
+2025-03-23T22:39:54.586Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:39:54.587Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:39:54.599Z info: RESPONSE 200 GET / [188.66ms]
+2025-03-23T22:40:49.776Z info: REQUEST GET /api/v1/search
+2025-03-23T22:40:49.946Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:40:49.947Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:40:49.958Z info: RESPONSE 200 GET / [181.33ms]
+2025-03-23T22:44:14.876Z info: Database configuration:
+2025-03-23T22:45:58.352Z info: Database configuration:
+2025-03-23T22:47:30.796Z info: Database configuration:
+2025-03-23T22:49:17.924Z info: Database configuration:
+2025-03-23T22:50:44.079Z info: Database configuration:
+2025-03-23T22:53:07.726Z info: Database configuration:
+2025-03-23T22:53:07.938Z info: Connecting to Redis:
+2025-03-23T22:53:11.340Z info: Redis rate limiter initialized
+2025-03-23T22:53:12.043Z info: Cache utility initialized
+2025-03-23T22:53:14.299Z info: Configuring CORS middleware
+2025-03-23T22:53:14.300Z info: Configuring compression middleware
+2025-03-23T22:53:14.307Z info: Redis rate limiter initialized
+2025-03-23T22:53:14.308Z info: Redis rate limiter initialized
+2025-03-23T22:53:14.310Z info: Checking database connection...
+2025-03-23T22:53:14.401Z info: Redis connected successfully
+2025-03-23T22:53:14.537Z info: Sequelize connection has been established successfully.
+2025-03-23T22:53:14.599Z info: Database connection successful
+2025-03-23T22:53:14.600Z info: Setting up model associations...
+2025-03-23T22:53:14.601Z info: Setting up model associations...
+2025-03-23T22:53:14.621Z info: Model associations set up successfully
+2025-03-23T22:53:14.622Z info: Checking Redis connection...
+2025-03-23T22:53:14.889Z info: Redis client is ready
+2025-03-23T22:53:15.087Z info: Redis ping successful
+2025-03-23T22:53:15.088Z info: Redis connection successful
+2025-03-23T22:53:15.088Z info: Syncing database models...
+2025-03-23T22:53:15.095Z info: Setting up model associations before sync...
+2025-03-23T22:53:15.096Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:53:15.097Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:53:15.097Z info: Syncing model: Role
+2025-03-23T22:53:15.267Z info: Successfully synced model: Role
+2025-03-23T22:53:15.268Z info: Syncing model: Permission
+2025-03-23T22:53:15.342Z info: Successfully synced model: Permission
+2025-03-23T22:53:15.343Z info: Syncing model: School
+2025-03-23T22:53:15.471Z info: Successfully synced model: School
+2025-03-23T22:53:15.472Z info: Syncing model: User
+2025-03-23T22:53:15.752Z info: Successfully synced model: User
+2025-03-23T22:53:15.752Z info: Syncing model: Address
+2025-03-23T22:53:15.792Z info: Successfully synced model: Address
+2025-03-23T22:53:15.792Z info: Syncing model: RolePermission
+2025-03-23T22:53:15.831Z info: Successfully synced model: RolePermission
+2025-03-23T22:53:15.832Z info: Syncing model: UserRole
+2025-03-23T22:53:15.868Z info: Successfully synced model: UserRole
+2025-03-23T22:53:15.868Z info: Syncing model: AddressLink
+2025-03-23T22:53:15.938Z info: Successfully synced model: AddressLink
+2025-03-23T22:53:15.939Z info: All models synced successfully
+2025-03-23T22:53:15.939Z info: Database synced successfully
+2025-03-23T22:53:15.939Z info: Verifying database tables before seeding...
+2025-03-23T22:53:15.942Z info: Found database tables: , , , , , , , 
+2025-03-23T22:53:15.942Z info: Running seeders...
+2025-03-23T22:53:15.942Z info: Starting database seeding...
+2025-03-23T22:53:16.956Z info: Starting RBAC seeding...
+2025-03-23T22:53:16.961Z info: Checking existing roles...
+2025-03-23T22:53:17.032Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-23T22:53:17.067Z info: Found 8 tables for permission generation
+2025-03-23T22:53:17.068Z info: No new permissions to create
+2025-03-23T22:53:17.074Z info: Found 350 existing role-permission mappings. Skipping.
+2025-03-23T22:53:17.074Z info: RBAC seeding completed successfully
+2025-03-23T22:53:17.075Z info: Database seeding completed
+2025-03-23T22:53:17.075Z info: Seeding completed successfully
+2025-03-23T22:53:17.083Z info: API Routes (95 total routes):
+2025-03-23T22:53:17.144Z info: Server running on port 3001
+2025-03-23T22:54:57.460Z info: Database configuration:
+2025-03-23T22:57:32.382Z info: Database configuration:
+2025-03-23T22:57:32.557Z info: Connecting to Redis:
+2025-03-23T22:57:35.995Z info: Redis rate limiter initialized
+2025-03-23T22:57:36.645Z info: Cache utility initialized
+2025-03-23T22:57:38.752Z info: Configuring CORS middleware
+2025-03-23T22:57:38.753Z info: Configuring compression middleware
+2025-03-23T22:57:38.758Z info: Redis rate limiter initialized
+2025-03-23T22:57:38.758Z info: Redis rate limiter initialized
+2025-03-23T22:57:38.759Z info: Checking database connection...
+2025-03-23T22:57:38.865Z info: Redis connected successfully
+2025-03-23T22:57:38.931Z info: Sequelize connection has been established successfully.
+2025-03-23T22:57:38.972Z info: Database connection successful
+2025-03-23T22:57:38.972Z info: Setting up model associations...
+2025-03-23T22:57:38.973Z info: Setting up model associations...
+2025-03-23T22:57:38.988Z info: Model associations set up successfully
+2025-03-23T22:57:38.989Z info: Checking Redis connection...
+2025-03-23T22:57:39.247Z info: Redis client is ready
+2025-03-23T22:57:39.453Z info: Redis ping successful
+2025-03-23T22:57:39.454Z info: Redis connection successful
+2025-03-23T22:57:39.454Z info: Syncing database models...
+2025-03-23T22:57:39.454Z info: Setting up model associations before sync...
+2025-03-23T22:57:39.454Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:57:39.455Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:57:39.455Z info: Syncing model: Role
+2025-03-23T22:57:39.569Z info: Successfully synced model: Role
+2025-03-23T22:57:39.569Z info: Syncing model: Permission
+2025-03-23T22:57:39.629Z info: Successfully synced model: Permission
+2025-03-23T22:57:39.629Z info: Syncing model: School
+2025-03-23T22:57:39.713Z info: Successfully synced model: School
+2025-03-23T22:57:39.713Z info: Syncing model: User
+2025-03-23T22:57:39.928Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:265:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:252:7)
+2025-03-23T22:57:39.929Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:265:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:252:7)
+2025-03-23T22:57:39.930Z error: Error details: column "role" does not exist
+2025-03-23T22:57:39.930Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:265:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:252:7)
+2025-03-23T22:59:02.392Z info: Database configuration:
+2025-03-23T22:59:02.514Z info: Connecting to Redis:
+2025-03-23T22:59:05.096Z info: Redis rate limiter initialized
+2025-03-23T22:59:06.187Z info: Cache utility initialized
+2025-03-23T22:59:08.374Z info: Configuring CORS middleware
+2025-03-23T22:59:08.375Z info: Configuring compression middleware
+2025-03-23T22:59:08.381Z info: Redis rate limiter initialized
+2025-03-23T22:59:08.382Z info: Redis rate limiter initialized
+2025-03-23T22:59:08.384Z info: Checking database connection...
+2025-03-23T22:59:08.522Z info: Redis connected successfully
+2025-03-23T22:59:08.527Z info: Sequelize connection has been established successfully.
+2025-03-23T22:59:08.569Z info: Database connection successful
+2025-03-23T22:59:08.570Z info: Setting up model associations...
+2025-03-23T22:59:08.571Z info: Setting up model associations...
+2025-03-23T22:59:08.587Z info: Model associations set up successfully
+2025-03-23T22:59:08.587Z info: Checking Redis connection...
+2025-03-23T22:59:08.862Z info: Redis client is ready
+2025-03-23T22:59:09.089Z info: Redis ping successful
+2025-03-23T22:59:09.089Z info: Redis connection successful
+2025-03-23T22:59:09.090Z info: Syncing database models...
+2025-03-23T22:59:09.090Z info: Setting up model associations before sync...
+2025-03-23T22:59:09.091Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-23T22:59:09.091Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-23T22:59:09.092Z info: Syncing model: Role
+2025-03-23T22:59:09.180Z info: Successfully synced model: Role
+2025-03-23T22:59:09.180Z info: Syncing model: Permission
+2025-03-23T22:59:09.224Z info: Successfully synced model: Permission
+2025-03-23T22:59:09.225Z info: Syncing model: School
+2025-03-23T22:59:09.305Z info: Successfully synced model: School
+2025-03-23T22:59:09.306Z info: Syncing model: User
+2025-03-23T22:59:09.479Z info: Successfully synced model: User
+2025-03-23T22:59:09.479Z info: Syncing model: Address
+2025-03-23T22:59:09.506Z info: Successfully synced model: Address
+2025-03-23T22:59:09.506Z info: Syncing model: RolePermission
+2025-03-23T22:59:09.533Z info: Successfully synced model: RolePermission
+2025-03-23T22:59:09.533Z info: Syncing model: UserRole
+2025-03-23T22:59:09.560Z info: Successfully synced model: UserRole
+2025-03-23T22:59:09.561Z info: Syncing model: AddressLink
+2025-03-23T22:59:09.612Z info: Successfully synced model: AddressLink
+2025-03-23T22:59:09.613Z info: All models synced successfully
+2025-03-23T22:59:09.613Z info: Database synced successfully
+2025-03-23T22:59:09.614Z info: Verifying database tables before seeding...
+2025-03-23T22:59:09.615Z info: Found database tables: , , , , , , , 
+2025-03-23T22:59:09.616Z info: Running seeders...
+2025-03-23T22:59:09.616Z info: Starting database seeding...
+2025-03-23T22:59:10.628Z info: Starting RBAC seeding...
+2025-03-23T22:59:10.632Z info: Checking existing roles...
+2025-03-23T22:59:10.676Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-23T22:59:10.703Z info: Found 8 tables for permission generation
+2025-03-23T22:59:10.704Z info: No new permissions to create
+2025-03-23T22:59:10.707Z info: Found 350 existing role-permission mappings. Skipping.
+2025-03-23T22:59:10.708Z info: RBAC seeding completed successfully
+2025-03-23T22:59:10.708Z info: Database seeding completed
+2025-03-23T22:59:10.708Z info: Seeding completed successfully
+2025-03-23T22:59:10.713Z info: API Routes (95 total routes):
+2025-03-23T22:59:10.773Z info: Server running on port 3001
+2025-03-23T22:59:17.296Z info: REQUEST GET /api/v1/search
+2025-03-23T22:59:17.575Z warn: Redis rate limiter failed, falling back to memory:
+2025-03-23T22:59:17.690Z info: Performing global search across entities: school, address, user with query: "Louis"
+2025-03-23T22:59:17.747Z info: RESPONSE 200 GET / [451.14ms]

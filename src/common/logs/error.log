@@ -3162,3 +3162,503 @@
     at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\permission.ts:94:15
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
 2025-03-23T22:16:15.315Z error: API Error: Insufficient permissions
+2025-03-23T22:22:08.762Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/v1/index.ts[0m:[93m9[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/search/routes"' has no default export.
+
+[7m9[0m import searchRouter from "../../features/search/routes";
+[7m [0m [91m       ~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:22:58.457Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/search/service.ts[0m:[93m64[0m:[93m11[0m - [91merror[0m[90m TS7034: [0mVariable 'allResults' implicitly has type 'any[]' in some locations where its type cannot be determined.
+
+[7m64[0m       let allResults = [];
+[7m  [0m [91m          ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS7005: [0mVariable 'allResults' implicitly has an 'any[]' type.
+
+[7m103[0m       allResults.sort((a, b) => b.relevanceScore - a.relevanceScore);
+[7m   [0m [91m      ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m109[0m:[93m32[0m - [91merror[0m[90m TS7005: [0mVariable 'allResults' implicitly has an 'any[]' type.
+
+[7m109[0m       const paginatedResults = allResults.slice(startIndex, endIndex);
+[7m   [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m115[0m:[93m59[0m - [91merror[0m[90m TS7005: [0mVariable 'allResults' implicitly has an 'any[]' type.
+
+[7m115[0m       const suggestions = this.generateSuggestions(query, allResults);
+[7m   [0m [91m                                                          ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m350[0m:[93m30[0m - [91merror[0m[90m TS2339: [0mProperty 'keys' does not exist on type 'CacheUtil'.
+
+[7m350[0m     const keys = await cache.keys(`${this.CACHE_PREFIX}*`);
+[7m   [0m [91m                             ~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m353[0m:[93m35[0m - [91merror[0m[90m TS7006: [0mParameter 'key' implicitly has an 'any' type.
+
+[7m353[0m       await Promise.all(keys.map((key) => cache.del(key)));
+[7m   [0m [91m                                  ~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:23:29.913Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/search/service.ts[0m:[93m64[0m:[93m11[0m - [91merror[0m[90m TS7034: [0mVariable 'allResults' implicitly has type 'any[]' in some locations where its type cannot be determined.
+
+[7m64[0m       let allResults = [];
+[7m  [0m [91m          ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS7005: [0mVariable 'allResults' implicitly has an 'any[]' type.
+
+[7m103[0m       allResults.sort((a, b) => b.relevanceScore - a.relevanceScore);
+[7m   [0m [91m      ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m109[0m:[93m32[0m - [91merror[0m[90m TS7005: [0mVariable 'allResults' implicitly has an 'any[]' type.
+
+[7m109[0m       const paginatedResults = allResults.slice(startIndex, endIndex);
+[7m   [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m115[0m:[93m59[0m - [91merror[0m[90m TS7005: [0mVariable 'allResults' implicitly has an 'any[]' type.
+
+[7m115[0m       const suggestions = this.generateSuggestions(query, allResults);
+[7m   [0m [91m                                                          ~~~~~~~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m350[0m:[93m30[0m - [91merror[0m[90m TS2339: [0mProperty 'keys' does not exist on type 'CacheUtil'.
+
+[7m350[0m     const keys = await cache.keys(`${this.CACHE_PREFIX}*`);
+[7m   [0m [91m                             ~~~~[0m
+[96msrc/features/search/service.ts[0m:[93m353[0m:[93m35[0m - [91merror[0m[90m TS7006: [0mParameter 'key' implicitly has an 'any' type.
+
+[7m353[0m       await Promise.all(keys.map((key) => cache.del(key)));
+[7m   [0m [91m                                  ~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:30:20.396Z error: API Error: Service temporarily unavailable due to high load
+2025-03-23T22:30:20.425Z error: RESPONSE 503 POST /api/v1/search [435.46ms]
+2025-03-23T22:38:25.906Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:38:25.909Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:39:22.171Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:39:22.172Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:39:54.586Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:39:54.587Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:40:49.946Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.rawSelect (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.count (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2124:20)
+    at async Promise.all (index 0)
+    at async Function.findAndCountAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:2183:27)
+    at async SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:161:31)
+    at async Promise.all (index 2)
+2025-03-23T22:40:49.947Z error: DatabaseError: Database error while searching users
+    at SearchRepository.searchUsers (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:174:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 2)
+    at async SearchService.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:61:29)
+    at async SearchController.globalSearch (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\controller.ts:45:22)
+2025-03-23T22:44:18.652Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/repository.ts[0m:[93m19[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Property 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m19[0m       return await User.findOne({
+[7m  [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m42[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Property 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m42[0m       return await User.findByPk(id, {
+[7m  [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m66[0m:[93m7[0m - [91merror[0m[90m TS2741: [0mProperty 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m66[0m       return await User.create(userData as any);
+[7m  [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m100[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m100[0m           passwordResetToken: token,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/features/auth/repository.ts[0m:[93m120[0m:[93m7[0m - [91merror[0m[90m TS2741: [0mProperty 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m120[0m       return await User.findOne({
+[7m   [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<User>, options: NonNullFindOptions<UserInterface>): Promise<User>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type 'WhereOptions<UserInterface>'.
+  Overload 2 of 2, '(this: ModelStatic<User>, options?: FindOptions<UserInterface> | undefined): Promise<User | null>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type 'WhereOptions<UserInterface>'.
+
+[7m122[0m           passwordResetToken: token,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/sequelize/types/model.d.ts[0m:[93m55[0m:[93m3[0m
+    [7m55[0m   where?: WhereOptions<TAttributes>;
+    [7m  [0m [96m  ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type 'NonNullFindOptions<UserInterface>'
+[96msrc/features/auth/repository.ts[0m:[93m143[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m143[0m           passwordResetToken: null,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/features/auth/repository.ts[0m:[93m202[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m202[0m           passwordResetToken: null,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:46:03.042Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/repository.ts[0m:[93m19[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Property 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m19[0m       return await User.findOne({
+[7m  [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m42[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Property 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m42[0m       return await User.findByPk(id, {
+[7m  [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m66[0m:[93m7[0m - [91merror[0m[90m TS2741: [0mProperty 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m66[0m       return await User.create(userData as any);
+[7m  [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m100[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m100[0m           passwordResetToken: token,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/features/auth/repository.ts[0m:[93m120[0m:[93m7[0m - [91merror[0m[90m TS2741: [0mProperty 'phoneNumber' is missing in type 'User' but required in type 'UserInterface'.
+
+[7m120[0m       return await User.findOne({
+[7m   [0m [91m      ~~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m8[0m:[93m3[0m
+    [7m8[0m   phoneNumber: string;
+    [7m [0m [96m  ~~~~~~~~~~~[0m
+    'phoneNumber' is declared here.
+[96msrc/features/auth/repository.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<User>, options: NonNullFindOptions<UserInterface>): Promise<User>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type 'WhereOptions<UserInterface>'.
+  Overload 2 of 2, '(this: ModelStatic<User>, options?: FindOptions<UserInterface> | undefined): Promise<User | null>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type 'WhereOptions<UserInterface>'.
+
+[7m122[0m           passwordResetToken: token,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/sequelize/types/model.d.ts[0m:[93m55[0m:[93m3[0m
+    [7m55[0m   where?: WhereOptions<TAttributes>;
+    [7m  [0m [96m  ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type 'NonNullFindOptions<UserInterface>'
+[96msrc/features/auth/repository.ts[0m:[93m143[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m143[0m           passwordResetToken: null,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/features/auth/repository.ts[0m:[93m202[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m202[0m           passwordResetToken: null,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:47:34.890Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/repository.ts[0m:[93m100[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m100[0m           passwordResetToken: token,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/features/auth/repository.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<User>, options: NonNullFindOptions<UserInterface>): Promise<User>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type 'WhereOptions<UserInterface>'.
+  Overload 2 of 2, '(this: ModelStatic<User>, options?: FindOptions<UserInterface> | undefined): Promise<User | null>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type 'WhereOptions<UserInterface>'.
+
+[7m122[0m           passwordResetToken: token,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/sequelize/types/model.d.ts[0m:[93m55[0m:[93m3[0m
+    [7m55[0m   where?: WhereOptions<TAttributes>;
+    [7m  [0m [96m  ~~~~~[0m
+    The expected type comes from property 'where' which is declared here on type 'NonNullFindOptions<UserInterface>'
+[96msrc/features/auth/repository.ts[0m:[93m143[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m143[0m           passwordResetToken: null,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/features/auth/repository.ts[0m:[93m202[0m:[93m11[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: Omit<...> & { ...; }): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+  Overload 2 of 2, '(this: ModelStatic<...>, values: { id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }, options: UpdateOptions<...>): Promise<...>', gave the following error.
+    Object literal may only specify known properties, and 'passwordResetToken' does not exist in type '{ id?: string | Fn | Col | Literal | undefined; firstName?: string | Fn | Col | Literal | undefined; lastName?: string | Fn | Col | Literal | undefined; ... 8 more ...; updatedAt?: Date | ... 3 more ... | undefined; }'.
+
+[7m202[0m           passwordResetToken: null,
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~[0m
+
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:49:21.653Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/users/model.ts[0m:[93m90[0m:[93m7[0m - [91merror[0m[90m TS18004: [0mNo value exists in scope for the shorthand property 'allowNull'. Either declare one or provide an initializer.
+
+[7m90[0m       allowNull false,
+[7m  [0m [91m      ~~~~~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m90[0m:[93m17[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'false' does not exist in type 'AbstractDataTypeConstructor | AbstractDataType | ModelAttributeColumnOptions<User>'.
+
+[7m90[0m       allowNull false,
+[7m  [0m [91m                ~~~~~[0m
+
+  [96msrc/features/users/interfaces.ts[0m:[93m6[0m:[93m3[0m
+    [7m6[0m   firstName: string;
+    [7m [0m [96m  ~~~~~~~~~[0m
+    The expected type comes from property 'firstName' which is declared here on type 'ModelAttributes<User, Optional<UserAttributes, never>>'
+[96msrc/features/users/model.ts[0m:[93m90[0m:[93m17[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m90[0m       allowNull false,
+[7m  [0m [91m                ~~~~~[0m
+[96msrc/features/users/model.ts[0m:[93m90[0m:[93m22[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m90[0m       allowNull false,
+[7m  [0m [91m                     ~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:50:50.643Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/search/repository.ts[0m:[93m194[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'QueryTypes' does not exist on type 'Sequelize'.
+
+[7m194[0m             type: db.sequelize.QueryTypes.SELECT,
+[7m   [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/features/search/repository.ts[0m:[93m198[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'QueryTypes' does not exist on type 'Sequelize'.
+
+[7m198[0m             type: db.sequelize.QueryTypes.SELECT,
+[7m   [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/features/search/repository.ts[0m:[93m204[0m:[93m27[0m - [91merror[0m[90m TS2532: [0mObject is possibly 'undefined'.
+
+[7m204[0m           count: parseInt(countResult[0].count || "0"),
+[7m   [0m [91m                          ~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:55:04.543Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/search/repository.ts[0m:[93m194[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'QueryTypes' does not exist on type 'Sequelize'.
+
+[7m194[0m             type: db.sequelize.QueryTypes.SELECT,
+[7m   [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/features/search/repository.ts[0m:[93m198[0m:[93m32[0m - [91merror[0m[90m TS2339: [0mProperty 'QueryTypes' does not exist on type 'Sequelize'.
+
+[7m198[0m             type: db.sequelize.QueryTypes.SELECT,
+[7m   [0m [91m                               ~~~~~~~~~~[0m
+[96msrc/features/search/repository.ts[0m:[93m204[0m:[93m27[0m - [91merror[0m[90m TS2532: [0mObject is possibly 'undefined'.
+
+[7m204[0m           count: parseInt(countResult[0].count || "0"),
+[7m   [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/features/search/repository.ts[0m:[93m339[0m:[93m9[0m - [91merror[0m[90m TS2304: [0mCannot find name 'Sequelize'.
+
+[7m339[0m         Sequelize.literal(
+[7m   [0m [91m        ~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T22:57:39.928Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:265:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:252:7)
+2025-03-23T22:57:39.929Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:265:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:252:7)
+2025-03-23T22:57:39.930Z error: Error details: column "role" does not exist
+2025-03-23T22:57:39.930Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addIndex (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:586:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1427:7)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:265:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:252:7)

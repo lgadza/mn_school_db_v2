@@ -142,6 +142,35 @@ User.init(
     tableName: "users",
     sequelize,
     timestamps: true,
+    indexes: [
+      {
+        name: "user_email_idx",
+        unique: true,
+        fields: ["email"],
+      },
+      {
+        name: "user_name_idx",
+        fields: ["firstName", "lastName"],
+      },
+      // Add additional indexes for search
+      {
+        name: "user_username_idx",
+        fields: ["username"],
+      },
+      {
+        name: "user_phone_idx",
+        fields: ["phoneNumber"],
+      },
+      // Additional search indexes
+      {
+        name: "user_gender_idx",
+        fields: ["gender"],
+      },
+      {
+        name: "user_country_idx",
+        fields: ["countryCode"],
+      },
+    ],
     hooks: {
       beforeCreate: async (user: User) => {
         if (user.password) {
