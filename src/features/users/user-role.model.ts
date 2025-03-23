@@ -1,7 +1,7 @@
 import { Model, DataTypes } from "sequelize";
-import sequelize from "../../config/sequelize";
+import sequelize from "@/config/sequelize";
 import User from "./model";
-import Role from "../rbac/models/roles.model";
+import Role from "@/features/rbac/models/roles.model";
 
 class UserRole extends Model {
   public userId!: string;
@@ -14,7 +14,6 @@ class UserRole extends Model {
 
 UserRole.init(
   {
-    // Define primary key as a composite of both foreign keys
     userId: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -30,6 +29,16 @@ UserRole.init(
         model: Role,
         key: "id",
       },
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
   },
   {

@@ -196,6 +196,24 @@ export class ServiceUnavailableError extends AppError {
 }
 
 /**
+ * File Error
+ * Used for errors related to file uploads and processing
+ */
+export class FileError extends AppError {
+  constructor(
+    message: string = "File processing error",
+    code: ErrorCode = ErrorCode.FILE_ERROR,
+    metadata?: Partial<ErrorMetadata>
+  ) {
+    super(message, HttpStatus.BAD_REQUEST, code, true, {
+      ...metadata,
+      severity: ErrorSeverity.WARNING,
+    });
+    Object.defineProperty(this, "name", { value: "FileError" });
+  }
+}
+
+/**
  * Error Handler Utility
  * Provides standardized methods for error handling
  */

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to School Database System</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .header {
+      background-color: #10b2bf;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .logo-container {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .main-logo {
+      width: 120px;
+      height: auto;
+    }
+    .name-logo {
+      width: 180px;
+      height: auto;
+      margin-top: 10px;
+    }
+    .content {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px 0;
+      background-color: #10b2bf;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+    }
+    .credentials {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <img src="https://makronexus.com/assets/md_logo_small2-CMnD-u5x.png" alt="Company Logo" class="main-logo">
+        <br>
+        <img src="https://makronexus.com/assets/md_logo_small4-Ci-XwfWu.png" alt="Company Name" class="name-logo">
+      </div>
+      <h1>Welcome to School Database System</h1>
+    </div>
+    <div class="content">
+      <p>Hello {{name}},</p>
+      
+      <p>Welcome to School Database System! Your account has been successfully created.</p>
+      
+      {{#if password}}
+      <div class="credentials">
+        <p><strong>Your login credentials:</strong></p>
+        <p>Email: {{email}}</p>
+        <p>Password: {{password}}</p>
+        <p>Please change your password after your first login for security reasons.</p>
+      </div>
+      {{/if}}
+      
+      {{#if verificationLink}}
+      <p>To verify your email address, please click the button below:</p>
+      
+      <div style="text-align: center;">
+        <a href="{{verificationLink}}" class="button">Verify Email</a>
+      </div>
+      
+      <p>Alternatively, you can copy and paste the following link into your browser:</p>
+      <p style="word-break: break-all;"><a href="{{verificationLink}}">{{verificationLink}}</a></p>
+      {{/if}}
+      
+      <p>If you have any questions or need assistance, please don't hesitate to contact our support team.</p>
+      
+      <p>Best regards,<br>School Database System Team</p>
+    </div>
+    <div class="footer">
+      <p>&copy; {{year}} School Database System. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

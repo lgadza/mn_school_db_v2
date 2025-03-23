@@ -2,12 +2,12 @@ import { Request, Response, NextFunction } from "express";
 import { ForbiddenError } from "@/common/utils/errors/errorUtils";
 import { ErrorCode } from "@/common/utils/errors/errorCodes";
 import logger from "@/common/utils/logging/logger";
-import { PermissionAction } from "@/features/rbac/interfaces";
 import Role from "@/features/rbac/models/roles.model";
 import UserRole from "@/features/users/user-role.model";
 import Permission from "@/features/rbac/models/permissions.model";
 import RolePermission from "@/features/rbac/models/role-permission.model";
 import cache from "@/common/utils/cache/cacheUtil";
+import { PermissionAction } from "@/features/rbac/interfaces/roles.interface";
 
 /**
  * Permission Middleware

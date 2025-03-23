@@ -1,10 +1,38 @@
-import { RoleInterface, CreateRoleDto, UpdateRoleDto } from "./index";
+export interface RoleInterface {
+  id: string;
+  name: string;
+  description?: string;
+}
 
+// Role creation input
+export interface CreateRoleDto {
+  name: string;
+  description?: string;
+}
+
+// Role update input
+export interface UpdateRoleDto {
+  name?: string;
+  description?: string;
+}
 export enum PermissionAction {
   CREATE = "create",
   READ = "read",
   UPDATE = "update",
   DELETE = "delete",
+  MANAGE = "manage",
+  APPROVE = "approve",
+  REJECT = "reject",
+  VIEW_REPORTS = "view_reports",
+  DOWNLOAD_DATA = "download_data",
+  EXPORT = "export",
+  IMPORT = "import",
+  ARCHIVE = "archive",
+  RESTORE = "restore",
+  PUBLISH = "publish",
+  UNPUBLISH = "unpublish",
+  ASSIGN = "assign",
+  TRANSFER = "transfer",
 }
 
 export interface IRoleRepository {

@@ -3,6 +3,8 @@ import { IAuthRepository } from "./interfaces/services";
 import User from "@/features/users/model";
 import Role from "@/features/rbac/models/roles.model";
 import UserRole from "@/features/users/user-role.model";
+import Permission from "@/features/rbac/models/permissions.model";
+import RolePermission from "@/features/rbac/models/role-permission.model";
 import { Transaction } from "sequelize";
 import logger from "@/common/utils/logging/logger";
 import { DatabaseError } from "@/common/utils/errors/errorUtils";
@@ -42,7 +44,7 @@ export class AuthRepository implements IAuthRepository {
           {
             model: Role,
             as: "roles",
-            through: { attributes: [] }, // Exclude join table attributes
+            through: { attributes: [] },
           },
         ],
       });
@@ -205,6 +207,62 @@ export class AuthRepository implements IAuthRepository {
     } catch (error) {
       logger.error("Error updating password:", error);
       throw new DatabaseError("Database error while updating password", {
+        additionalInfo: { code: ErrorCode.DB_QUERY_FAILED },
+      });
+    }
+  }
+
+  /**
+   * Get all permissions for a user
+   *
+   * @param userId - User ID to check permissions for
+   * @returns Array of permission objects
+   */
+  public async getUserPermissions(
+    userId: string
+  ): Promise<Array<{ resource: string; action: string }>> {
+    try {
+      // Find all user roles
+      const userRoleRecords = await UserRole.findAll({
+        where: { userId },
+        include: [
+          {
+            model: Role,
+            as: "role",
+            include: [
+              {
+                model: Permission,
+                as: "permissions",
+                through: { attributes: [] }, // Don't include join table attributes
+              },
+            ],
+          },
+        ],
+      });
+
+      // Extract unique permissions
+      const permissionsMap = new Map<
+        string,
+        { resource: string; action: string }
+      >();
+
+      userRoleRecords.forEach((userRole) => {
+        const role = userRole.get("role") as any;
+        if (role && role.permissions) {
+          role.permissions.forEach((permission: any) => {
+            const key = `${permission.resource}:${permission.action}`;
+            permissionsMap.set(key, {
+              resource: permission.resource,
+              action: permission.action,
+            });
+          });
+        }
+      });
+
+      return Array.from(permissionsMap.values());
+    } catch (error) {
+      logger.error(`Error fetching permissions for user ${userId}:`, error);
+      throw new DatabaseError("Database error while retrieving permissions", {
         additionalInfo: { code: ErrorCode.DB_QUERY_FAILED },
       });
     }

@@ -1,57 +1,130 @@
 import dotenv from "dotenv";
 import path from "path";
 
+// Prevent process.exit from actually exiting during tests
+const realProcessExit = process.exit;
+process.exit = ((code?: number) => {
+  console.warn(`[MOCK] process.exit(${code}) called - prevented during tests`);
+  return undefined as never;
+}) as typeof process.exit;
+
 // Load environment variables from .env.test or .env file
 dotenv.config({ path: path.resolve(process.cwd(), ".env.test") });
 
 // Set NODE_ENV to test if not already set
 process.env.NODE_ENV = process.env.NODE_ENV || "test";
 
-// Set up global Jest hooks
-beforeAll(() => {
-  console.log("Starting tests in environment:", process.env.NODE_ENV);
-  jest.setTimeout(30000); // 30 second timeout
+// Set REDIS_URL for testing to prevent process.exit
+process.env.REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+
+// Mock database connection for tests
+process.env.DATABASE_URL = "postgresql://test:test@localhost:5432/test_db";
+
+// Setup for tests
+console.log("Starting tests in environment:", process.env.NODE_ENV);
+jest.setTimeout(30000); // 30 second timeout
+
+// Set up mocks before any imports can run - ORDER MATTERS HERE
+// First, mock the model definition packages
+jest.mock("sequelize", () => {
+  const { MockModel, DataTypes } = require("../__tests__/mocks/sequelize.mock");
+
+  return {
+    Model: MockModel,
+    DataTypes,
+    Op: {
+      in: Symbol("in"),
+      iLike: Symbol("iLike"),
+      or: Symbol("or"),
+      gte: Symbol("gte"),
+      lte: Symbol("lte"),
+      and: Symbol("and"),
+      not: Symbol("not"),
+      eq: Symbol("eq"),
+      ne: Symbol("ne"),
+    },
+    ValidationError: Error,
+    UniqueConstraintError: Error,
+  };
 });
 
-afterAll(() => {
-  console.log("Tests completed");
+// Then mock the database configuration and modules
+jest.mock(
+  "@/config/redis",
+  () => require("../__tests__/mocks/config-redis.mock"),
+  { virtual: true }
+);
+
+jest.mock(
+  "@/config/database",
+  () => require("../__tests__/mocks/sequelize.mock"),
+  { virtual: true }
+);
+
+// Also directly mock the models
+jest.mock("@/features/users/model", () => {
+  const { MockModel } = require("../__tests__/mocks/sequelize.mock");
+  return MockModel;
 });
 
-// Test setup file for Jest
+jest.mock("@/features/rbac/models/roles.model", () => {
+  const { MockModel } = require("../__tests__/mocks/sequelize.mock");
+  return MockModel;
+});
 
-// Mock pg module more comprehensively to prevent pgPass errors
+jest.mock("@/features/users/user-role.model", () => {
+  const { MockModel } = require("../__tests__/mocks/sequelize.mock");
+  return MockModel;
+});
+
+jest.mock("@/features/rbac/models/permissions.model", () => {
+  const { MockModel } = require("../__tests__/mocks/sequelize.mock");
+  return MockModel;
+});
+
+// Mock pg module to prevent connection attempts
 jest.mock("pg", () => {
+  // Create mock pg client
   const mockClient = {
-    connect: jest.fn(() => Promise.resolve()),
-    query: jest.fn(() => Promise.resolve({ rows: [] })),
-    end: jest.fn(() => Promise.resolve()),
+    connect: jest.fn().mockResolvedValue(undefined),
+    query: jest.fn().mockResolvedValue({ rows: [] }),
+    end: jest.fn().mockResolvedValue(undefined),
     release: jest.fn(),
     on: jest.fn(),
-    // Add additional mock methods to prevent pgPass errors
-    _checkPgPass: jest.fn(() => Promise.resolve()),
-    _handleAuthSASL: jest.fn(() => Promise.resolve()),
+    once: jest.fn(), // Make sure this is defined
   };
 
-  const mPool = {
-    connect: jest.fn(() =>
-      Promise.resolve({
-        query: jest.fn(() => Promise.resolve({ rows: [] })),
-        release: jest.fn(),
-      })
-    ),
-    end: jest.fn(() => Promise.resolve()),
-    query: jest.fn(() => Promise.resolve({ rows: [] })),
+  // Create mock pool
+  const mockPool = {
+    connect: jest.fn().mockResolvedValue({
+      query: jest.fn().mockResolvedValue({ rows: [] }),
+      release: jest.fn(),
+      once: jest.fn(), // Make sure this is defined
+    }),
+    end: jest.fn().mockResolvedValue(undefined),
+    query: jest.fn().mockResolvedValue({ rows: [] }),
     on: jest.fn(),
   };
 
   return {
-    Pool: jest.fn(() => mPool),
+    Pool: jest.fn(() => mockPool),
     Client: jest.fn(() => mockClient),
   };
 });
 
-// Mock database connection for tests
-process.env.DATABASE_URL = "postgresql://test:test@localhost:5432/test_db";
+// Mock ioredis
+jest.mock("ioredis", () => {
+  return jest.fn().mockImplementation(() => ({
+    connect: jest.fn().mockResolvedValue(undefined),
+    disconnect: jest.fn().mockResolvedValue(undefined),
+    quit: jest.fn().mockResolvedValue("OK"),
+    get: jest.fn().mockResolvedValue(null),
+    set: jest.fn().mockResolvedValue("OK"),
+    del: jest.fn().mockResolvedValue(1),
+    on: jest.fn(),
+    once: jest.fn(), // Make sure this is defined
+  }));
+});
 
 // Store any DB connections that need to be closed
 const connections: any[] = [];
@@ -61,8 +134,8 @@ const connections: any[] = [];
   if (conn) connections.push(conn);
 };
 
-// Global teardown - run after all tests
-afterAll(async () => {
+// Global teardown function that tests can call if needed
+(global as any).__CLEANUP_CONNECTIONS__ = async () => {
   // Close any open connections with better error handling
   await Promise.all(
     connections.map(async (conn) => {
@@ -88,16 +161,10 @@ afterAll(async () => {
 
   // Clear the connections array
   connections.length = 0;
+};
 
-  // Add a longer delay to ensure all handles can properly close
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+// Global teardown function
+afterAll(async () => {
+  // Restore original process.exit
+  process.exit = realProcessExit;
 });
-
-// Force cleanup any potentially lingering connections before Jest tears down
-// This helps prevent the "import after environment torn down" errors
-beforeEach(() => {
-  // Ensure mock connection methods are reset
-  jest.clearAllMocks();
-});
-
-// Add more Jest-specific test setup as needed

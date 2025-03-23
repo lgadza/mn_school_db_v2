@@ -37,6 +37,7 @@ describe("AuthController", () => {
     requestPasswordReset: jest.fn(),
     resetPassword: jest.fn(),
     verifyEmail: jest.fn(),
+    isEmailRegistered: jest.fn(),
   };
 
   // Create controller with mocked service

@@ -52,6 +52,7 @@ MN School Database v2 Directory Structure
 ├── folder-structure.txt
 ├── getFolderStructure.ts
 ├── jest.config.ts
+├── jest.setup.js
 ├── package-lock.json
 ├── package.json
 ├── README.md
@@ -87,7 +88,8 @@ MN School Database v2 Directory Structure
 │   │   │   ├── security/
 │   │   │   │   └── encryptionUtil.ts
 │   │   │   └── system/
-│   │   │       └── diagnosticsUtil.ts
+│   │   │       ├── diagnosticsUtil.ts
+│   │   │       └── systemLoadUtil.ts
 │   │   └── validators/
 │   │       └── validationUtil.ts
 │   ├── config/
@@ -111,6 +113,7 @@ MN School Database v2 Directory Structure
 │   │   │   ├── schema.ts
 │   │   │   └── service.ts
 │   │   ├── rbac/
+│   │   │   ├── constants/
 │   │   │   ├── controllers/
 │   │   │   │   └── roles.controller.ts
 │   │   │   ├── dto/
@@ -118,6 +121,7 @@ MN School Database v2 Directory Structure
 │   │   │   ├── interfaces/
 │   │   │   │   ├── index.ts
 │   │   │   │   └── roles.interface.ts
+│   │   │   ├── interfaces.ts
 │   │   │   ├── models/
 │   │   │   │   ├── permissions.model.ts
 │   │   │   │   ├── role-permission.model.ts
@@ -130,12 +134,27 @@ MN School Database v2 Directory Structure
 │   │   │   │   └── roles.schema.ts
 │   │   │   └── services/
 │   │   │       └── roles.service.ts
+│   │   ├── schools/
+│   │   │   ├── model.ts
+│   │   │   └── repositories/
+│   │   │       └── schoolRepository.ts
 │   │   ├── shared/
 │   │   │   └── common.model.ts
+│   │   ├── students/
+│   │   │   └── controllers/
+│   │   │       └── studentController.ts
 │   │   └── users/
+│   │       ├── controller.ts
+│   │       ├── dto.ts
+│   │       ├── interfaces/
+│   │       │   └── services.ts
 │   │       ├── interfaces.ts
 │   │       ├── model.ts
-│   │       └── user-role.model.ts
+│   │       ├── repository.ts
+│   │       ├── routes.ts
+│   │       ├── service.ts
+│   │       ├── user-role.model.ts
+│   │       └── validation.ts
 │   ├── interfaces/
 │   │   └── index.d.ts
 │   ├── migrations/
@@ -145,6 +164,8 @@ MN School Database v2 Directory Structure
 │   │   └── v1/
 │   │       └── index.ts
 │   ├── seeders/
+│   │   ├── index.ts
+│   │   └── rbac.seeder.ts
 │   ├── server.ts
 │   ├── shared/
 │   │   ├── middleware/
@@ -160,6 +181,12 @@ MN School Database v2 Directory Structure
 │   │   └── tests/
 │   │       ├── global.test.ts
 │   │       └── setup.ts
+│   ├── templates/
+│   │   └── email/
+│   │       ├── password-change.hbs
+│   │       ├── password-reset-notification.hbs
+│   │       ├── password-reset.hbs
+│   │       └── welcome.hbs
 │   ├── types/
 │   │   ├── express/
 │   │   │   └── index.d.ts
@@ -186,6 +213,8 @@ MN School Database v2 Directory Structure
 │           │   ├── schema.test.ts
 │           │   └── service.test.ts
 │           └── utils.test.ts
+├── temp/
+│   └── uploads/
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── us-east-1-bundle.pem

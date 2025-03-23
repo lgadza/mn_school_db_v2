@@ -1,5 +1,9 @@
 import { IRoleRepository } from "../interfaces/roles.interface";
-import { RoleInterface, CreateRoleDto, UpdateRoleDto } from "../interfaces";
+import {
+  RoleInterface,
+  CreateRoleDto,
+  UpdateRoleDto,
+} from "../interfaces/roles.interface";
 import Role from "../models/roles.model";
 import { DatabaseError } from "@/common/utils/errors/errorUtils";
 import { ErrorCode } from "@/common/utils/errors/errorCodes";

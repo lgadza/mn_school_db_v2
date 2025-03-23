@@ -295,10 +295,15 @@ export class AuthService implements IAuthService {
       });
     }
 
-    // Get user roles and permissions
+    // Get user roles
     const roles = (user as any).roles || [];
     const roleNames = roles.map((role: any) => role.name);
-    const permissions: string[] = []; // In a real app, you'd fetch permissions too
+
+    // Get user permissions
+    const permissionObjects = await this.repository.getUserPermissions(userId);
+    const permissions = permissionObjects.map(
+      (p) => `${p.resource}:${p.action}`
+    );
 
     return this.mapUserToUserInfoDTO(user, roleNames, permissions);
   }

@@ -11,10 +11,10 @@ export interface UserInterface {
   gender?: string | null;
   dateOfBirth?: Date | null;
   lastLogin?: Date | null;
+  countryCode?: string | null;
+  schoolId?: string | null;
   passwordResetToken?: string | null;
   passwordResetExpires?: Date | null;
-  // Make verifyPassword optional using '?' since it's a method that is added by the model
-  // rather than a field that would be passed in user creation data
   verifyPassword?: (password: string) => Promise<boolean>;
 }
 

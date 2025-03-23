@@ -32,9 +32,12 @@ export enum ErrorCode {
   DB_TRANSACTION_FAILED = "DB-004",
 
   // File errors (FILE prefix)
+  FILE_ERROR = "FILE-000", // Generic file error
   FILE_UPLOAD_FAILED = "FILE-001",
   FILE_SIZE_EXCEEDED = "FILE-002",
   FILE_TYPE_NOT_ALLOWED = "FILE-003",
+  FILE_NOT_FOUND = "FILE-004", // Changed from numeric to string format
+  FILE_DELETE_FAILED = "FILE-005", // Changed from numeric to string format
 
   // External service errors (EXT prefix)
   EXT_SERVICE_UNAVAILABLE = "EXT-001",

@@ -9,6 +9,8 @@ import RolePermission from "./rbac/models/role-permission.model";
 import User from "./users/model";
 import UserRole from "./users/user-role.model";
 import School from "./schools/model";
+import Address from "./address/model";
+import AddressLink from "./address/address-link.model";
 
 // Model initialization order - this is important!
 const MODELS = [
@@ -17,10 +19,12 @@ const MODELS = [
   Permission,
   School,
   User,
+  Address,
 
   // Join tables and models with foreign key dependencies
   RolePermission,
   UserRole,
+  AddressLink,
 
   // Add other models in their dependency order
 ];
@@ -135,12 +139,38 @@ const setupAssociations = () => {
       constraints: false,
     });
 
-    // 3. School-User associations (if applicable)
-    // Example: Users belong to a school
-    // User.belongsTo(School, { foreignKey: "schoolId" });
-    // School.hasMany(User, { foreignKey: "schoolId" });
+    // Add direct associations between UserRole and Role
+    UserRole.belongsTo(Role, {
+      foreignKey: "roleId",
+      as: "role",
+    });
 
-    // Add other associations as needed
+    Role.hasMany(UserRole, {
+      foreignKey: "roleId",
+      as: "userRoles",
+    });
+
+    // Add direct associations between UserRole and User
+    UserRole.belongsTo(User, {
+      foreignKey: "userId",
+      as: "user",
+    });
+
+    User.hasMany(UserRole, {
+      foreignKey: "userId",
+      as: "userRoles",
+    });
+
+    // 3. Address-AddressLink associations
+    Address.hasMany(AddressLink, {
+      foreignKey: "addressId",
+      as: "links",
+    });
+
+    AddressLink.belongsTo(Address, {
+      foreignKey: "addressId",
+      as: "address",
+    });
 
     // Mark associations as set up
     associationsSetup = true;

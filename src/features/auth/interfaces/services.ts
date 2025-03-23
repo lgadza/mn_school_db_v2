@@ -19,6 +19,9 @@ export interface IAuthRepository {
     userId: string,
     newPassword: string
   ): Promise<void>;
+  getUserPermissions(
+    userId: string
+  ): Promise<Array<{ resource: string; action: string }>>;
 }
 
 export interface IAuthService {

@@ -183,12 +183,14 @@ export class EmailUtil {
    * @param email - Recipient email
    * @param name - Recipient name
    * @param verificationLink - Email verification link
+   * @param password - Initial password (optional, for admin-created accounts)
    * @returns Email status
    */
   public static async sendWelcomeEmail(
     email: string,
     name: string,
-    verificationLink: string
+    verificationLink: string | null,
+    password?: string
   ): Promise<EmailStatus> {
     return this.sendEmail({
       to: email,
@@ -197,6 +199,7 @@ export class EmailUtil {
       context: {
         name,
         verificationLink,
+        password,
         year: new Date().getFullYear(),
       },
     });
@@ -223,6 +226,55 @@ export class EmailUtil {
         name,
         resetLink,
         expiryHours: 1, // Token expires in 1 hour
+        year: new Date().getFullYear(),
+      },
+    });
+  }
+
+  /**
+   * Send a password change notification email
+   *
+   * @param email - Recipient email
+   * @param name - Recipient name
+   * @returns Email status
+   */
+  public static async sendPasswordChangeNotification(
+    email: string,
+    name: string
+  ): Promise<EmailStatus> {
+    return this.sendEmail({
+      to: email,
+      subject: "Your Password Has Been Changed",
+      template: "password-change",
+      context: {
+        name,
+        timestamp: new Date().toISOString(),
+        year: new Date().getFullYear(),
+      },
+    });
+  }
+
+  /**
+   * Send a password reset notification email (when admin resets user password)
+   *
+   * @param email - Recipient email
+   * @param name - Recipient name
+   * @param password - New password
+   * @returns Email status
+   */
+  public static async sendPasswordResetNotification(
+    email: string,
+    name: string,
+    password: string
+  ): Promise<EmailStatus> {
+    return this.sendEmail({
+      to: email,
+      subject: "Your Password Has Been Reset",
+      template: "password-reset-notification",
+      context: {
+        name,
+        password,
+        timestamp: new Date().toISOString(),
         year: new Date().getFullYear(),
       },
     });

@@ -171,11 +171,7 @@ const gracefulShutdown = async () => {
 
   // Close Redis connection
   try {
-    if (redis) {
-      await redis.quit();
-    } else {
-      logger.warn("Redis instance is null, skipping shutdown.");
-    }
+    await redis.quit();
     logger.info("Redis connection closed");
   } catch (error) {
     logger.error("Error closing Redis connection:", error);
@@ -235,11 +231,7 @@ const startServer = async () => {
     // Check Redis connection
     logger.info("Checking Redis connection...");
     try {
-      if (redis) {
-        await redis.ping();
-      } else {
-        logger.warn("Redis instance is null, skipping ping check.");
-      }
+      await redis.ping();
       logger.info("Redis connection successful");
     } catch (error) {
       logger.warn(
