@@ -48,13 +48,11 @@ Role.init(
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-      field: "created_at", // Explicitly set the column name
     },
     updatedAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-      field: "updated_at", // Explicitly set the column name
     },
   },
   {
@@ -62,7 +60,6 @@ Role.init(
     tableName: "roles",
     modelName: "Role",
     timestamps: true,
-    underscored: true, // Use snake_case for all fields
   }
 );
 

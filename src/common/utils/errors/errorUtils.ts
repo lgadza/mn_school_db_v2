@@ -387,12 +387,12 @@ export class ErrorHandlerUtil {
   /**
    * Detect high load and return 503 if the system is overloaded
    */
-  public static highLoadProtection = (
+  public static highLoadProtection = async (
     req: Request,
     res: Response,
     next: NextFunction
   ) => {
-    if (DiagnosticsUtil.isSystemUnderHighLoad()) {
+    if (await DiagnosticsUtil.isSystemUnderHighLoad()) {
       logger.warn("System under high load, rejecting request");
       // Set Retry-After header directly
       res.setHeader("Retry-After", "30");

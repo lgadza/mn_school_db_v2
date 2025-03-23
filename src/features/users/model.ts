@@ -26,7 +26,7 @@ class User
   implements UserInterface
 {
   public id!: string;
-  public username!: string;
+  public username?: string;
   public email!: string | null;
   public password!: string;
   public firstName!: string;
@@ -70,7 +70,7 @@ User.init(
     },
     username: {
       type: new DataTypes.STRING(50),
-      allowNull: false,
+      allowNull: true,
       unique: true,
     },
     email: {
@@ -142,7 +142,6 @@ User.init(
     tableName: "users",
     sequelize,
     timestamps: true,
-    underscored: true,
     hooks: {
       beforeCreate: async (user: User) => {
         if (user.password) {

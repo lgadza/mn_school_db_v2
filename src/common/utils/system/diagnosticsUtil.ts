@@ -7,6 +7,7 @@ import db from "@/config/database";
 import redis from "@/config/redis";
 import { appConfig } from "@/config";
 import DBConnectUtil from "@/common/utils/db/dbConnect";
+import systemLoadUtil from "@/common/utils/system/systemLoadUtil";
 
 /**
  * System metrics interface
@@ -58,6 +59,8 @@ export interface HealthCheckResult {
     system: {
       cpuLoad: number;
       memoryUsedPercent: number;
+      isHighLoad?: boolean;
+      lastChecked?: string;
     };
   };
   checks: Record<string, any>;
@@ -146,6 +149,12 @@ export class DiagnosticsUtil {
 
     // Add more health checks here...
 
+    // Get current system load metrics
+    const loadMetrics = systemLoadUtil.getLoadMetrics();
+    if (loadMetrics.isHighLoad) {
+      overallStatus = overallStatus === "unhealthy" ? "unhealthy" : "degraded";
+    }
+
     const endTime = performance.now();
 
     return {
@@ -166,9 +175,10 @@ export class DiagnosticsUtil {
           status: redis.status === "ready" ? "up" : "down", // Check Redis connection status
         },
         system: {
-          cpuLoad: os.loadavg()[0],
-          memoryUsedPercent:
-            ((os.totalmem() - os.freemem()) / os.totalmem()) * 100,
+          cpuLoad: loadMetrics.cpuUsage * 100, // Show as percentage
+          memoryUsedPercent: loadMetrics.memoryUsage * 100, // Show as percentage
+          isHighLoad: loadMetrics.isHighLoad,
+          lastChecked: loadMetrics.lastChecked.toISOString(),
         },
       },
     };
@@ -238,16 +248,8 @@ export class DiagnosticsUtil {
    *
    * @returns Whether the system is under high load
    */
-  public static isSystemUnderHighLoad(): boolean {
-    const loadAvg = os.loadavg()[0];
-    const cpuCount = os.cpus().length;
-    const memoryUsedPercent =
-      ((os.totalmem() - os.freemem()) / os.totalmem()) * 100;
-
-    // System is considered under high load if:
-    // 1. Load average per CPU core is > 0.7 (70% load)
-    // 2. Memory usage is > 85%
-    return loadAvg / cpuCount > 0.7 || memoryUsedPercent > 85;
+  public static async isSystemUnderHighLoad(): Promise<boolean> {
+    return systemLoadUtil.isSystemOverloaded();
   }
 }
 

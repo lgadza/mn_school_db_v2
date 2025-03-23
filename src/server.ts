@@ -62,7 +62,9 @@ CompressionMiddleware.configure(app);
 // 5. Request parsing
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+// Update Swagger UI setup
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(
   cookieParser(

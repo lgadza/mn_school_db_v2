@@ -5,7 +5,7 @@ export const authSchemas = {
   register: {
     body: Joi.object({
       email: ValidationUtil.SCHEMAS.EMAIL,
-      username: Joi.string().min(3).max(30).required(),
+      username: Joi.string().min(3).max(30).optional(),
       password: ValidationUtil.SCHEMAS.PASSWORD,
       firstName: Joi.string().min(2).max(50).required(),
       lastName: Joi.string().min(2).max(50).required(),

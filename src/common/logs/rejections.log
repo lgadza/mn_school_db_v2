@@ -499,3 +499,440 @@
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Function.Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T08:04:19.913Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/errors/errorUtils.ts[0m:[93m395[0m:[93m9[0m - [91merror[0m[90m TS2801: [0mThis condition will always return true since this 'Promise<boolean>' is always defined.
+
+[7m395[0m     if (DiagnosticsUtil.isSystemUnderHighLoad()) {
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/common/utils/errors/errorUtils.ts[0m:[93m395[0m:[93m9[0m
+    [7m395[0m     if (DiagnosticsUtil.isSystemUnderHighLoad()) {
+    [7m   [0m [96m        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    Did you forget to use 'await'?
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T08:26:02.315Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m165[0m:[93m9[0m - [91merror[0m[90m TS2304: [0mCannot find name 'fixDuplicateTables'.
+
+[7m165[0m   await fixDuplicateTables();
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:03:13.594Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/repository.ts[0m:[93m17[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Type 'User' is not assignable to type 'UserInterface'.
+    Types of property 'username' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[7m17[0m       return await User.findOne({
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/features/auth/repository.ts[0m:[93m40[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Type 'User' is not assignable to type 'UserInterface'.
+    Types of property 'username' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[7m40[0m       return await User.findByPk(id, {
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/features/auth/repository.ts[0m:[93m64[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User' is not assignable to type 'UserInterface'.
+  Types of property 'username' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+
+[7m64[0m       return await User.create(userData as any);
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/features/auth/repository.ts[0m:[93m118[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Type 'User' is not assignable to type 'UserInterface'.
+    Types of property 'username' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[7m118[0m       return await User.findOne({
+[7m   [0m [91m      ~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:03:23.156Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/service.ts[0m:[93m428[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m428[0m       username: user.username,
+[7m   [0m [91m      ~~~~~~~~[0m
+
+  [96msrc/features/auth/dto.ts[0m:[93m30[0m:[93m3[0m
+    [7m30[0m   username: string;
+    [7m  [0m [96m  ~~~~~~~~[0m
+    The expected type comes from property 'username' which is declared here on type 'UserInfoDTO'
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:24:33.788Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:26:44.115Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:27:12.077Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:27:59.316Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:29:40.610Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)

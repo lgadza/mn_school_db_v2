@@ -1740,3 +1740,1108 @@
     at Array.map (<anonymous>)
     at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:255:44)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T07:58:38.132Z error: API Error: Service temporarily unavailable due to high load
+2025-03-22T07:58:38.148Z error: RESPONSE 503 POST /api/v1/auth/register [266.22ms]
+2025-03-22T08:01:15.897Z error: SequelizeEagerLoadingError: Role is associated to User using an alias. You've included an alias (roles), but it does not match the alias(es) defined in your association (Roles).
+    at Function._getIncludedAssociation (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:646:53)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1794:12)
+    at async Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at async AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:01:15.899Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:01:15.900Z error: API Error: Database error while finding user
+2025-03-22T08:01:15.904Z error: RESPONSE 500 POST /register [477.65ms]
+2025-03-22T08:04:19.913Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/errors/errorUtils.ts[0m:[93m395[0m:[93m9[0m - [91merror[0m[90m TS2801: [0mThis condition will always return true since this 'Promise<boolean>' is always defined.
+
+[7m395[0m     if (DiagnosticsUtil.isSystemUnderHighLoad()) {
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/common/utils/errors/errorUtils.ts[0m:[93m395[0m:[93m9[0m
+    [7m395[0m     if (DiagnosticsUtil.isSystemUnderHighLoad()) {
+    [7m   [0m [96m        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    Did you forget to use 'await'?
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T08:05:46.663Z error: SequelizeEagerLoadingError: Role is associated to User using an alias. You've included an alias (roles), but it does not match the alias(es) defined in your association (Roles).
+    at Function._getIncludedAssociation (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:646:53)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1794:12)
+    at async Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at async AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:05:46.665Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:05:46.666Z error: API Error: Database error while finding user
+2025-03-22T08:05:46.671Z error: RESPONSE 500 POST /register [342.39ms]
+2025-03-22T08:10:46.235Z error: API Error: Service temporarily unavailable due to high load
+2025-03-22T08:10:46.244Z error: RESPONSE 503 POST /api/v1/auth/register [392.11ms]
+2025-03-22T08:13:46.771Z error: SequelizeEagerLoadingError: Role is associated to User using an alias. You've included an alias (roles), but it does not match the alias(es) defined in your association (Roles).
+    at Function._getIncludedAssociation (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:646:53)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1794:12)
+    at async Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at async AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:13:46.775Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:13:46.776Z error: API Error: Database error while finding user
+2025-03-22T08:13:46.782Z error: RESPONSE 500 POST /register [369.91ms]
+2025-03-22T08:15:54.339Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:190:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:15:54.340Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:190:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:15:54.340Z error: Error details: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T08:15:54.341Z error: Error stack: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:190:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:17:20.455Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:17:20.456Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:17:20.457Z error: Error details: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T08:17:20.458Z error: Error stack: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:19:06.046Z error: SequelizeAssociationError: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:19:06.047Z error: SequelizeAssociationError: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:19:06.048Z error: Error details: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T08:19:06.049Z error: Error stack: SequelizeAssociationError: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:21:48.851Z error: SequelizeAssociationError: You have used the alias role_has_permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:21:48.853Z error: SequelizeAssociationError: You have used the alias role_has_permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:21:48.854Z error: Error details: You have used the alias role_has_permissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T08:21:48.856Z error: Error stack: SequelizeAssociationError: You have used the alias role_has_permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:175:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:26:02.315Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m165[0m:[93m9[0m - [91merror[0m[90m TS2304: [0mCannot find name 'fixDuplicateTables'.
+
+[7m165[0m   await fixDuplicateTables();
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-22T08:28:05.981Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:28:05.982Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:28:05.983Z error: Error details: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T08:28:05.984Z error: Error stack: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:29:58.133Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:29:58.134Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:29:58.135Z error: Error details: column "createdAt" of relation "roles" contains null values
+2025-03-22T08:29:58.136Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:30:35.708Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:30:35.709Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:30:35.710Z error: Error details: column "createdAt" of relation "roles" contains null values
+2025-03-22T08:30:35.710Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:31:21.669Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:31:21.670Z error: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:31:21.671Z error: Error details: column "createdAt" of relation "roles" contains null values
+2025-03-22T08:31:21.671Z error: Error stack: Error
+    at Query.run (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.addColumn (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\dialects\abstract\query-interface.js:430:12)
+    at async Function.sync (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1373:11)
+    at async syncModelsInOrder (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:209:7)
+    at async startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:250:7)
+2025-03-22T08:38:32.651Z error: SequelizeEagerLoadingError: Role is associated to User using an alias. You've included an alias (roles), but it does not match the alias(es) defined in your association (Roles).
+    at Function._getIncludedAssociation (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:646:53)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1794:12)
+    at async Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at async AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:38:32.654Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:38:32.655Z error: API Error: Database error while finding user
+2025-03-22T08:38:32.660Z error: RESPONSE 500 POST /register [369.58ms]
+2025-03-22T08:46:02.319Z error: API Error: Service temporarily unavailable due to high load
+2025-03-22T08:46:02.333Z error: RESPONSE 503 POST /api/v1/auth/register [398.65ms]
+2025-03-22T08:48:53.531Z error: SequelizeEagerLoadingError: Role is associated to User using an alias. You've included an alias (roles), but it does not match the alias(es) defined in your association (Roles).
+    at Function._getIncludedAssociation (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:646:53)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1794:12)
+    at async Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at async AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:48:53.537Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-22T08:48:53.540Z error: API Error: Database error while finding user
+2025-03-22T08:48:53.550Z error: RESPONSE 500 POST /register [536.11ms]
+2025-03-22T08:53:40.488Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:53:40.491Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T08:53:40.493Z error: Error details: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T08:53:40.494Z error: Error stack: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T18:37:12.443Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T18:37:12.444Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T18:37:12.445Z error: Error details: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T18:37:12.446Z error: Error stack: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:18:01.667Z error: SequelizeAssociationError: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:18:01.668Z error: SequelizeAssociationError: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:18:01.668Z error: Error details: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T19:18:01.668Z error: Error stack: SequelizeAssociationError: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:18:18.032Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:18:18.033Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:18:18.033Z error: Error details: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T19:18:18.034Z error: Error stack: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:23:04.864Z error: SequelizeAssociationError: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:23:04.864Z error: SequelizeAssociationError: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:23:04.865Z error: Error details: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T19:23:04.865Z error: Error stack: SequelizeAssociationError: You have used the alias userRoles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:24:23.145Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:24:23.145Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:24:23.146Z error: Error details: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T19:24:23.146Z error: Error stack: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:25:27.917Z error: SequelizeAssociationError: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:25:27.917Z error: SequelizeAssociationError: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:25:27.918Z error: Error details: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T19:25:27.918Z error: Error stack: SequelizeAssociationError: You have used the alias rolePermissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:42:28.019Z error: SequelizeAssociationError: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:42:28.020Z error: SequelizeAssociationError: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-22T19:42:28.020Z error: Error details: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+2025-03-22T19:42:28.021Z error: Error stack: SequelizeAssociationError: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T05:50:35.361Z error: Redis connection error:
+2025-03-23T05:55:13.257Z error: SequelizeAssociationError: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T05:55:13.258Z error: SequelizeAssociationError: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T05:55:13.258Z error: Error details: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+2025-03-23T05:55:13.259Z error: Error stack: SequelizeAssociationError: You have used the alias rolesToPermissionsAssoc in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T05:56:50.538Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T05:56:50.539Z error: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T05:56:50.539Z error: Error details: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+2025-03-23T05:56:50.540Z error: Error stack: SequelizeAssociationError: You have used the alias roles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:110:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:11:13.585Z error: SequelizeAssociationError: You have used the alias users in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:118:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:11:13.586Z error: SequelizeAssociationError: You have used the alias users in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:118:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:11:13.586Z error: Error details: You have used the alias users in two separate associations. Aliased associations must have unique aliases.
+2025-03-23T06:11:13.587Z error: Error stack: SequelizeAssociationError: You have used the alias users in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:118:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:13:03.877Z error: SequelizeEagerLoadingError: Role is associated to User using an alias. You've included an alias (roles), but it does not match the alias(es) defined in your association (Roles).
+    at Function._getIncludedAssociation (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:646:53)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1794:12)
+    at async Function.findOne (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\model.js:1998:12)
+    at async AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:17:14)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T06:13:03.879Z error: DatabaseError: Database error while finding user
+    at AuthRepository.findUserByEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\repository.ts:29:13)
+    at async AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:44:33)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T06:13:03.879Z error: API Error: Database error while finding user
+2025-03-23T06:13:03.881Z error: RESPONSE 500 POST /register [319.70ms]
+2025-03-23T06:18:54.613Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:18:54.614Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:18:54.614Z error: Error details: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-23T06:18:54.615Z error: Error stack: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:21:14.460Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:21:14.461Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:21:14.461Z error: Error details: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-23T06:21:14.461Z error: Error stack: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:23:26.827Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:23:26.827Z error: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:23:26.828Z error: Error details: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+2025-03-23T06:23:26.828Z error: Error stack: SequelizeAssociationError: You have used the alias permissions in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\base.js:107:13)
+    at new BelongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\belongs-to-many.js:59:5)
+    at Function.belongsToMany (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\sequelize\src\associations\mixin.js:64:25)
+    at setupAssociations (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\associations.ts:95:10)
+    at startServer (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\server.ts:246:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-23T06:34:34.867Z error: Error: ENOENT: no such file or directory, open 'C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\templates\email\welcome.hbs'
+    at Object.openSync (node:fs:603:3)
+    at readFileSync (node:fs:471:35)
+    at Function.renderTemplate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:168:36)
+    at Function.sendEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:107:33)
+    at Function.sendWelcomeEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:193:17)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:106:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T06:34:34.869Z error: Error: ENOENT: no such file or directory, open 'C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\templates\email\welcome.hbs'
+    at Object.openSync (node:fs:603:3)
+    at readFileSync (node:fs:471:35)
+    at Function.renderTemplate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:168:36)
+    at Function.sendEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:107:33)
+    at Function.sendWelcomeEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:193:17)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:106:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T06:53:06.752Z error: Error: ENOENT: no such file or directory, open 'C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\templates\email\welcome.hbs'
+    at Object.openSync (node:fs:603:3)
+    at readFileSync (node:fs:471:35)
+    at Function.renderTemplate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:168:36)
+    at Function.sendEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:107:33)
+    at Function.sendWelcomeEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:193:17)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:109:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T06:53:06.754Z error: Error: ENOENT: no such file or directory, open 'C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\templates\email\welcome.hbs'
+    at Object.openSync (node:fs:603:3)
+    at readFileSync (node:fs:471:35)
+    at Function.renderTemplate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:168:36)
+    at Function.sendEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:107:33)
+    at Function.sendWelcomeEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:193:17)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:109:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T07:03:13.594Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/repository.ts[0m:[93m17[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Type 'User' is not assignable to type 'UserInterface'.
+    Types of property 'username' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[7m17[0m       return await User.findOne({
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/features/auth/repository.ts[0m:[93m40[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Type 'User' is not assignable to type 'UserInterface'.
+    Types of property 'username' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[7m40[0m       return await User.findByPk(id, {
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/features/auth/repository.ts[0m:[93m64[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User' is not assignable to type 'UserInterface'.
+  Types of property 'username' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+
+[7m64[0m       return await User.create(userData as any);
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/features/auth/repository.ts[0m:[93m118[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'User | null' is not assignable to type 'UserInterface | null'.
+  Type 'User' is not assignable to type 'UserInterface'.
+    Types of property 'username' are incompatible.
+      Type 'string | undefined' is not assignable to type 'string'.
+        Type 'undefined' is not assignable to type 'string'.
+
+[7m118[0m       return await User.findOne({
+[7m   [0m [91m      ~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:03:23.156Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/auth/service.ts[0m:[93m428[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m428[0m       username: user.username,
+[7m   [0m [91m      ~~~~~~~~[0m
+
+  [96msrc/features/auth/dto.ts[0m:[93m30[0m:[93m3[0m
+    [7m30[0m   username: string;
+    [7m  [0m [96m  ~~~~~~~~[0m
+    The expected type comes from property 'username' which is declared here on type 'UserInfoDTO'
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:06:41.400Z error: Error: ENOENT: no such file or directory, open 'C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\templates\email\welcome.hbs'
+    at Object.openSync (node:fs:603:3)
+    at readFileSync (node:fs:471:35)
+    at Function.renderTemplate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:168:36)
+    at Function.sendEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:107:33)
+    at Function.sendWelcomeEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:193:17)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:109:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T07:06:41.402Z error: Error: ENOENT: no such file or directory, open 'C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\templates\email\welcome.hbs'
+    at Object.openSync (node:fs:603:3)
+    at readFileSync (node:fs:471:35)
+    at Function.renderTemplate (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:168:36)
+    at Function.sendEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:107:33)
+    at Function.sendWelcomeEmail (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\common\utils\email\emailUtil.ts:193:17)
+    at AuthService.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\service.ts:109:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\auth\controller.ts:24:22)
+2025-03-23T07:24:33.788Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:26:44.115Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:27:12.077Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:27:59.316Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:29:40.610Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/common/utils/docs/swagger.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2741: [0mProperty 'security' is missing in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; }' but required in type '{ openapi: string; info: { title: string; version: string; description: string; }; servers: { url: string; description: string; }[]; components: { securitySchemes: { bearerAuth: { type: string; scheme: string; bearerFormat: string; }; }; }; security: { ...; }[]; }'.
+
+[7m33[0m   definition: {
+[7m  [0m [91m  ~~~~~~~~~~[0m
+
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m25[0m:[93m5[0m
+    [7m25[0m     security: {
+    [7m  [0m [96m    ~~~~~~~~[0m
+    'security' is declared here.
+  [96msrc/common/utils/docs/swagger.ts[0m:[93m5[0m:[93m3[0m
+    [7m5[0m   definition: {
+    [7m [0m [96m  ~~~~~~~~~~[0m
+    The expected type comes from property 'definition' which is declared here on type 'SwaggerOptions'
+[96msrc/common/utils/docs/swagger.ts[0m:[93m55[0m:[93m15[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 55[0m     security: [
+[7m   [0m [91m              ~[0m
+[7m 56[0m       {
+[7m   [0m [91m~~~~~~~[0m
+[7m...[0m 
+[7m 58[0m       },
+[7m   [0m [91m~~~~~~~~[0m
+[7m 59[0m     ],
+[7m   [0m [91m~~~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m61[0m:[93m9[0m - [91merror[0m[90m TS2695: [0mLeft side of comma operator is unused and has no side effects.
+
+[7m 61[0m   apis: [
+[7m   [0m [91m        ~[0m
+[7m 62[0m     "./src/features/**/routes.ts",
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 67[0m     "./src/shared/middleware/*.ts"
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 68[0m   ],
+[7m   [0m [91m~~~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m5[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m54[0m     ],
+[7m  [0m [91m    ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m54[0m:[93m6[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m54[0m     ],
+[7m  [0m [91m     ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m60[0m   },
+[7m  [0m [91m  ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m60[0m:[93m4[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m60[0m   },
+[7m  [0m [91m   ~[0m
+[96msrc/common/utils/docs/swagger.ts[0m:[93m69[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m };
+[7m  [0m [91m~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-23T07:33:39.869Z error: Error: CORS policy: Origin not allowed
+    at origin (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\shared\middleware\cors.ts:84:20)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\express\lib\router\index.js:280:10)
+    at internalNext (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\helmet\index.cjs:531:6)
+2025-03-23T07:33:39.870Z error: API Error: Internal Server Error

@@ -61,21 +61,18 @@ Permission.init(
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-      field: "created_at", // Explicitly set the column name
     },
     updatedAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-      field: "updated_at", // Explicitly set the column name
     },
   },
   {
     sequelize,
-    tableName: "permissions", // Make sure this is lowercase
+    tableName: "permissions",
     modelName: "Permission",
     timestamps: true,
-    underscored: true, // Use snake_case for all fields
   }
 );
 

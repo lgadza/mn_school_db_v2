@@ -33,13 +33,14 @@ const options: SwaggerOptions = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "MakroChain API",
+      title: "Makronexus School Database API",
       version: "1.0.0",
-      description: "API documentation for the MakroChain backend",
+      description:
+        "API documentation for the Makronexus School Database backend",
     },
     servers: [
       {
-        url: "/api",
+        url: "/",
         description: "Development server",
       },
     ],
@@ -58,7 +59,14 @@ const options: SwaggerOptions = {
       },
     ],
   },
-  apis: ["./src/routes/*.ts", "./src/controllers/*.ts", "./src/models/*.ts"],
+  apis: [
+    "./src/features/**/routes.ts",
+    "./src/features/**/controller.ts",
+    "./src/features/**/models/*.ts",
+    "./src/features/**/*.model.ts",
+    "./src/routes/**/*.ts",
+    "./src/shared/middleware/*.ts",
+  ],
 };
 
 const swaggerDocs = swaggerJsdoc(options);

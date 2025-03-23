@@ -22,7 +22,6 @@ RolePermission.init(
         model: Role,
         key: "id",
       },
-      field: "role_id", // Explicitly set the column name to match Postgres conventions
     },
     permissionId: {
       type: DataTypes.UUID,
@@ -31,19 +30,16 @@ RolePermission.init(
         model: Permission,
         key: "id",
       },
-      field: "permission_id", // Explicitly set the column name to match Postgres conventions
     },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-      field: "created_at", // Explicitly set the column name to match Postgres conventions
     },
     updatedAt: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-      field: "updated_at", // Explicitly set the column name to match Postgres conventions
     },
   },
   {
@@ -51,7 +47,6 @@ RolePermission.init(
     tableName: "role_permissions",
     modelName: "RolePermission",
     timestamps: true,
-    underscored: true, // Use snake_case for all fields
   }
 );
 

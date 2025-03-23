@@ -12,9 +12,11 @@ import {
   BadRequestError,
   NotFoundError,
   UnauthorizedError,
+  ServiceUnavailableError,
 } from "@/common/utils/errors/errorUtils";
 import { ErrorCode } from "@/common/utils/errors/errorCodes";
 import authRepository from "./repository";
+import systemLoadUtil from "@/common/utils/system/systemLoadUtil";
 
 export class AuthService implements IAuthService {
   private repository: IAuthRepository;
@@ -29,6 +31,15 @@ export class AuthService implements IAuthService {
   public async register(
     userData: Partial<UserInterface>
   ): Promise<AuthResponseDTO> {
+    // Check system load before processing registration
+    const isOverloaded = await systemLoadUtil.isSystemOverloaded();
+    if (isOverloaded) {
+      logger.warn("System under high load, rejecting request");
+      throw new ServiceUnavailableError(
+        "Service temporarily unavailable due to high load"
+      );
+    }
+
     // Check if user with email already exists
     const existingUserByEmail = await this.repository.findUserByEmail(
       userData.email as string
@@ -51,6 +62,17 @@ export class AuthService implements IAuthService {
       );
     }
 
+    //Check if phone number already exists
+    const existingUserByPhone = await this.repository.findUserByEmail(
+      userData.phoneNumber as string
+    );
+    if (existingUserByPhone) {
+      throw new BadRequestError(
+        "Phone number already registered",
+        ErrorCode.RES_ALREADY_EXISTS
+      );
+    }
+
     // Create the user
     const newUser = await this.repository.createUser({
       ...userData,
@@ -59,6 +81,9 @@ export class AuthService implements IAuthService {
 
     // Get the default role (user role) and associate it with the new user
     const defaultRoleId = await this.repository.getDefaultRoleId();
+    if (!defaultRoleId) {
+      throw new AppError("Default role not found", 404);
+    }
     await this.repository.associateUserWithRole(newUser.id, defaultRoleId);
 
     // Generate JWT tokens
@@ -155,8 +180,11 @@ export class AuthService implements IAuthService {
       permissions
     );
 
-    // Update last login timestamp
+    // Update last login timestamp in the database
     await this.repository.updateLastLogin(user.id);
+
+    // Update the user object in memory with current timestamp
+    user.lastLogin = new Date();
 
     // Return user info and tokens
     return {
@@ -400,7 +428,7 @@ export class AuthService implements IAuthService {
     return {
       id: user.id,
       email: user.email,
-      username: user.username,
+      username: user.username || "",
       firstName: user.firstName,
       lastName: user.lastName,
       fullName: `${user.firstName} ${user.lastName}`,

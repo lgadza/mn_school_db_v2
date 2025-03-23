@@ -22,7 +22,6 @@ UserRole.init(
         model: User,
         key: "id",
       },
-      field: "user_id", // Explicitly set the column name
     },
     roleId: {
       type: DataTypes.UUID,
@@ -31,19 +30,6 @@ UserRole.init(
         model: Role,
         key: "id",
       },
-      field: "role_id", // Explicitly set the column name
-    },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-      field: "created_at", // Explicitly set the column name
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-      field: "updated_at", // Explicitly set the column name
     },
   },
   {
@@ -51,7 +37,6 @@ UserRole.init(
     tableName: "user_roles",
     modelName: "UserRole",
     timestamps: true,
-    underscored: true, // Use snake_case for all fields
   }
 );
 

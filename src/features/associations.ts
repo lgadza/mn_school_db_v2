@@ -25,6 +25,9 @@ const MODELS = [
   // Add other models in their dependency order
 ];
 
+// Flag to track if associations have already been set up
+let associationsSetup = false;
+
 /**
  * Check if a table exists in the database
  */
@@ -85,105 +88,34 @@ const columnExists = async (
 };
 
 /**
- * Fix duplicate tables that might exist due to case-sensitivity issues
- */
-const fixDuplicateTables = async (): Promise<void> => {
-  try {
-    logger.info(
-      "Checking for duplicate tables with case-sensitivity issues..."
-    );
-
-    // Check if we have both "roles" and "Roles" tables
-    const [rolesExists, RolesExists] = await Promise.all([
-      tableExists("roles"),
-      tableExists("Roles"),
-    ]);
-
-    if (rolesExists && RolesExists) {
-      logger.warn(
-        "Found duplicate tables: 'roles' and 'Roles'. Fixing the issue..."
-      );
-
-      // Get data from the uppercase table to preserve it if needed
-      const rolesData = await sequelize.query('SELECT * FROM "Roles"', {
-        type: QueryTypes.SELECT,
-      });
-
-      logger.info(`Found ${rolesData.length} records in the 'Roles' table`);
-
-      // Drop the uppercase table
-      await sequelize.query('DROP TABLE IF EXISTS "Roles" CASCADE');
-      logger.info("Dropped the 'Roles' table");
-
-      // If the lowercase table is empty and we have data from the uppercase one,
-      // we might want to insert that data into the lowercase table
-      const lowerCaseCount = await sequelize.query(
-        "SELECT COUNT(*) as count FROM roles",
-        { type: QueryTypes.SELECT, plain: true }
-      );
-
-      if (rolesData.length > 0 && (lowerCaseCount as any).count === "0") {
-        logger.info("Migrating data from 'Roles' to 'roles'...");
-        // This would require more complex logic to insert properly
-        // For now, we'll rely on seeders to populate the correct table
-      }
-    }
-
-    // Similarly check for other potential duplicate tables
-    const [permissionsExists, PermissionsExists] = await Promise.all([
-      tableExists("permissions"),
-      tableExists("Permissions"),
-    ]);
-
-    if (permissionsExists && PermissionsExists) {
-      logger.warn(
-        "Found duplicate tables: 'permissions' and 'Permissions'. Fixing the issue..."
-      );
-      await sequelize.query('DROP TABLE IF EXISTS "Permissions" CASCADE');
-      logger.info("Dropped the 'Permissions' table");
-    }
-
-    // Check for role_permissions vs RolePermissions
-    const [rolePermissionsExists, RolePermissionsExists] = await Promise.all([
-      tableExists("role_permissions"),
-      tableExists("RolePermissions"),
-    ]);
-
-    if (rolePermissionsExists && RolePermissionsExists) {
-      logger.warn(
-        "Found duplicate tables: 'role_permissions' and 'RolePermissions'. Fixing the issue..."
-      );
-      await sequelize.query('DROP TABLE IF EXISTS "RolePermissions" CASCADE');
-      logger.info("Dropped the 'RolePermissions' table");
-    }
-
-    logger.info("Duplicate table check and cleanup completed");
-  } catch (error) {
-    logger.error("Error fixing duplicate tables:", error);
-    // Continue despite errors
-  }
-};
-
-/**
  * Setup all model associations
  */
 const setupAssociations = () => {
   try {
+    // Prevent multiple setup of associations
+    if (associationsSetup) {
+      logger.warn("Associations already set up. Skipping duplicate setup.");
+      return;
+    }
+
     logger.info("Setting up model associations...");
+    logger.debug(`Setup associations called from: ${new Error().stack}`);
 
     // 1. Role-Permission associations
     Role.belongsToMany(Permission, {
       through: RolePermission,
       foreignKey: "roleId",
       otherKey: "permissionId",
-      constraints: false, // Disable constraints for more flexible syncing
+      as: "permissions",
+      constraints: false,
     });
 
     Permission.belongsToMany(Role, {
       through: RolePermission,
       foreignKey: "permissionId",
       otherKey: "roleId",
-      constraints: false, // Disable constraints for more flexible syncing
+      as: "permissionRoles",
+      constraints: false,
     });
 
     // 2. User-Role associations
@@ -191,14 +123,16 @@ const setupAssociations = () => {
       through: UserRole,
       foreignKey: "userId",
       otherKey: "roleId",
-      constraints: false, // Disable constraints for more flexible syncing
+      as: "roles",
+      constraints: false,
     });
 
     Role.belongsToMany(User, {
       through: UserRole,
       foreignKey: "roleId",
       otherKey: "userId",
-      constraints: false, // Disable constraints for more flexible syncing
+      as: "users",
+      constraints: false,
     });
 
     // 3. School-User associations (if applicable)
@@ -208,9 +142,21 @@ const setupAssociations = () => {
 
     // Add other associations as needed
 
+    // Mark associations as set up
+    associationsSetup = true;
     logger.info("Model associations set up successfully");
   } catch (error) {
     logger.error("Error setting up model associations:", error);
+    logger.error(
+      `Association error details: ${
+        error instanceof Error ? error.message : "Unknown error"
+      }`
+    );
+    logger.error(
+      `Error stack: ${
+        error instanceof Error ? error.stack : "No stack available"
+      }`
+    );
     throw error;
   }
 };
@@ -240,9 +186,6 @@ const syncModelsInOrder = async (options = { force: false, alter: true }) => {
   logger.info(
     `Starting sequential model sync with options: ${JSON.stringify(options)}`
   );
-
-  // First, check for and fix any duplicate tables due to case sensitivity
-  await fixDuplicateTables();
 
   // First, drop all join tables if we need a clean sync
   if (options.force) {
@@ -276,10 +219,10 @@ const syncModelsInOrder = async (options = { force: false, alter: true }) => {
         // Check if we have column issues
         const hasIssue =
           model === RolePermission
-            ? !(await columnExists("role_permissions", "role_id")) ||
-              !(await columnExists("role_permissions", "permission_id"))
-            : !(await columnExists("user_roles", "user_id")) ||
-              !(await columnExists("user_roles", "role_id"));
+            ? !(await columnExists("role_permissions", "roleId")) ||
+              !(await columnExists("role_permissions", "permissionId"))
+            : !(await columnExists("user_roles", "userId")) ||
+              !(await columnExists("user_roles", "roleId"));
 
         if (hasIssue) {
           // Recreate the join table properly
