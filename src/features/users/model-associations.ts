@@ -2,6 +2,7 @@ import User from "./model";
 import Role from "../rbac/models/roles.model";
 import UserRole from "./user-role.model";
 import Teacher from "../teachers/model";
+import Student from "../accounts/students/model";
 import associationRegistry from "../../common/utils/db/AssociationRegistry";
 
 // Register all associations for the User model
@@ -28,6 +29,17 @@ associationRegistry.registerHasOne(
   {
     foreignKey: "userId",
     as: "teacher",
+  },
+  MODULE_NAME
+);
+
+// User has one Student
+associationRegistry.registerHasOne(
+  User,
+  Student,
+  {
+    foreignKey: "userId",
+    as: "student",
   },
   MODULE_NAME
 );

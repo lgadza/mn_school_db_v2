@@ -1,6 +1,7 @@
 import Grade from "./model";
 import School from "../../schools/model";
 import Teacher from "../../teachers/model";
+import Class from "../classes/model";
 import associationRegistry, {
   AssociationType,
 } from "../../../common/utils/db/AssociationRegistry";
@@ -27,6 +28,17 @@ associationRegistry.registerBelongsTo(
   {
     foreignKey: "teacherId",
     as: "teacher",
+  },
+  MODULE_NAME
+);
+
+// Grade has many Classes
+associationRegistry.registerHasMany(
+  Grade,
+  Class,
+  {
+    foreignKey: "gradeId",
+    as: "classes",
   },
   MODULE_NAME
 );

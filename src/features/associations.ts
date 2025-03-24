@@ -18,6 +18,7 @@ import Subject from "./school_config/subjects/model";
 import Category from "./school_config/categories/model";
 import Block from "./school_config/blocks/model";
 import Classroom from "./school_config/classrooms/model";
+import Class from "./school_config/classes/model";
 import Teacher from "./teachers/model";
 import Book from "./library/books/model";
 import BookLoan from "./library/loans/model";
@@ -45,6 +46,7 @@ const MODELS = [
   Subject,
   Block,
   Classroom,
+  Class,
 
   // Join tables and models with foreign key dependencies
   RolePermission,
