@@ -1,4 +1,10 @@
-import { SearchResultDTO, SearchQueryParams } from "../dto";
+import {
+  SearchResultDTO,
+  SearchQueryParams,
+  GlobalSearchDTO,
+  GlobalSearchResultDTO,
+  SearchResultType,
+} from "../dto";
 
 /**
  * Interface for the search repository
@@ -54,6 +60,27 @@ export interface ISearchRepository {
  * Interface for the search service
  */
 export interface ISearchService {
+  /**
+   * Get entities by type
+   */
+  getEntitiesByType(
+    type: SearchResultType,
+    query: string,
+    schoolId?: string,
+    limit?: number,
+    page?: number
+  ): Promise<GlobalSearchDTO[]>;
+
+  /**
+   * Perform a global search across multiple entities (legacy version)
+   * @deprecated Use the params-based overload instead
+   */
+  globalSearch(
+    query: string,
+    schoolId?: string,
+    limit?: number
+  ): Promise<GlobalSearchResultDTO>;
+
   /**
    * Perform a global search across all entities
    */

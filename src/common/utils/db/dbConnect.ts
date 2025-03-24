@@ -1,6 +1,7 @@
 import { Pool, PoolClient, QueryResult, QueryResultRow } from "pg";
+import { Transaction } from "sequelize"; // Fix: Import Transaction from sequelize
 import logger from "@/common/utils/logging/logger";
-import { db } from "@/config";
+import { db } from "@/config"; // Import db from config
 import { performance } from "perf_hooks";
 import { v4 as uuidv4 } from "uuid";
 
@@ -172,7 +173,7 @@ export class DBConnectUtil {
    * @returns Transaction result
    */
   public static async executeTransaction<T>(
-    callback: (client: PoolClient) => Promise<T>
+    callback: (transaction: Transaction) => Promise<T>
   ): Promise<T> {
     const transactionId = uuidv4();
     const startTime = performance.now();

@@ -13,6 +13,9 @@ import Address from "./address/model";
 import AddressLink from "./address/address-link.model";
 import Department from "./departments/model";
 import Teacher from "./teachers/model";
+import Book from "./library/books/model";
+import BookLoan from "./library/loans/model";
+import RentalRule from "./library/rules/model";
 
 // Import the association loader
 import loadAllAssociations from "./association-loader";
@@ -27,6 +30,9 @@ const MODELS = [
   Address,
   Department,
   Teacher,
+  Book,
+  BookLoan,
+  RentalRule,
 
   // Join tables and models with foreign key dependencies
   RolePermission,

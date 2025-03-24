@@ -11,6 +11,9 @@ import departmentRouter from "../../features/departments/routes";
 import teacherRouter from "../../features/teachers/routes";
 // Uncomment these as features are implemented
 import rbacRouter from "../../features/rbac/routes/roles.route";
+import bookRouter from "../../features/library/books/routes";
+import bookLoanRouter from "../../features/library/loans/routes";
+import rentalRuleRouter from "../../features/library/rules/routes";
 
 const router: Router = express.Router();
 
@@ -27,6 +30,9 @@ router.get("/", (req, res) => {
       search: "/search",
       departments: "/departments",
       teachers: "/teachers",
+      books: "/books",
+      loans: "/loans",
+      rentalRules: "/rental-rules",
       // List available endpoints as they are implemented
       // roles: '/rbac/roles',
       demo: "/demo",
@@ -52,5 +58,8 @@ router.use("/search", searchRouter);
 router.use("/departments", departmentRouter);
 router.use("/teachers", teacherRouter);
 router.use("/rbac/roles", rbacRouter);
+router.use("/books", bookRouter);
+router.use("/loans", bookLoanRouter);
+router.use("/rental-rules", rentalRuleRouter);
 
 export default router;

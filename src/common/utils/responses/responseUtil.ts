@@ -19,6 +19,7 @@ export enum HttpStatus {
   TOO_MANY_REQUESTS = 429,
   INTERNAL_SERVER_ERROR = 500,
   SERVICE_UNAVAILABLE = 503,
+  GATEWAY_TIMEOUT = 504,
 }
 
 /**
@@ -247,6 +248,61 @@ export class ResponseUtil {
     meta?: Partial<ApiResponse<any>["meta"]>
   ): void {
     this.sendError(res, message, HttpStatus.FORBIDDEN, null, meta);
+  }
+
+  /**
+   * Send a 409 Conflict response
+   *
+   * @param res - Express response object
+   * @param message - Error message
+   * @param additionalInfo - Additional error information
+   */
+  public static sendConflict(
+    res: Response,
+    message: string = "Conflict",
+    additionalInfo: Record<string, any> = {}
+  ): void {
+    this.sendError(res, message, HttpStatus.CONFLICT, additionalInfo);
+  }
+
+  /**
+   * Send a 204 No Content response
+   *
+   * @param res - Express response object
+   */
+  public static sendNoContent(res: Response): void {
+    res.status(HttpStatus.NO_CONTENT).end();
+  }
+
+  /**
+   * Send a paginated response
+   *
+   * @param res - Express response object
+   * @param data - Data array to include in response
+   * @param pagination - Pagination metadata
+   * @param message - Success message
+   */
+  public static sendPaginated(
+    res: Response,
+    data: any[],
+    pagination: {
+      page: number;
+      limit: number;
+      totalItems: number;
+      totalPages: number;
+    },
+    message: string = "Data retrieved successfully"
+  ): void {
+    res.status(HttpStatus.OK).json({
+      success: true,
+      message,
+      data,
+      pagination: {
+        ...pagination,
+        hasNextPage: pagination.page < pagination.totalPages,
+        hasPrevPage: pagination.page > 1,
+      },
+    });
   }
 }
 

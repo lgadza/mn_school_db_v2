@@ -7737,3 +7737,282 @@
 2025-03-23T22:59:17.575Z warn: Redis rate limiter failed, falling back to memory:
 2025-03-23T22:59:17.690Z info: Performing global search across entities: school, address, user with query: "Louis"
 2025-03-23T22:59:17.747Z info: RESPONSE 200 GET / [451.14ms]
+2025-03-24T13:54:48.073Z info: Database configuration:
+2025-03-24T13:56:51.153Z info: Database configuration:
+2025-03-24T13:57:54.039Z info: Database configuration:
+2025-03-24T14:06:33.268Z info: Database configuration:
+2025-03-24T14:07:07.523Z info: Database configuration:
+2025-03-24T14:10:02.294Z info: Database configuration:
+2025-03-24T14:20:50.081Z info: Database configuration:
+2025-03-24T14:23:37.226Z info: Database configuration:
+2025-03-24T14:24:10.102Z info: Database configuration:
+2025-03-24T14:24:10.276Z info: Connecting to Redis:
+2025-03-24T14:24:13.139Z info: Redis rate limiter initialized
+2025-03-24T14:24:13.862Z info: Cache utility initialized
+2025-03-24T14:24:17.881Z info: Configuring CORS middleware
+2025-03-24T14:24:17.882Z info: Configuring compression middleware
+2025-03-24T14:24:17.888Z info: Redis rate limiter initialized
+2025-03-24T14:24:17.888Z info: Redis rate limiter initialized
+2025-03-24T14:24:17.890Z info: Checking database connection...
+2025-03-24T14:24:17.947Z info: Redis connected successfully
+2025-03-24T14:24:18.052Z info: Sequelize connection has been established successfully.
+2025-03-24T14:24:18.093Z info: Database connection successful
+2025-03-24T14:24:18.093Z info: Setting up model associations...
+2025-03-24T14:24:18.094Z info: Setting up model associations...
+2025-03-24T14:24:18.101Z info: Loading feature-specific model associations...
+2025-03-24T14:24:35.014Z info: All feature-specific associations loaded successfully
+2025-03-24T14:24:35.015Z info: Model associations set up successfully
+2025-03-24T14:24:35.015Z info: Checking Redis connection...
+2025-03-24T14:24:35.027Z info: Redis client is ready
+2025-03-24T14:24:35.192Z info: Redis ping successful
+2025-03-24T14:24:35.193Z info: Redis connection successful
+2025-03-24T14:24:35.194Z info: Syncing database models...
+2025-03-24T14:24:35.194Z info: Setting up model associations before sync...
+2025-03-24T14:24:35.194Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-24T14:24:35.195Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-24T14:24:35.195Z info: Syncing model: Role
+2025-03-24T14:24:35.467Z info: Successfully synced model: Role
+2025-03-24T14:24:35.468Z info: Syncing model: Permission
+2025-03-24T14:24:35.537Z info: Successfully synced model: Permission
+2025-03-24T14:24:35.538Z info: Syncing model: School
+2025-03-24T14:24:35.730Z info: Successfully synced model: School
+2025-03-24T14:24:35.730Z info: Syncing model: User
+2025-03-24T14:24:36.111Z info: Successfully synced model: User
+2025-03-24T14:24:36.112Z info: Syncing model: Address
+2025-03-24T14:24:36.144Z info: Successfully synced model: Address
+2025-03-24T14:24:36.144Z info: Syncing model: Department
+2025-03-24T14:24:36.255Z info: Successfully synced model: Department
+2025-03-24T14:24:36.256Z info: Syncing model: Teacher
+2025-03-24T14:24:36.369Z info: Successfully synced model: Teacher
+2025-03-24T14:24:36.370Z info: Syncing model: Book
+2025-03-24T14:24:36.428Z info: Successfully synced model: Book
+2025-03-24T14:24:36.428Z info: Syncing model: BookLoan
+2025-03-24T14:24:36.485Z info: Successfully synced model: BookLoan
+2025-03-24T14:24:36.486Z info: Syncing model: RentalRule
+2025-03-24T14:24:36.523Z info: Successfully synced model: RentalRule
+2025-03-24T14:24:36.523Z info: Syncing model: RolePermission
+2025-03-24T14:24:36.567Z info: Successfully synced model: RolePermission
+2025-03-24T14:24:36.568Z info: Syncing model: UserRole
+2025-03-24T14:24:36.616Z info: Successfully synced model: UserRole
+2025-03-24T14:24:36.616Z info: Syncing model: AddressLink
+2025-03-24T14:24:36.691Z info: Successfully synced model: AddressLink
+2025-03-24T14:24:36.692Z info: All models synced successfully
+2025-03-24T14:24:36.692Z info: Database synced successfully
+2025-03-24T14:24:36.692Z info: Verifying database tables before seeding...
+2025-03-24T14:24:36.695Z info: Found database tables: , , , , , , , , , , , , 
+2025-03-24T14:24:36.695Z info: Running seeders...
+2025-03-24T14:24:36.696Z info: Starting database seeding...
+2025-03-24T14:24:37.711Z info: Starting RBAC seeding...
+2025-03-24T14:24:37.716Z info: Checking existing roles...
+2025-03-24T14:24:37.823Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-24T14:24:37.857Z info: Found 13 tables for permission generation
+2025-03-24T14:24:37.857Z info: No new permissions to create
+2025-03-24T14:24:37.879Z info: Checking for new permissions to assign to super_admin
+2025-03-24T14:24:37.880Z info: Checking for new permissions to assign to admin
+2025-03-24T14:24:37.881Z info: Checking for new permissions to assign to manager
+2025-03-24T14:24:37.882Z info: Checking for new permissions for teacher
+2025-03-24T14:24:37.883Z info: Checking for new permissions for student
+2025-03-24T14:24:37.883Z info: No new role-permission mappings needed
+2025-03-24T14:24:37.884Z info: RBAC seeding completed successfully
+2025-03-24T14:24:37.884Z info: Database seeding completed
+2025-03-24T14:24:37.884Z info: Seeding completed successfully
+2025-03-24T14:24:37.897Z info: API Routes (143 total routes):
+2025-03-24T14:24:38.027Z info: Server running on port 3001
+2025-03-24T14:24:43.694Z info: REQUEST GET /api/v1/search
+2025-03-24T14:24:43.869Z warn: Redis rate limiter failed, falling back to memory:
+2025-03-24T14:24:43.975Z warn: System under high load: CPU 16.2%, Memory 94.6%
+2025-03-24T14:24:43.975Z warn: System under high load, rejecting request
+2025-03-24T14:24:43.976Z error: API Error: Service temporarily unavailable due to high load
+2025-03-24T14:24:43.978Z error: RESPONSE 503 GET /api/v1/search [284.01ms]
+2025-03-24T14:25:21.405Z info: Database configuration:
+2025-03-24T14:25:21.540Z info: Connecting to Redis:
+2025-03-24T14:25:24.523Z info: Redis rate limiter initialized
+2025-03-24T14:25:25.263Z info: Cache utility initialized
+2025-03-24T14:25:32.109Z info: Configuring CORS middleware
+2025-03-24T14:25:32.111Z info: Configuring compression middleware
+2025-03-24T14:25:32.120Z info: Redis rate limiter initialized
+2025-03-24T14:25:32.121Z info: Redis rate limiter initialized
+2025-03-24T14:25:32.123Z info: Checking database connection...
+2025-03-24T14:25:32.180Z info: Redis connected successfully
+2025-03-24T14:25:32.313Z info: Sequelize connection has been established successfully.
+2025-03-24T14:25:32.362Z info: Database connection successful
+2025-03-24T14:25:32.363Z info: Setting up model associations...
+2025-03-24T14:25:32.364Z info: Setting up model associations...
+2025-03-24T14:25:32.372Z info: Loading feature-specific model associations...
+2025-03-24T14:25:54.060Z info: All feature-specific associations loaded successfully
+2025-03-24T14:25:54.060Z info: Model associations set up successfully
+2025-03-24T14:25:54.061Z info: Checking Redis connection...
+2025-03-24T14:25:54.073Z info: Redis client is ready
+2025-03-24T14:25:54.244Z info: Redis ping successful
+2025-03-24T14:25:54.244Z info: Redis connection successful
+2025-03-24T14:25:54.245Z info: Syncing database models...
+2025-03-24T14:25:54.245Z info: Setting up model associations before sync...
+2025-03-24T14:25:54.246Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-24T14:25:54.246Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-24T14:25:54.246Z info: Syncing model: Role
+2025-03-24T14:25:54.437Z info: Successfully synced model: Role
+2025-03-24T14:25:54.438Z info: Syncing model: Permission
+2025-03-24T14:25:54.501Z info: Successfully synced model: Permission
+2025-03-24T14:25:54.501Z info: Syncing model: School
+2025-03-24T14:25:54.667Z info: Successfully synced model: School
+2025-03-24T14:25:54.668Z info: Syncing model: User
+2025-03-24T14:25:55.119Z info: Successfully synced model: User
+2025-03-24T14:25:55.119Z info: Syncing model: Address
+2025-03-24T14:25:55.153Z info: Successfully synced model: Address
+2025-03-24T14:25:55.154Z info: Syncing model: Department
+2025-03-24T14:25:55.286Z info: Successfully synced model: Department
+2025-03-24T14:25:55.286Z info: Syncing model: Teacher
+2025-03-24T14:25:55.421Z info: Successfully synced model: Teacher
+2025-03-24T14:25:55.422Z info: Syncing model: Book
+2025-03-24T14:25:55.490Z info: Successfully synced model: Book
+2025-03-24T14:25:55.491Z info: Syncing model: BookLoan
+2025-03-24T14:25:55.556Z info: Successfully synced model: BookLoan
+2025-03-24T14:25:55.557Z info: Syncing model: RentalRule
+2025-03-24T14:25:55.607Z info: Successfully synced model: RentalRule
+2025-03-24T14:25:55.607Z info: Syncing model: RolePermission
+2025-03-24T14:25:55.661Z info: Successfully synced model: RolePermission
+2025-03-24T14:25:55.661Z info: Syncing model: UserRole
+2025-03-24T14:25:55.712Z info: Successfully synced model: UserRole
+2025-03-24T14:25:55.712Z info: Syncing model: AddressLink
+2025-03-24T14:25:55.778Z info: Successfully synced model: AddressLink
+2025-03-24T14:25:55.779Z info: All models synced successfully
+2025-03-24T14:25:55.779Z info: Database synced successfully
+2025-03-24T14:25:55.779Z info: Verifying database tables before seeding...
+2025-03-24T14:25:55.782Z info: Found database tables: , , , , , , , , , , , , 
+2025-03-24T14:25:55.782Z info: Running seeders...
+2025-03-24T14:25:55.783Z info: Starting database seeding...
+2025-03-24T14:25:56.794Z info: Starting RBAC seeding...
+2025-03-24T14:25:56.798Z info: Checking existing roles...
+2025-03-24T14:25:56.875Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-24T14:25:56.909Z info: Found 13 tables for permission generation
+2025-03-24T14:25:56.910Z info: No new permissions to create
+2025-03-24T14:25:56.933Z info: Checking for new permissions to assign to super_admin
+2025-03-24T14:25:56.935Z info: Checking for new permissions to assign to admin
+2025-03-24T14:25:56.935Z info: Checking for new permissions to assign to manager
+2025-03-24T14:25:56.936Z info: Checking for new permissions for teacher
+2025-03-24T14:25:56.937Z info: Checking for new permissions for student
+2025-03-24T14:25:56.938Z info: No new role-permission mappings needed
+2025-03-24T14:25:56.938Z info: RBAC seeding completed successfully
+2025-03-24T14:25:56.939Z info: Database seeding completed
+2025-03-24T14:25:56.940Z info: Seeding completed successfully
+2025-03-24T14:25:56.948Z info: API Routes (143 total routes):
+2025-03-24T14:25:57.060Z info: Server running on port 3001
+2025-03-24T14:26:02.592Z info: REQUEST GET /api/v1/search
+2025-03-24T14:26:02.763Z warn: Redis rate limiter failed, falling back to memory:
+2025-03-24T14:26:02.892Z info: Performing global search across entities: school, address, user, book, loan, rental_rule with query: "Fiction"
+2025-03-24T14:26:02.928Z error: Error: Unsupported entity type: book
+    at SearchRepository.searchByEntityType (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:266:15)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:179:12
+    at Array.map (<anonymous>)
+    at SearchService.globalSearchWithParams (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:176:42)
+2025-03-24T14:26:03.011Z error: Error: Unsupported entity type: loan
+    at SearchRepository.searchByEntityType (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:266:15)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:179:12
+    at Array.map (<anonymous>)
+    at SearchService.globalSearchWithParams (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:176:42)
+2025-03-24T14:26:03.015Z error: Error: Unsupported entity type: rental_rule
+    at SearchRepository.searchByEntityType (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:266:15)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:179:12
+    at Array.map (<anonymous>)
+    at SearchService.globalSearchWithParams (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:176:42)
+2025-03-24T14:26:03.418Z info: RESPONSE 200 GET / [825.77ms]
+2025-03-24T14:26:39.632Z info: REQUEST GET /api/v1/search
+2025-03-24T14:26:39.744Z info: Performing global search across entities: school, address, user, book, loan, rental_rule with query: "louis"
+2025-03-24T14:26:39.751Z error: Error: Unsupported entity type: book
+    at SearchRepository.searchByEntityType (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:266:15)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:179:12
+    at Array.map (<anonymous>)
+    at SearchService.globalSearchWithParams (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:176:42)
+2025-03-24T14:26:39.752Z error: Error: Unsupported entity type: loan
+    at SearchRepository.searchByEntityType (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:266:15)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:179:12
+    at Array.map (<anonymous>)
+    at SearchService.globalSearchWithParams (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:176:42)
+2025-03-24T14:26:39.753Z error: Error: Unsupported entity type: rental_rule
+    at SearchRepository.searchByEntityType (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\repository.ts:266:15)
+    at C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:179:12
+    at Array.map (<anonymous>)
+    at SearchService.globalSearchWithParams (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\src\features\search\service.ts:176:42)
+2025-03-24T14:26:39.923Z info: RESPONSE 200 GET / [291.68ms]
+2025-03-24T14:32:25.945Z info: Database configuration:
+2025-03-24T14:32:26.070Z info: Connecting to Redis:
+2025-03-24T14:32:28.651Z info: Redis rate limiter initialized
+2025-03-24T14:32:29.389Z info: Cache utility initialized
+2025-03-24T14:32:33.872Z info: Configuring CORS middleware
+2025-03-24T14:32:33.873Z info: Configuring compression middleware
+2025-03-24T14:32:33.880Z info: Redis rate limiter initialized
+2025-03-24T14:32:33.881Z info: Redis rate limiter initialized
+2025-03-24T14:32:33.882Z info: Checking database connection...
+2025-03-24T14:32:34.012Z info: Sequelize connection has been established successfully.
+2025-03-24T14:32:34.060Z info: Database connection successful
+2025-03-24T14:32:34.060Z info: Setting up model associations...
+2025-03-24T14:32:34.061Z info: Setting up model associations...
+2025-03-24T14:32:34.071Z info: Loading feature-specific model associations...
+2025-03-24T14:32:50.938Z info: All feature-specific associations loaded successfully
+2025-03-24T14:32:50.939Z info: Model associations set up successfully
+2025-03-24T14:32:50.939Z info: Checking Redis connection...
+2025-03-24T14:32:50.942Z error: Redis connection error:
+2025-03-24T14:32:50.943Z info: Retrying Redis connection in 50ms...
+2025-03-24T14:32:50.944Z warn: Redis connection closed
+2025-03-24T14:32:51.041Z info: Redis connected successfully
+2025-03-24T14:32:51.343Z info: Redis client is ready
+2025-03-24T14:32:51.552Z info: Redis ping successful
+2025-03-24T14:32:51.553Z info: Redis connection successful
+2025-03-24T14:32:51.553Z info: Syncing database models...
+2025-03-24T14:32:51.553Z info: Setting up model associations before sync...
+2025-03-24T14:32:51.554Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-24T14:32:51.554Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-24T14:32:51.555Z info: Syncing model: Role
+2025-03-24T14:32:51.798Z info: Successfully synced model: Role
+2025-03-24T14:32:51.799Z info: Syncing model: Permission
+2025-03-24T14:32:51.850Z info: Successfully synced model: Permission
+2025-03-24T14:32:51.851Z info: Syncing model: School
+2025-03-24T14:32:51.964Z info: Successfully synced model: School
+2025-03-24T14:32:51.964Z info: Syncing model: User
+2025-03-24T14:32:52.238Z info: Successfully synced model: User
+2025-03-24T14:32:52.239Z info: Syncing model: Address
+2025-03-24T14:32:52.263Z info: Successfully synced model: Address
+2025-03-24T14:32:52.263Z info: Syncing model: Department
+2025-03-24T14:32:52.371Z info: Successfully synced model: Department
+2025-03-24T14:32:52.372Z info: Syncing model: Teacher
+2025-03-24T14:32:52.491Z info: Successfully synced model: Teacher
+2025-03-24T14:32:52.491Z info: Syncing model: Book
+2025-03-24T14:32:52.553Z info: Successfully synced model: Book
+2025-03-24T14:32:52.554Z info: Syncing model: BookLoan
+2025-03-24T14:32:52.611Z info: Successfully synced model: BookLoan
+2025-03-24T14:32:52.611Z info: Syncing model: RentalRule
+2025-03-24T14:32:52.647Z info: Successfully synced model: RentalRule
+2025-03-24T14:32:52.648Z info: Syncing model: RolePermission
+2025-03-24T14:32:52.688Z info: Successfully synced model: RolePermission
+2025-03-24T14:32:52.689Z info: Syncing model: UserRole
+2025-03-24T14:32:52.737Z info: Successfully synced model: UserRole
+2025-03-24T14:32:52.738Z info: Syncing model: AddressLink
+2025-03-24T14:32:52.806Z info: Successfully synced model: AddressLink
+2025-03-24T14:32:52.806Z info: All models synced successfully
+2025-03-24T14:32:52.807Z info: Database synced successfully
+2025-03-24T14:32:52.807Z info: Verifying database tables before seeding...
+2025-03-24T14:32:52.809Z info: Found database tables: , , , , , , , , , , , , 
+2025-03-24T14:32:52.809Z info: Running seeders...
+2025-03-24T14:32:52.810Z info: Starting database seeding...
+2025-03-24T14:32:53.811Z info: Starting RBAC seeding...
+2025-03-24T14:32:53.814Z info: Checking existing roles...
+2025-03-24T14:32:53.875Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-24T14:32:53.897Z info: Found 13 tables for permission generation
+2025-03-24T14:32:53.898Z info: No new permissions to create
+2025-03-24T14:32:53.915Z info: Checking for new permissions to assign to super_admin
+2025-03-24T14:32:53.916Z info: Checking for new permissions to assign to admin
+2025-03-24T14:32:53.917Z info: Checking for new permissions to assign to manager
+2025-03-24T14:32:53.917Z info: Checking for new permissions for teacher
+2025-03-24T14:32:53.918Z info: Checking for new permissions for student
+2025-03-24T14:32:53.918Z info: No new role-permission mappings needed
+2025-03-24T14:32:53.918Z info: RBAC seeding completed successfully
+2025-03-24T14:32:53.918Z info: Database seeding completed
+2025-03-24T14:32:53.919Z info: Seeding completed successfully
+2025-03-24T14:32:53.924Z info: API Routes (143 total routes):
+2025-03-24T14:32:53.998Z info: Server running on port 3001
+2025-03-24T14:33:00.497Z info: REQUEST GET /api/v1/search
+2025-03-24T14:33:00.684Z warn: Redis rate limiter failed, falling back to memory:
+2025-03-24T14:33:00.795Z warn: System under high load: CPU 24.9%, Memory 90.6%
+2025-03-24T14:33:00.795Z warn: System under high load, rejecting request
+2025-03-24T14:33:00.797Z error: API Error: Service temporarily unavailable due to high load
+2025-03-24T14:33:00.798Z error: RESPONSE 503 GET /api/v1/search [300.84ms]

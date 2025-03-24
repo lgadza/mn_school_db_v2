@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+import { Sequelize, Transaction } from "sequelize";
 import { Pool, PoolClient } from "pg";
 import { appConfig } from "@/config";
 import logger from "@/common/utils/logging/logger";
@@ -214,4 +214,90 @@ const databaseClient: DatabaseClient = {
   },
 };
 
-export default databaseClient;
+// Database utility methods
+const db = {
+  sequelize,
+  pgPool, // Expose pgPool to allow direct access
+
+  /**
+   * Execute a function within a Sequelize transaction
+   * @param callback Function to execute within transaction
+   * @returns Result of the callback function
+   */
+  transaction: async <T>(
+    callback: (transaction: Transaction) => Promise<T>
+  ): Promise<T> => {
+    const transaction = await sequelize.transaction();
+    try {
+      const result = await callback(transaction);
+      await transaction.commit();
+      return result;
+    } catch (error) {
+      await transaction.rollback();
+      throw error;
+    }
+  },
+
+  /**
+   * Execute a function within a PostgreSQL transaction using a raw connection
+   * @param callback Function to execute within transaction
+   * @returns Result of the callback function
+   */
+  pgTransaction: async <T>(
+    callback: (client: PoolClient) => Promise<T>
+  ): Promise<T> => {
+    const client = await pgPool.connect();
+    try {
+      await client.query("BEGIN");
+      const result = await callback(client);
+      await client.query("COMMIT");
+      return result;
+    } catch (error) {
+      await client.query("ROLLBACK");
+      throw error;
+    } finally {
+      client.release();
+    }
+  },
+
+  /**
+   * Get a PostgreSQL connection from the pool
+   * @returns PostgreSQL client
+   */
+  getConnection: async (): Promise<PoolClient> => {
+    return await pgPool.connect();
+  },
+
+  /**
+   * Disconnect from the database
+   * Closes all connections
+   */
+  disconnect: async (): Promise<void> => {
+    try {
+      await sequelize.close();
+      await pgPool.end();
+      logger.info("Database connection closed successfully.");
+    } catch (error) {
+      logger.error("Error closing database connection:", error);
+      throw error;
+    }
+  },
+
+  /**
+   * Check database health
+   * @returns true if database is healthy, false otherwise
+   */
+  healthCheck: async (): Promise<boolean> => {
+    try {
+      await sequelize.authenticate();
+      const client = await pgPool.connect();
+      client.release();
+      return true;
+    } catch (error) {
+      logger.error("Database health check failed:", error);
+      return false;
+    }
+  },
+};
+
+export default db;

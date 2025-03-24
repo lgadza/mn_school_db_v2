@@ -4,6 +4,9 @@ import { Op, WhereOptions, QueryTypes, Sequelize } from "sequelize"; // Add Quer
 import School from "../schools/model";
 import Address from "../address/model";
 import User from "../users/model";
+import Book from "../library/books/model";
+import BookLoan from "../library/loans/model";
+import RentalRule from "../library/rules/model";
 import logger from "@/common/utils/logging/logger";
 import { DatabaseError } from "@/common/utils/errors/errorUtils";
 import { ErrorCode } from "@/common/utils/errors/errorCodes";
@@ -242,6 +245,262 @@ export class SearchRepository implements ISearchRepository {
   }
 
   /**
+   * Search books
+   */
+  public async searchBooks(
+    query: string,
+    params: SearchQueryParams
+  ): Promise<{
+    results: any[];
+    count: number;
+  }> {
+    try {
+      const {
+        page = 1,
+        limit = 10,
+        sortBy = "title",
+        sortOrder = "asc",
+        filters = {},
+      } = params;
+
+      // Calculate offset for pagination
+      const offset = (page - 1) * limit;
+
+      // Build search condition
+      const searchCondition = {
+        [Op.or]: [
+          { title: { [Op.iLike]: `%${query}%` } },
+          { author: { [Op.iLike]: `%${query}%` } },
+          { isbn: { [Op.iLike]: `%${query}%` } },
+          { genre: { [Op.iLike]: `%${query}%` } },
+          { publisher: { [Op.iLike]: `%${query}%` } },
+        ],
+      };
+
+      // Apply additional filters (like schoolId)
+      const whereClause = {
+        ...searchCondition,
+        ...this.applyFilters(filters),
+      };
+
+      // Determine sort order
+      const order: any =
+        sortBy === "relevance"
+          ? [["title", sortOrder as "asc" | "desc"]]
+          : [[sortBy, sortOrder as "asc" | "desc"]];
+
+      // Execute the search query
+      const { rows, count } = await Book.findAndCountAll({
+        where: whereClause,
+        order,
+        limit,
+        offset,
+        include: [
+          {
+            model: School,
+            as: "school",
+            attributes: ["id", "name"],
+          },
+        ],
+      });
+
+      return {
+        results: rows,
+        count,
+      };
+    } catch (error) {
+      logger.error("Error searching books:", error);
+      throw new DatabaseError("Database error while searching books", {
+        additionalInfo: { code: ErrorCode.DB_QUERY_FAILED, query },
+      });
+    }
+  }
+
+  /**
+   * Search book loans
+   */
+  public async searchLoans(
+    query: string,
+    params: SearchQueryParams
+  ): Promise<{
+    results: any[];
+    count: number;
+  }> {
+    try {
+      const {
+        page = 1,
+        limit = 10,
+        sortBy = "createdAt",
+        sortOrder = "desc",
+        filters = {},
+      } = params;
+
+      // Calculate offset for pagination
+      const offset = (page - 1) * limit;
+
+      // Find books and users matching the query
+      const [matchingBooks, matchingUsers] = await Promise.all([
+        Book.findAll({
+          where: {
+            [Op.or]: [
+              { title: { [Op.iLike]: `%${query}%` } },
+              { author: { [Op.iLike]: `%${query}%` } },
+            ],
+          },
+          attributes: ["id"],
+        }),
+        User.findAll({
+          where: {
+            [Op.or]: [
+              { firstName: { [Op.iLike]: `%${query}%` } },
+              { lastName: { [Op.iLike]: `%${query}%` } },
+            ],
+          },
+          attributes: ["id"],
+        }),
+      ]);
+
+      const bookIds = matchingBooks.map((book) => book.id);
+      const userIds = matchingUsers.map((user) => user.id);
+
+      // Build where clause
+      let whereClause: any = {};
+
+      if (bookIds.length > 0 || userIds.length > 0 || query.length === 0) {
+        whereClause[Op.or] = [];
+
+        if (bookIds.length > 0) {
+          whereClause[Op.or].push({ bookId: { [Op.in]: bookIds } });
+        }
+
+        if (userIds.length > 0) {
+          whereClause[Op.or].push({ userId: { [Op.in]: userIds } });
+        }
+
+        // If we're doing an empty query and have no matches but want all results
+        if (
+          query.length === 0 &&
+          bookIds.length === 0 &&
+          userIds.length === 0
+        ) {
+          delete whereClause[Op.or];
+        }
+      }
+
+      // Apply additional filters
+      const appliedFilters = this.applyFilters(filters);
+      whereClause = { ...whereClause, ...appliedFilters };
+
+      // Determine sort field and order
+      const orderDirection = sortOrder.toUpperCase() as "ASC" | "DESC";
+      const order: [string, "ASC" | "DESC"][] =
+        sortBy === "relevance"
+          ? [["createdAt", orderDirection]]
+          : [[sortBy, orderDirection]];
+
+      // Execute search
+      const { rows, count } = await BookLoan.findAndCountAll({
+        where: whereClause,
+        order,
+        limit,
+        offset,
+        include: [
+          {
+            model: Book,
+            as: "book",
+            attributes: ["id", "title", "author", "schoolId"],
+          },
+          {
+            model: User,
+            as: "user",
+            attributes: ["id", "firstName", "lastName"],
+          },
+        ],
+      });
+
+      return {
+        results: rows,
+        count,
+      };
+    } catch (error) {
+      logger.error("Error searching loans:", error);
+      throw new DatabaseError("Database error while searching loans", {
+        additionalInfo: { code: ErrorCode.DB_QUERY_FAILED, query },
+      });
+    }
+  }
+
+  /**
+   * Search rental rules
+   */
+  public async searchRentalRules(
+    query: string,
+    params: SearchQueryParams
+  ): Promise<{
+    results: any[];
+    count: number;
+  }> {
+    try {
+      const {
+        page = 1,
+        limit = 10,
+        sortBy = "name",
+        sortOrder = "asc",
+        filters = {},
+      } = params;
+
+      // Calculate offset for pagination
+      const offset = (page - 1) * limit;
+
+      // Build search condition
+      const searchCondition = {
+        [Op.or]: [
+          { name: { [Op.iLike]: `%${query}%` } },
+          { description: { [Op.iLike]: `%${query}%` } },
+        ],
+      };
+
+      // Apply additional filters
+      const whereClause = {
+        ...searchCondition,
+        ...this.applyFilters(filters),
+      };
+
+      // Determine sort order
+      const orderDirection = sortOrder.toUpperCase() as "ASC" | "DESC";
+      const order: [string, "ASC" | "DESC"][] =
+        sortBy === "relevance"
+          ? [["name", orderDirection]]
+          : [[sortBy, orderDirection]];
+
+      // Execute the search query
+      const { rows, count } = await RentalRule.findAndCountAll({
+        where: whereClause,
+        order,
+        limit,
+        offset,
+        include: [
+          {
+            model: School,
+            as: "school",
+            attributes: ["id", "name"],
+          },
+        ],
+      });
+
+      return {
+        results: rows,
+        count,
+      };
+    } catch (error) {
+      logger.error("Error searching rental rules:", error);
+      throw new DatabaseError("Database error while searching rental rules", {
+        additionalInfo: { code: ErrorCode.DB_QUERY_FAILED, query },
+      });
+    }
+  }
+
+  /**
    * Search any entity by type
    */
   public async searchByEntityType(
@@ -262,6 +521,19 @@ export class SearchRepository implements ISearchRepository {
       case "user":
       case "users":
         return this.searchUsers(query, params);
+      case "book":
+      case "books":
+        return this.searchBooks(query, params);
+      case "loan":
+      case "loans":
+      case "book_loan":
+      case "book_loans":
+        return this.searchLoans(query, params);
+      case "rental_rule":
+      case "rental_rules":
+      case "rentalrule":
+      case "rentalrules":
+        return this.searchRentalRules(query, params);
       default:
         throw new Error(`Unsupported entity type: ${entityType}`);
     }
