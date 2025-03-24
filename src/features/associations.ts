@@ -16,6 +16,8 @@ import Grade from "./school_config/grades/model";
 import Section from "./school_config/sections/model";
 import Subject from "./school_config/subjects/model";
 import Category from "./school_config/categories/model";
+import Block from "./school_config/blocks/model";
+import Classroom from "./school_config/classrooms/model";
 import Teacher from "./teachers/model";
 import Book from "./library/books/model";
 import BookLoan from "./library/loans/model";
@@ -41,6 +43,8 @@ const MODELS = [
   Section,
   Category,
   Subject,
+  Block,
+  Classroom,
 
   // Join tables and models with foreign key dependencies
   RolePermission,

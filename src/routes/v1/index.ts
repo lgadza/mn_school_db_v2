@@ -11,12 +11,15 @@ import departmentRouter from "../../features/school_config/departments/routes";
 import gradeRouter from "../../features/school_config/grades/routes";
 import sectionRouter from "../../features/school_config/sections/routes";
 import categoryRouter from "../../features/school_config/categories/routes";
+import blockRouter from "../../features/school_config/blocks/routes";
+import classroomRouter from "../../features/school_config/classrooms/routes";
 import teacherRouter from "../../features/teachers/routes";
 // Uncomment these as features are implemented
 import rbacRouter from "../../features/rbac/routes/roles.route";
 import bookRouter from "../../features/library/books/routes";
 import bookLoanRouter from "../../features/library/loans/routes";
 import rentalRuleRouter from "../../features/library/rules/routes";
+import subjectRouter from "../../features/school_config/subjects/routes";
 
 const router: Router = express.Router();
 
@@ -35,10 +38,13 @@ router.get("/", (req, res) => {
       grades: "/grades",
       sections: "/sections",
       categories: "/categories",
+      blocks: "/blocks",
+      classrooms: "/classrooms",
       teachers: "/teachers",
       books: "/books",
       loans: "/loans",
       rentalRules: "/rental-rules",
+      subjects: "/subjects",
       // List available endpoints as they are implemented
       // roles: '/rbac/roles',
       demo: "/demo",
@@ -65,10 +71,13 @@ router.use("/departments", departmentRouter);
 router.use("/grades", gradeRouter);
 router.use("/sections", sectionRouter);
 router.use("/categories", categoryRouter);
+router.use("/blocks", blockRouter);
+router.use("/classrooms", classroomRouter);
 router.use("/teachers", teacherRouter);
 router.use("/rbac/roles", rbacRouter);
 router.use("/books", bookRouter);
 router.use("/loans", bookLoanRouter);
 router.use("/rental-rules", rentalRuleRouter);
+router.use("/subjects", subjectRouter);
 
 export default router;

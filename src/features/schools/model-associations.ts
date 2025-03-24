@@ -7,6 +7,7 @@ import AddressLink from "../address/address-link.model";
 import Teacher from "../teachers/model";
 import Category from "../school_config/categories/model";
 import Subject from "../school_config/subjects/model";
+import Block from "../school_config/blocks/model";
 import associationRegistry from "../../common/utils/db/AssociationRegistry";
 
 // Register all associations for the School model
@@ -77,6 +78,18 @@ associationRegistry.registerHasMany(
   {
     foreignKey: "schoolId",
     as: "subjects",
+    onDelete: "CASCADE",
+  },
+  MODULE_NAME
+);
+
+// School has many Blocks
+associationRegistry.registerHasMany(
+  School,
+  Block,
+  {
+    foreignKey: "schoolId",
+    as: "blocks",
     onDelete: "CASCADE",
   },
   MODULE_NAME
