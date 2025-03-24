@@ -2,7 +2,7 @@ import {
   DepartmentInterface,
   DepartmentStatistics,
 } from "./interfaces/interfaces";
-import { SchoolDetailDTO } from "../schools/dto";
+import { SchoolDetailDTO } from "../../schools/dto";
 
 /**
  * Base DTO for department information

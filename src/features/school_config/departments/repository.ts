@@ -4,7 +4,7 @@ import {
   DepartmentStatistics,
 } from "./interfaces/interfaces";
 import Department from "./model";
-import School from "../schools/model";
+import School from "../../schools/model";
 import { Transaction, Op, WhereOptions, Sequelize } from "sequelize";
 import {
   DepartmentListQueryParams,
@@ -459,6 +459,76 @@ export class DepartmentRepository implements IDepartmentRepository {
         "Database error while finding default department",
         {
           additionalInfo: { code: ErrorCode.DB_QUERY_FAILED, schoolId },
+        }
+      );
+    }
+  }
+
+  /**
+   * Create multiple departments at once
+   */
+  public async createDepartmentsBulk(
+    departmentsData: CreateDepartmentDTO[],
+    transaction?: Transaction
+  ): Promise<DepartmentInterface[]> {
+    try {
+      // For each department marked as default, unset other defaults in the same school
+      for (const data of departmentsData) {
+        if (data.isDefault) {
+          await Department.update(
+            { isDefault: false },
+            {
+              where: { schoolId: data.schoolId, isDefault: true },
+              transaction,
+            }
+          );
+        }
+      }
+
+      // Create all departments
+      const createdDepartments = await Department.bulkCreate(
+        departmentsData as any,
+        { transaction }
+      );
+
+      // Return the created departments
+      return createdDepartments;
+    } catch (error) {
+      logger.error("Error bulk creating departments:", error);
+      throw new DatabaseError(
+        "Database error while bulk creating departments",
+        {
+          additionalInfo: { code: ErrorCode.DB_QUERY_FAILED },
+        }
+      );
+    }
+  }
+
+  /**
+   * Delete multiple departments at once
+   */
+  public async deleteDepartmentsBulk(
+    ids: string[],
+    transaction?: Transaction
+  ): Promise<number> {
+    try {
+      const deleted = await Department.destroy({
+        where: {
+          id: { [Op.in]: ids },
+          isDefault: false, // Only delete non-default departments
+        },
+        transaction,
+      });
+      return deleted;
+    } catch (error) {
+      logger.error("Error bulk deleting departments:", error);
+      throw new DatabaseError(
+        "Database error while bulk deleting departments",
+        {
+          additionalInfo: {
+            code: ErrorCode.DB_QUERY_FAILED,
+            departmentIds: ids,
+          },
         }
       );
     }

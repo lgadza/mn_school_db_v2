@@ -141,6 +141,43 @@ export const departmentValidationSchemas = {
       schoolId: ValidationUtil.SCHEMAS.ID.required(),
     }),
   },
+
+  // Bulk create departments validation
+  createDepartmentsBulk: {
+    body: Joi.object({
+      departments: Joi.array()
+        .items(
+          Joi.object({
+            name: Joi.string().max(150).required(),
+            code: Joi.string().max(20).allow(null, "").optional(),
+            description: Joi.string().allow(null, "").optional(),
+            headOfDepartmentId:
+              ValidationUtil.SCHEMAS.ID.allow(null).optional(),
+            contactEmail: Joi.string()
+              .email()
+              .max(100)
+              .allow(null, "")
+              .optional(),
+            phoneNumber: Joi.string().max(50).allow(null, "").optional(),
+            facultyCount: Joi.number().integer().min(0).allow(null).optional(),
+            studentCount: Joi.number().integer().min(0).allow(null).optional(),
+            location: Joi.string().max(150).allow(null, "").optional(),
+            budget: Joi.number().precision(2).min(0).allow(null).optional(),
+            schoolId: ValidationUtil.SCHEMAS.ID.required(),
+            isDefault: Joi.boolean().optional(),
+          })
+        )
+        .min(1)
+        .required(),
+    }),
+  },
+
+  // Bulk delete departments validation
+  deleteDepartmentsBulk: {
+    body: Joi.object({
+      ids: Joi.array().items(ValidationUtil.SCHEMAS.ID).min(1).required(),
+    }),
+  },
 };
 
 export default departmentValidationSchemas;

@@ -20,8 +20,8 @@ import {
   ConflictError,
 } from "@/common/utils/errors/errorUtils";
 import cache from "@/common/utils/cache/cacheUtil";
-import { SchoolDTOMapper } from "../schools/dto";
-import schoolService from "../schools/service";
+import { SchoolDTOMapper } from "../../schools/dto";
+import schoolService from "../../schools/service";
 import db from "@/config/database";
 
 export class DepartmentService implements IDepartmentService {
@@ -604,6 +604,152 @@ export class DepartmentService implements IDepartmentService {
       }
       logger.error("Error in setDefaultDepartment service:", error);
       throw new AppError("Failed to set department as default");
+    }
+  }
+
+  /**
+   * Create multiple departments at once
+   */
+  public async createDepartmentsBulk(
+    departmentsData: CreateDepartmentDTO[]
+  ): Promise<DepartmentDetailDTO[]> {
+    const transaction = await db.sequelize.transaction();
+
+    try {
+      // Validate all department data
+      for (const departmentData of departmentsData) {
+        await this.validateDepartmentData(departmentData);
+
+        // Check if school exists
+        await schoolService.getSchoolById(departmentData.schoolId);
+
+        // Generate department code if not provided
+        if (!departmentData.code) {
+          departmentData.code = await this.generateDepartmentCode(
+            departmentData.name,
+            departmentData.schoolId
+          );
+        } else {
+          // Check if department code is already taken
+          const isCodeTaken = await this.repository.isDepartmentCodeTaken(
+            departmentData.code
+          );
+          if (isCodeTaken) {
+            throw new ConflictError(
+              `Department code ${departmentData.code} is already taken`
+            );
+          }
+        }
+      }
+
+      // Create departments in bulk
+      const newDepartments = await this.repository.createDepartmentsBulk(
+        departmentsData,
+        transaction
+      );
+
+      await transaction.commit();
+
+      // Get the complete departments with schools
+      const departmentIds = newDepartments.map((dept) => dept.id);
+      const detailedDepartments: DepartmentDetailDTO[] = [];
+
+      for (const id of departmentIds) {
+        const department = await this.repository.findDepartmentById(id);
+        if (department) {
+          const departmentDTO = DepartmentDTOMapper.toDetailDTO(department);
+          if (department.school) {
+            departmentDTO.school = SchoolDTOMapper.toDetailDTO(
+              department.school
+            );
+          }
+          detailedDepartments.push(departmentDTO);
+        }
+      }
+
+      return detailedDepartments;
+    } catch (error) {
+      await transaction.rollback();
+      if (error instanceof AppError) {
+        throw error;
+      }
+      logger.error("Error in createDepartmentsBulk service:", error);
+      throw new AppError("Failed to create departments in bulk");
+    }
+  }
+
+  /**
+   * Delete multiple departments at once
+   */
+  public async deleteDepartmentsBulk(ids: string[]): Promise<{
+    success: boolean;
+    count: number;
+    failedIds?: string[];
+  }> {
+    const transaction = await db.sequelize.transaction();
+
+    try {
+      // Check if any department is a default one
+      const departments = await Promise.all(
+        ids.map((id) => this.repository.findDepartmentById(id))
+      );
+
+      const defaultDepts = departments.filter((dept) => dept && dept.isDefault);
+
+      if (defaultDepts.length > 0) {
+        const failedIds = defaultDepts.map((dept) => dept!.id);
+
+        // If not all are default, delete the non-default ones
+        if (failedIds.length < ids.length) {
+          const nonDefaultIds = ids.filter((id) => !failedIds.includes(id));
+          const deleted = await this.repository.deleteDepartmentsBulk(
+            nonDefaultIds,
+            transaction
+          );
+
+          await transaction.commit();
+
+          // Clear cache for deleted departments
+          for (const id of nonDefaultIds) {
+            await this.clearDepartmentCache(id);
+          }
+
+          return {
+            success: true,
+            count: deleted,
+            failedIds: failedIds,
+          };
+        } else {
+          throw new BadRequestError(
+            `Cannot delete default departments. Please set another department as default first.`
+          );
+        }
+      }
+
+      // Delete departments
+      const deletedCount = await this.repository.deleteDepartmentsBulk(
+        ids,
+        transaction
+      );
+
+      await transaction.commit();
+
+      // Clear cache for each deleted department
+      for (const id of ids) {
+        await this.clearDepartmentCache(id);
+      }
+
+      return {
+        success: true,
+        count: deletedCount,
+      };
+    } catch (error) {
+      await transaction.rollback();
+      if (error instanceof AppError) {
+        throw error;
+      }
+      logger.error("Error in deleteDepartmentsBulk service:", error);
+      throw new AppError("Failed to delete departments in bulk");
     }
   }
 

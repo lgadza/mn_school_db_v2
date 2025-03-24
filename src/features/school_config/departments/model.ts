@@ -1,7 +1,6 @@
 import { Model, DataTypes, Optional, Op } from "sequelize";
 import sequelize from "@/config/sequelize";
 import { DepartmentInterface } from "./interfaces/interfaces";
-import School from "../schools/model";
 
 // Define optional fields for creation (fields with default values or generated values like ID)
 interface DepartmentCreationInterface

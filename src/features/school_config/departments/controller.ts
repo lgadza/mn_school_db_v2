@@ -462,6 +462,69 @@ export class DepartmentController {
       }
     }
   };
+
+  /**
+   * Create multiple departments at once
+   */
+  public createDepartmentsBulk = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    try {
+      const { departments } = req.body;
+      const result = await this.service.createDepartmentsBulk(departments);
+
+      ResponseUtil.sendSuccess(
+        res,
+        result,
+        "Departments created successfully",
+        HttpStatus.CREATED
+      );
+    } catch (error) {
+      logger.error("Error in createDepartmentsBulk controller:", error);
+      if (error instanceof AppError) {
+        ResponseUtil.sendError(res, error.message, error.httpCode, {
+          code: error.metadata.code,
+        });
+      } else {
+        ResponseUtil.sendError(
+          res,
+          "Error creating departments in bulk",
+          HttpStatus.INTERNAL_SERVER_ERROR,
+          { code: ErrorCode.GEN_INTERNAL_ERROR }
+        );
+      }
+    }
+  };
+
+  /**
+   * Delete multiple departments at once
+   */
+  public deleteDepartmentsBulk = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    try {
+      const { ids } = req.body;
+      const result = await this.service.deleteDepartmentsBulk(ids);
+
+      ResponseUtil.sendSuccess(res, result, "Departments deleted successfully");
+    } catch (error) {
+      logger.error("Error in deleteDepartmentsBulk controller:", error);
+      if (error instanceof AppError) {
+        ResponseUtil.sendError(res, error.message, error.httpCode, {
+          code: error.metadata.code,
+        });
+      } else {
+        ResponseUtil.sendError(
+          res,
+          "Error deleting departments in bulk",
+          HttpStatus.INTERNAL_SERVER_ERROR,
+          { code: ErrorCode.GEN_INTERNAL_ERROR }
+        );
+      }
+    }
+  };
 }
 
 // Create and export controller instance

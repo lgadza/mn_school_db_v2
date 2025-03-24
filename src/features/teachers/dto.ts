@@ -4,7 +4,7 @@ import {
 } from "./interfaces/interfaces";
 import { UserDetailDTO } from "../users/dto";
 import { SchoolDetailDTO } from "../schools/dto";
-import { DepartmentDetailDTO } from "../departments/dto";
+import { DepartmentDetailDTO } from "../school_config/departments/dto";
 import EncryptionUtil, {
   EncryptedData,
 } from "@/common/utils/security/encryptionUtil";

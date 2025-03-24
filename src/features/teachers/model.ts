@@ -3,7 +3,7 @@ import sequelize from "@/config/sequelize";
 import { TeacherInterface } from "./interfaces/interfaces";
 import User from "../users/model";
 import School from "../schools/model";
-import Department from "../departments/model";
+import Department from "../school_config/departments/model";
 
 // Define optional fields for creation
 interface TeacherCreationInterface

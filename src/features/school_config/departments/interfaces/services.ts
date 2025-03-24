@@ -77,6 +77,22 @@ export interface IDepartmentRepository {
    * Get default department for a school
    */
   getDefaultDepartment(schoolId: string): Promise<DepartmentInterface | null>;
+
+  /**
+   * Create multiple departments at once
+   */
+  createDepartmentsBulk(
+    departmentsData: CreateDepartmentDTO[],
+    transaction?: Transaction
+  ): Promise<DepartmentInterface[]>;
+
+  /**
+   * Delete multiple departments at once
+   */
+  deleteDepartmentsBulk(
+    ids: string[],
+    transaction?: Transaction
+  ): Promise<number>;
 }
 
 /**
@@ -160,4 +176,20 @@ export interface IDepartmentService {
     departmentId: string,
     schoolId: string
   ): Promise<DepartmentDetailDTO>;
+
+  /**
+   * Create multiple departments at once
+   */
+  createDepartmentsBulk(
+    departmentsData: CreateDepartmentDTO[]
+  ): Promise<DepartmentDetailDTO[]>;
+
+  /**
+   * Delete multiple departments at once
+   */
+  deleteDepartmentsBulk(ids: string[]): Promise<{
+    success: boolean;
+    count: number;
+    failedIds?: string[];
+  }>;
 }

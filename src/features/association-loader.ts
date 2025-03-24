@@ -1,15 +1,17 @@
 import fs from "fs";
 import path from "path";
 import logger from "../common/utils/logging/logger";
+import associationRegistry from "../common/utils/db/AssociationRegistry";
 
 /**
  * Tracks association aliases to prevent duplicates
+ * @deprecated Use AssociationRegistry instead
  */
 const registeredAliases = new Map<string, string>();
 
 /**
  * Registers an association alias to prevent duplicates
- * Can be exported and used in model files
+ * @deprecated Use AssociationRegistry instead
  */
 export const registerAlias = (model: string, alias: string): boolean => {
   const key = `${model}:${alias}`;
@@ -26,48 +28,53 @@ export const registerAlias = (model: string, alias: string): boolean => {
 };
 
 /**
- * Dynamically loads all model-associations files from feature directories
+ * Load all feature-specific associations
  */
 const loadAllAssociations = () => {
+  logger.info("Loading all model associations...");
+
   try {
-    logger.info("Loading feature-specific model associations...");
-    const featuresDir = path.join(__dirname);
+    // First, require all model-associations.ts files to register associations
+    requireAllAssociationFiles();
 
-    // Get all directories inside the features directory
-    const featureDirs = fs
-      .readdirSync(featuresDir, { withFileTypes: true })
-      .filter((dirent) => dirent.isDirectory())
-      .map((dirent) => dirent.name);
+    // Then apply all registered associations in proper order
+    associationRegistry.applyAssociations();
 
-    // Load association files from each feature
-    for (const feature of featureDirs) {
-      const associationPath = path.join(
-        featuresDir,
-        feature,
-        "model-associations.ts"
-      );
+    logger.info("Model associations loaded");
+  } catch (error) {
+    logger.error("Error loading model associations:", error);
+    throw error;
+  }
+};
 
-      // Check if model-associations.ts exists for this feature
-      if (fs.existsSync(associationPath)) {
-        logger.debug(`Loading associations for feature: ${feature}`);
+/**
+ * Find and require all model-associations.ts files in feature directories
+ */
+const requireAllAssociationFiles = () => {
+  const featuresDir = path.join(__dirname);
+  const processDirectory = (dir: string) => {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+
+      if (entry.isDirectory()) {
+        // Recursively process subdirectories
+        processDirectory(fullPath);
+      } else if (entry.isFile() && entry.name === "model-associations.ts") {
+        // Found a model-associations.ts file - require it
         try {
-          // Import the association file
-          require(associationPath);
+          logger.debug(`Loading associations from: ${fullPath}`);
+          require(fullPath);
         } catch (error) {
-          logger.error(
-            `Error loading associations for feature ${feature}:`,
-            error
-          );
-          // Continue with other features instead of crashing the application
+          logger.error(`Error loading associations from ${fullPath}:`, error);
+          // Continue loading other files instead of crashing
         }
       }
     }
+  };
 
-    logger.info("All feature-specific associations loaded successfully");
-  } catch (error) {
-    logger.error("Error loading feature-specific associations:", error);
-    throw error;
-  }
+  processDirectory(featuresDir);
 };
 
 export default loadAllAssociations;

@@ -11,7 +11,8 @@ import UserRole from "./users/user-role.model";
 import School from "./schools/model";
 import Address from "./address/model";
 import AddressLink from "./address/address-link.model";
-import Department from "./departments/model";
+import Department from "./school_config/departments/model";
+import Grade from "./school_config/grades/model";
 import Teacher from "./teachers/model";
 import Book from "./library/books/model";
 import BookLoan from "./library/loans/model";
@@ -29,6 +30,7 @@ const MODELS = [
   User,
   Address,
   Department,
+  Grade,
   Teacher,
   Book,
   BookLoan,

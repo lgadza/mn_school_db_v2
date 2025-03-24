@@ -5,7 +5,7 @@ import departmentValidationSchemas from "./validation";
 import AuthMiddleware from "@/shared/middleware/auth";
 import PermissionMiddleware from "@/shared/middleware/permission";
 import ErrorHandlerUtil from "@/common/utils/errors/errorUtils";
-import { PermissionAction } from "../rbac/interfaces/roles.interface";
+import { PermissionAction } from "../../rbac/interfaces/roles.interface";
 
 // Create router
 const router = Router();
@@ -858,6 +858,197 @@ router.get(
     departmentValidationSchemas.generateDepartmentCode
   ),
   asyncHandler(departmentController.generateDepartmentCode)
+);
+
+/**
+ * @swagger
+ * /api/v1/departments/bulk:
+ *   post:
+ *     summary: Create multiple departments at once
+ *     tags: [Departments]
+ *     description: Create multiple department records in a single request
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - departments
+ *             properties:
+ *               departments:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   required:
+ *                     - name
+ *                     - schoolId
+ *                   properties:
+ *                     name:
+ *                       type: string
+ *                       maxLength: 150
+ *                       example: Computer Science
+ *                     code:
+ *                       type: string
+ *                       maxLength: 20
+ *                       nullable: true
+ *                       example: CS-DEP-101
+ *                     description:
+ *                       type: string
+ *                       nullable: true
+ *                       example: Department of Computer Science and Technology
+ *                     headOfDepartmentId:
+ *                       type: string
+ *                       format: uuid
+ *                       nullable: true
+ *                       example: 550e8400-e29b-41d4-a716-446655440000
+ *                     contactEmail:
+ *                       type: string
+ *                       format: email
+ *                       maxLength: 100
+ *                       nullable: true
+ *                       example: cs.dept@example.edu
+ *                     phoneNumber:
+ *                       type: string
+ *                       maxLength: 50
+ *                       nullable: true
+ *                       example: +1-555-123-4567
+ *                     facultyCount:
+ *                       type: integer
+ *                       nullable: true
+ *                       example: 25
+ *                     studentCount:
+ *                       type: integer
+ *                       nullable: true
+ *                       example: 500
+ *                     location:
+ *                       type: string
+ *                       maxLength: 150
+ *                       nullable: true
+ *                       example: Science Building, East Wing, 3rd Floor
+ *                     budget:
+ *                       type: number
+ *                       format: float
+ *                       nullable: true
+ *                       example: 250000.00
+ *                     schoolId:
+ *                       type: string
+ *                       format: uuid
+ *                       example: 772e0600-g48d-71g6-d938-668877660222
+ *                     isDefault:
+ *                       type: boolean
+ *                       example: false
+ *     responses:
+ *       201:
+ *         description: Departments created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Departments created successfully
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/DepartmentDetail'
+ *       400:
+ *         description: Bad request - validation error
+ *       401:
+ *         description: Unauthorized
+ *       403:
+ *         description: Forbidden - insufficient permissions
+ *       409:
+ *         description: Conflict - one or more department codes already exist
+ *       500:
+ *         description: Internal server error
+ */
+router.post(
+  "/bulk",
+  AuthMiddleware.verifyToken,
+  PermissionMiddleware.hasPermission("department", PermissionAction.CREATE),
+  ValidationUtil.validateRequest(
+    departmentValidationSchemas.createDepartmentsBulk
+  ),
+  asyncHandler(departmentController.createDepartmentsBulk)
+);
+
+/**
+ * @swagger
+ * /api/v1/departments/bulk:
+ *   delete:
+ *     summary: Delete multiple departments at once
+ *     tags: [Departments]
+ *     description: Delete multiple department records in a single request
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - ids
+ *             properties:
+ *               ids:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                   format: uuid
+ *                 example: ["550e8400-e29b-41d4-a716-446655440000", "661f9500-f39c-51f5-c827-557766550111"]
+ *     responses:
+ *       200:
+ *         description: Departments deleted successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Departments deleted successfully
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     success:
+ *                       type: boolean
+ *                       example: true
+ *                     count:
+ *                       type: integer
+ *                       example: 2
+ *                     failedIds:
+ *                       type: array
+ *                       items:
+ *                         type: string
+ *                         format: uuid
+ *                       description: IDs of departments that could not be deleted (e.g., default departments)
+ *       400:
+ *         description: Bad request - validation error or trying to delete default departments
+ *       401:
+ *         description: Unauthorized
+ *       403:
+ *         description: Forbidden - insufficient permissions
+ *       500:
+ *         description: Internal server error
+ */
+router.delete(
+  "/bulk",
+  AuthMiddleware.verifyToken,
+  PermissionMiddleware.hasPermission("department", PermissionAction.DELETE),
+  ValidationUtil.validateRequest(
+    departmentValidationSchemas.deleteDepartmentsBulk
+  ),
+  asyncHandler(departmentController.deleteDepartmentsBulk)
 );
 
 export default router;

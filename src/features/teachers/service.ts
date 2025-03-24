@@ -19,10 +19,10 @@ import {
 import cache from "@/common/utils/cache/cacheUtil";
 import { UserDTOMapper } from "../users/dto";
 import { SchoolDTOMapper } from "../schools/dto";
-import { DepartmentDTOMapper } from "../departments/dto";
+import { DepartmentDTOMapper } from "../school_config/departments/dto";
 import userService from "../users/service";
 import schoolService from "../schools/service";
-import departmentService from "../departments/service";
+import departmentService from "../school_config/departments/service";
 import db from "@/config/database";
 import DateTimeUtil from "@/common/utils/date/dateTimeUtil";
 

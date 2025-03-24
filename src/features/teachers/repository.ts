@@ -3,7 +3,7 @@ import { TeacherInterface, TeacherStatistics } from "./interfaces/interfaces";
 import Teacher from "./model";
 import User from "../users/model";
 import School from "../schools/model";
-import Department from "../departments/model";
+import Department from "../school_config/departments/model";
 import { Transaction, Op, WhereOptions, Sequelize } from "sequelize";
 import {
   TeacherListQueryParams,
