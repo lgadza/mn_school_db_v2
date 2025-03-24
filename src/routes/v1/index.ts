@@ -9,6 +9,8 @@ import schoolRouter from "../../features/schools/routes";
 import searchRouter from "../../features/search/routes";
 import departmentRouter from "../../features/school_config/departments/routes";
 import gradeRouter from "../../features/school_config/grades/routes";
+import sectionRouter from "../../features/school_config/sections/routes";
+import categoryRouter from "../../features/school_config/categories/routes";
 import teacherRouter from "../../features/teachers/routes";
 // Uncomment these as features are implemented
 import rbacRouter from "../../features/rbac/routes/roles.route";
@@ -31,6 +33,8 @@ router.get("/", (req, res) => {
       search: "/search",
       departments: "/departments",
       grades: "/grades",
+      sections: "/sections",
+      categories: "/categories",
       teachers: "/teachers",
       books: "/books",
       loans: "/loans",
@@ -59,6 +63,8 @@ router.use("/schools", schoolRouter);
 router.use("/search", searchRouter);
 router.use("/departments", departmentRouter);
 router.use("/grades", gradeRouter);
+router.use("/sections", sectionRouter);
+router.use("/categories", categoryRouter);
 router.use("/teachers", teacherRouter);
 router.use("/rbac/roles", rbacRouter);
 router.use("/books", bookRouter);

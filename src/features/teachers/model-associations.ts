@@ -2,35 +2,54 @@ import Teacher from "./model";
 import User from "../users/model";
 import School from "../schools/model";
 import Department from "../school_config/departments/model";
+import Grade from "../school_config/grades/model";
+import associationRegistry from "../../common/utils/db/AssociationRegistry";
 
-// Define associations
-Teacher.belongsTo(User, {
-  foreignKey: "userId",
-  as: "user",
-});
+// Register all associations for the Teacher model
+const MODULE_NAME = "teachers";
 
-Teacher.belongsTo(School, {
-  foreignKey: "schoolId",
-  as: "school",
-});
+// Teacher belongs to User
+associationRegistry.registerBelongsTo(
+  Teacher,
+  User,
+  {
+    foreignKey: "userId",
+    as: "user",
+  },
+  MODULE_NAME
+);
 
-Teacher.belongsTo(Department, {
-  foreignKey: "departmentId",
-  as: "department",
-});
+// Teacher belongs to School
+associationRegistry.registerBelongsTo(
+  Teacher,
+  School,
+  {
+    foreignKey: "schoolId",
+    as: "school",
+  },
+  MODULE_NAME
+);
 
-// Add reverse associations
-User.hasOne(Teacher, {
-  foreignKey: "userId",
-  as: "teacher",
-});
+// Teacher belongs to Department
+associationRegistry.registerBelongsTo(
+  Teacher,
+  Department,
+  {
+    foreignKey: "departmentId",
+    as: "department",
+  },
+  MODULE_NAME
+);
 
-School.hasMany(Teacher, {
-  foreignKey: "schoolId",
-  as: "teachers",
-});
+// Teacher has many Grades
+associationRegistry.registerHasMany(
+  Teacher,
+  Grade,
+  {
+    foreignKey: "teacherId",
+    as: "grades",
+  },
+  MODULE_NAME
+);
 
-Department.hasMany(Teacher, {
-  foreignKey: "departmentId",
-  as: "teachers",
-});
+// Note: The inverse relationships are defined in their respective model-associations files

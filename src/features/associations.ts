@@ -13,6 +13,9 @@ import Address from "./address/model";
 import AddressLink from "./address/address-link.model";
 import Department from "./school_config/departments/model";
 import Grade from "./school_config/grades/model";
+import Section from "./school_config/sections/model";
+import Subject from "./school_config/subjects/model";
+import Category from "./school_config/categories/model";
 import Teacher from "./teachers/model";
 import Book from "./library/books/model";
 import BookLoan from "./library/loans/model";
@@ -35,6 +38,9 @@ const MODELS = [
   Book,
   BookLoan,
   RentalRule,
+  Section,
+  Category,
+  Subject,
 
   // Join tables and models with foreign key dependencies
   RolePermission,

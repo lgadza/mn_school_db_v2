@@ -1,15 +1,17 @@
-import Department from "./model";
+import Category from "./model";
 import School from "../../schools/model";
 import Subject from "../subjects/model";
-import associationRegistry from "../../../common/utils/db/AssociationRegistry";
+import associationRegistry, {
+  AssociationType,
+} from "../../../common/utils/db/AssociationRegistry";
 
-// Register all associations for the Department model
+// Register all associations for the Category model
 // The module name helps with debugging and dependency tracking
-const MODULE_NAME = "school_config/departments";
+const MODULE_NAME = "school_config/categories";
 
-// Department belongs to School
+// Category belongs to School
 associationRegistry.registerBelongsTo(
-  Department,
+  Category,
   School,
   {
     foreignKey: "schoolId",
@@ -18,17 +20,17 @@ associationRegistry.registerBelongsTo(
   MODULE_NAME
 );
 
-// Department has many Subjects
+// Category has many Subjects
 associationRegistry.registerHasMany(
-  Department,
+  Category,
   Subject,
   {
-    foreignKey: "departmentId",
+    foreignKey: "categoryId",
     as: "subjects",
   },
   MODULE_NAME
 );
 
-// Note: The inverse relationship (School.hasMany(Department))
+// Note: The inverse relationship (School.hasMany(Category))
 // should be defined in the school model-associations.ts file
 // to maintain clear ownership
