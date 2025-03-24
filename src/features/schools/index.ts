@@ -1,5 +1,4 @@
 import School from "./model";
-import SchoolAddress from "./address-link.model";
 import schoolService from "./service";
 import schoolController from "./controller";
 import schoolRepository from "./repository";
@@ -27,7 +26,6 @@ import "./model-associations";
 
 export {
   School,
-  SchoolAddress,
   schoolService,
   schoolController,
   schoolRepository,

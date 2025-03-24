@@ -167,12 +167,9 @@ School.init(
   }
 );
 
-// Define simple association with Address (keep this one)
 School.belongsTo(Address, {
   foreignKey: "addressId",
   as: "address",
 });
-
-// Note: Additional associations will be defined in a separate file
 
 export default School;

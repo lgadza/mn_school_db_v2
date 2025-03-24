@@ -51,6 +51,7 @@ MN School Database v2 Directory Structure
 │   └── lcov.info
 ├── folder-structure.txt
 ├── getFolderStructure.ts
+├── jest.config.js
 ├── jest.config.ts
 ├── jest.setup.js
 ├── package-lock.json
@@ -102,6 +103,19 @@ MN School Database v2 Directory Structure
 │   │   ├── s3Client.ts
 │   │   └── sequelize.ts
 │   ├── features/
+│   │   ├── address/
+│   │   │   ├── address-link.model.ts
+│   │   │   ├── controller.ts
+│   │   │   ├── dto.ts
+│   │   │   ├── index.ts
+│   │   │   ├── interfaces/
+│   │   │   │   ├── interfaces.ts
+│   │   │   │   └── services.ts
+│   │   │   ├── model.ts
+│   │   │   ├── repository.ts
+│   │   │   ├── routes.ts
+│   │   │   ├── service.ts
+│   │   │   └── validation.ts
 │   │   ├── associations.ts
 │   │   ├── auth/
 │   │   │   ├── controller.ts
@@ -112,6 +126,20 @@ MN School Database v2 Directory Structure
 │   │   │   ├── routes.ts
 │   │   │   ├── schema.ts
 │   │   │   └── service.ts
+│   │   ├── departments/
+│   │   │   ├── controller.ts
+│   │   │   ├── dto.ts
+│   │   │   ├── index.ts
+│   │   │   ├── interfaces/
+│   │   │   │   ├── interfaces.ts
+│   │   │   │   └── services.ts
+│   │   │   ├── model-associations.ts
+│   │   │   ├── model.ts
+│   │   │   ├── repository.ts
+│   │   │   ├── routes.ts
+│   │   │   ├── service.ts
+│   │   │   ├── swagger.ts
+│   │   │   └── validation.ts
 │   │   ├── rbac/
 │   │   │   ├── constants/
 │   │   │   ├── controllers/
@@ -119,9 +147,9 @@ MN School Database v2 Directory Structure
 │   │   │   ├── dto/
 │   │   │   │   └── roles.dto.ts
 │   │   │   ├── interfaces/
-│   │   │   │   ├── index.ts
 │   │   │   │   └── roles.interface.ts
-│   │   │   ├── interfaces.ts
+│   │   │   ├── middleware/
+│   │   │   │   └── school-context.middleware.ts
 │   │   │   ├── models/
 │   │   │   │   ├── permissions.model.ts
 │   │   │   │   ├── role-permission.model.ts
@@ -133,11 +161,30 @@ MN School Database v2 Directory Structure
 │   │   │   ├── schema/
 │   │   │   │   └── roles.schema.ts
 │   │   │   └── services/
+│   │   │       ├── permission.service.ts
 │   │   │       └── roles.service.ts
 │   │   ├── schools/
+│   │   │   ├── controller.ts
+│   │   │   ├── dto.ts
+│   │   │   ├── index.ts
+│   │   │   ├── interfaces/
+│   │   │   │   ├── interfaces.ts
+│   │   │   │   └── services.ts
 │   │   │   ├── model.ts
-│   │   │   └── repositories/
-│   │   │       └── schoolRepository.ts
+│   │   │   ├── repository.ts
+│   │   │   ├── routes.ts
+│   │   │   ├── service.ts
+│   │   │   └── validation.ts
+│   │   ├── search/
+│   │   │   ├── controller.ts
+│   │   │   ├── dto.ts
+│   │   │   ├── index.ts
+│   │   │   ├── interfaces/
+│   │   │   │   └── services.ts
+│   │   │   ├── repository.ts
+│   │   │   ├── routes.ts
+│   │   │   ├── service.ts
+│   │   │   └── validation.ts
 │   │   ├── shared/
 │   │   │   └── common.model.ts
 │   │   ├── students/
@@ -195,7 +242,8 @@ MN School Database v2 Directory Structure
 │   └── __tests__/
 │       ├── e2e/
 │       │   ├── app.e2e.test.ts
-│       │   └── auth.e2e.test.ts
+│       │   ├── auth.e2e.test.ts
+│       │   └── users.e2e.test.ts
 │       ├── helpers/
 │       │   ├── auth-test-helpers.ts
 │       │   └── test-utils.ts
@@ -204,6 +252,11 @@ MN School Database v2 Directory Structure
 │       │   │   ├── auth.integration.test.ts
 │       │   │   └── auth.repository.integration.test.ts
 │       │   └── users.integration.test.ts
+│       ├── mocks/
+│       │   ├── config-redis.mock.ts
+│       │   ├── models.mock.ts
+│       │   ├── redis.mock.ts
+│       │   └── sequelize.mock.ts
 │       ├── setup.ts
 │       └── unit/
 │           ├── auth/
@@ -212,6 +265,12 @@ MN School Database v2 Directory Structure
 │           │   ├── repository.test.ts
 │           │   ├── schema.test.ts
 │           │   └── service.test.ts
+│           ├── users/
+│           │   ├── controller.test.ts
+│           │   ├── dto.test.ts
+│           │   ├── repository.test.ts
+│           │   ├── service.test.ts
+│           │   └── validation.test.ts
 │           └── utils.test.ts
 ├── temp/
 │   └── uploads/

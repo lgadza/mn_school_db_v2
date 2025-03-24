@@ -8,6 +8,7 @@ import Permission from "@/features/rbac/models/permissions.model";
 import RolePermission from "@/features/rbac/models/role-permission.model";
 import cache from "@/common/utils/cache/cacheUtil";
 import { PermissionAction } from "@/features/rbac/interfaces/roles.interface";
+import PermissionService from "@/features/rbac/services/permission.service";
 
 /**
  * Permission Middleware
@@ -23,6 +24,31 @@ class PermissionMiddleware {
    * Cache expiration for permission data (in seconds)
    */
   private static readonly CACHE_TTL = 600; // 10 minutes
+
+  /**
+   * Permission hierarchy mapping - which permissions imply others
+   * Imported from PermissionService to maintain consistency
+   */
+  private static readonly permissionHierarchy = {
+    // Reference the same hierarchy defined in PermissionService
+    [PermissionAction.MANAGE]: [
+      PermissionAction.CREATE,
+      PermissionAction.READ,
+      PermissionAction.UPDATE,
+      PermissionAction.APPROVE,
+      PermissionAction.REJECT,
+      PermissionAction.VIEW_REPORTS,
+      PermissionAction.DOWNLOAD_DATA,
+      PermissionAction.EXPORT,
+      PermissionAction.IMPORT,
+      PermissionAction.ARCHIVE,
+      PermissionAction.RESTORE,
+      PermissionAction.PUBLISH,
+      PermissionAction.UNPUBLISH,
+      PermissionAction.ASSIGN,
+      PermissionAction.TRANSFER,
+    ],
+  };
 
   /**
    * Middleware to check if a user has a specific permission on a resource
@@ -57,24 +83,51 @@ class PermissionMiddleware {
         }
 
         // Super admin bypass check - admins have access to everything if enabled
-        if (options.superAdminBypass && user.role === "admin") {
+        if (
+          options.superAdminBypass &&
+          (user.role === "admin" || user.role === "super_admin")
+        ) {
           return next();
         }
 
         // Get user permissions
         const userPermissions = await this.getUserPermissions(user.userId);
 
-        // Check if user has the required permission
-        const hasRequiredPermission = userPermissions.some(
+        // Check if user has the required permission (direct match)
+        const hasDirectPermission = userPermissions.some(
           (permission) =>
-            (permission.resource === resource &&
-              permission.action === action) ||
-            (permission.resource === resource &&
-              permission.action === PermissionAction.MANAGE) ||
-            (permission.resource === "*" && permission.action === "*")
+            permission.resource === resource && permission.action === action
         );
 
-        if (hasRequiredPermission) {
+        // Check if user has a higher permission that implies this permission
+        const hasImpliedPermission = userPermissions.some((permission) => {
+          if (permission.resource !== resource) return false;
+
+          // If user has MANAGE permission, check if it implies the requested action
+          if (permission.action === PermissionAction.MANAGE) {
+            return this.permissionHierarchy[PermissionAction.MANAGE].includes(
+              action as PermissionAction
+            );
+          }
+
+          // Add checks for any other hierarchical permissions here
+
+          return false;
+        });
+
+        // Check for wildcard permissions (resource: "*", action: "*")
+        const hasWildcardPermission = userPermissions.some(
+          (permission) =>
+            (permission.resource === "*" && permission.action === "*") ||
+            (permission.resource === "*" && permission.action === action) ||
+            (permission.resource === resource && permission.action === "*")
+        );
+
+        if (
+          hasDirectPermission ||
+          hasImpliedPermission ||
+          hasWildcardPermission
+        ) {
           return next();
         }
 

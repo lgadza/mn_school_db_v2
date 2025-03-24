@@ -15,24 +15,33 @@ export interface UpdateRoleDto {
   name?: string;
   description?: string;
 }
+
+/**
+ * Permission actions enum
+ *
+ * Hierarchy of actions (from highest to lowest):
+ * - MANAGE: Comprehensive permission that implies all other actions except DELETE
+ * - DELETE: Ability to permanently remove resources
+ * - Other actions: Specific capabilities for the resource
+ */
 export enum PermissionAction {
-  CREATE = "create",
-  READ = "read",
-  UPDATE = "update",
-  DELETE = "delete",
-  MANAGE = "manage",
-  APPROVE = "approve",
-  REJECT = "reject",
-  VIEW_REPORTS = "view_reports",
-  DOWNLOAD_DATA = "download_data",
-  EXPORT = "export",
-  IMPORT = "import",
-  ARCHIVE = "archive",
-  RESTORE = "restore",
-  PUBLISH = "publish",
-  UNPUBLISH = "unpublish",
-  ASSIGN = "assign",
-  TRANSFER = "transfer",
+  CREATE = "create", // Create new instances of a resource
+  READ = "read", // View/read a resource
+  UPDATE = "update", // Modify existing resources
+  DELETE = "delete", // Remove resources (highest risk action)
+  MANAGE = "manage", // Comprehensive control (implies CREATE, READ, UPDATE, etc. but NOT DELETE)
+  APPROVE = "approve", // Approve pending items/requests
+  REJECT = "reject", // Reject pending items/requests
+  VIEW_REPORTS = "view_reports", // Access to reporting features
+  DOWNLOAD_DATA = "download_data", // Export data to files
+  EXPORT = "export", // Export resources to external format
+  IMPORT = "import", // Import resources from external format
+  ARCHIVE = "archive", // Move to archive/inactive state
+  RESTORE = "restore", // Restore from archive/inactive state
+  PUBLISH = "publish", // Make resources public/visible
+  UNPUBLISH = "unpublish", // Make resources private/hidden
+  ASSIGN = "assign", // Assign resources to users/entities
+  TRANSFER = "transfer", // Transfer ownership/responsibility
 }
 
 export interface IRoleRepository {

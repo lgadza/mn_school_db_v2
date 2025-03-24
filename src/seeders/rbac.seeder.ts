@@ -268,145 +268,123 @@ const seedRolePermissions = async (): Promise<void> => {
       return; // Exit early
     }
 
-    const count = await RolePermission.count().catch((error) => {
-      logger.error("Error counting role-permissions:", error);
-      return 0;
-    });
+    // Get all roles and permissions
+    const roles = await Role.findAll();
+    const permissions = await Permission.findAll();
 
-    if (count === 0) {
+    // Find admin roles
+    const superAdminRole = roles.find((role) => role.name === "super_admin");
+    const adminRole = roles.find((role) => role.name === "admin");
+    const managerRole = roles.find((role) => role.name === "manager");
+
+    // Get existing role-permission mappings
+    const existingMappings = await RolePermission.findAll();
+
+    // Create a set of existing mappings for quick lookup
+    const existingMappingSet = new Set(
+      existingMappings.map(
+        (mapping) => `${mapping.roleId}-${mapping.permissionId}`
+      )
+    );
+
+    // Prepare bulk create array for new mappings
+    const rolePermissionsToCreate: {
+      roleId: string;
+      permissionId: string;
+    }[] = [];
+
+    // Function to add missing permissions for a role
+    const addMissingPermissionsForRole = (
+      role: any,
+      permissionsToAdd: any[],
+      shouldSkip: (permission: any) => boolean = () => false
+    ) => {
+      if (!role) return;
+
+      permissionsToAdd.forEach((permission) => {
+        // Skip if this permission should be excluded for this role
+        if (shouldSkip(permission)) return;
+
+        // Check if this mapping already exists
+        const mappingKey = `${role.id}-${permission.id}`;
+        if (!existingMappingSet.has(mappingKey)) {
+          rolePermissionsToCreate.push({
+            roleId: role.id,
+            permissionId: permission.id,
+          });
+        }
+      });
+    };
+
+    // Add missing permissions for super_admin (ALL permissions)
+    if (superAdminRole) {
+      logger.info("Checking for new permissions to assign to super_admin");
+      addMissingPermissionsForRole(superAdminRole, permissions);
+    }
+
+    // Add missing permissions for admin (ALL permissions)
+    if (adminRole) {
+      logger.info("Checking for new permissions to assign to admin");
+      addMissingPermissionsForRole(adminRole, permissions);
+    }
+
+    // Add missing permissions for manager (ALL except DELETE)
+    if (managerRole) {
+      logger.info("Checking for new permissions to assign to manager");
+      addMissingPermissionsForRole(
+        managerRole,
+        permissions,
+        (permission) => permission.action === PermissionAction.DELETE
+      );
+    }
+
+    // Handle other roles with specific permission sets
+    for (const group of permissionGroups) {
+      // Skip admin roles since we already handled them
+      if (
+        group.roles.includes("super_admin") ||
+        group.roles.includes("admin") ||
+        group.roles.includes("manager")
+      ) {
+        continue;
+      }
+
+      // Find all roles that should receive this group's permissions
+      const targetRoles = roles.filter((role) =>
+        group.roles.includes(role.name)
+      );
+      if (targetRoles.length === 0) continue;
+
+      // Determine which resources to apply permissions to
+      const resources = group.resources || [];
+
+      // Skip if no resources specified for non-admin roles
+      if (resources.length === 0) continue;
+
+      // For each target role, assign the appropriate permissions
+      for (const role of targetRoles) {
+        logger.info(`Checking for new permissions for ${role.name}`);
+
+        // Find permissions for specified resources and actions
+        const rolePermissions = permissions.filter(
+          (permission) =>
+            resources.includes(permission.resource) &&
+            group.actions.includes(permission.action as string)
+        );
+
+        // Add missing role-permission mappings
+        addMissingPermissionsForRole(role, rolePermissions);
+      }
+    }
+
+    // Create new mappings if any are found
+    if (rolePermissionsToCreate.length > 0) {
+      await RolePermission.bulkCreate(rolePermissionsToCreate);
       logger.info(
-        "No role-permission mappings found. Creating default mappings..."
+        `Created ${rolePermissionsToCreate.length} new role-permission mappings`
       );
-
-      // Get all roles and permissions
-      const roles = await Role.findAll();
-      const permissions = await Permission.findAll();
-
-      // Prepare bulk create array
-      const rolePermissionsToCreate: {
-        roleId: string;
-        permissionId: string;
-      }[] = [];
-
-      // Find admin roles
-      const superAdminRole = roles.find((role) => role.name === "super_admin");
-      const adminRole = roles.find((role) => role.name === "admin");
-      const managerRole = roles.find((role) => role.name === "manager");
-
-      // Set super_admin permissions - ALL permissions system-wide
-      if (superAdminRole) {
-        logger.info(
-          "Setting permissions for super_admin (ALL permissions system-wide)"
-        );
-        // Assign ALL permissions to super_admin
-        permissions.forEach((permission) => {
-          rolePermissionsToCreate.push({
-            roleId: superAdminRole.id,
-            permissionId: permission.id,
-          });
-        });
-      }
-
-      // Set admin permissions - ALL permissions but limited to school context
-      if (adminRole) {
-        logger.info(
-          "Setting permissions for admin (ALL permissions, school-limited)"
-        );
-        // Assign ALL permissions to admin
-        permissions.forEach((permission) => {
-          rolePermissionsToCreate.push({
-            roleId: adminRole.id,
-            permissionId: permission.id,
-          });
-        });
-      }
-
-      // Set manager permissions - ALL except DELETE and limited to school context
-      if (managerRole) {
-        logger.info(
-          "Setting permissions for manager (ALL except DELETE, school-limited)"
-        );
-        // Assign all permissions EXCEPT DELETE
-        permissions.forEach((permission) => {
-          // Skip DELETE permissions for managers
-          if (permission.action === PermissionAction.DELETE) {
-            return;
-          }
-
-          rolePermissionsToCreate.push({
-            roleId: managerRole.id,
-            permissionId: permission.id,
-          });
-        });
-      }
-
-      // Handle other roles with specific permission sets
-      // We'll keep the permissionGroups for non-admin roles
-      for (const group of permissionGroups) {
-        // Skip admin roles since we already handled them
-        if (
-          group.roles.includes("super_admin") ||
-          group.roles.includes("admin") ||
-          group.roles.includes("manager")
-        ) {
-          continue;
-        }
-
-        // Find all roles that should receive this group's permissions
-        const targetRoles = roles.filter((role) =>
-          group.roles.includes(role.name)
-        );
-        if (targetRoles.length === 0) continue;
-
-        // Determine which resources to apply permissions to
-        const resources = group.resources || [];
-
-        // Skip if no resources specified for non-admin roles
-        if (resources.length === 0) continue;
-
-        // For each target role, assign the appropriate permissions
-        for (const role of targetRoles) {
-          logger.info(`Setting permissions for ${role.name}`);
-
-          // Find permissions for specified resources and actions
-          const rolePermissions = permissions.filter(
-            (permission) =>
-              resources.includes(permission.resource) &&
-              group.actions.includes(permission.action as string)
-          );
-
-          // Add role-permission mappings
-          for (const permission of rolePermissions) {
-            rolePermissionsToCreate.push({
-              roleId: role.id,
-              permissionId: permission.id,
-            });
-          }
-        }
-      }
-
-      // Deduplicate the mappings to avoid unique constraint violations
-      const uniqueMappings = Array.from(
-        new Map(
-          rolePermissionsToCreate.map((item) => [
-            `${item.roleId}-${item.permissionId}`,
-            item,
-          ])
-        ).values()
-      );
-
-      if (uniqueMappings.length > 0) {
-        await RolePermission.bulkCreate(uniqueMappings);
-        logger.info(
-          `Created ${uniqueMappings.length} role-permission mappings`
-        );
-      }
-
-      logger.info("Role-permission mappings created successfully");
     } else {
-      logger.info(
-        `Found ${count} existing role-permission mappings. Skipping.`
-      );
+      logger.info("No new role-permission mappings needed");
     }
   } catch (error) {
     logger.error("Error creating role-permission mappings:", error);
@@ -435,7 +413,7 @@ const permissionGroups: {
       PermissionAction.CREATE,
       PermissionAction.READ,
       PermissionAction.UPDATE,
-      PermissionAction.MANAGE,
+      PermissionAction.MANAGE, // Note: MANAGE implies most other actions except DELETE
       PermissionAction.APPROVE,
       PermissionAction.REJECT,
       PermissionAction.VIEW_REPORTS,

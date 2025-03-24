@@ -11,6 +11,10 @@ import UserRole from "./users/user-role.model";
 import School from "./schools/model";
 import Address from "./address/model";
 import AddressLink from "./address/address-link.model";
+import Department from "./departments/model";
+
+// Import the association loader
+import loadAllAssociations from "./association-loader";
 
 // Model initialization order - this is important!
 const MODELS = [
@@ -20,6 +24,7 @@ const MODELS = [
   School,
   User,
   Address,
+  Department, // Added Department model
 
   // Join tables and models with foreign key dependencies
   RolePermission,
@@ -105,72 +110,8 @@ const setupAssociations = () => {
     logger.info("Setting up model associations...");
     logger.debug(`Setup associations called from: ${new Error().stack}`);
 
-    // 1. Role-Permission associations
-    Role.belongsToMany(Permission, {
-      through: RolePermission,
-      foreignKey: "roleId",
-      otherKey: "permissionId",
-      as: "permissions",
-      constraints: false,
-    });
-
-    Permission.belongsToMany(Role, {
-      through: RolePermission,
-      foreignKey: "permissionId",
-      otherKey: "roleId",
-      as: "permissionRoles",
-      constraints: false,
-    });
-
-    // 2. User-Role associations
-    User.belongsToMany(Role, {
-      through: UserRole,
-      foreignKey: "userId",
-      otherKey: "roleId",
-      as: "roles",
-      constraints: false,
-    });
-
-    Role.belongsToMany(User, {
-      through: UserRole,
-      foreignKey: "roleId",
-      otherKey: "userId",
-      as: "users",
-      constraints: false,
-    });
-
-    // Add direct associations between UserRole and Role
-    UserRole.belongsTo(Role, {
-      foreignKey: "roleId",
-      as: "role",
-    });
-
-    Role.hasMany(UserRole, {
-      foreignKey: "roleId",
-      as: "userRoles",
-    });
-
-    // Add direct associations between UserRole and User
-    UserRole.belongsTo(User, {
-      foreignKey: "userId",
-      as: "user",
-    });
-
-    User.hasMany(UserRole, {
-      foreignKey: "userId",
-      as: "userRoles",
-    });
-
-    // 3. Address-AddressLink associations
-    Address.hasMany(AddressLink, {
-      foreignKey: "addressId",
-      as: "links",
-    });
-
-    AddressLink.belongsTo(Address, {
-      foreignKey: "addressId",
-      as: "address",
-    });
+    // Load all feature-specific associations
+    loadAllAssociations();
 
     // Mark associations as set up
     associationsSetup = true;
