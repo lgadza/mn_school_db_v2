@@ -111,11 +111,13 @@ MN School Database v2 Directory Structure
 │   │   │   ├── interfaces/
 │   │   │   │   ├── interfaces.ts
 │   │   │   │   └── services.ts
+│   │   │   ├── model-associations.ts
 │   │   │   ├── model.ts
 │   │   │   ├── repository.ts
 │   │   │   ├── routes.ts
 │   │   │   ├── service.ts
 │   │   │   └── validation.ts
+│   │   ├── association-loader.ts
 │   │   ├── associations.ts
 │   │   ├── auth/
 │   │   │   ├── controller.ts
@@ -150,6 +152,7 @@ MN School Database v2 Directory Structure
 │   │   │   │   └── roles.interface.ts
 │   │   │   ├── middleware/
 │   │   │   │   └── school-context.middleware.ts
+│   │   │   ├── model-associations.ts
 │   │   │   ├── models/
 │   │   │   │   ├── permissions.model.ts
 │   │   │   │   ├── role-permission.model.ts
@@ -190,12 +193,26 @@ MN School Database v2 Directory Structure
 │   │   ├── students/
 │   │   │   └── controllers/
 │   │   │       └── studentController.ts
+│   │   ├── teachers/
+│   │   │   ├── controller.ts
+│   │   │   ├── dto.ts
+│   │   │   ├── index.ts
+│   │   │   ├── interfaces/
+│   │   │   │   ├── interfaces.ts
+│   │   │   │   └── services.ts
+│   │   │   ├── model-associations.ts
+│   │   │   ├── model.ts
+│   │   │   ├── repository.ts
+│   │   │   ├── routes.ts
+│   │   │   ├── service.ts
+│   │   │   └── validation.ts
 │   │   └── users/
 │   │       ├── controller.ts
 │   │       ├── dto.ts
 │   │       ├── interfaces/
 │   │       │   └── services.ts
 │   │       ├── interfaces.ts
+│   │       ├── model-associations.ts
 │   │       ├── model.ts
 │   │       ├── repository.ts
 │   │       ├── routes.ts

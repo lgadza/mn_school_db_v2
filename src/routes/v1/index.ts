@@ -8,6 +8,7 @@ import addressRouter from "../../features/address/routes";
 import schoolRouter from "../../features/schools/routes";
 import searchRouter from "../../features/search/routes";
 import departmentRouter from "../../features/departments/routes";
+import teacherRouter from "../../features/teachers/routes";
 // Uncomment these as features are implemented
 import rbacRouter from "../../features/rbac/routes/roles.route";
 
@@ -25,6 +26,7 @@ router.get("/", (req, res) => {
       schools: "/schools",
       search: "/search",
       departments: "/departments",
+      teachers: "/teachers",
       // List available endpoints as they are implemented
       // roles: '/rbac/roles',
       demo: "/demo",
@@ -48,6 +50,7 @@ router.use("/addresses", addressRouter);
 router.use("/schools", schoolRouter);
 router.use("/search", searchRouter);
 router.use("/departments", departmentRouter);
+router.use("/teachers", teacherRouter);
 router.use("/rbac/roles", rbacRouter);
 
 export default router;

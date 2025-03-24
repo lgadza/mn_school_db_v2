@@ -12,6 +12,7 @@ import School from "./schools/model";
 import Address from "./address/model";
 import AddressLink from "./address/address-link.model";
 import Department from "./departments/model";
+import Teacher from "./teachers/model";
 
 // Import the association loader
 import loadAllAssociations from "./association-loader";
@@ -24,7 +25,8 @@ const MODELS = [
   School,
   User,
   Address,
-  Department, // Added Department model
+  Department,
+  Teacher,
 
   // Join tables and models with foreign key dependencies
   RolePermission,
