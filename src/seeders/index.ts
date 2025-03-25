@@ -1,5 +1,6 @@
 import logger from "../common/utils/logging/logger";
 import seedRBAC from "./rbac.seeder";
+import seedSchoolYears from "./school-years.seeder";
 // Import other seeders here
 
 /**
@@ -16,6 +17,14 @@ export const runSeeders = async (): Promise<void> => {
     await seedRBAC().catch((error) => {
       logger.error(
         "RBAC seeding failed but continuing with other seeders:",
+        error
+      );
+    });
+
+    // Seed school years
+    await seedSchoolYears().catch((error) => {
+      logger.error(
+        "School years seeding failed but continuing with other seeders:",
         error
       );
     });

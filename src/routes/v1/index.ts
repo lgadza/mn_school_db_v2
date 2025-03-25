@@ -24,6 +24,7 @@ import subjectRouter from "../../features/school_config/subjects/routes";
 import studentRouter from "../../features/accounts/students/routes";
 import behaviorTypeRouter from "../../features/behavior/behavior_types/routes";
 import behaviorRouter from "../../features/behavior/behaviors/routes";
+import schoolYearRouter from "../../features/school_config/school_years/routes";
 
 const router: Router = express.Router();
 
@@ -53,6 +54,7 @@ router.get("/", (req, res) => {
       students: "/students",
       behaviorTypes: "/behavior-types",
       behaviors: "/behaviors",
+      schoolYears: "/school-years",
       // List available endpoints as they are implemented
       // roles: '/rbac/roles',
       demo: "/demo",
@@ -91,5 +93,6 @@ router.use("/subjects", subjectRouter);
 router.use("/students", studentRouter);
 router.use("/behavior-types", behaviorTypeRouter);
 router.use("/behaviors", behaviorRouter);
+router.use("/school-years", schoolYearRouter);
 
 export default router;

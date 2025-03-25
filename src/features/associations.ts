@@ -25,6 +25,7 @@ import BookLoan from "./library/loans/model";
 import RentalRule from "./library/rules/model";
 import BehaviorType from "./behavior/behavior_types/model";
 import Behavior from "./behavior/behaviors/model";
+import SchoolYear from "./school_config/school_years/model";
 
 // Import the association loader
 import loadAllAssociations from "./association-loader";
@@ -51,6 +52,7 @@ const MODELS = [
   Class,
   BehaviorType,
   Behavior,
+  SchoolYear, // Added SchoolYear model
 
   // Join tables and models with foreign key dependencies
   RolePermission,
