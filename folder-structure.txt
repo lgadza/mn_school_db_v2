@@ -49,6 +49,11 @@ MN School Database v2 Directory Structure
 │   │               ├── index.html
 │   │               └── setup.ts.html
 │   └── lcov.info
+├── docs/
+│   ├── block-api.md
+│   ├── classroom-api.md
+│   ├── school-physical-hierarchy.md
+│   └── school-structure.md
 ├── folder-structure.txt
 ├── getFolderStructure.ts
 ├── jest.config.js
@@ -72,6 +77,7 @@ MN School Database v2 Directory Structure
 │   │   │   ├── date/
 │   │   │   │   └── dateTimeUtil.ts
 │   │   │   ├── db/
+│   │   │   │   ├── AssociationRegistry.ts
 │   │   │   │   └── dbConnect.ts
 │   │   │   ├── docs/
 │   │   │   │   └── swagger.ts
@@ -103,6 +109,23 @@ MN School Database v2 Directory Structure
 │   │   ├── s3Client.ts
 │   │   └── sequelize.ts
 │   ├── features/
+│   │   ├── accounts/
+│   │   │   ├── index.ts
+│   │   │   ├── students/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   └── teachers/
+│   │   │       └── index.ts
 │   │   ├── address/
 │   │   │   ├── address-link.model.ts
 │   │   │   ├── controller.ts
@@ -128,20 +151,40 @@ MN School Database v2 Directory Structure
 │   │   │   ├── routes.ts
 │   │   │   ├── schema.ts
 │   │   │   └── service.ts
-│   │   ├── departments/
-│   │   │   ├── controller.ts
-│   │   │   ├── dto.ts
-│   │   │   ├── index.ts
+│   │   ├── library/
+│   │   │   ├── books/
+│   │   │   │   ├── book-review.model.ts
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
 │   │   │   ├── interfaces/
 │   │   │   │   ├── interfaces.ts
 │   │   │   │   └── services.ts
+│   │   │   ├── loans/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
 │   │   │   ├── model-associations.ts
-│   │   │   ├── model.ts
-│   │   │   ├── repository.ts
-│   │   │   ├── routes.ts
-│   │   │   ├── service.ts
-│   │   │   ├── swagger.ts
-│   │   │   └── validation.ts
+│   │   │   └── rules/
+│   │   │       ├── controller.ts
+│   │   │       ├── dto.ts
+│   │   │       ├── index.ts
+│   │   │       ├── model.ts
+│   │   │       ├── repository.ts
+│   │   │       ├── routes.ts
+│   │   │       ├── service.ts
+│   │   │       └── validation.ts
+│   │   ├── payment/
 │   │   ├── rbac/
 │   │   │   ├── constants/
 │   │   │   ├── controllers/
@@ -152,8 +195,8 @@ MN School Database v2 Directory Structure
 │   │   │   │   └── roles.interface.ts
 │   │   │   ├── middleware/
 │   │   │   │   └── school-context.middleware.ts
-│   │   │   ├── model-associations.ts
 │   │   │   ├── models/
+│   │   │   │   ├── model-associations.ts
 │   │   │   │   ├── permissions.model.ts
 │   │   │   │   ├── role-permission.model.ts
 │   │   │   │   └── roles.model.ts
@@ -173,11 +216,118 @@ MN School Database v2 Directory Structure
 │   │   │   ├── interfaces/
 │   │   │   │   ├── interfaces.ts
 │   │   │   │   └── services.ts
+│   │   │   ├── model-associations.ts
 │   │   │   ├── model.ts
 │   │   │   ├── repository.ts
 │   │   │   ├── routes.ts
 │   │   │   ├── service.ts
 │   │   │   └── validation.ts
+│   │   ├── school_config/
+│   │   │   ├── blocks/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   ├── categories/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   ├── classes/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   ├── classrooms/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   ├── departments/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   ├── swagger.ts
+│   │   │   │   └── validation.ts
+│   │   │   ├── grades/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   ├── sections/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   └── subjects/
+│   │   │       ├── controller.ts
+│   │   │       ├── dto.ts
+│   │   │       ├── index.ts
+│   │   │       ├── interfaces/
+│   │   │       │   ├── interfaces.ts
+│   │   │       │   └── services.ts
+│   │   │       ├── model-associations.ts
+│   │   │       ├── model.ts
+│   │   │       ├── repository.ts
+│   │   │       ├── routes.ts
+│   │   │       ├── service.ts
+│   │   │       └── validation.ts
 │   │   ├── search/
 │   │   │   ├── controller.ts
 │   │   │   ├── dto.ts
@@ -222,6 +372,7 @@ MN School Database v2 Directory Structure
 │   ├── interfaces/
 │   │   └── index.d.ts
 │   ├── migrations/
+│   │   └── 20240227000000_create_students_table.js
 │   ├── register-aliases.ts
 │   ├── routes/
 │   │   ├── index.ts

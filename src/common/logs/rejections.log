@@ -1867,3 +1867,163 @@
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Function.Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-24T23:48:44.670Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m26[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behavior_types/model"' has no default export.
+
+[7m26[0m import BehaviorType from "./behavior/behavior_types/model";
+[7m  [0m [91m       ~~~~~~~~~~~~[0m
+[96msrc/features/associations.ts[0m:[93m27[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behaviors/model"' has no default export.
+
+[7m27[0m import Behavior from "./behavior/behaviors/model";
+[7m  [0m [91m       ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-24T23:50:13.616Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m26[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behavior_types/model"' has no default export.
+
+[7m26[0m import BehaviorType from "./behavior/behavior_types/model";
+[7m  [0m [91m       ~~~~~~~~~~~~[0m
+[96msrc/features/associations.ts[0m:[93m27[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behaviors/model"' has no default export.
+
+[7m27[0m import Behavior from "./behavior/behaviors/model";
+[7m  [0m [91m       ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-24T23:53:56.837Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m26[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behavior_types/model"' has no default export.
+
+[7m26[0m import BehaviorType from "./behavior/behavior_types/model";
+[7m  [0m [91m       ~~~~~~~~~~~~[0m
+[96msrc/features/associations.ts[0m:[93m27[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behaviors/model"' has no default export.
+
+[7m27[0m import Behavior from "./behavior/behaviors/model";
+[7m  [0m [91m       ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-24T23:58:40.505Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/associations.ts[0m:[93m26[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behavior_types/model"' has no default export.
+
+[7m26[0m import BehaviorType from "./behavior/behavior_types/model";
+[7m  [0m [91m       ~~~~~~~~~~~~[0m
+[96msrc/features/associations.ts[0m:[93m27[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behaviors/model"' has no default export.
+
+[7m27[0m import Behavior from "./behavior/behaviors/model";
+[7m  [0m [91m       ~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-25T00:01:49.091Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/v1/index.ts[0m:[93m25[0m:[93m8[0m - [91merror[0m[90m TS1192: [0mModule '"C:/Users/siuol/OneDrive/Documents/mn_school_db_v2/src/features/behavior/behavior_types/routes"' has no default export.
+
+[7m25[0m import behaviorTypeRouter from "../../features/behavior/behavior_types/routes";
+[7m  [0m [91m       ~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-25T00:03:12.401Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/behavior/behavior_types/repository.ts[0m:[93m306[0m:[93m46[0m - [91merror[0m[90m TS2576: [0mProperty 'count' does not exist on type 'Behavior'. Did you mean to access the static member 'Behavior.count' instead?
+
+[7m306[0m               count: parseInt(matchingResult.count, 10),
+[7m   [0m [91m                                             ~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-25T00:05:19.547Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/behavior/behavior_types/repository.ts[0m:[93m306[0m:[93m46[0m - [91merror[0m[90m TS2576: [0mProperty 'count' does not exist on type 'Behavior'. Did you mean to access the static member 'Behavior.count' instead?
+
+[7m306[0m               count: parseInt(matchingResult.count, 10),
+[7m   [0m [91m                                             ~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2025-03-25T00:09:00.289Z error: TSError: ⨯ Unable to compile TypeScript:
+[96msrc/features/behavior/behaviors/repository.ts[0m:[93m204[0m:[93m9[0m - [91merror[0m[90m TS2588: [0mCannot assign to 'where' because it is a constant.
+
+[7m204[0m         where = {
+[7m   [0m [91m        ~~~~~[0m
+[96msrc/features/behavior/behaviors/repository.ts[0m:[93m426[0m:[93m47[0m - [91merror[0m[90m TS2552: [0mCannot find name 'sequelize'. Did you mean 'Sequelize'?
+
+[7m426[0m       const behaviorsByCategoryResult = await sequelize.query(
+[7m   [0m [91m                                              ~~~~~~~~~[0m
+[96msrc/features/behavior/behaviors/repository.ts[0m:[93m429[0m:[93m27[0m - [91merror[0m[90m TS2339: [0mProperty 'QueryTypes' does not exist on type 'typeof Sequelize'.
+
+[7m429[0m           type: Sequelize.QueryTypes.SELECT,
+[7m   [0m [91m                          ~~~~~~~~~~[0m
+[96msrc/features/behavior/behaviors/repository.ts[0m:[93m482[0m:[93m45[0m - [91merror[0m[90m TS2552: [0mCannot find name 'sequelize'. Did you mean 'Sequelize'?
+
+[7m482[0m       const behaviorsPerMonthResult = await sequelize.query(
+[7m   [0m [91m                                            ~~~~~~~~~[0m
+[96msrc/features/behavior/behaviors/repository.ts[0m:[93m485[0m:[93m27[0m - [91merror[0m[90m TS2339: [0mProperty 'QueryTypes' does not exist on type 'typeof Sequelize'.
+
+[7m485[0m           type: Sequelize.QueryTypes.SELECT,
+[7m   [0m [91m                          ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\siuol\OneDrive\Documents\mn_school_db_v2\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)

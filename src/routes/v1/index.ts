@@ -22,6 +22,8 @@ import bookLoanRouter from "../../features/library/loans/routes";
 import rentalRuleRouter from "../../features/library/rules/routes";
 import subjectRouter from "../../features/school_config/subjects/routes";
 import studentRouter from "../../features/accounts/students/routes";
+import behaviorTypeRouter from "../../features/behavior/behavior_types/routes";
+import behaviorRouter from "../../features/behavior/behaviors/routes";
 
 const router: Router = express.Router();
 
@@ -49,6 +51,8 @@ router.get("/", (req, res) => {
       rentalRules: "/rental-rules",
       subjects: "/subjects",
       students: "/students",
+      behaviorTypes: "/behavior-types",
+      behaviors: "/behaviors",
       // List available endpoints as they are implemented
       // roles: '/rbac/roles',
       demo: "/demo",
@@ -85,5 +89,7 @@ router.use("/loans", bookLoanRouter);
 router.use("/rental-rules", rentalRuleRouter);
 router.use("/subjects", subjectRouter);
 router.use("/students", studentRouter);
+router.use("/behavior-types", behaviorTypeRouter);
+router.use("/behaviors", behaviorRouter);
 
 export default router;

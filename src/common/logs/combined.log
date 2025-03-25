@@ -8016,3 +8016,507 @@
 2025-03-24T14:33:00.795Z warn: System under high load, rejecting request
 2025-03-24T14:33:00.797Z error: API Error: Service temporarily unavailable due to high load
 2025-03-24T14:33:00.798Z error: RESPONSE 503 GET /api/v1/search [300.84ms]
+2025-03-24T23:31:43.494Z info: Database configuration:
+2025-03-24T23:31:43.665Z info: Connecting to Redis:
+2025-03-24T23:31:47.529Z info: Redis rate limiter initialized
+2025-03-24T23:31:48.518Z info: Cache utility initialized
+2025-03-24T23:31:59.341Z info: Configuring CORS middleware
+2025-03-24T23:31:59.343Z info: Configuring compression middleware
+2025-03-24T23:31:59.355Z info: Redis rate limiter initialized
+2025-03-24T23:31:59.356Z info: Redis rate limiter initialized
+2025-03-24T23:31:59.358Z info: Checking database connection...
+2025-03-24T23:31:59.518Z info: Redis connected successfully
+2025-03-24T23:31:59.639Z info: Sequelize connection has been established successfully.
+2025-03-24T23:31:59.685Z info: Database connection successful
+2025-03-24T23:32:54.659Z info: Database configuration:
+2025-03-24T23:32:54.827Z info: Connecting to Redis:
+2025-03-24T23:32:57.949Z info: Redis rate limiter initialized
+2025-03-24T23:32:58.717Z info: Cache utility initialized
+2025-03-24T23:33:08.840Z info: Configuring CORS middleware
+2025-03-24T23:33:08.841Z info: Configuring compression middleware
+2025-03-24T23:33:08.857Z info: Redis rate limiter initialized
+2025-03-24T23:33:08.858Z info: Redis rate limiter initialized
+2025-03-24T23:33:08.860Z info: Checking database connection...
+2025-03-24T23:33:08.918Z info: Redis connected successfully
+2025-03-24T23:33:09.025Z info: Sequelize connection has been established successfully.
+2025-03-24T23:33:09.086Z info: Database connection successful
+2025-03-24T23:34:40.541Z info: Database configuration:
+2025-03-24T23:34:40.676Z info: Connecting to Redis:
+2025-03-24T23:34:43.828Z info: Redis rate limiter initialized
+2025-03-24T23:34:44.664Z info: Cache utility initialized
+2025-03-24T23:34:54.460Z info: Configuring CORS middleware
+2025-03-24T23:34:54.461Z info: Configuring compression middleware
+2025-03-24T23:34:54.473Z info: Redis rate limiter initialized
+2025-03-24T23:34:54.474Z info: Redis rate limiter initialized
+2025-03-24T23:34:54.475Z info: Checking database connection...
+2025-03-24T23:34:54.559Z info: Redis connected successfully
+2025-03-24T23:34:54.612Z info: Sequelize connection has been established successfully.
+2025-03-24T23:34:54.655Z info: Database connection successful
+2025-03-24T23:35:27.905Z info: Database configuration:
+2025-03-24T23:35:28.102Z info: Connecting to Redis:
+2025-03-24T23:35:31.426Z info: Redis rate limiter initialized
+2025-03-24T23:35:32.168Z info: Cache utility initialized
+2025-03-24T23:35:42.635Z info: Configuring CORS middleware
+2025-03-24T23:35:42.636Z info: Configuring compression middleware
+2025-03-24T23:35:42.655Z info: Redis rate limiter initialized
+2025-03-24T23:35:42.656Z info: Redis rate limiter initialized
+2025-03-24T23:35:42.658Z info: Checking database connection...
+2025-03-24T23:35:42.785Z info: Redis connected successfully
+2025-03-24T23:35:42.849Z info: Sequelize connection has been established successfully.
+2025-03-24T23:35:42.906Z info: Database connection successful
+2025-03-24T23:35:42.907Z info: Setting up model associations...
+2025-03-24T23:35:42.908Z info: Setting up model associations...
+2025-03-24T23:35:42.919Z info: Loading all model associations...
+2025-03-24T23:36:51.041Z info: Applied 48 of 48 model associations
+2025-03-24T23:36:51.041Z info: Model associations loaded
+2025-03-24T23:36:51.042Z info: Model associations set up successfully
+2025-03-24T23:36:51.043Z info: Checking Redis connection...
+2025-03-24T23:36:51.049Z info: Redis client is ready
+2025-03-24T23:36:51.300Z info: Redis ping successful
+2025-03-24T23:36:51.300Z info: Redis connection successful
+2025-03-24T23:36:51.301Z info: Syncing database models...
+2025-03-24T23:36:51.301Z info: Setting up model associations before sync...
+2025-03-24T23:36:51.301Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-24T23:36:51.302Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-24T23:36:51.302Z info: Syncing model: Role
+2025-03-24T23:36:51.568Z info: Successfully synced model: Role
+2025-03-24T23:36:51.569Z info: Syncing model: Permission
+2025-03-24T23:36:51.675Z info: Successfully synced model: Permission
+2025-03-24T23:36:51.676Z info: Syncing model: School
+2025-03-24T23:36:51.910Z info: Successfully synced model: School
+2025-03-24T23:36:51.911Z info: Syncing model: User
+2025-03-24T23:36:52.485Z info: Successfully synced model: User
+2025-03-24T23:36:52.485Z info: Syncing model: Address
+2025-03-24T23:36:52.514Z info: Successfully synced model: Address
+2025-03-24T23:36:52.515Z info: Syncing model: Department
+2025-03-24T23:36:52.710Z info: Successfully synced model: Department
+2025-03-24T23:36:52.711Z info: Syncing model: Grade
+2025-03-24T23:36:52.824Z info: Successfully synced model: Grade
+2025-03-24T23:36:52.824Z info: Syncing model: Teacher
+2025-03-24T23:36:53.135Z info: Successfully synced model: Teacher
+2025-03-24T23:36:53.136Z info: Syncing model: Book
+2025-03-24T23:36:53.214Z info: Successfully synced model: Book
+2025-03-24T23:36:53.214Z info: Syncing model: BookLoan
+2025-03-24T23:36:53.293Z info: Successfully synced model: BookLoan
+2025-03-24T23:36:53.294Z info: Syncing model: RentalRule
+2025-03-24T23:36:53.346Z info: Successfully synced model: RentalRule
+2025-03-24T23:36:53.347Z info: Syncing model: Section
+2025-03-24T23:36:53.404Z info: Successfully synced model: Section
+2025-03-24T23:36:53.405Z info: Syncing model: Category
+2025-03-24T23:36:53.469Z info: Successfully synced model: Category
+2025-03-24T23:36:53.469Z info: Syncing model: Subject
+2025-03-24T23:36:53.612Z info: Successfully synced model: Subject
+2025-03-24T23:36:53.612Z info: Syncing model: Block
+2025-03-24T23:36:53.674Z info: Successfully synced model: Block
+2025-03-24T23:36:53.674Z info: Syncing model: Classroom
+2025-03-24T23:36:53.770Z info: Successfully synced model: Classroom
+2025-03-24T23:36:53.770Z info: Syncing model: Class
+2025-03-24T23:36:54.015Z info: Successfully synced model: Class
+2025-03-24T23:36:54.015Z info: Syncing model: RolePermission
+2025-03-24T23:36:54.077Z info: Successfully synced model: RolePermission
+2025-03-24T23:36:54.078Z info: Syncing model: UserRole
+2025-03-24T23:36:54.142Z info: Successfully synced model: UserRole
+2025-03-24T23:36:54.143Z info: Syncing model: AddressLink
+2025-03-24T23:36:54.223Z info: Successfully synced model: AddressLink
+2025-03-24T23:36:54.223Z info: All models synced successfully
+2025-03-24T23:36:54.224Z info: Database synced successfully
+2025-03-24T23:36:54.224Z info: Verifying database tables before seeding...
+2025-03-24T23:36:54.226Z info: Found database tables: , , , , , , , , , , , , , , , , , , , 
+2025-03-24T23:36:54.226Z info: Running seeders...
+2025-03-24T23:36:54.227Z info: Starting database seeding...
+2025-03-24T23:36:55.240Z info: Starting RBAC seeding...
+2025-03-24T23:36:55.243Z info: Checking existing roles...
+2025-03-24T23:36:55.413Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-24T23:36:55.479Z info: Found 20 tables for permission generation
+2025-03-24T23:36:55.480Z info: No new permissions to create
+2025-03-24T23:36:55.513Z info: Checking for new permissions to assign to super_admin
+2025-03-24T23:36:55.514Z info: Checking for new permissions to assign to admin
+2025-03-24T23:36:55.515Z info: Checking for new permissions to assign to manager
+2025-03-24T23:36:55.516Z info: Checking for new permissions for teacher
+2025-03-24T23:36:55.517Z info: Checking for new permissions for student
+2025-03-24T23:36:55.518Z info: No new role-permission mappings needed
+2025-03-24T23:36:55.518Z info: RBAC seeding completed successfully
+2025-03-24T23:36:55.518Z info: Database seeding completed
+2025-03-24T23:36:55.519Z info: Seeding completed successfully
+2025-03-24T23:36:55.528Z info: API Routes (232 total routes):
+2025-03-24T23:36:55.661Z info: Server running on port 3001
+2025-03-24T23:38:42.546Z info: Database configuration:
+2025-03-24T23:38:42.862Z info: Connecting to Redis:
+2025-03-24T23:38:46.388Z info: Redis rate limiter initialized
+2025-03-24T23:38:47.270Z info: Cache utility initialized
+2025-03-24T23:38:56.726Z info: Configuring CORS middleware
+2025-03-24T23:38:56.727Z info: Configuring compression middleware
+2025-03-24T23:38:56.742Z info: Redis rate limiter initialized
+2025-03-24T23:38:56.742Z info: Redis rate limiter initialized
+2025-03-24T23:38:56.744Z info: Checking database connection...
+2025-03-24T23:38:56.893Z info: Sequelize connection has been established successfully.
+2025-03-24T23:38:56.935Z info: Database connection successful
+2025-03-24T23:38:56.935Z info: Setting up model associations...
+2025-03-24T23:38:56.936Z info: Setting up model associations...
+2025-03-24T23:38:56.943Z info: Loading all model associations...
+2025-03-24T23:40:04.451Z info: Applied 48 of 48 model associations
+2025-03-24T23:40:04.452Z info: Model associations loaded
+2025-03-24T23:40:04.452Z info: Model associations set up successfully
+2025-03-24T23:40:04.452Z info: Checking Redis connection...
+2025-03-24T23:40:04.455Z error: Redis connection error:
+2025-03-24T23:40:04.460Z info: Retrying Redis connection in 50ms...
+2025-03-24T23:40:04.461Z warn: Redis connection closed
+2025-03-24T23:40:04.562Z info: Redis connected successfully
+2025-03-24T23:40:04.863Z info: Redis client is ready
+2025-03-24T23:40:05.050Z info: Redis ping successful
+2025-03-24T23:40:05.050Z info: Redis connection successful
+2025-03-24T23:40:05.051Z info: Syncing database models...
+2025-03-24T23:40:05.051Z info: Setting up model associations before sync...
+2025-03-24T23:40:05.051Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-24T23:40:05.052Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-24T23:40:05.052Z info: Syncing model: Role
+2025-03-24T23:40:05.324Z info: Successfully synced model: Role
+2025-03-24T23:40:05.324Z info: Syncing model: Permission
+2025-03-24T23:40:05.409Z info: Successfully synced model: Permission
+2025-03-24T23:40:05.409Z info: Syncing model: School
+2025-03-24T23:40:05.622Z info: Successfully synced model: School
+2025-03-24T23:40:05.622Z info: Syncing model: User
+2025-03-24T23:40:06.085Z info: Successfully synced model: User
+2025-03-24T23:40:06.086Z info: Syncing model: Address
+2025-03-24T23:40:06.113Z info: Successfully synced model: Address
+2025-03-24T23:40:06.114Z info: Syncing model: Department
+2025-03-24T23:40:06.292Z info: Successfully synced model: Department
+2025-03-24T23:40:06.292Z info: Syncing model: Grade
+2025-03-24T23:40:06.377Z info: Successfully synced model: Grade
+2025-03-24T23:40:06.378Z info: Syncing model: Teacher
+2025-03-24T23:40:06.619Z info: Successfully synced model: Teacher
+2025-03-24T23:40:06.620Z info: Syncing model: Book
+2025-03-24T23:40:06.691Z info: Successfully synced model: Book
+2025-03-24T23:40:06.691Z info: Syncing model: BookLoan
+2025-03-24T23:40:06.763Z info: Successfully synced model: BookLoan
+2025-03-24T23:40:06.763Z info: Syncing model: RentalRule
+2025-03-24T23:40:06.807Z info: Successfully synced model: RentalRule
+2025-03-24T23:40:06.807Z info: Syncing model: Section
+2025-03-24T23:40:06.851Z info: Successfully synced model: Section
+2025-03-24T23:40:06.851Z info: Syncing model: Category
+2025-03-24T23:40:06.909Z info: Successfully synced model: Category
+2025-03-24T23:40:06.909Z info: Syncing model: Subject
+2025-03-24T23:40:07.024Z info: Successfully synced model: Subject
+2025-03-24T23:40:07.024Z info: Syncing model: Block
+2025-03-24T23:40:07.073Z info: Successfully synced model: Block
+2025-03-24T23:40:07.073Z info: Syncing model: Classroom
+2025-03-24T23:40:07.138Z info: Successfully synced model: Classroom
+2025-03-24T23:40:07.139Z info: Syncing model: Class
+2025-03-24T23:40:07.324Z info: Successfully synced model: Class
+2025-03-24T23:40:07.324Z info: Syncing model: RolePermission
+2025-03-24T23:40:07.375Z info: Successfully synced model: RolePermission
+2025-03-24T23:40:07.376Z info: Syncing model: UserRole
+2025-03-24T23:40:07.427Z info: Successfully synced model: UserRole
+2025-03-24T23:40:07.428Z info: Syncing model: AddressLink
+2025-03-24T23:40:07.497Z info: Successfully synced model: AddressLink
+2025-03-24T23:40:07.498Z info: All models synced successfully
+2025-03-24T23:40:07.498Z info: Database synced successfully
+2025-03-24T23:40:07.498Z info: Verifying database tables before seeding...
+2025-03-24T23:40:07.501Z info: Found database tables: , , , , , , , , , , , , , , , , , , , 
+2025-03-24T23:40:07.501Z info: Running seeders...
+2025-03-24T23:40:07.502Z info: Starting database seeding...
+2025-03-24T23:40:08.515Z info: Starting RBAC seeding...
+2025-03-24T23:40:08.518Z info: Checking existing roles...
+2025-03-24T23:40:08.578Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-24T23:40:08.613Z info: Found 20 tables for permission generation
+2025-03-24T23:40:08.614Z info: No new permissions to create
+2025-03-24T23:40:08.637Z info: Checking for new permissions to assign to super_admin
+2025-03-24T23:40:08.638Z info: Checking for new permissions to assign to admin
+2025-03-24T23:40:08.639Z info: Checking for new permissions to assign to manager
+2025-03-24T23:40:08.639Z info: Checking for new permissions for teacher
+2025-03-24T23:40:08.640Z info: Checking for new permissions for student
+2025-03-24T23:40:08.640Z info: No new role-permission mappings needed
+2025-03-24T23:40:08.640Z info: RBAC seeding completed successfully
+2025-03-24T23:40:08.641Z info: Database seeding completed
+2025-03-24T23:40:08.641Z info: Seeding completed successfully
+2025-03-24T23:40:08.646Z info: API Routes (232 total routes):
+2025-03-24T23:40:08.737Z info: Server running on port 3001
+2025-03-24T23:42:25.835Z info: Database configuration:
+2025-03-24T23:42:26.025Z info: Connecting to Redis:
+2025-03-24T23:42:29.328Z info: Redis rate limiter initialized
+2025-03-24T23:42:30.209Z info: Cache utility initialized
+2025-03-24T23:42:42.092Z info: Configuring CORS middleware
+2025-03-24T23:42:42.093Z info: Configuring compression middleware
+2025-03-24T23:42:42.108Z info: Redis rate limiter initialized
+2025-03-24T23:42:42.109Z info: Redis rate limiter initialized
+2025-03-24T23:42:42.110Z info: Checking database connection...
+2025-03-24T23:42:42.199Z info: Redis connected successfully
+2025-03-24T23:42:42.269Z info: Sequelize connection has been established successfully.
+2025-03-24T23:42:42.318Z info: Database connection successful
+2025-03-24T23:43:32.216Z info: Database configuration:
+2025-03-24T23:43:32.338Z info: Connecting to Redis:
+2025-03-24T23:43:34.859Z info: Redis rate limiter initialized
+2025-03-24T23:43:35.503Z info: Cache utility initialized
+2025-03-24T23:43:43.959Z info: Configuring CORS middleware
+2025-03-24T23:43:43.982Z info: Configuring compression middleware
+2025-03-24T23:43:44.052Z info: Redis rate limiter initialized
+2025-03-24T23:43:44.053Z info: Redis rate limiter initialized
+2025-03-24T23:43:44.055Z info: Checking database connection...
+2025-03-24T23:43:44.117Z info: Redis connected successfully
+2025-03-24T23:43:44.295Z info: Sequelize connection has been established successfully.
+2025-03-24T23:43:44.336Z info: Database connection successful
+2025-03-24T23:43:44.337Z info: Setting up model associations...
+2025-03-24T23:43:44.337Z info: Setting up model associations...
+2025-03-24T23:43:44.344Z info: Loading all model associations...
+2025-03-24T23:44:41.130Z info: Applied 48 of 48 model associations
+2025-03-24T23:44:41.130Z info: Model associations loaded
+2025-03-24T23:44:41.131Z info: Model associations set up successfully
+2025-03-24T23:44:41.131Z info: Checking Redis connection...
+2025-03-24T23:44:41.137Z info: Redis client is ready
+2025-03-24T23:44:41.328Z info: Redis ping successful
+2025-03-24T23:44:41.329Z info: Redis connection successful
+2025-03-24T23:44:41.330Z info: Syncing database models...
+2025-03-24T23:44:41.330Z info: Setting up model associations before sync...
+2025-03-24T23:44:41.330Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-24T23:44:41.331Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-24T23:44:41.331Z info: Syncing model: Role
+2025-03-24T23:44:41.503Z info: Successfully synced model: Role
+2025-03-24T23:44:41.504Z info: Syncing model: Permission
+2025-03-24T23:44:41.577Z info: Successfully synced model: Permission
+2025-03-24T23:44:41.578Z info: Syncing model: School
+2025-03-24T23:44:41.759Z info: Successfully synced model: School
+2025-03-24T23:44:41.759Z info: Syncing model: User
+2025-03-24T23:44:42.225Z info: Successfully synced model: User
+2025-03-24T23:44:42.226Z info: Syncing model: Address
+2025-03-24T23:44:42.252Z info: Successfully synced model: Address
+2025-03-24T23:44:42.253Z info: Syncing model: Department
+2025-03-24T23:44:42.427Z info: Successfully synced model: Department
+2025-03-24T23:44:42.427Z info: Syncing model: Grade
+2025-03-24T23:44:42.521Z info: Successfully synced model: Grade
+2025-03-24T23:44:42.521Z info: Syncing model: Teacher
+2025-03-24T23:44:42.859Z info: Successfully synced model: Teacher
+2025-03-24T23:44:42.859Z info: Syncing model: Book
+2025-03-24T23:44:42.938Z info: Successfully synced model: Book
+2025-03-24T23:44:42.938Z info: Syncing model: BookLoan
+2025-03-24T23:44:43.016Z info: Successfully synced model: BookLoan
+2025-03-24T23:44:43.016Z info: Syncing model: RentalRule
+2025-03-24T23:44:43.061Z info: Successfully synced model: RentalRule
+2025-03-24T23:44:43.062Z info: Syncing model: Section
+2025-03-24T23:44:43.117Z info: Successfully synced model: Section
+2025-03-24T23:44:43.118Z info: Syncing model: Category
+2025-03-24T23:44:43.167Z info: Successfully synced model: Category
+2025-03-24T23:44:43.168Z info: Syncing model: Subject
+2025-03-24T23:44:43.300Z info: Successfully synced model: Subject
+2025-03-24T23:44:43.301Z info: Syncing model: Block
+2025-03-24T23:44:43.352Z info: Successfully synced model: Block
+2025-03-24T23:44:43.352Z info: Syncing model: Classroom
+2025-03-24T23:44:43.425Z info: Successfully synced model: Classroom
+2025-03-24T23:44:43.425Z info: Syncing model: Class
+2025-03-24T23:44:43.632Z info: Successfully synced model: Class
+2025-03-24T23:44:43.633Z info: Syncing model: RolePermission
+2025-03-24T23:44:43.686Z info: Successfully synced model: RolePermission
+2025-03-24T23:44:43.686Z info: Syncing model: UserRole
+2025-03-24T23:44:43.739Z info: Successfully synced model: UserRole
+2025-03-24T23:44:43.739Z info: Syncing model: AddressLink
+2025-03-24T23:44:43.808Z info: Successfully synced model: AddressLink
+2025-03-24T23:44:43.809Z info: All models synced successfully
+2025-03-24T23:44:43.809Z info: Database synced successfully
+2025-03-24T23:44:43.810Z info: Verifying database tables before seeding...
+2025-03-24T23:44:43.812Z info: Found database tables: , , , , , , , , , , , , , , , , , , , 
+2025-03-24T23:44:43.812Z info: Running seeders...
+2025-03-24T23:44:43.813Z info: Starting database seeding...
+2025-03-24T23:44:44.827Z info: Starting RBAC seeding...
+2025-03-24T23:44:44.830Z info: Checking existing roles...
+2025-03-24T23:44:44.887Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-24T23:44:44.922Z info: Found 20 tables for permission generation
+2025-03-24T23:44:44.923Z info: No new permissions to create
+2025-03-24T23:44:44.945Z info: Checking for new permissions to assign to super_admin
+2025-03-24T23:44:44.946Z info: Checking for new permissions to assign to admin
+2025-03-24T23:44:44.947Z info: Checking for new permissions to assign to manager
+2025-03-24T23:44:44.948Z info: Checking for new permissions for teacher
+2025-03-24T23:44:44.949Z info: Checking for new permissions for student
+2025-03-24T23:44:44.949Z info: No new role-permission mappings needed
+2025-03-24T23:44:44.951Z info: RBAC seeding completed successfully
+2025-03-24T23:44:44.952Z info: Database seeding completed
+2025-03-24T23:44:44.952Z info: Seeding completed successfully
+2025-03-24T23:44:44.957Z info: API Routes (232 total routes):
+2025-03-24T23:44:45.046Z info: Server running on port 3001
+2025-03-24T23:46:28.578Z info: Database configuration:
+2025-03-24T23:46:28.825Z info: Connecting to Redis:
+2025-03-24T23:46:32.303Z info: Redis rate limiter initialized
+2025-03-24T23:46:33.288Z info: Cache utility initialized
+2025-03-24T23:46:44.679Z info: Configuring CORS middleware
+2025-03-24T23:46:44.680Z info: Configuring compression middleware
+2025-03-24T23:46:44.694Z info: Redis rate limiter initialized
+2025-03-24T23:46:44.695Z info: Redis rate limiter initialized
+2025-03-24T23:46:44.697Z info: Checking database connection...
+2025-03-24T23:46:44.849Z info: Sequelize connection has been established successfully.
+2025-03-24T23:46:44.854Z info: Redis connected successfully
+2025-03-24T23:46:44.899Z info: Database connection successful
+2025-03-24T23:46:44.900Z info: Setting up model associations...
+2025-03-24T23:46:44.900Z info: Setting up model associations...
+2025-03-24T23:46:44.910Z info: Loading all model associations...
+2025-03-24T23:47:48.343Z info: Applied 48 of 48 model associations
+2025-03-24T23:47:48.343Z info: Model associations loaded
+2025-03-24T23:47:48.343Z info: Model associations set up successfully
+2025-03-24T23:47:48.344Z info: Checking Redis connection...
+2025-03-24T23:47:48.350Z info: Redis client is ready
+2025-03-24T23:47:48.540Z info: Redis ping successful
+2025-03-24T23:47:48.541Z info: Redis connection successful
+2025-03-24T23:47:48.541Z info: Syncing database models...
+2025-03-24T23:47:48.541Z info: Setting up model associations before sync...
+2025-03-24T23:47:48.542Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-24T23:47:48.542Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-24T23:47:48.543Z info: Syncing model: Role
+2025-03-24T23:47:48.744Z info: Successfully synced model: Role
+2025-03-24T23:47:48.744Z info: Syncing model: Permission
+2025-03-24T23:47:48.829Z info: Successfully synced model: Permission
+2025-03-24T23:47:48.830Z info: Syncing model: School
+2025-03-24T23:47:49.024Z info: Successfully synced model: School
+2025-03-24T23:47:49.024Z info: Syncing model: User
+2025-03-24T23:47:49.398Z info: Successfully synced model: User
+2025-03-24T23:47:49.399Z info: Syncing model: Address
+2025-03-24T23:47:49.425Z info: Successfully synced model: Address
+2025-03-24T23:47:49.426Z info: Syncing model: Department
+2025-03-24T23:47:49.575Z info: Successfully synced model: Department
+2025-03-24T23:47:49.576Z info: Syncing model: Grade
+2025-03-24T23:47:49.675Z info: Successfully synced model: Grade
+2025-03-24T23:47:49.676Z info: Syncing model: Teacher
+2025-03-24T23:47:50.002Z info: Successfully synced model: Teacher
+2025-03-24T23:47:50.002Z info: Syncing model: Book
+2025-03-24T23:47:50.069Z info: Successfully synced model: Book
+2025-03-24T23:47:50.069Z info: Syncing model: BookLoan
+2025-03-24T23:47:50.137Z info: Successfully synced model: BookLoan
+2025-03-24T23:47:50.137Z info: Syncing model: RentalRule
+2025-03-24T23:47:50.180Z info: Successfully synced model: RentalRule
+2025-03-24T23:47:50.180Z info: Syncing model: Section
+2025-03-24T23:47:50.224Z info: Successfully synced model: Section
+2025-03-24T23:47:50.225Z info: Syncing model: Category
+2025-03-24T23:47:50.273Z info: Successfully synced model: Category
+2025-03-24T23:47:50.274Z info: Syncing model: Subject
+2025-03-24T23:47:50.375Z info: Successfully synced model: Subject
+2025-03-24T23:47:50.375Z info: Syncing model: Block
+2025-03-24T23:47:50.429Z info: Successfully synced model: Block
+2025-03-24T23:47:50.429Z info: Syncing model: Classroom
+2025-03-24T23:47:50.501Z info: Successfully synced model: Classroom
+2025-03-24T23:47:50.501Z info: Syncing model: Class
+2025-03-24T23:47:50.718Z info: Successfully synced model: Class
+2025-03-24T23:47:50.719Z info: Syncing model: RolePermission
+2025-03-24T23:47:50.775Z info: Successfully synced model: RolePermission
+2025-03-24T23:47:50.776Z info: Syncing model: UserRole
+2025-03-24T23:47:50.837Z info: Successfully synced model: UserRole
+2025-03-24T23:47:50.838Z info: Syncing model: AddressLink
+2025-03-24T23:47:50.913Z info: Successfully synced model: AddressLink
+2025-03-24T23:47:50.914Z info: All models synced successfully
+2025-03-24T23:47:50.914Z info: Database synced successfully
+2025-03-24T23:47:50.914Z info: Verifying database tables before seeding...
+2025-03-24T23:47:50.917Z info: Found database tables: , , , , , , , , , , , , , , , , , , , 
+2025-03-24T23:47:50.917Z info: Running seeders...
+2025-03-24T23:47:50.918Z info: Starting database seeding...
+2025-03-24T23:47:51.922Z info: Starting RBAC seeding...
+2025-03-24T23:47:51.925Z info: Checking existing roles...
+2025-03-24T23:47:51.991Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-24T23:47:52.023Z info: Found 20 tables for permission generation
+2025-03-24T23:47:52.024Z info: No new permissions to create
+2025-03-24T23:47:52.043Z info: Checking for new permissions to assign to super_admin
+2025-03-24T23:47:52.044Z info: Checking for new permissions to assign to admin
+2025-03-24T23:47:52.045Z info: Checking for new permissions to assign to manager
+2025-03-24T23:47:52.046Z info: Checking for new permissions for teacher
+2025-03-24T23:47:52.046Z info: Checking for new permissions for student
+2025-03-24T23:47:52.047Z info: No new role-permission mappings needed
+2025-03-24T23:47:52.047Z info: RBAC seeding completed successfully
+2025-03-24T23:47:52.047Z info: Database seeding completed
+2025-03-24T23:47:52.047Z info: Seeding completed successfully
+2025-03-24T23:47:52.052Z info: API Routes (232 total routes):
+2025-03-24T23:47:52.136Z info: Server running on port 3001
+2025-03-24T23:48:30.559Z info: Database configuration:
+2025-03-24T23:50:02.235Z info: Database configuration:
+2025-03-24T23:53:45.041Z info: Database configuration:
+2025-03-24T23:58:23.334Z info: Database configuration:
+2025-03-25T00:01:47.767Z info: Database configuration:
+2025-03-25T00:03:01.217Z info: Database configuration:
+2025-03-25T00:05:07.567Z info: Database configuration:
+2025-03-25T00:08:45.806Z info: Database configuration:
+2025-03-25T00:17:27.013Z info: Database configuration:
+2025-03-25T00:17:27.159Z info: Connecting to Redis:
+2025-03-25T00:17:30.553Z info: Redis rate limiter initialized
+2025-03-25T00:17:31.412Z info: Cache utility initialized
+2025-03-25T00:17:41.537Z info: Configuring CORS middleware
+2025-03-25T00:17:41.538Z info: Configuring compression middleware
+2025-03-25T00:17:41.557Z info: Redis rate limiter initialized
+2025-03-25T00:17:41.558Z info: Redis rate limiter initialized
+2025-03-25T00:17:41.560Z info: Checking database connection...
+2025-03-25T00:17:41.729Z info: Redis connected successfully
+2025-03-25T00:17:41.913Z info: Sequelize connection has been established successfully.
+2025-03-25T00:17:42.131Z info: Database connection successful
+2025-03-25T00:17:42.132Z info: Setting up model associations...
+2025-03-25T00:17:42.132Z info: Setting up model associations...
+2025-03-25T00:17:42.146Z info: Loading all model associations...
+2025-03-25T00:18:57.156Z info: Applied 53 of 53 model associations
+2025-03-25T00:18:57.157Z info: Model associations loaded
+2025-03-25T00:18:57.157Z info: Model associations set up successfully
+2025-03-25T00:18:57.157Z info: Checking Redis connection...
+2025-03-25T00:18:57.173Z info: Redis client is ready
+2025-03-25T00:18:57.340Z info: Redis ping successful
+2025-03-25T00:18:57.341Z info: Redis connection successful
+2025-03-25T00:18:57.341Z info: Syncing database models...
+2025-03-25T00:18:57.341Z info: Setting up model associations before sync...
+2025-03-25T00:18:57.341Z warn: Associations already set up. Skipping duplicate setup.
+2025-03-25T00:18:57.342Z info: Starting sequential model sync with options: {"force":false,"alter":true}
+2025-03-25T00:18:57.342Z info: Syncing model: Role
+2025-03-25T00:18:57.676Z info: Successfully synced model: Role
+2025-03-25T00:18:57.676Z info: Syncing model: Permission
+2025-03-25T00:18:57.797Z info: Successfully synced model: Permission
+2025-03-25T00:18:57.798Z info: Syncing model: School
+2025-03-25T00:18:58.044Z info: Successfully synced model: School
+2025-03-25T00:18:58.044Z info: Syncing model: User
+2025-03-25T00:18:58.616Z info: Successfully synced model: User
+2025-03-25T00:18:58.616Z info: Syncing model: Address
+2025-03-25T00:18:58.656Z info: Successfully synced model: Address
+2025-03-25T00:18:58.656Z info: Syncing model: Department
+2025-03-25T00:18:58.869Z info: Successfully synced model: Department
+2025-03-25T00:18:58.870Z info: Syncing model: Grade
+2025-03-25T00:18:58.986Z info: Successfully synced model: Grade
+2025-03-25T00:18:58.987Z info: Syncing model: Teacher
+2025-03-25T00:18:59.306Z info: Successfully synced model: Teacher
+2025-03-25T00:18:59.307Z info: Syncing model: Book
+2025-03-25T00:18:59.384Z info: Successfully synced model: Book
+2025-03-25T00:18:59.384Z info: Syncing model: BookLoan
+2025-03-25T00:18:59.484Z info: Successfully synced model: BookLoan
+2025-03-25T00:18:59.484Z info: Syncing model: RentalRule
+2025-03-25T00:18:59.557Z info: Successfully synced model: RentalRule
+2025-03-25T00:18:59.558Z info: Syncing model: Section
+2025-03-25T00:18:59.620Z info: Successfully synced model: Section
+2025-03-25T00:18:59.620Z info: Syncing model: Category
+2025-03-25T00:18:59.681Z info: Successfully synced model: Category
+2025-03-25T00:18:59.681Z info: Syncing model: Subject
+2025-03-25T00:18:59.816Z info: Successfully synced model: Subject
+2025-03-25T00:18:59.816Z info: Syncing model: Block
+2025-03-25T00:18:59.866Z info: Successfully synced model: Block
+2025-03-25T00:18:59.867Z info: Syncing model: Classroom
+2025-03-25T00:18:59.941Z info: Successfully synced model: Classroom
+2025-03-25T00:18:59.942Z info: Syncing model: Class
+2025-03-25T00:19:00.222Z info: Successfully synced model: Class
+2025-03-25T00:19:00.224Z info: Syncing model: BehaviorType
+2025-03-25T00:19:00.271Z info: Successfully synced model: BehaviorType
+2025-03-25T00:19:00.282Z info: Syncing model: Behavior
+2025-03-25T00:19:00.351Z info: Successfully synced model: Behavior
+2025-03-25T00:19:00.352Z info: Syncing model: RolePermission
+2025-03-25T00:19:00.429Z info: Successfully synced model: RolePermission
+2025-03-25T00:19:00.429Z info: Syncing model: UserRole
+2025-03-25T00:19:00.496Z info: Successfully synced model: UserRole
+2025-03-25T00:19:00.497Z info: Syncing model: AddressLink
+2025-03-25T00:19:00.574Z info: Successfully synced model: AddressLink
+2025-03-25T00:19:00.574Z info: All models synced successfully
+2025-03-25T00:19:00.574Z info: Database synced successfully
+2025-03-25T00:19:00.575Z info: Verifying database tables before seeding...
+2025-03-25T00:19:00.577Z info: Found database tables: , , , , , , , , , , , , , , , , , , , , , 
+2025-03-25T00:19:00.578Z info: Running seeders...
+2025-03-25T00:19:00.578Z info: Starting database seeding...
+2025-03-25T00:19:01.585Z info: Starting RBAC seeding...
+2025-03-25T00:19:01.589Z info: Checking existing roles...
+2025-03-25T00:19:01.685Z info: Found 9 existing roles. Skipping role seeding.
+2025-03-25T00:19:01.753Z info: Found 22 tables for permission generation
+2025-03-25T00:19:01.755Z info: Creating 34 new permissions...
+2025-03-25T00:19:01.812Z info: New permissions created successfully
+2025-03-25T00:19:01.849Z info: Checking for new permissions to assign to super_admin
+2025-03-25T00:19:01.851Z info: Checking for new permissions to assign to admin
+2025-03-25T00:19:01.852Z info: Checking for new permissions to assign to manager
+2025-03-25T00:19:01.853Z info: Checking for new permissions for teacher
+2025-03-25T00:19:01.854Z info: Checking for new permissions for student
+2025-03-25T00:19:01.889Z info: Created 100 new role-permission mappings
+2025-03-25T00:19:01.890Z info: RBAC seeding completed successfully
+2025-03-25T00:19:01.890Z info: Database seeding completed
+2025-03-25T00:19:01.890Z info: Seeding completed successfully
+2025-03-25T00:19:01.899Z info: API Routes (254 total routes):
+2025-03-25T00:19:02.038Z info: Server running on port 3001
