@@ -27,6 +27,8 @@ import gradeService from "../../school_config/grades/service";
 import classService from "../../school_config/classes/service";
 import db from "@/config/database";
 import DateTimeUtil from "@/common/utils/date/dateTimeUtil";
+import { StudentInterface } from "./interfaces/interfaces";
+import Student from "./model";
 
 export class StudentService implements IStudentService {
   private repository: IStudentRepository;
@@ -711,9 +713,13 @@ export class StudentService implements IStudentService {
         : schoolDetail.name.substring(0, 2).toUpperCase();
 
       // Get grade identifier (e.g., G1, G2, etc.) but the name is like this Grade 1 or Form 1
-    const gradeType = gradeDetail.name.startsWith('Grade') ? 'G' : (gradeDetail.name.startsWith('Form') ? 'F' : 'G');
-    const gradeNumber = gradeDetail.name.match(/\d+/)?.[0] || '';
-    const gradePrefix = `${gradeType}${gradeNumber}`; 
+      const gradeType = gradeDetail.name.startsWith("Grade")
+        ? "G"
+        : gradeDetail.name.startsWith("Form")
+        ? "F"
+        : "G";
+      const gradeNumber = gradeDetail.name.match(/\d+/)?.[0] || "";
+      const gradePrefix = `${gradeType}${gradeNumber}`;
 
       // Get current year
       const currentYear = new Date().getFullYear().toString().substring(2);

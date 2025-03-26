@@ -8,6 +8,7 @@ import Teacher from "../teachers/model";
 import Category from "../school_config/categories/model";
 import Subject from "../school_config/subjects/model";
 import Block from "../school_config/blocks/model";
+import Period from "../school_config/periods/model";
 import associationRegistry from "../../common/utils/db/AssociationRegistry";
 
 // Register all associations for the School model
@@ -90,6 +91,18 @@ associationRegistry.registerHasMany(
   {
     foreignKey: "schoolId",
     as: "blocks",
+    onDelete: "CASCADE",
+  },
+  MODULE_NAME
+);
+
+// School has many Periods
+associationRegistry.registerHasMany(
+  School,
+  Period,
+  {
+    foreignKey: "schoolId",
+    as: "periods",
     onDelete: "CASCADE",
   },
   MODULE_NAME

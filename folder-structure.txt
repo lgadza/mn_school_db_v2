@@ -151,6 +151,34 @@ MN School Database v2 Directory Structure
 │   │   │   ├── routes.ts
 │   │   │   ├── schema.ts
 │   │   │   └── service.ts
+│   │   ├── behavior/
+│   │   │   ├── behaviors/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   ├── behavior_types/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
+│   │   │   └── index.ts
 │   │   ├── library/
 │   │   │   ├── books/
 │   │   │   │   ├── book-review.model.ts
@@ -185,6 +213,34 @@ MN School Database v2 Directory Structure
 │   │   │       ├── service.ts
 │   │   │       └── validation.ts
 │   │   ├── payment/
+│   │   ├── projects/
+│   │   │   ├── controller.ts
+│   │   │   ├── controllers/
+│   │   │   │   ├── project-feedback.controller.ts
+│   │   │   │   ├── project-file.controller.ts
+│   │   │   │   └── project-grade.controller.ts
+│   │   │   ├── dto.ts
+│   │   │   ├── interfaces/
+│   │   │   │   ├── interfaces.ts
+│   │   │   │   └── services.ts
+│   │   │   ├── model-associations.ts
+│   │   │   ├── model.ts
+│   │   │   ├── models/
+│   │   │   │   ├── project-feedback.model.ts
+│   │   │   │   ├── project-file.model.ts
+│   │   │   │   └── project-grade.model.ts
+│   │   │   ├── repositories/
+│   │   │   │   ├── project-feedback.repository.ts
+│   │   │   │   ├── project-file.repository.ts
+│   │   │   │   └── project-grade.repository.ts
+│   │   │   ├── repository.ts
+│   │   │   ├── routes.ts
+│   │   │   ├── service.ts
+│   │   │   ├── services/
+│   │   │   │   ├── project-feedback.service.ts
+│   │   │   │   ├── project-file.service.ts
+│   │   │   │   └── project-grade.service.ts
+│   │   │   └── validation.ts
 │   │   ├── rbac/
 │   │   │   ├── constants/
 │   │   │   ├── controllers/
@@ -302,6 +358,19 @@ MN School Database v2 Directory Structure
 │   │   │   │   ├── routes.ts
 │   │   │   │   ├── service.ts
 │   │   │   │   └── validation.ts
+│   │   │   ├── school_years/
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── dto.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interfaces/
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services.ts
+│   │   │   │   ├── model-associations.ts
+│   │   │   │   ├── model.ts
+│   │   │   │   ├── repository.ts
+│   │   │   │   ├── routes.ts
+│   │   │   │   ├── service.ts
+│   │   │   │   └── validation.ts
 │   │   │   ├── sections/
 │   │   │   │   ├── controller.ts
 │   │   │   │   ├── dto.ts
@@ -380,7 +449,8 @@ MN School Database v2 Directory Structure
 │   │       └── index.ts
 │   ├── seeders/
 │   │   ├── index.ts
-│   │   └── rbac.seeder.ts
+│   │   ├── rbac.seeder.ts
+│   │   └── school-years.seeder.ts
 │   ├── server.ts
 │   ├── shared/
 │   │   ├── middleware/

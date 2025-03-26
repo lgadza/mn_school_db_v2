@@ -1,5 +1,9 @@
 import { Request, Response, NextFunction } from "express";
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import {
+  S3Client,
+  PutObjectCommand,
+  DeleteObjectCommand,
+} from "@aws-sdk/client-s3";
 import fs from "fs";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
@@ -213,6 +217,39 @@ export class FileUploadUtil {
         next(error);
       }
     };
+  }
+
+  /**
+   * Delete file from S3
+   */
+  public static async deleteFromS3(fileKey: string): Promise<boolean> {
+    try {
+      const deleteParams = {
+        Bucket: appConfig.aws.s3.bucketName,
+        Key: fileKey,
+      };
+
+      await this.s3Client.send(new DeleteObjectCommand(deleteParams));
+      return true;
+    } catch (error) {
+      logger.error("Error deleting file from S3:", error);
+      throw new FileError(
+        "Failed to delete file from storage",
+        ErrorCode.FILE_DELETE_FAILED
+      );
+    }
+  }
+
+  /**
+   * Calculate file size in human-readable format
+   */
+  public static formatFileSize(bytes: number): string {
+    if (bytes === 0) return "0 Bytes";
+
+    const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+    const i = Math.floor(Math.log(bytes) / Math.log(1024));
+
+    return `${parseFloat((bytes / Math.pow(1024, i)).toFixed(2))} ${sizes[i]}`;
   }
 }
 

@@ -26,6 +26,13 @@ import RentalRule from "./library/rules/model";
 import BehaviorType from "./behavior/behavior_types/model";
 import Behavior from "./behavior/behaviors/model";
 import SchoolYear from "./school_config/school_years/model";
+import Module from "./school_config/modules/model";
+import Project from "./projects/project/model";
+import ProjectFile from "./projects/files/model";
+import ProjectFeedback from "./projects/feedback/model";
+import ProjectGrade from "./projects/grades/model";
+import Student from "./accounts/students/model";
+import Period from "./school_config/periods/model";
 
 // Import the association loader
 import loadAllAssociations from "./association-loader";
@@ -34,6 +41,7 @@ import loadAllAssociations from "./association-loader";
 const MODELS = [
   // Base models first (no foreign key dependencies)
   Role,
+  Student,
   Permission,
   School,
   User,
@@ -52,7 +60,13 @@ const MODELS = [
   Class,
   BehaviorType,
   Behavior,
-  SchoolYear, // Added SchoolYear model
+  SchoolYear,
+  Module,
+  Project,
+  ProjectFile,
+  ProjectFeedback,
+  ProjectGrade,
+  Period,
 
   // Join tables and models with foreign key dependencies
   RolePermission,
