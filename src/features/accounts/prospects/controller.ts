@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express";
-import { IPeriodService } from "./interfaces/services";
-import periodService from "./service";
+import { Request, Response } from "express";
+import { IProspectService } from "./interfaces/services";
+import prospectService from "./service";
 import ResponseUtil, {
   HttpStatus,
 } from "@/common/utils/responses/responseUtil";
@@ -8,24 +8,27 @@ import logger from "@/common/utils/logging/logger";
 import { AppError } from "@/common/utils/errors/errorUtils";
 import { ErrorCode } from "@/common/utils/errors/errorCodes";
 
-export class PeriodController {
-  private service: IPeriodService;
+export class ProspectController {
+  private service: IProspectService;
 
-  constructor(service: IPeriodService) {
+  constructor(service: IProspectService) {
     this.service = service;
   }
 
   /**
-   * Get period by ID
+   * Get prospect by ID
    */
-  public getPeriodById = async (req: Request, res: Response): Promise<void> => {
+  public getProspectById = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
     try {
       const { id } = req.params;
-      const result = await this.service.getPeriodById(id);
+      const result = await this.service.getProspectById(id);
 
-      ResponseUtil.sendSuccess(res, result, "Period retrieved successfully");
+      ResponseUtil.sendSuccess(res, result, "Prospect retrieved successfully");
     } catch (error) {
-      logger.error("Error in getPeriodById controller:", error);
+      logger.error("Error in getProspectById controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -33,7 +36,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error retrieving period",
+          "Error retrieving prospect",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -42,68 +45,53 @@ export class PeriodController {
   };
 
   /**
-   * Create a new period
+   * Get prospect by user ID
    */
-  public createPeriod = async (
+  public getProspectByUserId = async (
     req: Request,
-    res: Response,
-    next: NextFunction
+    res: Response
   ): Promise<void> => {
     try {
-      const periodData = req.body;
-      const result = await this.service.createPeriod(periodData);
+      const { userId } = req.params;
+      const result = await this.service.getProspectByUserId(userId);
+
+      ResponseUtil.sendSuccess(res, result, "Prospect retrieved successfully");
+    } catch (error) {
+      logger.error("Error in getProspectByUserId controller:", error);
+      if (error instanceof AppError) {
+        ResponseUtil.sendError(res, error.message, error.httpCode, {
+          code: error.metadata.code,
+        });
+      } else {
+        ResponseUtil.sendError(
+          res,
+          "Error retrieving prospect by user ID",
+          HttpStatus.INTERNAL_SERVER_ERROR,
+          { code: ErrorCode.GEN_INTERNAL_ERROR }
+        );
+      }
+    }
+  };
+
+  /**
+   * Create a new prospect
+   */
+  public createProspect = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    try {
+      const prospectData = req.body;
+      const result = await this.service.createProspect(prospectData);
 
       ResponseUtil.sendSuccess(
         res,
         result,
-        "Period created successfully",
+        "Prospect created successfully",
         HttpStatus.CREATED
       );
-    } catch (error: unknown) {
-      logger.error("Error in createPeriod controller:", error);
-
-      // Handle validation errors specifically
-      if (
-        error instanceof Error &&
-        (error.name === "SequelizeValidationError" ||
-          error.name === "SequelizeUniqueConstraintError" ||
-          error.name === "ValidationError" ||
-          error.name === "BadRequestError")
-      ) {
-        // Return a 400 Bad Request with the validation error message
-        ResponseUtil.sendError(res, error.message, HttpStatus.BAD_REQUEST, {
-          code: ErrorCode.VAL_VALIDATION_ERROR,
-        });
-        return;
-      }
-
-      if (error instanceof AppError) {
-        ResponseUtil.sendError(res, error.message, error.httpCode, {
-          code: error.metadata.code,
-        });
-      } else {
-        ResponseUtil.sendError(
-          res,
-          "Error creating period",
-          HttpStatus.INTERNAL_SERVER_ERROR,
-          { code: ErrorCode.GEN_INTERNAL_ERROR }
-        );
-      }
-    }
-  };
-
-  /**
-   * Update a period
-   */
-  public updatePeriod = async (req: Request, res: Response): Promise<void> => {
-    try {
-      const { id } = req.params;
-      const periodData = req.body;
-      const result = await this.service.updatePeriod(id, periodData);
-
-      ResponseUtil.sendSuccess(res, result, "Period updated successfully");
     } catch (error) {
-      logger.error("Error in updatePeriod controller:", error);
+      logger.error("Error in createProspect controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -111,7 +99,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error updating period",
+          "Error creating prospect",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -120,20 +108,53 @@ export class PeriodController {
   };
 
   /**
-   * Delete a period
+   * Update a prospect
    */
-  public deletePeriod = async (req: Request, res: Response): Promise<void> => {
+  public updateProspect = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
     try {
       const { id } = req.params;
-      const result = await this.service.deletePeriod(id);
+      const prospectData = req.body;
+      const result = await this.service.updateProspect(id, prospectData);
+
+      ResponseUtil.sendSuccess(res, result, "Prospect updated successfully");
+    } catch (error) {
+      logger.error("Error in updateProspect controller:", error);
+      if (error instanceof AppError) {
+        ResponseUtil.sendError(res, error.message, error.httpCode, {
+          code: error.metadata.code,
+        });
+      } else {
+        ResponseUtil.sendError(
+          res,
+          "Error updating prospect",
+          HttpStatus.INTERNAL_SERVER_ERROR,
+          { code: ErrorCode.GEN_INTERNAL_ERROR }
+        );
+      }
+    }
+  };
+
+  /**
+   * Delete a prospect
+   */
+  public deleteProspect = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    try {
+      const { id } = req.params;
+      const result = await this.service.deleteProspect(id);
 
       ResponseUtil.sendSuccess(
         res,
         { success: result },
-        "Period deleted successfully"
+        "Prospect deleted successfully"
       );
     } catch (error) {
-      logger.error("Error in deletePeriod controller:", error);
+      logger.error("Error in deleteProspect controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -141,7 +162,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error deleting period",
+          "Error deleting prospect",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -150,38 +171,36 @@ export class PeriodController {
   };
 
   /**
-   * Get period list
+   * Get prospect list
    */
-  public getPeriodList = async (req: Request, res: Response): Promise<void> => {
+  public getProspectList = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
     try {
       const params = req.query;
-      const result = await this.service.getPeriodList({
+      const result = await this.service.getProspectList({
         page: params.page ? parseInt(params.page as string) : undefined,
         limit: params.limit ? parseInt(params.limit as string) : undefined,
         search: params.search as string,
         sortBy: params.sortBy as string,
         sortOrder: params.sortOrder as "asc" | "desc" | undefined,
         schoolId: params.schoolId as string,
-        section: params.section as
-          | "morning"
-          | "afternoon"
-          | "evening"
-          | undefined,
-        durationMin: params.durationMin
-          ? parseInt(params.durationMin as string)
-          : undefined,
-        durationMax: params.durationMax
-          ? parseInt(params.durationMax as string)
-          : undefined,
-        startTimeFrom: params.startTimeFrom as string,
-        startTimeTo: params.startTimeTo as string,
-        endTimeFrom: params.endTimeFrom as string,
-        endTimeTo: params.endTimeTo as string,
+        roleId: params.roleId as string,
+        interestLevel: params.interestLevel as string,
+        activeStatus:
+          params.activeStatus === "true"
+            ? true
+            : params.activeStatus === "false"
+            ? false
+            : undefined,
+        contactDateFrom: params.contactDateFrom as string,
+        contactDateTo: params.contactDateTo as string,
       });
 
-      ResponseUtil.sendSuccess(res, result, "Periods retrieved successfully");
+      ResponseUtil.sendSuccess(res, result, "Prospects retrieved successfully");
     } catch (error) {
-      logger.error("Error in getPeriodList controller:", error);
+      logger.error("Error in getProspectList controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -189,7 +208,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error retrieving periods",
+          "Error retrieving prospects",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -198,23 +217,23 @@ export class PeriodController {
   };
 
   /**
-   * Get periods by school
+   * Get prospects by school
    */
-  public getPeriodsBySchool = async (
+  public getProspectsBySchool = async (
     req: Request,
     res: Response
   ): Promise<void> => {
     try {
       const { schoolId } = req.params;
-      const result = await this.service.getPeriodsBySchool(schoolId);
+      const result = await this.service.getProspectsBySchool(schoolId);
 
       ResponseUtil.sendSuccess(
         res,
         result,
-        "School's periods retrieved successfully"
+        "School's prospects retrieved successfully"
       );
     } catch (error) {
-      logger.error("Error in getPeriodsBySchool controller:", error);
+      logger.error("Error in getProspectsBySchool controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -222,7 +241,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error retrieving school's periods",
+          "Error retrieving school's prospects",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -231,22 +250,23 @@ export class PeriodController {
   };
 
   /**
-   * Get period statistics
+   * Get prospects by role
    */
-  public getPeriodStatistics = async (
+  public getProspectsByRole = async (
     req: Request,
     res: Response
   ): Promise<void> => {
     try {
-      const result = await this.service.getPeriodStatistics();
+      const { roleId } = req.params;
+      const result = await this.service.getProspectsByRole(roleId);
 
       ResponseUtil.sendSuccess(
         res,
         result,
-        "Period statistics retrieved successfully"
+        "Role's prospects retrieved successfully"
       );
     } catch (error) {
-      logger.error("Error in getPeriodStatistics controller:", error);
+      logger.error("Error in getProspectsByRole controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -254,7 +274,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error retrieving period statistics",
+          "Error retrieving role's prospects",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -263,24 +283,25 @@ export class PeriodController {
   };
 
   /**
-   * Create multiple periods at once
+   * Get prospects by interest level
    */
-  public createPeriodsBulk = async (
+  public getProspectsByInterestLevel = async (
     req: Request,
     res: Response
   ): Promise<void> => {
     try {
-      const { periods } = req.body;
-      const result = await this.service.createPeriodsBulk(periods);
+      const { interestLevel } = req.params;
+      const result = await this.service.getProspectsByInterestLevel(
+        interestLevel
+      );
 
       ResponseUtil.sendSuccess(
         res,
         result,
-        "Periods created successfully",
-        HttpStatus.CREATED
+        `Prospects with interest level '${interestLevel}' retrieved successfully`
       );
     } catch (error) {
-      logger.error("Error in createPeriodsBulk controller:", error);
+      logger.error("Error in getProspectsByInterestLevel controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -288,7 +309,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error creating periods in bulk",
+          "Error retrieving prospects by interest level",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -297,19 +318,22 @@ export class PeriodController {
   };
 
   /**
-   * Delete multiple periods at once
+   * Get prospect statistics
    */
-  public deletePeriodsBulk = async (
+  public getProspectStatistics = async (
     req: Request,
     res: Response
   ): Promise<void> => {
     try {
-      const { ids } = req.body;
-      const result = await this.service.deletePeriodsBulk(ids);
+      const result = await this.service.getProspectStatistics();
 
-      ResponseUtil.sendSuccess(res, result, "Periods deleted successfully");
+      ResponseUtil.sendSuccess(
+        res,
+        result,
+        "Prospect statistics retrieved successfully"
+      );
     } catch (error) {
-      logger.error("Error in deletePeriodsBulk controller:", error);
+      logger.error("Error in getProspectStatistics controller:", error);
       if (error instanceof AppError) {
         ResponseUtil.sendError(res, error.message, error.httpCode, {
           code: error.metadata.code,
@@ -317,7 +341,7 @@ export class PeriodController {
       } else {
         ResponseUtil.sendError(
           res,
-          "Error deleting periods in bulk",
+          "Error retrieving prospect statistics",
           HttpStatus.INTERNAL_SERVER_ERROR,
           { code: ErrorCode.GEN_INTERNAL_ERROR }
         );
@@ -327,4 +351,4 @@ export class PeriodController {
 }
 
 // Create and export controller instance
-export default new PeriodController(periodService);
+export default new ProspectController(prospectService);

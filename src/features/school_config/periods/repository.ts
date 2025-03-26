@@ -39,8 +39,24 @@ export class PeriodRepository implements IPeriodRepository {
   ): Promise<PeriodInterface> {
     try {
       return await Period.create(periodData as any, { transaction });
-    } catch (error) {
-      logger.error("Error creating period:", error);
+    } catch (error: unknown) {
+      // Check if this is a validation error (including unique constraint violations)
+      if (
+        error &&
+        typeof error === "object" &&
+        "name" in error &&
+        (error.name === "SequelizeValidationError" ||
+          error.name === "SequelizeUniqueConstraintError")
+      ) {
+        // Rethrow validation errors with the ValidationError type
+        // This will be caught by the service layer and returned as a 400 response
+        throw error;
+      }
+
+      // Log the actual error for debugging
+      logger.error("Database error creating period:", error);
+
+      // For other database errors, throw a generic database error
       throw new DatabaseError("Database error while creating period", {
         additionalInfo: { code: ErrorCode.DB_QUERY_FAILED },
       });
@@ -56,11 +72,17 @@ export class PeriodRepository implements IPeriodRepository {
     transaction?: Transaction
   ): Promise<boolean> {
     try {
-      const [updated] = await Period.update(periodData as any, {
-        where: { id },
-        transaction,
-      });
-      return updated > 0;
+      // First, find the existing period
+      const existingPeriod = await Period.findByPk(id);
+
+      if (!existingPeriod) {
+        return false;
+      }
+
+      // Update the period - apply changes directly to the instance
+      await existingPeriod.update(periodData, { transaction });
+
+      return true;
     } catch (error) {
       logger.error("Error updating period:", error);
       throw new DatabaseError("Database error while updating period", {

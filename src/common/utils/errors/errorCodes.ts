@@ -19,6 +19,7 @@ export enum ErrorCode {
   VAL_MISSING_REQUIRED_FIELD = "VAL-001",
   VAL_INVALID_FORMAT = "VAL-002",
   VAL_EXCEEDS_LIMIT = "VAL-003",
+  VAL_VALIDATION_ERROR = "VAL-004", // Generic validation error
 
   // Resource errors (RES prefix)
   RES_NOT_FOUND = "RES-001",

@@ -32,7 +32,9 @@ import ProjectFile from "./projects/files/model";
 import ProjectFeedback from "./projects/feedback/model";
 import ProjectGrade from "./projects/grades/model";
 import Student from "./accounts/students/model";
+import Prospect from "./accounts/prospects/model";
 import Period from "./school_config/periods/model";
+import SchoolFee from "./school_config/school_fees/model";
 
 // Import the association loader
 import loadAllAssociations from "./association-loader";
@@ -42,6 +44,7 @@ const MODELS = [
   // Base models first (no foreign key dependencies)
   Role,
   Student,
+  Prospect,
   Permission,
   School,
   User,
@@ -67,6 +70,7 @@ const MODELS = [
   ProjectFeedback,
   ProjectGrade,
   Period,
+  SchoolFee,
 
   // Join tables and models with foreign key dependencies
   RolePermission,

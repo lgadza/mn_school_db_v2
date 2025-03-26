@@ -20,6 +20,7 @@ const defaultRoles = [
   { name: "super_admin", description: "Super administrator with all access" },
   { name: "librarian", description: "Library access" },
   { name: "accountant", description: "Financial access" },
+  { name: "prospect", description: "Prospective student access" },
 ];
 
 // Expanded granular permission actions

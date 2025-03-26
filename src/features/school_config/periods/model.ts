@@ -1,4 +1,11 @@
-import { Model, DataTypes, Optional, Op } from "sequelize";
+import {
+  Model,
+  DataTypes,
+  Optional,
+  Op,
+  ValidationError,
+  UniqueConstraintError,
+} from "sequelize";
 import sequelize from "@/config/sequelize";
 import { PeriodInterface } from "./interfaces/interfaces";
 
@@ -34,7 +41,10 @@ class Period
     return thisStart < otherEnd && thisEnd > otherStart;
   }
 
-  public convertTimeToMinutes(time: string): number {
+  public convertTimeToMinutes(time: string | undefined): number {
+    if (!time) {
+      return 0; // Return default value for undefined/null time
+    }
     const [hours, minutes] = time.split(":").map(Number);
     return hours * 60 + minutes;
   }
@@ -66,6 +76,39 @@ Period.init(
     name: {
       type: new DataTypes.STRING(100),
       allowNull: false,
+      validate: {
+        async isPeriodNameUnique(value: string) {
+          const period = this as unknown as Period;
+
+          // Skip validation if name hasn't changed during update
+          if (!period.isNewRecord && !period.changed("name")) {
+            return;
+          }
+
+          // If this is an update (has id) but no schoolId, we don't need to validate
+          // The repository will handle updates on the actual instance with all data
+          if (!period.isNewRecord && !period.schoolId) {
+            return;
+          }
+
+          // For new records, schoolId is required
+          if (period.isNewRecord && !period.schoolId) {
+            throw new Error("SchoolId is required for creating a new period");
+          }
+
+          const exists = await Period.nameExistsForSchool(
+            value,
+            period.schoolId,
+            period.id
+          );
+
+          if (exists) {
+            throw new Error(
+              `A period with name "${value}" already exists for this school. Period names must be unique per school.`
+            );
+          }
+        },
+      },
     },
     startTime: {
       type: new DataTypes.STRING(5), // Format: "HH:MM"
@@ -115,10 +158,40 @@ Period.init(
     hooks: {
       beforeValidate: (period: Period) => {
         // Calculate duration if not provided
-        if (!period.duration) {
+        if (!period.duration && period.startTime && period.endTime) {
           const startTime = period.convertTimeToMinutes(period.startTime);
           const endTime = period.convertTimeToMinutes(period.endTime);
           period.duration = endTime - startTime;
+        }
+      },
+      // Use a valid hook to handle database-level uniqueness errors
+      beforeCreate: async (period: Period, options) => {
+        // Check for name uniqueness before attempting to create
+        const exists = await Period.nameExistsForSchool(
+          period.name,
+          period.schoolId
+        );
+
+        if (exists) {
+          throw new Error(
+            `A period with name "${period.name}" already exists for this school. Period names must be unique per school.`
+          );
+        }
+      },
+      beforeUpdate: async (period: Period, options) => {
+        // Only validate name uniqueness if it has changed
+        if (period.changed("name") && period.schoolId) {
+          const exists = await Period.nameExistsForSchool(
+            period.name,
+            period.schoolId,
+            period.id
+          );
+
+          if (exists) {
+            throw new Error(
+              `A period with name "${period.name}" already exists for this school. Period names must be unique per school.`
+            );
+          }
         }
       },
     },

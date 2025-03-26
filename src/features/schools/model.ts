@@ -41,6 +41,16 @@ class School
   public getFullName(): string {
     return `${this.name} - ${this.shortName}`;
   }
+
+  // Helper method to get minimal school info for DTOs
+  public getMinimalInfo(): object {
+    return {
+      id: this.id,
+      name: this.name,
+      shortName: this.shortName,
+      fullName: this.getFullName(),
+    };
+  }
 }
 
 School.init(

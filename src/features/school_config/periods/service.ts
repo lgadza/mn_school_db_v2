@@ -116,10 +116,28 @@ export class PeriodService implements IPeriodService {
       await cache.del(`${this.CACHE_PREFIX}school:${periodData.schoolId}`);
 
       return periodDTO;
-    } catch (error) {
+    } catch (error: unknown) {
+      // Check specifically for Sequelize validation errors
+      if (
+        typeof error === "object" &&
+        error !== null &&
+        "name" in error &&
+        ("name" as keyof typeof error) &&
+        (error.name === "SequelizeValidationError" ||
+          error.name === "SequelizeUniqueConstraintError")
+      ) {
+        // Rethrow the validation error with its original message
+        const errorMessage =
+          "message" in error && typeof error.message === "string"
+            ? error.message
+            : "Validation error occurred";
+        throw new BadRequestError(errorMessage);
+      }
+
       if (error instanceof AppError) {
         throw error;
       }
+
       logger.error("Error in createPeriod service:", error);
       throw new AppError("Failed to create period");
     }
