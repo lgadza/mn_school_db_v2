@@ -178,7 +178,12 @@ export class AuthService implements IAuthService {
     // Get user roles and permissions
     const roles = (user as any).roles || [];
     const roleNames = roles.map((role: any) => role.name);
-    const permissions: string[] = []; // In a real app, you'd fetch permissions too
+
+    // Fetch user permissions from repository
+    const permissionObjects = await this.repository.getUserPermissions(user.id);
+    const permissions = permissionObjects.map(
+      (p) => `${p.resource}:${p.action}`
+    );
 
     // Generate JWT tokens
     const { accessToken, refreshToken } = JwtUtil.generateTokenPair(

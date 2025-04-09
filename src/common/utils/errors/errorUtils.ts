@@ -6,6 +6,7 @@ import ResponseUtil, {
 import { ValidationError as JoiValidationError } from "joi";
 import { QueryFailedError } from "typeorm";
 import DiagnosticsUtil from "@/common/utils/system/diagnosticsUtil";
+import { appConfig } from "@/config"; // Import appConfig to check environment
 import {
   ErrorCode,
   ErrorSeverity,
@@ -404,12 +405,18 @@ export class ErrorHandlerUtil {
 
   /**
    * Detect high load and return 503 if the system is overloaded
+   * Skips check in development/local environments
    */
   public static highLoadProtection = async (
     req: Request,
     res: Response,
     next: NextFunction
   ) => {
+    // Skip load check in development/local environment
+    if (appConfig.isDevelopment) {
+      return next();
+    }
+
     if (await DiagnosticsUtil.isSystemUnderHighLoad()) {
       logger.warn("System under high load, rejecting request");
       // Set Retry-After header directly

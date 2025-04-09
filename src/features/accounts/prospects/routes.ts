@@ -653,4 +653,154 @@ router.get(
   asyncHandler(prospectController.getProspectStatistics)
 );
 
+/**
+ * @swagger
+ * /api/v1/prospects/application-statistics:
+ *   get:
+ *     summary: Get prospect application statistics
+ *     tags: [Prospects]
+ *     description: Retrieve detailed statistics about prospect applications
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Prospect application statistics retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Prospect application statistics retrieved successfully
+ *                 data:
+ *                   $ref: '#/components/schemas/ProspectApplicationStatistics'
+ *       401:
+ *         description: Unauthorized
+ *       403:
+ *         description: Forbidden - insufficient permissions
+ *       500:
+ *         description: Internal server error
+ */
+router.get(
+  "/application-statistics",
+  AuthMiddleware.verifyToken,
+  PermissionMiddleware.hasPermission("prospect", PermissionAction.READ),
+  asyncHandler(prospectController.getProspectApplicationStatistics)
+);
+
+/**
+ * @swagger
+ * /api/v1/prospects/multiple-applications:
+ *   get:
+ *     summary: Get prospects who applied to multiple schools
+ *     tags: [Prospects]
+ *     description: Retrieve all prospects who have applied to more than one school
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Prospects with multiple applications retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Prospects with multiple applications retrieved successfully
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/ProspectDetail'
+ *       401:
+ *         description: Unauthorized
+ *       403:
+ *         description: Forbidden - insufficient permissions
+ *       500:
+ *         description: Internal server error
+ */
+router.get(
+  "/multiple-applications",
+  AuthMiddleware.verifyToken,
+  PermissionMiddleware.hasPermission("prospect", PermissionAction.READ),
+  asyncHandler(prospectController.getProspectsWithMultipleApplications)
+);
+
+/**
+ * @swagger
+ * /api/v1/prospects/{prospectId}/has-applied:
+ *   put:
+ *     summary: Update prospect's application status
+ *     tags: [Prospects]
+ *     description: Update a prospect's hasApplied status
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: prospectId
+ *         required: true
+ *         schema:
+ *           type: string
+ *           format: uuid
+ *         description: Prospect ID
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - hasApplied
+ *             properties:
+ *               hasApplied:
+ *                 type: boolean
+ *                 example: true
+ *     responses:
+ *       200:
+ *         description: Prospect application status updated successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Prospect application status updated to applied
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: string
+ *                       format: uuid
+ *                     hasApplied:
+ *                       type: boolean
+ *       401:
+ *         description: Unauthorized
+ *       403:
+ *         description: Forbidden - insufficient permissions
+ *       404:
+ *         description: Prospect not found
+ *       500:
+ *         description: Internal server error
+ */
+router.put(
+  "/:prospectId/has-applied",
+  AuthMiddleware.verifyToken,
+  PermissionMiddleware.hasPermission("prospect", PermissionAction.UPDATE),
+  ValidationUtil.validateRequest(
+    prospectValidationSchemas.updateProspectHasApplied
+  ),
+  asyncHandler(prospectController.updateProspectHasAppliedStatus)
+);
+
 export default router;

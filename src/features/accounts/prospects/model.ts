@@ -23,6 +23,7 @@ class Prospect
   public contactDate!: Date;
   public notes!: string | null;
   public activeStatus!: boolean;
+  public hasApplied!: boolean; // Track if prospect has submitted an application
 
   // Timestamps
   public readonly createdAt!: Date;
@@ -90,6 +91,11 @@ Prospect.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: true,
+    },
+    hasApplied: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
     },
     createdAt: {
       type: DataTypes.DATE,

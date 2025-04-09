@@ -17,6 +17,7 @@ export interface ProspectBaseDTO {
   contactDate: string;
   notes: string | null;
   activeStatus: boolean;
+  hasApplied: boolean; // Added hasApplied field
 }
 
 /**
@@ -61,6 +62,7 @@ export interface UpdateProspectDTO {
   contactDate?: string | Date;
   notes?: string | null;
   activeStatus?: boolean;
+  hasApplied?: boolean; // Added hasApplied field
 }
 
 /**
@@ -129,6 +131,7 @@ export class ProspectDTOMapper {
         : new Date().toISOString().split("T")[0],
       notes: prospect.notes || null,
       activeStatus: prospect.activeStatus,
+      hasApplied: prospect.hasApplied || false, // Added hasApplied field
     };
   }
 

@@ -7,6 +7,10 @@ import {
   PaginatedProspectListDTO,
   ProspectListQueryParams,
 } from "../dto";
+import {
+  SchoolApplicationStatistics,
+  ProspectApplicationsDetail,
+} from "../../school-applications/interfaces/interfaces";
 
 /**
  * Interface for Prospect Repository
@@ -34,6 +38,13 @@ export interface IProspectRepository {
     interestLevel: string
   ): Promise<ProspectInterface[]>;
   getProspectStatistics(): Promise<ProspectStatistics>;
+  getProspectApplicationStatistics(): Promise<SchoolApplicationStatistics>;
+  getProspectsWithMultipleApplications(): Promise<ProspectInterface[]>;
+  updateHasAppliedStatus(
+    prospectId: string,
+    hasApplied: boolean,
+    transaction?: Transaction
+  ): Promise<boolean>;
 }
 
 /**
@@ -59,5 +70,11 @@ export interface IProspectService {
   getProspectStatistics(): Promise<ProspectStatistics>;
   validateProspectData(
     prospectData: CreateProspectDTO | UpdateProspectDTO
+  ): Promise<boolean>;
+  getProspectApplicationStatistics(): Promise<SchoolApplicationStatistics>;
+  getProspectsWithMultipleApplications(): Promise<ProspectApplicationsDetail[]>;
+  updateHasAppliedStatus(
+    prospectId: string,
+    hasApplied: boolean
   ): Promise<boolean>;
 }

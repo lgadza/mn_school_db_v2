@@ -17,6 +17,7 @@ export interface ProspectInterface {
   contactDate: Date;
   notes: string | null;
   activeStatus: boolean;
+  hasApplied: boolean; // Added hasApplied field
   createdAt: Date;
   updatedAt: Date;
 
@@ -48,4 +49,6 @@ export interface ProspectStatistics {
   prospectsPerInterestLevel: { [level: string]: number };
   contactsByMonth: { [month: string]: number };
   contactsByYear: { [year: string]: number };
+  appliedProspects?: number; // New field to track applied prospects
+  notAppliedProspects?: number; // New field to track not applied prospects
 }

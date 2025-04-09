@@ -348,6 +348,117 @@ export class ProspectController {
       }
     }
   };
+
+  /**
+   * Get prospect application statistics
+   */
+  public getProspectApplicationStatistics = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    try {
+      const statistics = await this.service.getProspectApplicationStatistics();
+      ResponseUtil.sendSuccess(
+        res,
+        statistics,
+        "Prospect application statistics retrieved successfully"
+      );
+    } catch (error) {
+      logger.error(
+        "Error in getProspectApplicationStatistics controller:",
+        error
+      );
+      if (error instanceof AppError) {
+        ResponseUtil.sendError(res, error.message, error.httpCode, {
+          code: error.metadata.code,
+        });
+      } else {
+        ResponseUtil.sendError(
+          res,
+          "Error retrieving prospect application statistics",
+          HttpStatus.INTERNAL_SERVER_ERROR,
+          { code: ErrorCode.GEN_INTERNAL_ERROR }
+        );
+      }
+    }
+  };
+
+  /**
+   * Get prospects who applied to multiple schools
+   */
+  public getProspectsWithMultipleApplications = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    try {
+      const prospects =
+        await this.service.getProspectsWithMultipleApplications();
+      ResponseUtil.sendSuccess(
+        res,
+        prospects,
+        "Prospects with multiple applications retrieved successfully"
+      );
+    } catch (error) {
+      logger.error(
+        "Error in getProspectsWithMultipleApplications controller:",
+        error
+      );
+      if (error instanceof AppError) {
+        ResponseUtil.sendError(res, error.message, error.httpCode, {
+          code: error.metadata.code,
+        });
+      } else {
+        ResponseUtil.sendError(
+          res,
+          "Error retrieving prospects with multiple applications",
+          HttpStatus.INTERNAL_SERVER_ERROR,
+          { code: ErrorCode.GEN_INTERNAL_ERROR }
+        );
+      }
+    }
+  };
+
+  /**
+   * Update prospect's hasApplied status
+   */
+  public updateProspectHasAppliedStatus = async (
+    req: Request,
+    res: Response
+  ): Promise<void> => {
+    try {
+      const { prospectId } = req.params;
+      const { hasApplied } = req.body;
+      const result = await this.service.updateHasAppliedStatus(
+        prospectId,
+        hasApplied
+      );
+
+      ResponseUtil.sendSuccess(
+        res,
+        result,
+        `Prospect application status updated to ${
+          hasApplied ? "applied" : "not applied"
+        }`
+      );
+    } catch (error) {
+      logger.error(
+        "Error in updateProspectHasAppliedStatus controller:",
+        error
+      );
+      if (error instanceof AppError) {
+        ResponseUtil.sendError(res, error.message, error.httpCode, {
+          code: error.metadata.code,
+        });
+      } else {
+        ResponseUtil.sendError(
+          res,
+          "Error updating prospect application status",
+          HttpStatus.INTERNAL_SERVER_ERROR,
+          { code: ErrorCode.GEN_INTERNAL_ERROR }
+        );
+      }
+    }
+  };
 }
 
 // Create and export controller instance

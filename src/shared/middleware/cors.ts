@@ -24,13 +24,23 @@ export class CorsMiddleware {
    * Default CORS options
    */
   private static readonly DEFAULT_OPTIONS: CorsOptions = {
-    allowedOrigins: appConfig.cors?.allowedOrigins || ["http://localhost:3000"],
+    allowedOrigins: appConfig.cors?.allowedOrigins || [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "https://localhost:5173",
+      "http://localhost:8080",
+    ],
     allowedMethods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: [
       "Content-Type",
       "Authorization",
       "X-Requested-With",
       "X-Request-ID",
+      "X-Client-Version",
+      "Accept",
+      "Origin",
+      "Access-Control-Allow-Origin",
+      "Access-Control-Allow-Headers",
     ],
     exposedHeaders: [
       "X-Request-ID",
@@ -38,6 +48,8 @@ export class CorsMiddleware {
       "X-RateLimit-Limit",
       "X-RateLimit-Remaining",
       "X-RateLimit-Reset",
+      "Content-Range",
+      "X-Content-Range",
     ],
     maxAge: 86400, // 24 hours in seconds
     credentials: true,

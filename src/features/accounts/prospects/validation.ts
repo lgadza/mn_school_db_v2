@@ -113,6 +113,23 @@ export const prospectValidationSchemas = {
       // No params needed for statistics
     }),
   },
+
+  // Get prospect applications validation
+  getProspectApplications: {
+    params: Joi.object({
+      prospectId: ValidationUtil.SCHEMAS.ID,
+    }),
+  },
+
+  // Update prospect application status validation
+  updateProspectHasApplied: {
+    params: Joi.object({
+      prospectId: ValidationUtil.SCHEMAS.ID,
+    }),
+    body: Joi.object({
+      hasApplied: Joi.boolean().required(),
+    }),
+  },
 };
 
 export default prospectValidationSchemas;
